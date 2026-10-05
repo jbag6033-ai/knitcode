@@ -62,3 +62,20 @@ def test_resolve_instance_method_call():
         and result["target"]["name"] == "create_order"
         for result in results
     )
+    
+def test_resolve_class_constructor():
+    resolver = CallResolver("tests/fixtures/advanced_project")
+    resolver.analyze_project()
+
+    results = resolver.resolve_calls()
+
+    assert any(
+        result["caller"] == "main"
+        and result["callee"] == "OrderService"
+        and result["target"] is not None
+        and result["target"]["file"] == "service.py"
+        and result["target"]["name"] == "OrderService"
+        and result["target"]["type"] == "class"
+        for result in results
+    )
+    

@@ -16,3 +16,10 @@ __pycache__/
 # IDE
 .vscode/
 .idea/
+
+# Generated visualization outputs
+*.html
+lib/
+
+# External benchmark repositories
+benchmark/
