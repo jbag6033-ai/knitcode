@@ -367,28 +367,3 @@ class CodeVisitor(ast.NodeVisitor):
         self.generic_visit(node)
 
         self.current_function = previous_function
-
-            # Register the enclosing function -> lambda relationship.
-        caller = parent_function
-
-        if self.current_class and self.current_function:
-            caller = f"{self.current_class}.{self.current_function}"
-
-        self.call_relationships.append({
-            "caller": caller,
-            "callee": lambda_name,
-            "lineno": node.lineno,
-        })
-
-        self.calls.append({
-            "name": lambda_name,
-            "lineno": node.lineno,
-        })
-
-        # Analyze calls inside the lambda body as belonging to the lambda.
-        previous_function = self.current_function
-        self.current_function = lambda_name
-
-        self.generic_visit(node)
-
-        self.current_function = previous_function

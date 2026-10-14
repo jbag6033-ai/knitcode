@@ -89,12 +89,39 @@ class CallResolver:
                 resolved.append({
                     "caller_file": file_name,
                     "caller": caller,
+                    "caller_definition": self._find_caller_definition(
+                        file_name, caller, visitor,
+                    ),
                     "callee": callee,
                     "target": target,
                     "lineno": relationship["lineno"],
                 })
 
         return resolved
+
+    def _find_caller_definition(self, file_name, caller, visitor):
+        """Return definition metadata without inferring types from dotted names."""
+        for function in visitor.functions:
+            class_name = function["class"]
+            qualified_name = function["name"]
+            if class_name is not None:
+                qualified_name = f"{class_name}.{qualified_name}"
+            if qualified_name == caller:
+                return {
+                    "type": "method" if class_name is not None else "function",
+                    "name": function["name"],
+                    "file": file_name,
+                    "lineno": function["lineno"],
+                    "class": class_name,
+                }
+        return None
+
+    def _resolve_constructor(self, class_definition):
+        """Prefer a project-defined initializer, otherwise keep the class target."""
+        initializer = self._resolve_method_in_hierarchy(
+            class_definition["file"], class_definition["name"], "__init__",
+        )
+        return initializer if initializer is not None else class_definition
     
     def _resolve_method_in_hierarchy(
         self,
@@ -330,7 +357,7 @@ class CallResolver:
                 imported_name, []
             ):
                 if definition["file"] == expected_file:
-                    return definition
+                    return self._resolve_constructor(definition)
 
         # ---------------------------------------------------------
         # 4. from module import function
@@ -365,26 +392,7 @@ class CallResolver:
             if class_definition["file"] != current_file:
                 continue
 
-            # A call to ClassName() executes ClassName.__init__().
-            for method_definition in self.function_definitions.get(
-                "__init__", []
-            ):
-                if (
-                    method_definition["file"] == current_file
-                    and method_definition["class"] == callee
-                ):
-                    return method_definition
-
-            # The class exists, but it does not define __init__ itself.
-            # Search its inheritance hierarchy.
-            definition = self._resolve_method_in_hierarchy(
-                current_file,
-                callee,
-                "__init__",
-            )
-
-            if definition is not None:
-                return definition
+            return self._resolve_constructor(class_definition)
         # 5. Function defined in same file
         # ---------------------------------------------------------
 

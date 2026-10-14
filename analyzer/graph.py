@@ -38,6 +38,28 @@ class CodeGraph:
         'instantiates' edge instead of a normal 'calls' edge.
         """
 
+        # Register known definitions before fallback caller nodes so metadata
+        # does not depend on the order of call expressions. Materialize once
+        # to support iterators as well as lists.
+        resolved_calls = list(resolved_calls)
+        for result in resolved_calls:
+            for definition in (
+                result.get("caller_definition"), result["target"],
+            ):
+                if definition is None:
+                    continue
+                name = definition["name"]
+                if definition.get("class") is not None:
+                    name = f"{definition['class']}.{name}"
+                self.add_node(
+                    f"{definition['file']}::{name}",
+                    name=definition["name"],
+                    file=definition["file"],
+                    lineno=definition["lineno"],
+                    type=definition.get("type", "function"),
+                    class_name=definition.get("class"),
+                )
+
         for result in resolved_calls:
             caller_file = result["caller_file"]
             caller_name = result["caller"]

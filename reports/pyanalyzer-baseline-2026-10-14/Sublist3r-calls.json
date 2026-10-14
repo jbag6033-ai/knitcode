@@ -1,0 +1,7900 @@
+[
+  {
+    "caller_file": "setup.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "setup",
+    "target": null,
+    "lineno": 3
+  },
+  {
+    "caller_file": "setup.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "find_packages",
+    "target": null,
+    "lineno": 8
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "sys.platform.startswith",
+    "target": null,
+    "lineno": 33
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "subbrute/subbrute.py",
+      "lineno": 40,
+      "class": "verify_nameservers"
+    },
+    "callee": "multiprocessing.Process.__init__",
+    "target": null,
+    "lineno": 41
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "subbrute/subbrute.py",
+      "lineno": 40,
+      "class": "verify_nameservers"
+    },
+    "callee": "signal_init",
+    "target": {
+      "type": "function",
+      "name": "signal_init",
+      "file": "subbrute/subbrute.py",
+      "lineno": 543,
+      "class": null
+    },
+    "lineno": 43
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "subbrute/subbrute.py",
+      "lineno": 40,
+      "class": "verify_nameservers"
+    },
+    "callee": "dns.resolver.Resolver",
+    "target": null,
+    "lineno": 54
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "subbrute/subbrute.py",
+      "lineno": 40,
+      "class": "verify_nameservers"
+    },
+    "callee": "resolver.query",
+    "target": null,
+    "lineno": 70
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "subbrute/subbrute.py",
+      "lineno": 40,
+      "class": "verify_nameservers"
+    },
+    "callee": "dns.resolver.Resolver",
+    "target": null,
+    "lineno": 73
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.add_nameserver",
+    "caller_definition": {
+      "type": "method",
+      "name": "add_nameserver",
+      "file": "subbrute/subbrute.py",
+      "lineno": 80,
+      "class": "verify_nameservers"
+    },
+    "callee": "self.resolver_q.put",
+    "target": null,
+    "lineno": 84
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.add_nameserver",
+    "caller_definition": {
+      "type": "method",
+      "name": "add_nameserver",
+      "file": "subbrute/subbrute.py",
+      "lineno": 80,
+      "class": "verify_nameservers"
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 85
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.add_nameserver",
+    "caller_definition": {
+      "type": "method",
+      "name": "add_nameserver",
+      "file": "subbrute/subbrute.py",
+      "lineno": 80,
+      "class": "verify_nameservers"
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 88
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.add_nameserver",
+    "caller_definition": {
+      "type": "method",
+      "name": "add_nameserver",
+      "file": "subbrute/subbrute.py",
+      "lineno": 80,
+      "class": "verify_nameservers"
+    },
+    "callee": "str",
+    "target": null,
+    "lineno": 88
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.add_nameserver",
+    "caller_definition": {
+      "type": "method",
+      "name": "add_nameserver",
+      "file": "subbrute/subbrute.py",
+      "lineno": 80,
+      "class": "verify_nameservers"
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 88
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.verify",
+    "caller_definition": {
+      "type": "method",
+      "name": "verify",
+      "file": "subbrute/subbrute.py",
+      "lineno": 91,
+      "class": "verify_nameservers"
+    },
+    "callee": "server.strip",
+    "target": null,
+    "lineno": 97
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.verify",
+    "caller_definition": {
+      "type": "method",
+      "name": "verify",
+      "file": "subbrute/subbrute.py",
+      "lineno": 91,
+      "class": "verify_nameservers"
+    },
+    "callee": "self.find_wildcards",
+    "target": {
+      "type": "method",
+      "name": "find_wildcards",
+      "file": "subbrute/subbrute.py",
+      "lineno": 133,
+      "class": "verify_nameservers"
+    },
+    "lineno": 105
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.verify",
+    "caller_definition": {
+      "type": "method",
+      "name": "verify",
+      "file": "subbrute/subbrute.py",
+      "lineno": 91,
+      "class": "verify_nameservers"
+    },
+    "callee": "self.add_nameserver",
+    "target": {
+      "type": "method",
+      "name": "add_nameserver",
+      "file": "subbrute/subbrute.py",
+      "lineno": 80,
+      "class": "verify_nameservers"
+    },
+    "lineno": 108
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.verify",
+    "caller_definition": {
+      "type": "method",
+      "name": "verify",
+      "file": "subbrute/subbrute.py",
+      "lineno": 91,
+      "class": "verify_nameservers"
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 111
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.verify",
+    "caller_definition": {
+      "type": "method",
+      "name": "verify",
+      "file": "subbrute/subbrute.py",
+      "lineno": 91,
+      "class": "verify_nameservers"
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 114
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.verify",
+    "caller_definition": {
+      "type": "method",
+      "name": "verify",
+      "file": "subbrute/subbrute.py",
+      "lineno": 91,
+      "class": "verify_nameservers"
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 114
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 117,
+      "class": "verify_nameservers"
+    },
+    "callee": "random.shuffle",
+    "target": null,
+    "lineno": 119
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 117,
+      "class": "verify_nameservers"
+    },
+    "callee": "self.verify",
+    "target": {
+      "type": "method",
+      "name": "verify",
+      "file": "subbrute/subbrute.py",
+      "lineno": 91,
+      "class": "verify_nameservers"
+    },
+    "lineno": 120
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 117,
+      "class": "verify_nameservers"
+    },
+    "callee": "sys.stderr.write",
+    "target": null,
+    "lineno": 122
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 117,
+      "class": "verify_nameservers"
+    },
+    "callee": "self.verify",
+    "target": {
+      "type": "method",
+      "name": "verify",
+      "file": "subbrute/subbrute.py",
+      "lineno": 91,
+      "class": "verify_nameservers"
+    },
+    "lineno": 124
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 117,
+      "class": "verify_nameservers"
+    },
+    "callee": "self.resolver_q.put",
+    "target": null,
+    "lineno": 127
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.find_wildcards",
+    "caller_definition": {
+      "type": "method",
+      "name": "find_wildcards",
+      "file": "subbrute/subbrute.py",
+      "lineno": 133,
+      "class": "verify_nameservers"
+    },
+    "callee": "self.resolver.query",
+    "target": null,
+    "lineno": 141
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.find_wildcards",
+    "caller_definition": {
+      "type": "method",
+      "name": "find_wildcards",
+      "file": "subbrute/subbrute.py",
+      "lineno": 133,
+      "class": "verify_nameservers"
+    },
+    "callee": "uuid.uuid4",
+    "target": null,
+    "lineno": 141
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.find_wildcards",
+    "caller_definition": {
+      "type": "method",
+      "name": "find_wildcards",
+      "file": "subbrute/subbrute.py",
+      "lineno": 133,
+      "class": "verify_nameservers"
+    },
+    "callee": "len",
+    "target": null,
+    "lineno": 142
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.find_wildcards",
+    "caller_definition": {
+      "type": "method",
+      "name": "find_wildcards",
+      "file": "subbrute/subbrute.py",
+      "lineno": 133,
+      "class": "verify_nameservers"
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 143
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.find_wildcards",
+    "caller_definition": {
+      "type": "method",
+      "name": "find_wildcards",
+      "file": "subbrute/subbrute.py",
+      "lineno": 133,
+      "class": "verify_nameservers"
+    },
+    "callee": "uuid.uuid4",
+    "target": null,
+    "lineno": 154
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.find_wildcards",
+    "caller_definition": {
+      "type": "method",
+      "name": "find_wildcards",
+      "file": "subbrute/subbrute.py",
+      "lineno": 133,
+      "class": "verify_nameservers"
+    },
+    "callee": "self.resolver.query",
+    "target": null,
+    "lineno": 155
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.find_wildcards",
+    "caller_definition": {
+      "type": "method",
+      "name": "find_wildcards",
+      "file": "subbrute/subbrute.py",
+      "lineno": 133,
+      "class": "verify_nameservers"
+    },
+    "callee": "str",
+    "target": null,
+    "lineno": 159
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.find_wildcards",
+    "caller_definition": {
+      "type": "method",
+      "name": "find_wildcards",
+      "file": "subbrute/subbrute.py",
+      "lineno": 133,
+      "class": "verify_nameservers"
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 166
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.find_wildcards",
+    "caller_definition": {
+      "type": "method",
+      "name": "find_wildcards",
+      "file": "subbrute/subbrute.py",
+      "lineno": 133,
+      "class": "verify_nameservers"
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 166
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.find_wildcards",
+    "caller_definition": {
+      "type": "method",
+      "name": "find_wildcards",
+      "file": "subbrute/subbrute.py",
+      "lineno": 133,
+      "class": "verify_nameservers"
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 171
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "verify_nameservers.find_wildcards",
+    "caller_definition": {
+      "type": "method",
+      "name": "find_wildcards",
+      "file": "subbrute/subbrute.py",
+      "lineno": 133,
+      "class": "verify_nameservers"
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 171
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "subbrute/subbrute.py",
+      "lineno": 179,
+      "class": "lookup"
+    },
+    "callee": "multiprocessing.Process.__init__",
+    "target": null,
+    "lineno": 180
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "subbrute/subbrute.py",
+      "lineno": 179,
+      "class": "lookup"
+    },
+    "callee": "signal_init",
+    "target": {
+      "type": "function",
+      "name": "signal_init",
+      "file": "subbrute/subbrute.py",
+      "lineno": 543,
+      "class": null
+    },
+    "lineno": 181
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "subbrute/subbrute.py",
+      "lineno": 179,
+      "class": "lookup"
+    },
+    "callee": "dns.resolver.Resolver",
+    "target": null,
+    "lineno": 189
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.get_ns",
+    "caller_definition": {
+      "type": "method",
+      "name": "get_ns",
+      "file": "subbrute/subbrute.py",
+      "lineno": 193,
+      "class": "lookup"
+    },
+    "callee": "self.resolver_q.get_nowait",
+    "target": null,
+    "lineno": 196
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.get_ns",
+    "caller_definition": {
+      "type": "method",
+      "name": "get_ns",
+      "file": "subbrute/subbrute.py",
+      "lineno": 193,
+      "class": "lookup"
+    },
+    "callee": "self.resolver_q.put",
+    "target": null,
+    "lineno": 199
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.get_ns_blocking",
+    "caller_definition": {
+      "type": "method",
+      "name": "get_ns_blocking",
+      "file": "subbrute/subbrute.py",
+      "lineno": 205,
+      "class": "lookup"
+    },
+    "callee": "self.resolver_q.get",
+    "target": null,
+    "lineno": 207
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.get_ns_blocking",
+    "caller_definition": {
+      "type": "method",
+      "name": "get_ns_blocking",
+      "file": "subbrute/subbrute.py",
+      "lineno": 205,
+      "class": "lookup"
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 209
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.get_ns_blocking",
+    "caller_definition": {
+      "type": "method",
+      "name": "get_ns_blocking",
+      "file": "subbrute/subbrute.py",
+      "lineno": 205,
+      "class": "lookup"
+    },
+    "callee": "self.resolver_q.put",
+    "target": null,
+    "lineno": 211
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 216
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "len",
+    "target": null,
+    "lineno": 219
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "self.get_ns",
+    "target": {
+      "type": "method",
+      "name": "get_ns",
+      "file": "subbrute/subbrute.py",
+      "lineno": 193,
+      "class": "lookup"
+    },
+    "lineno": 221
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "self.resolver.query",
+    "target": null,
+    "lineno": 227
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "extract_hosts",
+    "target": {
+      "type": "function",
+      "name": "extract_hosts",
+      "file": "subbrute/subbrute.py",
+      "lineno": 360,
+      "class": null
+    },
+    "lineno": 229
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "str",
+    "target": null,
+    "lineno": 229
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 233
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "self.in_q.put",
+    "target": null,
+    "lineno": 234
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "range",
+    "target": null,
+    "lineno": 238
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "self.resolver.query",
+    "target": null,
+    "lineno": 240
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "str.rstrip",
+    "target": null,
+    "lineno": 245
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "str",
+    "target": null,
+    "lineno": 245
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "cname_record.append",
+    "target": null,
+    "lineno": 246
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "self.resolver.query",
+    "target": null,
+    "lineno": 251
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 254
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "self.in_q.put",
+    "target": null,
+    "lineno": 258
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "self.get_ns_blocking",
+    "target": {
+      "type": "method",
+      "name": "get_ns_blocking",
+      "file": "subbrute/subbrute.py",
+      "lineno": 205,
+      "class": "lookup"
+    },
+    "lineno": 259
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 261
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 264
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 267
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 270
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 271
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "self.in_q.put",
+    "target": null,
+    "lineno": 281
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 285
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 289
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "self.in_q.put",
+    "target": null,
+    "lineno": 292
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 294
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "error",
+    "target": {
+      "type": "function",
+      "name": "error",
+      "file": "subbrute/subbrute.py",
+      "lineno": 523,
+      "class": null
+    },
+    "lineno": 295
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.check",
+    "caller_definition": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 297
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "self.get_ns_blocking",
+    "target": {
+      "type": "method",
+      "name": "get_ns_blocking",
+      "file": "subbrute/subbrute.py",
+      "lineno": 205,
+      "class": "lookup"
+    },
+    "lineno": 303
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "self.in_q.get",
+    "target": null,
+    "lineno": 306
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "self.in_q.get",
+    "target": null,
+    "lineno": 311
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "self.in_q.put",
+    "target": null,
+    "lineno": 314
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 316
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "self.in_q.put",
+    "target": null,
+    "lineno": 323
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "self.out_q.put",
+    "target": null,
+    "lineno": 325
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "len",
+    "target": null,
+    "lineno": 328
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "self.check",
+    "target": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "lineno": 331
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "self.check",
+    "target": {
+      "type": "method",
+      "name": "check",
+      "file": "subbrute/subbrute.py",
+      "lineno": 215,
+      "class": "lookup"
+    },
+    "lineno": 334
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "sys.stdout.flush",
+    "target": null,
+    "lineno": 335
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 336
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "str",
+    "target": null,
+    "lineno": 343
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 345
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "found_addresses.append",
+    "target": null,
+    "lineno": 350
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "lookup.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 301,
+      "class": "lookup"
+    },
+    "callee": "self.out_q.put",
+    "target": null,
+    "lineno": 354
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 359
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_hosts",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_hosts",
+      "file": "subbrute/subbrute.py",
+      "lineno": 360,
+      "class": null
+    },
+    "callee": "re.findall",
+    "target": null,
+    "lineno": 364
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_hosts",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_hosts",
+      "file": "subbrute/subbrute.py",
+      "lineno": 360,
+      "class": null
+    },
+    "callee": "fh.rstrip",
+    "target": null,
+    "lineno": 366
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_hosts",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_hosts",
+      "file": "subbrute/subbrute.py",
+      "lineno": 360,
+      "class": null
+    },
+    "callee": "host.endswith",
+    "target": null,
+    "lineno": 368
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_hosts",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_hosts",
+      "file": "subbrute/subbrute.py",
+      "lineno": 360,
+      "class": null
+    },
+    "callee": "ret.append",
+    "target": null,
+    "lineno": 369
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 374
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_subdomains",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_subdomains",
+      "file": "subbrute/subbrute.py",
+      "lineno": 375,
+      "class": null
+    },
+    "callee": "open.read",
+    "target": null,
+    "lineno": 379
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_subdomains",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_subdomains",
+      "file": "subbrute/subbrute.py",
+      "lineno": 375,
+      "class": null
+    },
+    "callee": "open",
+    "target": null,
+    "lineno": 379
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_subdomains",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_subdomains",
+      "file": "subbrute/subbrute.py",
+      "lineno": 375,
+      "class": null
+    },
+    "callee": "re.findall",
+    "target": null,
+    "lineno": 380
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_subdomains",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_subdomains",
+      "file": "subbrute/subbrute.py",
+      "lineno": 375,
+      "class": null
+    },
+    "callee": "i.find",
+    "target": null,
+    "lineno": 383
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_subdomains",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_subdomains",
+      "file": "subbrute/subbrute.py",
+      "lineno": 375,
+      "class": null
+    },
+    "callee": "i.split",
+    "target": null,
+    "lineno": 384
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_subdomains",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_subdomains",
+      "file": "subbrute/subbrute.py",
+      "lineno": 375,
+      "class": null
+    },
+    "callee": "len",
+    "target": null,
+    "lineno": 386
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_subdomains",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_subdomains",
+      "file": "subbrute/subbrute.py",
+      "lineno": 375,
+      "class": null
+    },
+    "callee": "len",
+    "target": null,
+    "lineno": 391
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_subdomains",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_subdomains",
+      "file": "subbrute/subbrute.py",
+      "lineno": 375,
+      "class": null
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 392
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_subdomains",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_subdomains",
+      "file": "subbrute/subbrute.py",
+      "lineno": 375,
+      "class": null
+    },
+    "callee": "str",
+    "target": null,
+    "lineno": 392
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_subdomains",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_subdomains",
+      "file": "subbrute/subbrute.py",
+      "lineno": 375,
+      "class": null
+    },
+    "callee": "q.lower",
+    "target": null,
+    "lineno": 396
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_subdomains",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_subdomains",
+      "file": "subbrute/subbrute.py",
+      "lineno": 375,
+      "class": null
+    },
+    "callee": "sorted",
+    "target": null,
+    "lineno": 404
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_subdomains",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_subdomains",
+      "file": "subbrute/subbrute.py",
+      "lineno": 375,
+      "class": null
+    },
+    "callee": "subs.keys",
+    "target": null,
+    "lineno": 404
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "extract_subdomains",
+    "caller_definition": {
+      "type": "function",
+      "name": "extract_subdomains",
+      "file": "subbrute/subbrute.py",
+      "lineno": 375,
+      "class": null
+    },
+    "callee": "extract_subdomains.<lambda1>",
+    "target": {
+      "type": "function",
+      "name": "extract_subdomains.<lambda1>",
+      "file": "subbrute/subbrute.py",
+      "lineno": 404,
+      "class": null
+    },
+    "lineno": 404
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "print_target",
+    "caller_definition": {
+      "type": "function",
+      "name": "print_target",
+      "file": "subbrute/subbrute.py",
+      "lineno": 407,
+      "class": null
+    },
+    "callee": "run",
+    "target": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "lineno": 410
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "print_target",
+    "caller_definition": {
+      "type": "function",
+      "name": "print_target",
+      "file": "subbrute/subbrute.py",
+      "lineno": 407,
+      "class": null
+    },
+    "callee": "run",
+    "target": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "lineno": 411
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "print_target",
+    "caller_definition": {
+      "type": "function",
+      "name": "print_target",
+      "file": "subbrute/subbrute.py",
+      "lineno": 407,
+      "class": null
+    },
+    "callee": "join.strip",
+    "target": null,
+    "lineno": 416
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "print_target",
+    "caller_definition": {
+      "type": "function",
+      "name": "print_target",
+      "file": "subbrute/subbrute.py",
+      "lineno": 407,
+      "class": null
+    },
+    "callee": "join",
+    "target": null,
+    "lineno": 416
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "print_target",
+    "caller_definition": {
+      "type": "function",
+      "name": "print_target",
+      "file": "subbrute/subbrute.py",
+      "lineno": 407,
+      "class": null
+    },
+    "callee": "print",
+    "target": null,
+    "lineno": 419
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "print_target",
+    "caller_definition": {
+      "type": "function",
+      "name": "print_target",
+      "file": "subbrute/subbrute.py",
+      "lineno": 407,
+      "class": null
+    },
+    "callee": "subdomains_list.append",
+    "target": null,
+    "lineno": 420
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "print_target",
+    "caller_definition": {
+      "type": "function",
+      "name": "print_target",
+      "file": "subbrute/subbrute.py",
+      "lineno": 407,
+      "class": null
+    },
+    "callee": "set",
+    "target": null,
+    "lineno": 422
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "check_open",
+    "target": {
+      "type": "function",
+      "name": "check_open",
+      "file": "subbrute/subbrute.py",
+      "lineno": 530,
+      "class": null
+    },
+    "lineno": 425
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "check_open",
+    "target": {
+      "type": "function",
+      "name": "check_open",
+      "file": "subbrute/subbrute.py",
+      "lineno": 530,
+      "class": null
+    },
+    "lineno": 426
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "len",
+    "target": null,
+    "lineno": 427
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "sys.stderr.write",
+    "target": null,
+    "lineno": 428
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "multiprocessing.Manager.dict",
+    "target": null,
+    "lineno": 433
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "multiprocessing.Manager",
+    "target": null,
+    "lineno": 433
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "multiprocessing.Manager.dict",
+    "target": null,
+    "lineno": 434
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "multiprocessing.Manager",
+    "target": null,
+    "lineno": 434
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "multiprocessing.Queue",
+    "target": null,
+    "lineno": 435
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "multiprocessing.Queue",
+    "target": null,
+    "lineno": 436
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "multiprocessing.Queue",
+    "target": null,
+    "lineno": 438
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "verify_nameservers",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "subbrute/subbrute.py",
+      "lineno": 40,
+      "class": "verify_nameservers"
+    },
+    "lineno": 441
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "verify_nameservers_proc.start",
+    "target": null,
+    "lineno": 442
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "in_q.put",
+    "target": null,
+    "lineno": 444
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "str.strip",
+    "target": null,
+    "lineno": 448
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "str",
+    "target": null,
+    "lineno": 448
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "s.find",
+    "target": null,
+    "lineno": 450
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "s.split",
+    "target": null,
+    "lineno": 453
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "s.endswith",
+    "target": null,
+    "lineno": 454
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "in_q.put",
+    "target": null,
+    "lineno": 462
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "in_q.put",
+    "target": null,
+    "lineno": 464
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "range",
+    "target": null,
+    "lineno": 465
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "lookup",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "subbrute/subbrute.py",
+      "lineno": 179,
+      "class": "lookup"
+    },
+    "lineno": 466
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "worker.start",
+    "target": null,
+    "lineno": 467
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "out_q.get",
+    "target": null,
+    "lineno": 472
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 481
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "str",
+    "target": null,
+    "lineno": 481
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 481
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 488
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "killproc",
+    "target": {
+      "type": "function",
+      "name": "killproc",
+      "file": "subbrute/subbrute.py",
+      "lineno": 500,
+      "class": null
+    },
+    "lineno": 491
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "verify_nameservers_proc.end",
+    "target": {
+      "type": "method",
+      "name": "end",
+      "file": "subbrute/subbrute.py",
+      "lineno": 76,
+      "class": "verify_nameservers"
+    },
+    "lineno": 494
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "run",
+    "caller_definition": {
+      "type": "function",
+      "name": "run",
+      "file": "subbrute/subbrute.py",
+      "lineno": 424,
+      "class": null
+    },
+    "callee": "trace",
+    "target": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "lineno": 495
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "killproc",
+    "caller_definition": {
+      "type": "function",
+      "name": "killproc",
+      "file": "subbrute/subbrute.py",
+      "lineno": 500,
+      "class": null
+    },
+    "callee": "os.getpid",
+    "target": null,
+    "lineno": 502
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "killproc",
+    "caller_definition": {
+      "type": "function",
+      "name": "killproc",
+      "file": "subbrute/subbrute.py",
+      "lineno": 500,
+      "class": null
+    },
+    "callee": "sys.platform.startswith",
+    "target": null,
+    "lineno": 503
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "killproc",
+    "caller_definition": {
+      "type": "function",
+      "name": "killproc",
+      "file": "subbrute/subbrute.py",
+      "lineno": 500,
+      "class": null
+    },
+    "callee": "kernel32.OpenProcess",
+    "target": null,
+    "lineno": 506
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "killproc",
+    "caller_definition": {
+      "type": "function",
+      "name": "killproc",
+      "file": "subbrute/subbrute.py",
+      "lineno": 500,
+      "class": null
+    },
+    "callee": "kernel32.TerminateProcess",
+    "target": null,
+    "lineno": 507
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "killproc",
+    "caller_definition": {
+      "type": "function",
+      "name": "killproc",
+      "file": "subbrute/subbrute.py",
+      "lineno": 500,
+      "class": null
+    },
+    "callee": "os.kill",
+    "target": null,
+    "lineno": 512
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "trace",
+    "caller_definition": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "callee": "sys.stderr.write",
+    "target": null,
+    "lineno": 519
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "trace",
+    "caller_definition": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "callee": "str",
+    "target": null,
+    "lineno": 519
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "trace",
+    "caller_definition": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "callee": "sys.stderr.write",
+    "target": null,
+    "lineno": 520
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "trace",
+    "caller_definition": {
+      "type": "function",
+      "name": "trace",
+      "file": "subbrute/subbrute.py",
+      "lineno": 516,
+      "class": null
+    },
+    "callee": "sys.stderr.write",
+    "target": null,
+    "lineno": 521
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "error",
+    "caller_definition": {
+      "type": "function",
+      "name": "error",
+      "file": "subbrute/subbrute.py",
+      "lineno": 523,
+      "class": null
+    },
+    "callee": "sys.stderr.write",
+    "target": null,
+    "lineno": 525
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "error",
+    "caller_definition": {
+      "type": "function",
+      "name": "error",
+      "file": "subbrute/subbrute.py",
+      "lineno": 523,
+      "class": null
+    },
+    "callee": "str",
+    "target": null,
+    "lineno": 525
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "error",
+    "caller_definition": {
+      "type": "function",
+      "name": "error",
+      "file": "subbrute/subbrute.py",
+      "lineno": 523,
+      "class": null
+    },
+    "callee": "sys.stderr.write",
+    "target": null,
+    "lineno": 526
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "error",
+    "caller_definition": {
+      "type": "function",
+      "name": "error",
+      "file": "subbrute/subbrute.py",
+      "lineno": 523,
+      "class": null
+    },
+    "callee": "sys.stderr.write",
+    "target": null,
+    "lineno": 527
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "error",
+    "caller_definition": {
+      "type": "function",
+      "name": "error",
+      "file": "subbrute/subbrute.py",
+      "lineno": 523,
+      "class": null
+    },
+    "callee": "sys.exit",
+    "target": null,
+    "lineno": 528
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "check_open",
+    "caller_definition": {
+      "type": "function",
+      "name": "check_open",
+      "file": "subbrute/subbrute.py",
+      "lineno": 530,
+      "class": null
+    },
+    "callee": "open.readlines",
+    "target": null,
+    "lineno": 534
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "check_open",
+    "caller_definition": {
+      "type": "function",
+      "name": "check_open",
+      "file": "subbrute/subbrute.py",
+      "lineno": 530,
+      "class": null
+    },
+    "callee": "open",
+    "target": null,
+    "lineno": 534
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "check_open",
+    "caller_definition": {
+      "type": "function",
+      "name": "check_open",
+      "file": "subbrute/subbrute.py",
+      "lineno": 530,
+      "class": null
+    },
+    "callee": "error",
+    "target": {
+      "type": "function",
+      "name": "error",
+      "file": "subbrute/subbrute.py",
+      "lineno": 523,
+      "class": null
+    },
+    "lineno": 536
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "check_open",
+    "caller_definition": {
+      "type": "function",
+      "name": "check_open",
+      "file": "subbrute/subbrute.py",
+      "lineno": 530,
+      "class": null
+    },
+    "callee": "len",
+    "target": null,
+    "lineno": 537
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "check_open",
+    "caller_definition": {
+      "type": "function",
+      "name": "check_open",
+      "file": "subbrute/subbrute.py",
+      "lineno": 530,
+      "class": null
+    },
+    "callee": "error",
+    "target": {
+      "type": "function",
+      "name": "error",
+      "file": "subbrute/subbrute.py",
+      "lineno": 523,
+      "class": null
+    },
+    "lineno": 538
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "signal_init",
+    "caller_definition": {
+      "type": "function",
+      "name": "signal_init",
+      "file": "subbrute/subbrute.py",
+      "lineno": 543,
+      "class": null
+    },
+    "callee": "signal.signal",
+    "target": null,
+    "lineno": 545
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "signal_init",
+    "caller_definition": {
+      "type": "function",
+      "name": "signal_init",
+      "file": "subbrute/subbrute.py",
+      "lineno": 543,
+      "class": null
+    },
+    "callee": "signal.signal",
+    "target": null,
+    "lineno": 547
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "signal_init",
+    "caller_definition": {
+      "type": "function",
+      "name": "signal_init",
+      "file": "subbrute/subbrute.py",
+      "lineno": 543,
+      "class": null
+    },
+    "callee": "signal.signal",
+    "target": null,
+    "lineno": 548
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "getattr",
+    "target": null,
+    "lineno": 554
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "os.path.dirname",
+    "target": null,
+    "lineno": 556
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "multiprocessing.freeze_support",
+    "target": null,
+    "lineno": 557
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "os.path.dirname",
+    "target": null,
+    "lineno": 560
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "os.path.realpath",
+    "target": null,
+    "lineno": 560
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "optparse.OptionParser",
+    "target": null,
+    "lineno": 561
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "parser.add_option",
+    "target": null,
+    "lineno": 562
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "os.path.join",
+    "target": null,
+    "lineno": 562
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "parser.add_option",
+    "target": null,
+    "lineno": 564
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "os.path.join",
+    "target": null,
+    "lineno": 564
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "parser.add_option",
+    "target": null,
+    "lineno": 566
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "parser.add_option",
+    "target": null,
+    "lineno": 568
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "parser.add_option",
+    "target": null,
+    "lineno": 569
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "parser.add_option",
+    "target": null,
+    "lineno": 570
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "parser.add_option",
+    "target": null,
+    "lineno": 572
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "parser.add_option",
+    "target": null,
+    "lineno": 574
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "parser.add_option",
+    "target": null,
+    "lineno": 577
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "parser.add_option",
+    "target": null,
+    "lineno": 579
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "parser.parse_args",
+    "target": null,
+    "lineno": 581
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "len",
+    "target": null,
+    "lineno": 586
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "parser.error",
+    "target": null,
+    "lineno": 587
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "extract_subdomains",
+    "target": {
+      "type": "function",
+      "name": "extract_subdomains",
+      "file": "subbrute/subbrute.py",
+      "lineno": 375,
+      "class": null
+    },
+    "lineno": 591
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "print",
+    "target": null,
+    "lineno": 592
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "sys.exit",
+    "target": null,
+    "lineno": 593
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "check_open",
+    "target": {
+      "type": "function",
+      "name": "check_open",
+      "file": "subbrute/subbrute.py",
+      "lineno": 530,
+      "class": null
+    },
+    "lineno": 596
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "open",
+    "target": null,
+    "lineno": 603
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "error",
+    "target": {
+      "type": "function",
+      "name": "error",
+      "file": "subbrute/subbrute.py",
+      "lineno": 523,
+      "class": null
+    },
+    "lineno": 605
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "open",
+    "target": null,
+    "lineno": 610
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "error",
+    "target": {
+      "type": "function",
+      "name": "error",
+      "file": "subbrute/subbrute.py",
+      "lineno": 523,
+      "class": null
+    },
+    "lineno": 612
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "str.upper",
+    "target": null,
+    "lineno": 618
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "str",
+    "target": null,
+    "lineno": 618
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "target.strip",
+    "target": null,
+    "lineno": 622
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "print",
+    "target": null,
+    "lineno": 632
+  },
+  {
+    "caller_file": "subbrute/subbrute.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "print_target",
+    "target": {
+      "type": "function",
+      "name": "print_target",
+      "file": "subbrute/subbrute.py",
+      "lineno": 407,
+      "class": null
+    },
+    "lineno": 633
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "requests.packages.urllib3.disable_warnings",
+    "target": null,
+    "lineno": 37
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "sys.platform.startswith",
+    "target": null,
+    "lineno": 42
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "win_unicode_console.enable",
+    "target": null,
+    "lineno": 54
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "colorama.init",
+    "target": null,
+    "lineno": 55
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "print",
+    "target": null,
+    "lineno": 58
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "banner",
+    "caller_definition": {
+      "type": "function",
+      "name": "banner",
+      "file": "sublist3r.py",
+      "lineno": 74,
+      "class": null
+    },
+    "callee": "print",
+    "target": null,
+    "lineno": 75
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "parser_error",
+    "caller_definition": {
+      "type": "function",
+      "name": "parser_error",
+      "file": "sublist3r.py",
+      "lineno": 86,
+      "class": null
+    },
+    "callee": "banner",
+    "target": {
+      "type": "function",
+      "name": "banner",
+      "file": "sublist3r.py",
+      "lineno": 74,
+      "class": null
+    },
+    "lineno": 87
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "parser_error",
+    "caller_definition": {
+      "type": "function",
+      "name": "parser_error",
+      "file": "sublist3r.py",
+      "lineno": 86,
+      "class": null
+    },
+    "callee": "print",
+    "target": null,
+    "lineno": 88
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "parser_error",
+    "caller_definition": {
+      "type": "function",
+      "name": "parser_error",
+      "file": "sublist3r.py",
+      "lineno": 86,
+      "class": null
+    },
+    "callee": "print",
+    "target": null,
+    "lineno": 89
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "parser_error",
+    "caller_definition": {
+      "type": "function",
+      "name": "parser_error",
+      "file": "sublist3r.py",
+      "lineno": 86,
+      "class": null
+    },
+    "callee": "sys.exit",
+    "target": null,
+    "lineno": 90
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "parse_args",
+    "caller_definition": {
+      "type": "function",
+      "name": "parse_args",
+      "file": "sublist3r.py",
+      "lineno": 93,
+      "class": null
+    },
+    "callee": "argparse.ArgumentParser",
+    "target": null,
+    "lineno": 95
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "parse_args",
+    "caller_definition": {
+      "type": "function",
+      "name": "parse_args",
+      "file": "sublist3r.py",
+      "lineno": 93,
+      "class": null
+    },
+    "callee": "parser.add_argument",
+    "target": null,
+    "lineno": 98
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "parse_args",
+    "caller_definition": {
+      "type": "function",
+      "name": "parse_args",
+      "file": "sublist3r.py",
+      "lineno": 93,
+      "class": null
+    },
+    "callee": "parser.add_argument",
+    "target": null,
+    "lineno": 99
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "parse_args",
+    "caller_definition": {
+      "type": "function",
+      "name": "parse_args",
+      "file": "sublist3r.py",
+      "lineno": 93,
+      "class": null
+    },
+    "callee": "parser.add_argument",
+    "target": null,
+    "lineno": 100
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "parse_args",
+    "caller_definition": {
+      "type": "function",
+      "name": "parse_args",
+      "file": "sublist3r.py",
+      "lineno": 93,
+      "class": null
+    },
+    "callee": "parser.add_argument",
+    "target": null,
+    "lineno": 101
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "parse_args",
+    "caller_definition": {
+      "type": "function",
+      "name": "parse_args",
+      "file": "sublist3r.py",
+      "lineno": 93,
+      "class": null
+    },
+    "callee": "parser.add_argument",
+    "target": null,
+    "lineno": 102
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "parse_args",
+    "caller_definition": {
+      "type": "function",
+      "name": "parse_args",
+      "file": "sublist3r.py",
+      "lineno": 93,
+      "class": null
+    },
+    "callee": "parser.add_argument",
+    "target": null,
+    "lineno": 103
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "parse_args",
+    "caller_definition": {
+      "type": "function",
+      "name": "parse_args",
+      "file": "sublist3r.py",
+      "lineno": 93,
+      "class": null
+    },
+    "callee": "parser.add_argument",
+    "target": null,
+    "lineno": 104
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "parse_args",
+    "caller_definition": {
+      "type": "function",
+      "name": "parse_args",
+      "file": "sublist3r.py",
+      "lineno": 93,
+      "class": null
+    },
+    "callee": "parser.add_argument",
+    "target": null,
+    "lineno": 105
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "parse_args",
+    "caller_definition": {
+      "type": "function",
+      "name": "parse_args",
+      "file": "sublist3r.py",
+      "lineno": 93,
+      "class": null
+    },
+    "callee": "parser.parse_args",
+    "target": null,
+    "lineno": 106
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "write_file",
+    "caller_definition": {
+      "type": "function",
+      "name": "write_file",
+      "file": "sublist3r.py",
+      "lineno": 109,
+      "class": null
+    },
+    "callee": "print",
+    "target": null,
+    "lineno": 111
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "write_file",
+    "caller_definition": {
+      "type": "function",
+      "name": "write_file",
+      "file": "sublist3r.py",
+      "lineno": 109,
+      "class": null
+    },
+    "callee": "open",
+    "target": null,
+    "lineno": 112
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "write_file",
+    "caller_definition": {
+      "type": "function",
+      "name": "write_file",
+      "file": "sublist3r.py",
+      "lineno": 109,
+      "class": null
+    },
+    "callee": "str",
+    "target": null,
+    "lineno": 112
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "write_file",
+    "caller_definition": {
+      "type": "function",
+      "name": "write_file",
+      "file": "sublist3r.py",
+      "lineno": 109,
+      "class": null
+    },
+    "callee": "f.write",
+    "target": null,
+    "lineno": 114
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "subdomain_sorting_key",
+    "caller_definition": {
+      "type": "function",
+      "name": "subdomain_sorting_key",
+      "file": "sublist3r.py",
+      "lineno": 117,
+      "class": null
+    },
+    "callee": "hostname.split",
+    "target": null,
+    "lineno": 137
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 144,
+      "class": "enumratorBase"
+    },
+    "callee": "urlparse.urlparse",
+    "target": null,
+    "lineno": 146
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 144,
+      "class": "enumratorBase"
+    },
+    "callee": "requests.Session",
+    "target": null,
+    "lineno": 147
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 144,
+      "class": "enumratorBase"
+    },
+    "callee": "self.print_banner",
+    "target": {
+      "type": "method",
+      "name": "print_banner",
+      "file": "sublist3r.py",
+      "lineno": 167,
+      "class": "enumratorBase"
+    },
+    "lineno": 160
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.print_",
+    "caller_definition": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "callee": "print",
+    "target": null,
+    "lineno": 164
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.print_banner",
+    "caller_definition": {
+      "type": "method",
+      "name": "print_banner",
+      "file": "sublist3r.py",
+      "lineno": 167,
+      "class": "enumratorBase"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 169
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.send_req",
+    "caller_definition": {
+      "type": "method",
+      "name": "send_req",
+      "file": "sublist3r.py",
+      "lineno": 172,
+      "class": "enumratorBase"
+    },
+    "callee": "self.base_url.format",
+    "target": null,
+    "lineno": 174
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.send_req",
+    "caller_definition": {
+      "type": "method",
+      "name": "send_req",
+      "file": "sublist3r.py",
+      "lineno": 172,
+      "class": "enumratorBase"
+    },
+    "callee": "self.session.get",
+    "target": null,
+    "lineno": 176
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.send_req",
+    "caller_definition": {
+      "type": "method",
+      "name": "send_req",
+      "file": "sublist3r.py",
+      "lineno": 172,
+      "class": "enumratorBase"
+    },
+    "callee": "self.get_response",
+    "target": {
+      "type": "method",
+      "name": "get_response",
+      "file": "sublist3r.py",
+      "lineno": 181,
+      "class": "enumratorBase"
+    },
+    "lineno": 179
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.get_response",
+    "caller_definition": {
+      "type": "method",
+      "name": "get_response",
+      "file": "sublist3r.py",
+      "lineno": 181,
+      "class": "enumratorBase"
+    },
+    "callee": "hasattr",
+    "target": null,
+    "lineno": 184
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 220,
+      "class": "enumratorBase"
+    },
+    "callee": "self.generate_query",
+    "target": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 212,
+      "class": "enumratorBase"
+    },
+    "lineno": 227
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 220,
+      "class": "enumratorBase"
+    },
+    "callee": "query.count",
+    "target": null,
+    "lineno": 228
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 220,
+      "class": "enumratorBase"
+    },
+    "callee": "self.check_max_subdomains",
+    "target": {
+      "type": "method",
+      "name": "check_max_subdomains",
+      "file": "sublist3r.py",
+      "lineno": 186,
+      "class": "enumratorBase"
+    },
+    "lineno": 232
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 220,
+      "class": "enumratorBase"
+    },
+    "callee": "self.get_page",
+    "target": {
+      "type": "method",
+      "name": "get_page",
+      "file": "sublist3r.py",
+      "lineno": 216,
+      "class": "enumratorBase"
+    },
+    "lineno": 233
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 220,
+      "class": "enumratorBase"
+    },
+    "callee": "self.check_max_pages",
+    "target": {
+      "type": "method",
+      "name": "check_max_pages",
+      "file": "sublist3r.py",
+      "lineno": 191,
+      "class": "enumratorBase"
+    },
+    "lineno": 235
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 220,
+      "class": "enumratorBase"
+    },
+    "callee": "self.send_req",
+    "target": {
+      "type": "method",
+      "name": "send_req",
+      "file": "sublist3r.py",
+      "lineno": 172,
+      "class": "enumratorBase"
+    },
+    "lineno": 237
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 220,
+      "class": "enumratorBase"
+    },
+    "callee": "self.check_response_errors",
+    "target": {
+      "type": "method",
+      "name": "check_response_errors",
+      "file": "sublist3r.py",
+      "lineno": 202,
+      "class": "enumratorBase"
+    },
+    "lineno": 240
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 220,
+      "class": "enumratorBase"
+    },
+    "callee": "self.extract_domains",
+    "target": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 197,
+      "class": "enumratorBase"
+    },
+    "lineno": 242
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 220,
+      "class": "enumratorBase"
+    },
+    "callee": "self.get_page",
+    "target": {
+      "type": "method",
+      "name": "get_page",
+      "file": "sublist3r.py",
+      "lineno": 216,
+      "class": "enumratorBase"
+    },
+    "lineno": 247
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBase.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 220,
+      "class": "enumratorBase"
+    },
+    "callee": "self.should_sleep",
+    "target": {
+      "type": "method",
+      "name": "should_sleep",
+      "file": "sublist3r.py",
+      "lineno": 208,
+      "class": "enumratorBase"
+    },
+    "lineno": 254
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBaseThreaded.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 260,
+      "class": "enumratorBaseThreaded"
+    },
+    "callee": "threading.Lock",
+    "target": null,
+    "lineno": 260
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBaseThreaded.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 260,
+      "class": "enumratorBaseThreaded"
+    },
+    "callee": "enumratorBase.__init__",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 144,
+      "class": "enumratorBase"
+    },
+    "lineno": 262
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBaseThreaded.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 260,
+      "class": "enumratorBaseThreaded"
+    },
+    "callee": "multiprocessing.Process.__init__",
+    "target": null,
+    "lineno": 263
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBaseThreaded.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "sublist3r.py",
+      "lineno": 268,
+      "class": "enumratorBaseThreaded"
+    },
+    "callee": "self.enumerate",
+    "target": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 220,
+      "class": "enumratorBase"
+    },
+    "lineno": 269
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "enumratorBaseThreaded.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "sublist3r.py",
+      "lineno": 268,
+      "class": "enumratorBaseThreaded"
+    },
+    "callee": "self.q.append",
+    "target": null,
+    "lineno": 271
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 275,
+      "class": "GoogleEnum"
+    },
+    "callee": "super.__init__",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 260,
+      "class": "enumratorBaseThreaded"
+    },
+    "lineno": 281
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 275,
+      "class": "GoogleEnum"
+    },
+    "callee": "super",
+    "target": null,
+    "lineno": 281
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 285,
+      "class": "GoogleEnum"
+    },
+    "callee": "list",
+    "target": null,
+    "lineno": 286
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 285,
+      "class": "GoogleEnum"
+    },
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 287
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 285,
+      "class": "GoogleEnum"
+    },
+    "callee": "link_regx.findall",
+    "target": null,
+    "lineno": 289
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 285,
+      "class": "GoogleEnum"
+    },
+    "callee": "re.sub",
+    "target": null,
+    "lineno": 291
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 285,
+      "class": "GoogleEnum"
+    },
+    "callee": "link.startswith",
+    "target": null,
+    "lineno": 292
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 285,
+      "class": "GoogleEnum"
+    },
+    "callee": "urlparse.urlparse",
+    "target": null,
+    "lineno": 294
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 285,
+      "class": "GoogleEnum"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 297
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 285,
+      "class": "GoogleEnum"
+    },
+    "callee": "self.subdomains.append",
+    "target": null,
+    "lineno": 298
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 285,
+      "class": "GoogleEnum"
+    },
+    "callee": "subdomain.strip",
+    "target": null,
+    "lineno": 298
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.check_response_errors",
+    "caller_definition": {
+      "type": "method",
+      "name": "check_response_errors",
+      "file": "sublist3r.py",
+      "lineno": 303,
+      "class": "GoogleEnum"
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 304
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.check_response_errors",
+    "caller_definition": {
+      "type": "method",
+      "name": "check_response_errors",
+      "file": "sublist3r.py",
+      "lineno": 303,
+      "class": "GoogleEnum"
+    },
+    "callee": "type",
+    "target": null,
+    "lineno": 304
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.check_response_errors",
+    "caller_definition": {
+      "type": "method",
+      "name": "check_response_errors",
+      "file": "sublist3r.py",
+      "lineno": 303,
+      "class": "GoogleEnum"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 305
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.check_response_errors",
+    "caller_definition": {
+      "type": "method",
+      "name": "check_response_errors",
+      "file": "sublist3r.py",
+      "lineno": 303,
+      "class": "GoogleEnum"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 306
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.should_sleep",
+    "caller_definition": {
+      "type": "method",
+      "name": "should_sleep",
+      "file": "sublist3r.py",
+      "lineno": 310,
+      "class": "GoogleEnum"
+    },
+    "callee": "time.sleep",
+    "target": null,
+    "lineno": 311
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.generate_query",
+    "caller_definition": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 314,
+      "class": "GoogleEnum"
+    },
+    "callee": "join",
+    "target": null,
+    "lineno": 317
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.generate_query",
+    "caller_definition": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 314,
+      "class": "GoogleEnum"
+    },
+    "callee": "fmt.format",
+    "target": null,
+    "lineno": 318
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "GoogleEnum.generate_query",
+    "caller_definition": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 314,
+      "class": "GoogleEnum"
+    },
+    "callee": "format",
+    "target": null,
+    "lineno": 320
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 325,
+      "class": "YahooEnum"
+    },
+    "callee": "super.__init__",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 260,
+      "class": "enumratorBaseThreaded"
+    },
+    "lineno": 331
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 325,
+      "class": "YahooEnum"
+    },
+    "callee": "super",
+    "target": null,
+    "lineno": 331
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 335,
+      "class": "YahooEnum"
+    },
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 336
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 335,
+      "class": "YahooEnum"
+    },
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 337
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 335,
+      "class": "YahooEnum"
+    },
+    "callee": "link_regx.findall",
+    "target": null,
+    "lineno": 340
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 335,
+      "class": "YahooEnum"
+    },
+    "callee": "link_regx2.findall",
+    "target": null,
+    "lineno": 341
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 335,
+      "class": "YahooEnum"
+    },
+    "callee": "re.sub",
+    "target": null,
+    "lineno": 344
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 335,
+      "class": "YahooEnum"
+    },
+    "callee": "link.startswith",
+    "target": null,
+    "lineno": 345
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 335,
+      "class": "YahooEnum"
+    },
+    "callee": "urlparse.urlparse",
+    "target": null,
+    "lineno": 347
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 335,
+      "class": "YahooEnum"
+    },
+    "callee": "subdomain.endswith",
+    "target": null,
+    "lineno": 348
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 335,
+      "class": "YahooEnum"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 352
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 335,
+      "class": "YahooEnum"
+    },
+    "callee": "self.subdomains.append",
+    "target": null,
+    "lineno": 353
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 335,
+      "class": "YahooEnum"
+    },
+    "callee": "subdomain.strip",
+    "target": null,
+    "lineno": 353
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.generate_query",
+    "caller_definition": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 365,
+      "class": "YahooEnum"
+    },
+    "callee": "join",
+    "target": null,
+    "lineno": 368
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.generate_query",
+    "caller_definition": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 365,
+      "class": "YahooEnum"
+    },
+    "callee": "fmt.format",
+    "target": null,
+    "lineno": 369
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "YahooEnum.generate_query",
+    "caller_definition": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 365,
+      "class": "YahooEnum"
+    },
+    "callee": "format",
+    "target": null,
+    "lineno": 371
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "AskEnum.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 376,
+      "class": "AskEnum"
+    },
+    "callee": "enumratorBaseThreaded.__init__",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 260,
+      "class": "enumratorBaseThreaded"
+    },
+    "lineno": 382
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "AskEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 386,
+      "class": "AskEnum"
+    },
+    "callee": "list",
+    "target": null,
+    "lineno": 387
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "AskEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 386,
+      "class": "AskEnum"
+    },
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 388
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "AskEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 386,
+      "class": "AskEnum"
+    },
+    "callee": "link_regx.findall",
+    "target": null,
+    "lineno": 390
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "AskEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 386,
+      "class": "AskEnum"
+    },
+    "callee": "link.startswith",
+    "target": null,
+    "lineno": 392
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "AskEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 386,
+      "class": "AskEnum"
+    },
+    "callee": "urlparse.urlparse",
+    "target": null,
+    "lineno": 394
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "AskEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 386,
+      "class": "AskEnum"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 397
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "AskEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 386,
+      "class": "AskEnum"
+    },
+    "callee": "self.subdomains.append",
+    "target": null,
+    "lineno": 398
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "AskEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 386,
+      "class": "AskEnum"
+    },
+    "callee": "subdomain.strip",
+    "target": null,
+    "lineno": 398
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "AskEnum.generate_query",
+    "caller_definition": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 407,
+      "class": "AskEnum"
+    },
+    "callee": "join",
+    "target": null,
+    "lineno": 410
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "AskEnum.generate_query",
+    "caller_definition": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 407,
+      "class": "AskEnum"
+    },
+    "callee": "fmt.format",
+    "target": null,
+    "lineno": 411
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "AskEnum.generate_query",
+    "caller_definition": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 407,
+      "class": "AskEnum"
+    },
+    "callee": "format",
+    "target": null,
+    "lineno": 413
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BingEnum.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 419,
+      "class": "BingEnum"
+    },
+    "callee": "enumratorBaseThreaded.__init__",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 260,
+      "class": "enumratorBaseThreaded"
+    },
+    "lineno": 425
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BingEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 430,
+      "class": "BingEnum"
+    },
+    "callee": "list",
+    "target": null,
+    "lineno": 431
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BingEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 430,
+      "class": "BingEnum"
+    },
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 432
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BingEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 430,
+      "class": "BingEnum"
+    },
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 433
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BingEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 430,
+      "class": "BingEnum"
+    },
+    "callee": "link_regx.findall",
+    "target": null,
+    "lineno": 435
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BingEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 430,
+      "class": "BingEnum"
+    },
+    "callee": "link_regx2.findall",
+    "target": null,
+    "lineno": 436
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BingEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 430,
+      "class": "BingEnum"
+    },
+    "callee": "re.sub",
+    "target": null,
+    "lineno": 440
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BingEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 430,
+      "class": "BingEnum"
+    },
+    "callee": "link.startswith",
+    "target": null,
+    "lineno": 441
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BingEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 430,
+      "class": "BingEnum"
+    },
+    "callee": "urlparse.urlparse",
+    "target": null,
+    "lineno": 443
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BingEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 430,
+      "class": "BingEnum"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 446
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BingEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 430,
+      "class": "BingEnum"
+    },
+    "callee": "self.subdomains.append",
+    "target": null,
+    "lineno": 447
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BingEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 430,
+      "class": "BingEnum"
+    },
+    "callee": "subdomain.strip",
+    "target": null,
+    "lineno": 447
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BingEnum.generate_query",
+    "caller_definition": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 453,
+      "class": "BingEnum"
+    },
+    "callee": "join",
+    "target": null,
+    "lineno": 456
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BingEnum.generate_query",
+    "caller_definition": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 453,
+      "class": "BingEnum"
+    },
+    "callee": "fmt.format",
+    "target": null,
+    "lineno": 457
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BingEnum.generate_query",
+    "caller_definition": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 453,
+      "class": "BingEnum"
+    },
+    "callee": "format",
+    "target": null,
+    "lineno": 459
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 464,
+      "class": "BaiduEnum"
+    },
+    "callee": "enumratorBaseThreaded.__init__",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 260,
+      "class": "enumratorBaseThreaded"
+    },
+    "lineno": 470
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 475,
+      "class": "BaiduEnum"
+    },
+    "callee": "list",
+    "target": null,
+    "lineno": 476
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 475,
+      "class": "BaiduEnum"
+    },
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 479
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 475,
+      "class": "BaiduEnum"
+    },
+    "callee": "link_regx.findall",
+    "target": null,
+    "lineno": 481
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 475,
+      "class": "BaiduEnum"
+    },
+    "callee": "re.sub",
+    "target": null,
+    "lineno": 483
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 475,
+      "class": "BaiduEnum"
+    },
+    "callee": "link.startswith",
+    "target": null,
+    "lineno": 484
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 475,
+      "class": "BaiduEnum"
+    },
+    "callee": "urlparse.urlparse",
+    "target": null,
+    "lineno": 486
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 475,
+      "class": "BaiduEnum"
+    },
+    "callee": "subdomain.endswith",
+    "target": null,
+    "lineno": 487
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 475,
+      "class": "BaiduEnum"
+    },
+    "callee": "subdomain_list.append",
+    "target": null,
+    "lineno": 488
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 475,
+      "class": "BaiduEnum"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 492
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 475,
+      "class": "BaiduEnum"
+    },
+    "callee": "self.subdomains.append",
+    "target": null,
+    "lineno": 493
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 475,
+      "class": "BaiduEnum"
+    },
+    "callee": "subdomain.strip",
+    "target": null,
+    "lineno": 493
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 475,
+      "class": "BaiduEnum"
+    },
+    "callee": "self.findsubs",
+    "target": {
+      "type": "method",
+      "name": "findsubs",
+      "file": "sublist3r.py",
+      "lineno": 500,
+      "class": "BaiduEnum"
+    },
+    "lineno": 497
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.findsubs",
+    "caller_definition": {
+      "type": "method",
+      "name": "findsubs",
+      "file": "sublist3r.py",
+      "lineno": 500,
+      "class": "BaiduEnum"
+    },
+    "callee": "Counter",
+    "target": null,
+    "lineno": 501
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.findsubs",
+    "caller_definition": {
+      "type": "method",
+      "name": "findsubs",
+      "file": "sublist3r.py",
+      "lineno": 500,
+      "class": "BaiduEnum"
+    },
+    "callee": "max",
+    "target": null,
+    "lineno": 502
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.findsubs",
+    "caller_definition": {
+      "type": "method",
+      "name": "findsubs",
+      "file": "sublist3r.py",
+      "lineno": 500,
+      "class": "BaiduEnum"
+    },
+    "callee": "count.pop",
+    "target": null,
+    "lineno": 503
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.findsubs",
+    "caller_definition": {
+      "type": "method",
+      "name": "findsubs",
+      "file": "sublist3r.py",
+      "lineno": 500,
+      "class": "BaiduEnum"
+    },
+    "callee": "max",
+    "target": null,
+    "lineno": 504
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.should_sleep",
+    "caller_definition": {
+      "type": "method",
+      "name": "should_sleep",
+      "file": "sublist3r.py",
+      "lineno": 510,
+      "class": "BaiduEnum"
+    },
+    "callee": "time.sleep",
+    "target": null,
+    "lineno": 511
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.should_sleep",
+    "caller_definition": {
+      "type": "method",
+      "name": "should_sleep",
+      "file": "sublist3r.py",
+      "lineno": 510,
+      "class": "BaiduEnum"
+    },
+    "callee": "random.randint",
+    "target": null,
+    "lineno": 511
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.generate_query",
+    "caller_definition": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 514,
+      "class": "BaiduEnum"
+    },
+    "callee": "join",
+    "target": null,
+    "lineno": 516
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.generate_query",
+    "caller_definition": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 514,
+      "class": "BaiduEnum"
+    },
+    "callee": "format",
+    "target": null,
+    "lineno": 517
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "BaiduEnum.generate_query",
+    "caller_definition": {
+      "type": "method",
+      "name": "generate_query",
+      "file": "sublist3r.py",
+      "lineno": 514,
+      "class": "BaiduEnum"
+    },
+    "callee": "format",
+    "target": null,
+    "lineno": 519
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 524,
+      "class": "NetcraftEnum"
+    },
+    "callee": "threading.Lock",
+    "target": null,
+    "lineno": 528
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 524,
+      "class": "NetcraftEnum"
+    },
+    "callee": "super.__init__",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 260,
+      "class": "enumratorBaseThreaded"
+    },
+    "lineno": 529
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 524,
+      "class": "NetcraftEnum"
+    },
+    "callee": "super",
+    "target": null,
+    "lineno": 529
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.req",
+    "caller_definition": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 533,
+      "class": "NetcraftEnum"
+    },
+    "callee": "self.session.get",
+    "target": null,
+    "lineno": 536
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.req",
+    "caller_definition": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 533,
+      "class": "NetcraftEnum"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 538
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.get_next",
+    "caller_definition": {
+      "type": "method",
+      "name": "get_next",
+      "file": "sublist3r.py",
+      "lineno": 542,
+      "class": "NetcraftEnum"
+    },
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 543
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.get_next",
+    "caller_definition": {
+      "type": "method",
+      "name": "get_next",
+      "file": "sublist3r.py",
+      "lineno": 542,
+      "class": "NetcraftEnum"
+    },
+    "callee": "link_regx.findall",
+    "target": null,
+    "lineno": 544
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.get_next",
+    "caller_definition": {
+      "type": "method",
+      "name": "get_next",
+      "file": "sublist3r.py",
+      "lineno": 542,
+      "class": "NetcraftEnum"
+    },
+    "callee": "re.sub",
+    "target": null,
+    "lineno": 545
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.create_cookies",
+    "caller_definition": {
+      "type": "method",
+      "name": "create_cookies",
+      "file": "sublist3r.py",
+      "lineno": 549,
+      "class": "NetcraftEnum"
+    },
+    "callee": "dict",
+    "target": null,
+    "lineno": 550
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.create_cookies",
+    "caller_definition": {
+      "type": "method",
+      "name": "create_cookies",
+      "file": "sublist3r.py",
+      "lineno": 549,
+      "class": "NetcraftEnum"
+    },
+    "callee": "split",
+    "target": null,
+    "lineno": 551
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.create_cookies",
+    "caller_definition": {
+      "type": "method",
+      "name": "create_cookies",
+      "file": "sublist3r.py",
+      "lineno": 549,
+      "class": "NetcraftEnum"
+    },
+    "callee": "cookie.find",
+    "target": null,
+    "lineno": 551
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.create_cookies",
+    "caller_definition": {
+      "type": "method",
+      "name": "create_cookies",
+      "file": "sublist3r.py",
+      "lineno": 549,
+      "class": "NetcraftEnum"
+    },
+    "callee": "hashlib.sha1.hexdigest",
+    "target": null,
+    "lineno": 554
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.create_cookies",
+    "caller_definition": {
+      "type": "method",
+      "name": "create_cookies",
+      "file": "sublist3r.py",
+      "lineno": 549,
+      "class": "NetcraftEnum"
+    },
+    "callee": "hashlib.sha1",
+    "target": null,
+    "lineno": 554
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.create_cookies",
+    "caller_definition": {
+      "type": "method",
+      "name": "create_cookies",
+      "file": "sublist3r.py",
+      "lineno": 549,
+      "class": "NetcraftEnum"
+    },
+    "callee": "urllib.unquote.encode",
+    "target": null,
+    "lineno": 554
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.create_cookies",
+    "caller_definition": {
+      "type": "method",
+      "name": "create_cookies",
+      "file": "sublist3r.py",
+      "lineno": 549,
+      "class": "NetcraftEnum"
+    },
+    "callee": "urllib.unquote",
+    "target": null,
+    "lineno": 554
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.get_cookies",
+    "caller_definition": {
+      "type": "method",
+      "name": "get_cookies",
+      "file": "sublist3r.py",
+      "lineno": 557,
+      "class": "NetcraftEnum"
+    },
+    "callee": "self.create_cookies",
+    "target": {
+      "type": "method",
+      "name": "create_cookies",
+      "file": "sublist3r.py",
+      "lineno": 549,
+      "class": "NetcraftEnum"
+    },
+    "lineno": 559
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 564,
+      "class": "NetcraftEnum"
+    },
+    "callee": "self.base_url.format",
+    "target": null,
+    "lineno": 565
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 564,
+      "class": "NetcraftEnum"
+    },
+    "callee": "self.req",
+    "target": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 533,
+      "class": "NetcraftEnum"
+    },
+    "lineno": 566
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 564,
+      "class": "NetcraftEnum"
+    },
+    "callee": "self.get_cookies",
+    "target": {
+      "type": "method",
+      "name": "get_cookies",
+      "file": "sublist3r.py",
+      "lineno": 557,
+      "class": "NetcraftEnum"
+    },
+    "lineno": 567
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 564,
+      "class": "NetcraftEnum"
+    },
+    "callee": "self.base_url.format",
+    "target": null,
+    "lineno": 568
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 564,
+      "class": "NetcraftEnum"
+    },
+    "callee": "self.get_response",
+    "target": {
+      "type": "method",
+      "name": "get_response",
+      "file": "sublist3r.py",
+      "lineno": 181,
+      "class": "enumratorBase"
+    },
+    "lineno": 570
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 564,
+      "class": "NetcraftEnum"
+    },
+    "callee": "self.req",
+    "target": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 533,
+      "class": "NetcraftEnum"
+    },
+    "lineno": 570
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 564,
+      "class": "NetcraftEnum"
+    },
+    "callee": "self.extract_domains",
+    "target": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 577,
+      "class": "NetcraftEnum"
+    },
+    "lineno": 571
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 564,
+      "class": "NetcraftEnum"
+    },
+    "callee": "self.get_next",
+    "target": {
+      "type": "method",
+      "name": "get_next",
+      "file": "sublist3r.py",
+      "lineno": 542,
+      "class": "NetcraftEnum"
+    },
+    "lineno": 575
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 577,
+      "class": "NetcraftEnum"
+    },
+    "callee": "list",
+    "target": null,
+    "lineno": 578
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 577,
+      "class": "NetcraftEnum"
+    },
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 579
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 577,
+      "class": "NetcraftEnum"
+    },
+    "callee": "link_regx.findall",
+    "target": null,
+    "lineno": 581
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 577,
+      "class": "NetcraftEnum"
+    },
+    "callee": "urlparse.urlparse",
+    "target": null,
+    "lineno": 583
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 577,
+      "class": "NetcraftEnum"
+    },
+    "callee": "subdomain.endswith",
+    "target": null,
+    "lineno": 584
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 577,
+      "class": "NetcraftEnum"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 588
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 577,
+      "class": "NetcraftEnum"
+    },
+    "callee": "self.subdomains.append",
+    "target": null,
+    "lineno": 589
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "NetcraftEnum.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 577,
+      "class": "NetcraftEnum"
+    },
+    "callee": "subdomain.strip",
+    "target": null,
+    "lineno": 589
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 596,
+      "class": "DNSdumpster"
+    },
+    "callee": "threading.BoundedSemaphore",
+    "target": null,
+    "lineno": 602
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 596,
+      "class": "DNSdumpster"
+    },
+    "callee": "super.__init__",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 260,
+      "class": "enumratorBaseThreaded"
+    },
+    "lineno": 604
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 596,
+      "class": "DNSdumpster"
+    },
+    "callee": "super",
+    "target": null,
+    "lineno": 604
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.check_host",
+    "caller_definition": {
+      "type": "method",
+      "name": "check_host",
+      "file": "sublist3r.py",
+      "lineno": 607,
+      "class": "DNSdumpster"
+    },
+    "callee": "dns.resolver.Resolver",
+    "target": null,
+    "lineno": 609
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.check_host",
+    "caller_definition": {
+      "type": "method",
+      "name": "check_host",
+      "file": "sublist3r.py",
+      "lineno": 607,
+      "class": "DNSdumpster"
+    },
+    "callee": "self.lock.acquire",
+    "target": null,
+    "lineno": 611
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.check_host",
+    "caller_definition": {
+      "type": "method",
+      "name": "check_host",
+      "file": "sublist3r.py",
+      "lineno": 607,
+      "class": "DNSdumpster"
+    },
+    "callee": "to_text",
+    "target": null,
+    "lineno": 613
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.check_host",
+    "caller_definition": {
+      "type": "method",
+      "name": "check_host",
+      "file": "sublist3r.py",
+      "lineno": 607,
+      "class": "DNSdumpster"
+    },
+    "callee": "Resolver.query",
+    "target": null,
+    "lineno": 613
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.check_host",
+    "caller_definition": {
+      "type": "method",
+      "name": "check_host",
+      "file": "sublist3r.py",
+      "lineno": 607,
+      "class": "DNSdumpster"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 616
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.check_host",
+    "caller_definition": {
+      "type": "method",
+      "name": "check_host",
+      "file": "sublist3r.py",
+      "lineno": 607,
+      "class": "DNSdumpster"
+    },
+    "callee": "self.live_subdomains.append",
+    "target": null,
+    "lineno": 618
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.check_host",
+    "caller_definition": {
+      "type": "method",
+      "name": "check_host",
+      "file": "sublist3r.py",
+      "lineno": 607,
+      "class": "DNSdumpster"
+    },
+    "callee": "self.lock.release",
+    "target": null,
+    "lineno": 621
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.req",
+    "caller_definition": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 624,
+      "class": "DNSdumpster"
+    },
+    "callee": "dict",
+    "target": null,
+    "lineno": 626
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.req",
+    "caller_definition": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 624,
+      "class": "DNSdumpster"
+    },
+    "callee": "self.session.get",
+    "target": null,
+    "lineno": 630
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.req",
+    "caller_definition": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 624,
+      "class": "DNSdumpster"
+    },
+    "callee": "self.session.post",
+    "target": null,
+    "lineno": 632
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.req",
+    "caller_definition": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 624,
+      "class": "DNSdumpster"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 634
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.req",
+    "caller_definition": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 624,
+      "class": "DNSdumpster"
+    },
+    "callee": "self.get_response",
+    "target": {
+      "type": "method",
+      "name": "get_response",
+      "file": "sublist3r.py",
+      "lineno": 181,
+      "class": "enumratorBase"
+    },
+    "lineno": 636
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.get_csrftoken",
+    "caller_definition": {
+      "type": "method",
+      "name": "get_csrftoken",
+      "file": "sublist3r.py",
+      "lineno": 638,
+      "class": "DNSdumpster"
+    },
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 639
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.get_csrftoken",
+    "caller_definition": {
+      "type": "method",
+      "name": "get_csrftoken",
+      "file": "sublist3r.py",
+      "lineno": 638,
+      "class": "DNSdumpster"
+    },
+    "callee": "csrf_regex.findall",
+    "target": null,
+    "lineno": 640
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.get_csrftoken",
+    "caller_definition": {
+      "type": "method",
+      "name": "get_csrftoken",
+      "file": "sublist3r.py",
+      "lineno": 638,
+      "class": "DNSdumpster"
+    },
+    "callee": "token.strip",
+    "target": null,
+    "lineno": 641
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 643,
+      "class": "DNSdumpster"
+    },
+    "callee": "self.req",
+    "target": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 624,
+      "class": "DNSdumpster"
+    },
+    "lineno": 644
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 643,
+      "class": "DNSdumpster"
+    },
+    "callee": "self.get_csrftoken",
+    "target": {
+      "type": "method",
+      "name": "get_csrftoken",
+      "file": "sublist3r.py",
+      "lineno": 638,
+      "class": "DNSdumpster"
+    },
+    "lineno": 645
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 643,
+      "class": "DNSdumpster"
+    },
+    "callee": "self.req",
+    "target": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 624,
+      "class": "DNSdumpster"
+    },
+    "lineno": 647
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 643,
+      "class": "DNSdumpster"
+    },
+    "callee": "self.extract_domains",
+    "target": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 655,
+      "class": "DNSdumpster"
+    },
+    "lineno": 648
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 643,
+      "class": "DNSdumpster"
+    },
+    "callee": "threading.Thread",
+    "target": null,
+    "lineno": 650
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 643,
+      "class": "DNSdumpster"
+    },
+    "callee": "t.start",
+    "target": null,
+    "lineno": 651
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 643,
+      "class": "DNSdumpster"
+    },
+    "callee": "t.join",
+    "target": null,
+    "lineno": 652
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 655,
+      "class": "DNSdumpster"
+    },
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 656
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 655,
+      "class": "DNSdumpster"
+    },
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 657
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 655,
+      "class": "DNSdumpster"
+    },
+    "callee": "tbl_regex.findall",
+    "target": null,
+    "lineno": 660
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 655,
+      "class": "DNSdumpster"
+    },
+    "callee": "link_regex.findall",
+    "target": null,
+    "lineno": 663
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 655,
+      "class": "DNSdumpster"
+    },
+    "callee": "list",
+    "target": null,
+    "lineno": 664
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 655,
+      "class": "DNSdumpster"
+    },
+    "callee": "set",
+    "target": null,
+    "lineno": 664
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 655,
+      "class": "DNSdumpster"
+    },
+    "callee": "link.strip",
+    "target": null,
+    "lineno": 666
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 655,
+      "class": "DNSdumpster"
+    },
+    "callee": "subdomain.endswith",
+    "target": null,
+    "lineno": 667
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 655,
+      "class": "DNSdumpster"
+    },
+    "callee": "self.subdomains.append",
+    "target": null,
+    "lineno": 670
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "DNSdumpster.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 655,
+      "class": "DNSdumpster"
+    },
+    "callee": "subdomain.strip",
+    "target": null,
+    "lineno": 670
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "Virustotal.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 675,
+      "class": "Virustotal"
+    },
+    "callee": "threading.Lock",
+    "target": null,
+    "lineno": 679
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "Virustotal.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 675,
+      "class": "Virustotal"
+    },
+    "callee": "super.__init__",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 260,
+      "class": "enumratorBaseThreaded"
+    },
+    "lineno": 681
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "Virustotal.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 675,
+      "class": "Virustotal"
+    },
+    "callee": "super",
+    "target": null,
+    "lineno": 681
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "Virustotal.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 675,
+      "class": "Virustotal"
+    },
+    "callee": "self.base_url.format",
+    "target": null,
+    "lineno": 682
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "Virustotal.send_req",
+    "caller_definition": {
+      "type": "method",
+      "name": "send_req",
+      "file": "sublist3r.py",
+      "lineno": 686,
+      "class": "Virustotal"
+    },
+    "callee": "self.session.get",
+    "target": null,
+    "lineno": 688
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "Virustotal.send_req",
+    "caller_definition": {
+      "type": "method",
+      "name": "send_req",
+      "file": "sublist3r.py",
+      "lineno": 686,
+      "class": "Virustotal"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 690
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "Virustotal.send_req",
+    "caller_definition": {
+      "type": "method",
+      "name": "send_req",
+      "file": "sublist3r.py",
+      "lineno": 686,
+      "class": "Virustotal"
+    },
+    "callee": "self.get_response",
+    "target": {
+      "type": "method",
+      "name": "get_response",
+      "file": "sublist3r.py",
+      "lineno": 181,
+      "class": "enumratorBase"
+    },
+    "lineno": 693
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "Virustotal.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 696,
+      "class": "Virustotal"
+    },
+    "callee": "self.send_req",
+    "target": {
+      "type": "method",
+      "name": "send_req",
+      "file": "sublist3r.py",
+      "lineno": 686,
+      "class": "Virustotal"
+    },
+    "lineno": 698
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "Virustotal.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 696,
+      "class": "Virustotal"
+    },
+    "callee": "json.loads",
+    "target": null,
+    "lineno": 699
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "Virustotal.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 696,
+      "class": "Virustotal"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 701
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "Virustotal.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 696,
+      "class": "Virustotal"
+    },
+    "callee": "self.extract_domains",
+    "target": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 710,
+      "class": "Virustotal"
+    },
+    "lineno": 707
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "Virustotal.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 710,
+      "class": "Virustotal"
+    },
+    "callee": "subdomain.endswith",
+    "target": null,
+    "lineno": 716
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "Virustotal.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 710,
+      "class": "Virustotal"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 720
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "Virustotal.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 710,
+      "class": "Virustotal"
+    },
+    "callee": "self.subdomains.append",
+    "target": null,
+    "lineno": 721
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "Virustotal.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 710,
+      "class": "Virustotal"
+    },
+    "callee": "subdomain.strip",
+    "target": null,
+    "lineno": 721
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "ThreatCrowd.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 727,
+      "class": "ThreatCrowd"
+    },
+    "callee": "threading.Lock",
+    "target": null,
+    "lineno": 731
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "ThreatCrowd.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 727,
+      "class": "ThreatCrowd"
+    },
+    "callee": "super.__init__",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 260,
+      "class": "enumratorBaseThreaded"
+    },
+    "lineno": 733
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "ThreatCrowd.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 727,
+      "class": "ThreatCrowd"
+    },
+    "callee": "super",
+    "target": null,
+    "lineno": 733
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "ThreatCrowd.req",
+    "caller_definition": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 736,
+      "class": "ThreatCrowd"
+    },
+    "callee": "self.session.get",
+    "target": null,
+    "lineno": 738
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "ThreatCrowd.req",
+    "caller_definition": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 736,
+      "class": "ThreatCrowd"
+    },
+    "callee": "self.get_response",
+    "target": {
+      "type": "method",
+      "name": "get_response",
+      "file": "sublist3r.py",
+      "lineno": 181,
+      "class": "enumratorBase"
+    },
+    "lineno": 742
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "ThreatCrowd.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 744,
+      "class": "ThreatCrowd"
+    },
+    "callee": "self.base_url.format",
+    "target": null,
+    "lineno": 745
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "ThreatCrowd.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 744,
+      "class": "ThreatCrowd"
+    },
+    "callee": "self.req",
+    "target": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 736,
+      "class": "ThreatCrowd"
+    },
+    "lineno": 746
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "ThreatCrowd.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 744,
+      "class": "ThreatCrowd"
+    },
+    "callee": "self.extract_domains",
+    "target": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 750,
+      "class": "ThreatCrowd"
+    },
+    "lineno": 747
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "ThreatCrowd.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 750,
+      "class": "ThreatCrowd"
+    },
+    "callee": "json.loads",
+    "target": null,
+    "lineno": 752
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "ThreatCrowd.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 750,
+      "class": "ThreatCrowd"
+    },
+    "callee": "link.strip",
+    "target": null,
+    "lineno": 754
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "ThreatCrowd.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 750,
+      "class": "ThreatCrowd"
+    },
+    "callee": "subdomain.endswith",
+    "target": null,
+    "lineno": 755
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "ThreatCrowd.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 750,
+      "class": "ThreatCrowd"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 759
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "ThreatCrowd.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 750,
+      "class": "ThreatCrowd"
+    },
+    "callee": "self.subdomains.append",
+    "target": null,
+    "lineno": 760
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "ThreatCrowd.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 750,
+      "class": "ThreatCrowd"
+    },
+    "callee": "subdomain.strip",
+    "target": null,
+    "lineno": 760
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 766,
+      "class": "CrtSearch"
+    },
+    "callee": "threading.Lock",
+    "target": null,
+    "lineno": 770
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 766,
+      "class": "CrtSearch"
+    },
+    "callee": "super.__init__",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 260,
+      "class": "enumratorBaseThreaded"
+    },
+    "lineno": 772
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 766,
+      "class": "CrtSearch"
+    },
+    "callee": "super",
+    "target": null,
+    "lineno": 772
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.req",
+    "caller_definition": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 775,
+      "class": "CrtSearch"
+    },
+    "callee": "self.session.get",
+    "target": null,
+    "lineno": 777
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.req",
+    "caller_definition": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 775,
+      "class": "CrtSearch"
+    },
+    "callee": "self.get_response",
+    "target": {
+      "type": "method",
+      "name": "get_response",
+      "file": "sublist3r.py",
+      "lineno": 181,
+      "class": "enumratorBase"
+    },
+    "lineno": 781
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 783,
+      "class": "CrtSearch"
+    },
+    "callee": "self.base_url.format",
+    "target": null,
+    "lineno": 784
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 783,
+      "class": "CrtSearch"
+    },
+    "callee": "self.req",
+    "target": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 775,
+      "class": "CrtSearch"
+    },
+    "lineno": 785
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 783,
+      "class": "CrtSearch"
+    },
+    "callee": "self.extract_domains",
+    "target": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 790,
+      "class": "CrtSearch"
+    },
+    "lineno": 787
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 790,
+      "class": "CrtSearch"
+    },
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 791
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 790,
+      "class": "CrtSearch"
+    },
+    "callee": "link_regx.findall",
+    "target": null,
+    "lineno": 793
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 790,
+      "class": "CrtSearch"
+    },
+    "callee": "link.strip",
+    "target": null,
+    "lineno": 795
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 790,
+      "class": "CrtSearch"
+    },
+    "callee": "subdomain.endswith",
+    "target": null,
+    "lineno": 796
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 790,
+      "class": "CrtSearch"
+    },
+    "callee": "subdomain.find",
+    "target": null,
+    "lineno": 800
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 790,
+      "class": "CrtSearch"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 804
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 790,
+      "class": "CrtSearch"
+    },
+    "callee": "self.subdomains.append",
+    "target": null,
+    "lineno": 805
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "CrtSearch.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 790,
+      "class": "CrtSearch"
+    },
+    "callee": "subdomain.strip",
+    "target": null,
+    "lineno": 805
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "PassiveDNS.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 811,
+      "class": "PassiveDNS"
+    },
+    "callee": "threading.Lock",
+    "target": null,
+    "lineno": 815
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "PassiveDNS.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 811,
+      "class": "PassiveDNS"
+    },
+    "callee": "super.__init__",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 260,
+      "class": "enumratorBaseThreaded"
+    },
+    "lineno": 817
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "PassiveDNS.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 811,
+      "class": "PassiveDNS"
+    },
+    "callee": "super",
+    "target": null,
+    "lineno": 817
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "PassiveDNS.req",
+    "caller_definition": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 820,
+      "class": "PassiveDNS"
+    },
+    "callee": "self.session.get",
+    "target": null,
+    "lineno": 822
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "PassiveDNS.req",
+    "caller_definition": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 820,
+      "class": "PassiveDNS"
+    },
+    "callee": "self.get_response",
+    "target": {
+      "type": "method",
+      "name": "get_response",
+      "file": "sublist3r.py",
+      "lineno": 181,
+      "class": "enumratorBase"
+    },
+    "lineno": 826
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "PassiveDNS.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 828,
+      "class": "PassiveDNS"
+    },
+    "callee": "self.base_url.format",
+    "target": null,
+    "lineno": 829
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "PassiveDNS.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 828,
+      "class": "PassiveDNS"
+    },
+    "callee": "self.req",
+    "target": {
+      "type": "method",
+      "name": "req",
+      "file": "sublist3r.py",
+      "lineno": 820,
+      "class": "PassiveDNS"
+    },
+    "lineno": 830
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "PassiveDNS.enumerate",
+    "caller_definition": {
+      "type": "method",
+      "name": "enumerate",
+      "file": "sublist3r.py",
+      "lineno": 828,
+      "class": "PassiveDNS"
+    },
+    "callee": "self.extract_domains",
+    "target": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 837,
+      "class": "PassiveDNS"
+    },
+    "lineno": 834
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "PassiveDNS.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 837,
+      "class": "PassiveDNS"
+    },
+    "callee": "json.loads",
+    "target": null,
+    "lineno": 839
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "PassiveDNS.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 837,
+      "class": "PassiveDNS"
+    },
+    "callee": "self.print_",
+    "target": {
+      "type": "method",
+      "name": "print_",
+      "file": "sublist3r.py",
+      "lineno": 162,
+      "class": "enumratorBase"
+    },
+    "lineno": 843
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "PassiveDNS.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 837,
+      "class": "PassiveDNS"
+    },
+    "callee": "self.subdomains.append",
+    "target": null,
+    "lineno": 844
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "PassiveDNS.extract_domains",
+    "caller_definition": {
+      "type": "method",
+      "name": "extract_domains",
+      "file": "sublist3r.py",
+      "lineno": 837,
+      "class": "PassiveDNS"
+    },
+    "callee": "subdomain.strip",
+    "target": null,
+    "lineno": 844
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "portscan.__init__",
+    "caller_definition": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 850,
+      "class": "portscan"
+    },
+    "callee": "threading.BoundedSemaphore",
+    "target": null,
+    "lineno": 854
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "portscan.port_scan",
+    "caller_definition": {
+      "type": "method",
+      "name": "port_scan",
+      "file": "sublist3r.py",
+      "lineno": 856,
+      "class": "portscan"
+    },
+    "callee": "self.lock.acquire",
+    "target": null,
+    "lineno": 858
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "portscan.port_scan",
+    "caller_definition": {
+      "type": "method",
+      "name": "port_scan",
+      "file": "sublist3r.py",
+      "lineno": 856,
+      "class": "portscan"
+    },
+    "callee": "socket.socket",
+    "target": null,
+    "lineno": 861
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "portscan.port_scan",
+    "caller_definition": {
+      "type": "method",
+      "name": "port_scan",
+      "file": "sublist3r.py",
+      "lineno": 856,
+      "class": "portscan"
+    },
+    "callee": "s.settimeout",
+    "target": null,
+    "lineno": 862
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "portscan.port_scan",
+    "caller_definition": {
+      "type": "method",
+      "name": "port_scan",
+      "file": "sublist3r.py",
+      "lineno": 856,
+      "class": "portscan"
+    },
+    "callee": "s.connect_ex",
+    "target": null,
+    "lineno": 863
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "portscan.port_scan",
+    "caller_definition": {
+      "type": "method",
+      "name": "port_scan",
+      "file": "sublist3r.py",
+      "lineno": 856,
+      "class": "portscan"
+    },
+    "callee": "int",
+    "target": null,
+    "lineno": 863
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "portscan.port_scan",
+    "caller_definition": {
+      "type": "method",
+      "name": "port_scan",
+      "file": "sublist3r.py",
+      "lineno": 856,
+      "class": "portscan"
+    },
+    "callee": "openports.append",
+    "target": null,
+    "lineno": 865
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "portscan.port_scan",
+    "caller_definition": {
+      "type": "method",
+      "name": "port_scan",
+      "file": "sublist3r.py",
+      "lineno": 856,
+      "class": "portscan"
+    },
+    "callee": "s.close",
+    "target": null,
+    "lineno": 866
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "portscan.port_scan",
+    "caller_definition": {
+      "type": "method",
+      "name": "port_scan",
+      "file": "sublist3r.py",
+      "lineno": 856,
+      "class": "portscan"
+    },
+    "callee": "self.lock.release",
+    "target": null,
+    "lineno": 869
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "portscan.port_scan",
+    "caller_definition": {
+      "type": "method",
+      "name": "port_scan",
+      "file": "sublist3r.py",
+      "lineno": 856,
+      "class": "portscan"
+    },
+    "callee": "len",
+    "target": null,
+    "lineno": 870
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "portscan.port_scan",
+    "caller_definition": {
+      "type": "method",
+      "name": "port_scan",
+      "file": "sublist3r.py",
+      "lineno": 856,
+      "class": "portscan"
+    },
+    "callee": "print",
+    "target": null,
+    "lineno": 871
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "portscan.port_scan",
+    "caller_definition": {
+      "type": "method",
+      "name": "port_scan",
+      "file": "sublist3r.py",
+      "lineno": 856,
+      "class": "portscan"
+    },
+    "callee": "join",
+    "target": null,
+    "lineno": 871
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "portscan.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "sublist3r.py",
+      "lineno": 873,
+      "class": "portscan"
+    },
+    "callee": "threading.Thread",
+    "target": null,
+    "lineno": 875
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "portscan.run",
+    "caller_definition": {
+      "type": "method",
+      "name": "run",
+      "file": "sublist3r.py",
+      "lineno": 873,
+      "class": "portscan"
+    },
+    "callee": "t.start",
+    "target": null,
+    "lineno": 876
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "set",
+    "target": null,
+    "lineno": 880
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "set",
+    "target": null,
+    "lineno": 881
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "list",
+    "target": null,
+    "lineno": 884
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "multiprocessing.Manager.list",
+    "target": null,
+    "lineno": 886
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "multiprocessing.Manager",
+    "target": null,
+    "lineno": 886
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "re.compile",
+    "target": null,
+    "lineno": 893
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "domain_check.match",
+    "target": null,
+    "lineno": 894
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "print",
+    "target": null,
+    "lineno": 896
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "domain.startswith",
+    "target": null,
+    "lineno": 899
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "domain.startswith",
+    "target": null,
+    "lineno": 899
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "urlparse.urlparse",
+    "target": null,
+    "lineno": 902
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "print",
+    "target": null,
+    "lineno": 905
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "print",
+    "target": null,
+    "lineno": 908
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "engines.split",
+    "target": null,
+    "lineno": 932
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "engine.lower",
+    "target": null,
+    "lineno": 934
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "chosenEnums.append",
+    "target": null,
+    "lineno": 935
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "engine.lower",
+    "target": null,
+    "lineno": 935
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "BaiduEnum",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 464,
+      "class": "BaiduEnum"
+    },
+    "lineno": 938
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "YahooEnum",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 325,
+      "class": "YahooEnum"
+    },
+    "lineno": 938
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "GoogleEnum",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 275,
+      "class": "GoogleEnum"
+    },
+    "lineno": 938
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "BingEnum",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 419,
+      "class": "BingEnum"
+    },
+    "lineno": 938
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "AskEnum",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 376,
+      "class": "AskEnum"
+    },
+    "lineno": 938
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "NetcraftEnum",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 524,
+      "class": "NetcraftEnum"
+    },
+    "lineno": 938
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "DNSdumpster",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 596,
+      "class": "DNSdumpster"
+    },
+    "lineno": 938
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "Virustotal",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 675,
+      "class": "Virustotal"
+    },
+    "lineno": 938
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "ThreatCrowd",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 727,
+      "class": "ThreatCrowd"
+    },
+    "lineno": 938
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "CrtSearch",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 766,
+      "class": "CrtSearch"
+    },
+    "lineno": 938
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "PassiveDNS",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 811,
+      "class": "PassiveDNS"
+    },
+    "lineno": 938
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "enum.start",
+    "target": null,
+    "lineno": 940
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "enum.join",
+    "target": null,
+    "lineno": 942
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "set",
+    "target": null,
+    "lineno": 944
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "search_list.add",
+    "target": null,
+    "lineno": 946
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "print",
+    "target": null,
+    "lineno": 950
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "os.path.dirname",
+    "target": null,
+    "lineno": 952
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "os.path.realpath",
+    "target": null,
+    "lineno": 952
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "os.path.join",
+    "target": null,
+    "lineno": 953
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "os.path.join",
+    "target": null,
+    "lineno": 954
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "subbrute.print_target",
+    "target": {
+      "type": "function",
+      "name": "print_target",
+      "file": "subbrute/subbrute.py",
+      "lineno": 407,
+      "class": null
+    },
+    "lineno": 958
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "search_list.union",
+    "target": null,
+    "lineno": 960
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "sorted",
+    "target": null,
+    "lineno": 963
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "write_file",
+    "target": {
+      "type": "function",
+      "name": "write_file",
+      "file": "sublist3r.py",
+      "lineno": 109,
+      "class": null
+    },
+    "lineno": 966
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "print",
+    "target": null,
+    "lineno": 969
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "len",
+    "target": null,
+    "lineno": 969
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "print",
+    "target": null,
+    "lineno": 973
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "ports.split",
+    "target": null,
+    "lineno": 974
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "portscan",
+    "target": {
+      "type": "method",
+      "name": "__init__",
+      "file": "sublist3r.py",
+      "lineno": 850,
+      "class": "portscan"
+    },
+    "lineno": 975
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "pscan.run",
+    "target": {
+      "type": "method",
+      "name": "run",
+      "file": "sublist3r.py",
+      "lineno": 873,
+      "class": "portscan"
+    },
+    "lineno": 976
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "main",
+    "caller_definition": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "callee": "print",
+    "target": null,
+    "lineno": 980
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "interactive",
+    "caller_definition": {
+      "type": "function",
+      "name": "interactive",
+      "file": "sublist3r.py",
+      "lineno": 984,
+      "class": null
+    },
+    "callee": "parse_args",
+    "target": {
+      "type": "function",
+      "name": "parse_args",
+      "file": "sublist3r.py",
+      "lineno": 93,
+      "class": null
+    },
+    "lineno": 985
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "interactive",
+    "caller_definition": {
+      "type": "function",
+      "name": "interactive",
+      "file": "sublist3r.py",
+      "lineno": 984,
+      "class": null
+    },
+    "callee": "no_color",
+    "target": {
+      "type": "function",
+      "name": "no_color",
+      "file": "sublist3r.py",
+      "lineno": 69,
+      "class": null
+    },
+    "lineno": 996
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "interactive",
+    "caller_definition": {
+      "type": "function",
+      "name": "interactive",
+      "file": "sublist3r.py",
+      "lineno": 984,
+      "class": null
+    },
+    "callee": "banner",
+    "target": {
+      "type": "function",
+      "name": "banner",
+      "file": "sublist3r.py",
+      "lineno": 74,
+      "class": null
+    },
+    "lineno": 997
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "interactive",
+    "caller_definition": {
+      "type": "function",
+      "name": "interactive",
+      "file": "sublist3r.py",
+      "lineno": 984,
+      "class": null
+    },
+    "callee": "main",
+    "target": {
+      "type": "function",
+      "name": "main",
+      "file": "sublist3r.py",
+      "lineno": 879,
+      "class": null
+    },
+    "lineno": 998
+  },
+  {
+    "caller_file": "sublist3r.py",
+    "caller": "<module>",
+    "caller_definition": null,
+    "callee": "interactive",
+    "target": {
+      "type": "function",
+      "name": "interactive",
+      "file": "sublist3r.py",
+      "lineno": 984,
+      "class": null
+    },
+    "lineno": 1001
+  }
+]

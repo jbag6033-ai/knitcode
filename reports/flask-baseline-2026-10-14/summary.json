@@ -1,0 +1,392 @@
+{
+  "generated_at": "2026-10-14T18:00:21.594024+09:00",
+  "python_version": "3.12.2",
+  "flask_commit": "d086db856be187255b8ec61ef409357393020f32",
+  "knitcode_head": "f98e902b1631d2efda054591552655774a08bc4a",
+  "scope": "benchmark/Flask/src/flask (tests, examples and external dependencies excluded)",
+  "source_sha256": {
+    "__init__.py": "2daebda4dc29fed5cb36c912a6115a234e9a4b5f9c33fd795e4bfeffd0cc9386",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "app.py": "510b83880097af4450933561cba96e5a1c432bf53ea9264ca947da53752e3a2b",
+    "blueprints.py": "a79404da5635f0622d6ddaff44a46967c0e8d7b8343ef4062206644940e15f69",
+    "cli.py": "1f476f816464b4250caaf6cc6fdf3f5fc956456a7da61cb7d0a1e03e3e7e5f3b",
+    "config.py": "3e2a85d033da9ba1d6d051f8087d61a574c17b7d0d4b38cf10ec2bcf56fa92dd",
+    "ctx.py": "e21952d044159438765eb27848b0fe4c75f83faee8645181a09a1eccb1d5cab7",
+    "debughelpers.py": "75c8258dc3487e1d0857dc5d3c7ca471fac1a254282570fa57e56d71aada037e",
+    "globals.py": "1abe9a4e0a96c8bb28c232e2b08993fffdfb9bb694be2230755e54a46a40ca4d",
+    "helpers.py": "4e2b647be02a93f655ddd058105c5ed8e9ffe3daef398ef3dd21e3a3817623fb",
+    "json/__init__.py": "b402bd0b89b87250f932bf4b8e2bec7af7130a8ebdc3ff5a0bba3865e9984173",
+    "json/provider.py": "cefdd0dfdde6bb6f73e7b853aa789de432e2af52a8c920c1c2af17228235b72c",
+    "json/tag.py": "0e168dc2e20e85db7647be28382f58e19f19a6bc4562245be5d50fe5bcb220dc",
+    "logging.py": "f2c33758c4ee6e2d5c05bd9cfe53e45a937427c74c02aae029160b2e2d5d0952",
+    "sansio/app.py": "cf5df9f2972be7cad9878df7ea321804617d769f47823984abbe0a9b1cbc460b",
+    "sansio/blueprints.py": "da960c5792daf2f1cef8c14113d9c95c8ce389a9689abb395fe867f4054d0ba1",
+    "sansio/scaffold.py": "d6578d2b5f06d227482e4110f8b750d04c8d94c9525c8857f9183f727ee2858b",
+    "sessions.py": "26fa7cc311b841f8409ad93933d3a3a52b068150c6f15fc3cd0c107e7a9aaf9d",
+    "signals.py": "57b94c530c3b0aa809d93854067d4f89ab59b506a73b2b7b399a6ed86648fb7e",
+    "templating.py": "3ed7a044a96c911267e855b7359d9f159f06321f75fbe678a6656923d5e0989e",
+    "testing.py": "629d481658aaec7076a55913eda38c270ec45d430b34b2f9d38b2eec2b0ad3da",
+    "typing.py": "ac3b0f12bf2a89e10c6b8f04d142b6103f9f1495030b8ff2c559d9952e060a00",
+    "views.py": "d0d5ceecd117533169c924cdbb01ea5bb0ee74b7b1c4b22855f73f0e4dea0ee7",
+    "wrappers.py": "8d492fe2655e93622ae21c3177846faab20c6faf41bf43c49438162e6779391a"
+  },
+  "analyzer_sha256": {
+    "analyzer/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "analyzer/evaluate.py": "622d287c1f2bf070b49e4276bf63cb0ab861f91ed10758aab9f64819e88439b5",
+    "analyzer/graph.py": "2c3a6725e046f0bb2092222a7a607f587a02fc86068e3797f1163b98b99c243f",
+    "analyzer/parser.py": "1335a324cb0f5280c42d12b41994f165ae3565efa0003b27806b68d6825a0c6b",
+    "analyzer/resolver.py": "a51bf23a91bd671032b1f32567960e6a0dcbf209b64b47f6204c6c02f8993c60",
+    "analyzer/visitor.py": "ec63786ada7c156fbb64d999e60f0b7246842e0471edd8f3d291cd2b8e0d0cc6",
+    "analyzer/visualize.py": "e30a37b527494aea0364bbf9e90b4a4812e8ce22e05b8454f6fdabb131265966"
+  },
+  "runner_sha256": "e53b47c813da7b9195de6b82c6dd12194d3634e2b6253c44f240c423a3936002",
+  "files": 24,
+  "source_lines": 9507,
+  "ast_call_expressions": 1223,
+  "function_and_method_definitions": 400,
+  "class_definitions": 53,
+  "call_records": 1230,
+  "resolved_records": 237,
+  "unresolved_records": 993,
+  "resolution_rate": 0.1926829268292683,
+  "graph_nodes": 363,
+  "graph_edge_records": 237,
+  "unique_caller_callee_edges": 202,
+  "timing_seconds": {
+    "parse_and_visit": 0.030749375000596046,
+    "resolve": 0.004747041966766119,
+    "graph": 0.000932374969124794,
+    "total_analysis": 0.03642879193648696
+  },
+  "top_unresolved_callees": [
+    [
+      "isinstance",
+      55
+    ],
+    [
+      "t.TypeVar",
+      36
+    ],
+    [
+      "super",
+      28
+    ],
+    [
+      "getattr",
+      17
+    ],
+    [
+      "RuntimeError",
+      17
+    ],
+    [
+      "ValueError",
+      13
+    ],
+    [
+      "len",
+      12
+    ],
+    [
+      "os.path.join",
+      11
+    ],
+    [
+      "_cv_app.get",
+      11
+    ],
+    [
+      "click.option",
+      11
+    ],
+    [
+      "super.__init__",
+      10
+    ],
+    [
+      "TypeError",
+      10
+    ],
+    [
+      "type",
+      10
+    ],
+    [
+      "_signals.signal",
+      10
+    ],
+    [
+      "defaultdict",
+      9
+    ],
+    [
+      "app_ctx._get_current_object",
+      8
+    ],
+    [
+      "next",
+      8
+    ],
+    [
+      "callable",
+      8
+    ],
+    [
+      "os.path.dirname",
+      8
+    ],
+    [
+      "join",
+      8
+    ]
+  ],
+  "per_file": [
+    {
+      "file": "__init__.py",
+      "lines": 39,
+      "ast_call_expressions": 0,
+      "function_and_method_definitions": 0,
+      "class_definitions": 0,
+      "call_records": 0,
+      "resolved_records": 0,
+      "unresolved_records": 0
+    },
+    {
+      "file": "__main__.py",
+      "lines": 3,
+      "ast_call_expressions": 1,
+      "function_and_method_definitions": 0,
+      "class_definitions": 0,
+      "call_records": 1,
+      "resolved_records": 1,
+      "unresolved_records": 0
+    },
+    {
+      "file": "app.py",
+      "lines": 1625,
+      "ast_call_expressions": 206,
+      "function_and_method_definitions": 41,
+      "class_definitions": 1,
+      "call_records": 206,
+      "resolved_records": 58,
+      "unresolved_records": 148
+    },
+    {
+      "file": "blueprints.py",
+      "lines": 128,
+      "ast_call_expressions": 14,
+      "function_and_method_definitions": 4,
+      "class_definitions": 1,
+      "call_records": 14,
+      "resolved_records": 5,
+      "unresolved_records": 9
+    },
+    {
+      "file": "cli.py",
+      "lines": 1126,
+      "ast_call_expressions": 238,
+      "function_and_method_definitions": 36,
+      "class_definitions": 6,
+      "call_records": 238,
+      "resolved_records": 37,
+      "unresolved_records": 201
+    },
+    {
+      "file": "config.py",
+      "lines": 367,
+      "ast_call_expressions": 38,
+      "function_and_method_definitions": 14,
+      "class_definitions": 2,
+      "call_records": 38,
+      "resolved_records": 5,
+      "unresolved_records": 33
+    },
+    {
+      "file": "ctx.py",
+      "lines": 540,
+      "ast_call_expressions": 56,
+      "function_and_method_definitions": 28,
+      "class_definitions": 2,
+      "call_records": 56,
+      "resolved_records": 7,
+      "unresolved_records": 49
+    },
+    {
+      "file": "debughelpers.py",
+      "lines": 179,
+      "ast_call_expressions": 41,
+      "function_and_method_definitions": 7,
+      "class_definitions": 4,
+      "call_records": 41,
+      "resolved_records": 2,
+      "unresolved_records": 39
+    },
+    {
+      "file": "globals.py",
+      "lines": 77,
+      "ast_call_expressions": 9,
+      "function_and_method_definitions": 2,
+      "class_definitions": 6,
+      "call_records": 9,
+      "resolved_records": 0,
+      "unresolved_records": 9
+    },
+    {
+      "file": "helpers.py",
+      "lines": 679,
+      "ast_call_expressions": 59,
+      "function_and_method_definitions": 24,
+      "class_definitions": 1,
+      "call_records": 60,
+      "resolved_records": 6,
+      "unresolved_records": 54
+    },
+    {
+      "file": "json/__init__.py",
+      "lines": 170,
+      "ast_call_expressions": 11,
+      "function_and_method_definitions": 5,
+      "class_definitions": 0,
+      "call_records": 11,
+      "resolved_records": 0,
+      "unresolved_records": 11
+    },
+    {
+      "file": "json/provider.py",
+      "lines": 215,
+      "ast_call_expressions": 32,
+      "function_and_method_definitions": 11,
+      "class_definitions": 2,
+      "call_records": 32,
+      "resolved_records": 6,
+      "unresolved_records": 26
+    },
+    {
+      "file": "json/tag.py",
+      "lines": 327,
+      "ast_call_expressions": 53,
+      "function_and_method_definitions": 34,
+      "class_definitions": 10,
+      "call_records": 53,
+      "resolved_records": 7,
+      "unresolved_records": 46
+    },
+    {
+      "file": "logging.py",
+      "lines": 79,
+      "ast_call_expressions": 9,
+      "function_and_method_definitions": 3,
+      "class_definitions": 0,
+      "call_records": 9,
+      "resolved_records": 1,
+      "unresolved_records": 8
+    },
+    {
+      "file": "sansio/app.py",
+      "lines": 1014,
+      "ast_call_expressions": 76,
+      "function_and_method_definitions": 39,
+      "class_definitions": 1,
+      "call_records": 73,
+      "resolved_records": 16,
+      "unresolved_records": 57
+    },
+    {
+      "file": "sansio/blueprints.py",
+      "lines": 692,
+      "ast_call_expressions": 112,
+      "function_and_method_definitions": 47,
+      "class_definitions": 2,
+      "call_records": 119,
+      "resolved_records": 36,
+      "unresolved_records": 83
+    },
+    {
+      "file": "sansio/scaffold.py",
+      "lines": 800,
+      "ast_call_expressions": 84,
+      "function_and_method_definitions": 37,
+      "class_definitions": 1,
+      "call_records": 85,
+      "resolved_records": 12,
+      "unresolved_records": 73
+    },
+    {
+      "file": "sessions.py",
+      "lines": 385,
+      "ast_call_expressions": 42,
+      "function_and_method_definitions": 22,
+      "class_definitions": 5,
+      "call_records": 42,
+      "resolved_records": 13,
+      "unresolved_records": 29
+    },
+    {
+      "file": "signals.py",
+      "lines": 17,
+      "ast_call_expressions": 11,
+      "function_and_method_definitions": 0,
+      "class_definitions": 0,
+      "call_records": 11,
+      "resolved_records": 0,
+      "unresolved_records": 11
+    },
+    {
+      "file": "templating.py",
+      "lines": 212,
+      "ast_call_expressions": 43,
+      "function_and_method_definitions": 15,
+      "class_definitions": 2,
+      "call_records": 43,
+      "resolved_records": 11,
+      "unresolved_records": 32
+    },
+    {
+      "file": "testing.py",
+      "lines": 298,
+      "ast_call_expressions": 52,
+      "function_and_method_definitions": 13,
+      "class_definitions": 3,
+      "call_records": 53,
+      "resolved_records": 12,
+      "unresolved_records": 41
+    },
+    {
+      "file": "typing.py",
+      "lines": 87,
+      "ast_call_expressions": 1,
+      "function_and_method_definitions": 0,
+      "class_definitions": 0,
+      "call_records": 1,
+      "resolved_records": 0,
+      "unresolved_records": 1
+    },
+    {
+      "file": "views.py",
+      "lines": 191,
+      "ast_call_expressions": 23,
+      "function_and_method_definitions": 6,
+      "class_definitions": 2,
+      "call_records": 23,
+      "resolved_records": 0,
+      "unresolved_records": 23
+    },
+    {
+      "file": "wrappers.py",
+      "lines": 257,
+      "ast_call_expressions": 12,
+      "function_and_method_definitions": 12,
+      "class_definitions": 2,
+      "call_records": 12,
+      "resolved_records": 2,
+      "unresolved_records": 10
+    }
+  ],
+  "limitations": [
+    "No ground truth: resolution rate is not precision, recall or accuracy.",
+    "Unresolved calls include builtins and external APIs as well as missed internal calls.",
+    "Call records include synthetic enclosing-function-to-lambda relationships.",
+    "Resolved targets can be incorrect; no complete manual correctness audit was performed.",
+    "Analyzer hashes identify the working-tree implementation, including uncommitted changes."
+  ]
+}
