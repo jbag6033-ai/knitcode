@@ -23,3 +23,10 @@ lib/
 
 # External benchmark repositories
 benchmark/
+
+# Packaged VS Code extension
+dist/
+
+# Local experiment outputs; publish only the curated verification snapshot.
+/reports/*
+!/reports/release-2026-10-16/

@@ -1,0 +1,23 @@
+{
+  "name": "knitcode",
+  "displayName": "KnitCode",
+  "description": "Explore Python call relationships and Git co-change evidence.",
+  "version": "0.1.1",
+  "publisher": "knitcode-local",
+  "engines": {"vscode": "^1.85.0"},
+  "categories": ["Visualization"],
+  "main": "./extension.js",
+  "extensionKind": ["workspace"],
+  "capabilities": {"untrustedWorkspaces": {"supported": false}},
+  "contributes": {
+    "commands": [{"command": "knitcode.open", "title": "KnitCode: Open Code Map"}],
+    "configuration": {
+      "title": "KnitCode",
+      "properties": {
+        "knitcode.pythonPath": {"type": "string", "default": "", "description": "Python 3.10+ executable. Empty: use the development checkout's Knitcode environment if present, otherwise python3."},
+        "knitcode.historyDays": {"type": "number", "default": 90, "minimum": 1, "maximum": 3650},
+        "knitcode.commitLimit": {"type": "number", "default": 300, "minimum": 1, "maximum": 2000}
+      }
+    }
+  }
+}

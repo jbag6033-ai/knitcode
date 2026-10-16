@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT))
 
 from analyzer.evaluate import make_qualified_name
 from analyzer.resolver import CallResolver
+from analyzer.comparison import compare_pairs, declared_symbols, project_declared_functions
 
 BASE = ROOT / "benchmark/PyAnalyzer/Data/RQ3/macro-benchmark C"
 # Package modules keep their package prefix. Script roots use their filenames.
@@ -41,7 +42,14 @@ def module_name(file_name, prefix):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--entrypoints", type=Path, help="Explicit public API input contract; one project only")
+    parser.add_argument("--projects", nargs="+", choices=sorted(SCOPES))
+    parser.add_argument("--include-smaller", action="store_true",
+                        help="Include small projects as explicitly labeled holdout evaluations")
     args = parser.parse_args()
+    if args.entrypoints and (not args.projects or len(args.projects) != 1):
+        parser.error('--entrypoints requires exactly one --projects selection')
+    entrypoints = json.loads(args.entrypoints.read_text()) if args.entrypoints else None
     output = args.output.resolve()
     output.mkdir(parents=True, exist_ok=True)
     inventory = []
@@ -57,7 +65,9 @@ def main():
     reports = []
     for item in inventory:
         name = item["project"]
-        if name != "Sublist3r" and item["lines"] <= threshold:
+        if args.projects and name not in args.projects:
+            continue
+        if not args.include_smaller and name != "Sublist3r" and item["lines"] <= threshold:
             continue
         project = ROOT / item["scope"]
         prefix = item["module_prefix"]
@@ -81,7 +91,7 @@ def main():
         report["ground_truth_edges"] = len(truth)
         started = perf_counter()
         try:
-            resolver = CallResolver(project)
+            resolver = CallResolver(project, entrypoints=entrypoints)
             resolver.analyze_project()
             calls = resolver.resolve_calls()
             predicted = set()
@@ -103,6 +113,7 @@ def main():
             recall = len(tp) / len(truth) if truth else 0
             report.update({
                 "status": "ok", "call_records": len(calls),
+                "value_flow": getattr(resolver, "value_flow_status", None),
                 "resolved_records": sum(call["target"] is not None for call in calls),
                 "predicted_edges": len(predicted), "tp": len(tp), "fp": len(fp), "fn": len(fn),
                 "precision": precision, "recall": recall,
@@ -113,6 +124,20 @@ def main():
                 "true_positive": sorted(tp), "false_positive": sorted(fp), "false_negative": sorted(fn),
             })
             write_json(output / f"{name}-calls.json", calls)
+            symbols = declared_symbols(resolver, prefix)
+            projected_truth, excluded_truth = project_declared_functions(truth, symbols)
+            projected_predicted, excluded_predicted = project_declared_functions(predicted, symbols)
+            projected_metrics, projected_diff = compare_pairs(projected_truth, projected_predicted)
+            report['function_projection'] = {
+                'contract': 'source-declared-functions-v1', **projected_metrics,
+                'excluded_truth_edges': len(excluded_truth),
+                'excluded_predicted_edges': len(excluded_predicted),
+            }
+            write_json(output / f"{name}-function-projection.json", {
+                'metrics': report['function_projection'], 'edges': projected_diff,
+                'excluded_truth': excluded_truth, 'excluded_predicted': excluded_predicted,
+                'symbols': {key: sorted(values) for key, values in symbols.items()},
+            })
         except Exception:
             report.update({"status": "error", "traceback": traceback.format_exc()})
         report["analysis_seconds"] = perf_counter() - started
@@ -121,7 +146,11 @@ def main():
                           if key not in {"source_sha256", "internal_modules", "top_unresolved"}}, ensure_ascii=False))
     write_json(output / "summary.json", {
         "generated_at": datetime.now().astimezone().isoformat(), "python": platform.python_version(),
-        "selection": "Core-source Python lines > Sublist3r; comments, docstrings and blanks included",
+        "selection": ("Explicit inclusion of smaller projects; comments, docstrings and blanks included" if args.include_smaller
+                      else "Core-source Python lines > Sublist3r; comments, docstrings and blanks included"),
+        "requested_projects": args.projects,
+        "entrypoints": entrypoints,
+        "entrypoints_sha256": hashlib.sha256(args.entrypoints.read_bytes()).hexdigest() if args.entrypoints else None,
         "threshold_lines": threshold, "inventory": inventory, "results": reports,
         "analyzer_sha256": {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
                             for path in sorted((ROOT / "analyzer").glob("*.py"))},

@@ -1,0 +1,52 @@
+{
+  "name": "knitcode-flow",
+  "displayName": "KnitCode Flow",
+  "description": "Function-centered call flow and a separate Git co-change panel.",
+  "version": "0.1.1",
+  "publisher": "knitcode-local",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization"
+  ],
+  "main": "./extension.js",
+  "extensionKind": [
+    "workspace"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": false
+    }
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "knitcodeFlow.open",
+        "title": "KnitCode Flow: Open Call Flow"
+      }
+    ],
+    "configuration": {
+      "title": "KnitCode Flow",
+      "properties": {
+        "knitcodeFlow.pythonPath": {
+          "type": "string",
+          "default": "",
+          "description": "Python 3.10+ executable. Empty: use the development checkout's Knitcode environment if present, otherwise python3."
+        },
+        "knitcodeFlow.historyDays": {
+          "type": "number",
+          "default": 90,
+          "minimum": 1,
+          "maximum": 3650
+        },
+        "knitcodeFlow.commitLimit": {
+          "type": "number",
+          "default": 300,
+          "minimum": 1,
+          "maximum": 2000
+        }
+      }
+    }
+  }
+}

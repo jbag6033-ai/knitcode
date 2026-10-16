@@ -1,59 +1,41 @@
 # KnitCode 작업 체크포인트
 
-기록일: 2026-10-14 (Asia/Seoul)
+기준일: 2026-10-16 (Asia/Seoul)
 
-## 현재 상태
+## 현재 구현
 
-Python 정적 호출 분석기의 첫 안정화와 Flask 및 PyAnalyzer 베이스라인 평가를 완료했습니다. 다음 분석 개선은 아직 적용하지 않았습니다.
+- Python AST 호출 해석과 bounded ValueFlow: 상속, 생성자, 메서드, 인자/반환값, 컨테이너, property, with, lambda, 제한된 guarded getattr.
+- 불변 AST/정의 정보는 분석 인스턴스별로 캐시하며 상태 의존 expression/invoke 결과는 캐시하지 않음.
+- argparse 등록/Namespace 전달, 명시 문자열 argv의 subcommand/alias 선택, parser factory의 최대 3개 호출 위치 문맥, 제한된 if/else guard, parse 위치 이전 default 재생.
+- opt-in 외부 입력 계약: 함수/매개변수/프로젝트 클래스 검증 후 instance 값을 입력으로 제공. API 및 --entrypoints CLI 지원. target 코드를 실행하거나 정답 edge를 직접 주입하지 않음.
+- 두 독립 확장: KnitCode / KnitCode Flow. 기존 화면·명령·설정 유지. 소스 패키징 시 현재 분석기를 각각 번들. 설치된 구버전 VSIX는 자동 업데이트되지 않음.
 
-- lambda 본문 중복 순회 제거
-- 호출 순서와 무관하게 메서드 노드의 타입·클래스·줄 번호 유지
-- 로컬 및 `from ... import Class` 생성자 해석 통일
-- `pytest.ini`로 기본 수집 범위를 `tests/`로 제한
-- 기존 10개 + 회귀 8개 = 테스트 18개 통과
+## 최신 검증
 
-## 결과와 재현 자료
+테스트 **139개 통과**. 기본 모드의 5개 프로젝트 전체 raw edge/호출 레코드는 직전 개선 전후 동일함을 검증.
 
-- Flask: `reports/flask-baseline-2026-10-14/README.md`
-  - 24파일, 9,507줄, 호출 관계 1,230개 중 237개 해석 (19.27%)
-  - ground truth가 없어 정확도/F1을 측정한 것은 아님
-  - Flask 커밋: `d086db856be187255b8ec61ef409357393020f32`
-- PyAnalyzer: `reports/pyanalyzer-baseline-2026-10-14/README.md`
-  - Sublist3r: TP 115 / FP 0 / FN 0, F1 1.0000
-  - autojump: TP 134 / FP 22 / FN 83, F1 0.7185
-  - face_classification: TP 95 / FP 2 / FN 4, F1 0.9694
-  - fabric: 상대 import 해석 예외로 중단, 점수 없음
-  - 테스트·예제 등을 제외한 핵심 `.py` 소스 줄 수가 Sublist3r보다 큰 프로젝트만 선정
-- 실행 스크립트: `scripts/flask_baseline.py`, `scripts/pyanalyzer_baseline.py`
-- 전체 호출, 차이 목록, 입력 및 분석기 해시는 각 보고서 디렉터리의 JSON/CSV에 보관
+| 프로젝트 | TP | FP | FN | F1 |
+|---|---:|---:|---:|---:|
+| Sublist3r | 115 | 0 | 0 | 1.0000 |
+| autojump | 205 | 15 | 12 | 0.9382 |
+| fabric | 44 | 8 | 18 | 0.7719 |
+| face_classification | 97 | 4 | 2 | 0.9700 |
+| asciinema | 131 | 50 | 13 | 0.8062 |
 
-## 다음 작업
+최근 parser snapshot 수정은 재현된 오연결을 복구했으나 현재 benchmark에 해당 패턴이 없어 위 점수는 유지됨.
 
-1. fabric의 `executor.py:84`, `ConnectionCall.make_context → Connection`에서 발생하는 상대 import 오류부터 해결한다.
-   - `from . import Connection`의 `ImportFrom.module`은 `None`이다.
-   - resolver의 `module.replace()` 예외를 재현하는 회귀 테스트를 먼저 추가한다.
-   - 단순히 예외를 건너뛰지 말고 패키지 및 상대 import 의미를 고려한다.
-2. 새 출력 폴더로 PyAnalyzer를 재평가하고 기존 베이스라인과 비교한다.
-3. autojump의 중첩 함수 전체 이름/scope 처리를 개선한다.
-   - 현재 `ArgumentParser.consume_optional` 대신 ground truth는 `ArgumentParser._parse_known_args.consume_optional`을 사용한다.
-4. 이후 파일 간 상속과 외부 부모 클래스 이름 충돌을 개선한다.
-   - Flask `testing.py:86`의 외부 부모 생성자가 로컬 동명 클래스 생성자로 잘못 연결된다.
+## 해석 시 구분
 
-변경 시 기존 테스트와 Sublist3r의 115개 edge를 유지한다. 원본 베이스라인을 덮어쓰지 않는다. 다음 작업은 계획이며 아직 구현되지 않았다.
+- asciinema는 초기 117/45/27에서 기본 131/50/13으로 개선. FP 50개는 통제된 입력과 네트워크/PTY/프로세스 경계 대체 하에서 호출 근거를 관찰. 전체 실제 환경에서의 완전성이나 benchmark 작성 의도 증명은 아님.
+- asciinema 남은 13개: 소스/정답 차이 10개 + 공개 API 입력 범위 3개. 명시적 입력 계약 적용 시 원본 정답 기준 134/50/10, F1 0.8171. 별도 교정안까지 적용한 145/39/0, F1 0.8815는 입력 가정 및 정답 변경 효과를 포함하며 기본 정확도가 아님.
+- autojump의 생성자/__call__, MRO/이름 차이는 별도 정답 검토 대상으로 조사. 기본 원시 점수는 유지.
+- 일반적인 완전한 경로/객체 민감 분석은 아님. 옵션 arity, namespace 주입, 모든 복합 조건, 함수 사이 임의 mutation 순서, 같은 호출 위치의 반복 객체 완전 구분은 미지원.
+- 실제 Extension Host 설치/화면 및 대형 저장소 전체 성능, 캐시 peak memory는 별도 검증 필요.
 
-## 검증 명령
+## 공개 자료와 로컬 기록
 
-프로젝트 루트에서 실행한다.
+공개할 결과는 [release 검증 요약](reports/release-2026-10-16/README.md)에 모음. 상세 source/GT/analyzer 해시도 해당 폴더에 보관. 재현에 필요한 benchmark URL/commit 및 명령을 기록함.
 
-```bash
-PYTHONDONTWRITEBYTECODE=1 Knitcode/bin/python -m pytest -q -p no:cacheprovider
-PYTHONDONTWRITEBYTECODE=1 Knitcode/bin/python -m analyzer.evaluate
-PYTHONDONTWRITEBYTECODE=1 Knitcode/bin/python scripts/pyanalyzer_baseline.py --output reports/pyanalyzer-next
-PYTHONDONTWRITEBYTECODE=1 Knitcode/bin/python scripts/flask_baseline.py --output reports/flask-next
-```
+전체 과거 체크포인트/README는 로컬 `reports/local-publication-backup-2026-10-16/`에 백업했으며 기존 상세 실험 자료도 로컬에 보존. benchmark 복사본, 중간 보고서, 구형 VSIX를 이번 새 커밋에 추가하지 않음. 이전 커밋의 기존 baseline 자료는 이력을 유지.
 
-## 로컬 환경 주의 사항
-
-`benchmark/`, 가상환경 `Knitcode/`, 생성 HTML 및 `lib/`는 기존 `.gitignore` 규칙으로 커밋에서 제외된다. 현재 머신에는 입력 소스와 HTML이 남아 있다. 다른 머신에서는 동일한 benchmark 데이터와 Python 의존성을 별도로 준비해야 한다. 보고서와 JSON/CSV, 재현 스크립트는 체크포인트에 포함한다. Flask HTML은 스크립트로 재생성할 수 있다.
-
-베이스라인의 `knitcode_head`는 측정 당시 HEAD이며, 당시 안정화 변경은 미커밋 상태였다. 실제 구현 비교에는 `analyzer_sha256`을 사용한다.
+다음 정확도 개선은 실제 실패 관계를 먼저 재현하고 수정하며, 전체 TP/FP 목록과 5개 프로젝트 회귀를 확인할 것. 정답 수정 효과·외부 입력 조건·기능 확장을 원본 benchmark 개선과 혼동하지 않을 것.

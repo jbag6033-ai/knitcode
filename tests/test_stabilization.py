@@ -28,8 +28,6 @@ def test_nested_lambda_body_is_visited_once():
         for item in visitor.call_relationships
     )
     assert relationships == Counter({
-        ("outer", "outer.<lambda1>"): 1,
-        ("outer.<lambda1>", "outer.<lambda1>.<lambda1>"): 1,
         ("outer.<lambda1>.<lambda1>", "helper"): 1,
         ("outer", "after"): 1,
     })

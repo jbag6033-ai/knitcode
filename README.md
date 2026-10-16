@@ -1,233 +1,78 @@
 # KnitCode
 
-KnitCode는 **Python 프로젝트의 코드 관계를 정적 분석하고 시각화하는 도구**입니다.
+Python 소스의 함수·클래스·호출 관계를 정적으로 분석하고, Git 변경 이력과 함께 VS Code에서 탐색하는 프로젝트입니다. 분석 대상 코드를 실행하지 않습니다.
 
-Python의 AST(Abstract Syntax Tree)를 기반으로 소스 코드를 분석하여 함수, 클래스, import, 함수 호출 등의 정보를 추출하고, 실제 코드 정의를 추적하여 **caller → callee 관계를 Call Graph 형태로 구성**합니다.
+두 확장은 각자의 화면과 명령을 유지하며 같은 분석기를 사용합니다.
 
-분석한 결과는 그래프로 시각화할 수 있으며, 정답 데이터가 존재하는 프로젝트에 대해서는 Precision, Recall, F1-score를 이용한 정량 평가도 수행할 수 있습니다.
+| 확장 | 인터페이스 | 실행 명령 |
+|---|---|---|
+| [KnitCode](vscode-extension/README.md) | 코드 관계 그래프·파일 탐색 | `KnitCode: Open Code Map` |
+| [KnitCode Flow](vscode-flow-extension/README.md) | 호출자 → 선택 함수 → 호출 대상 | `KnitCode Flow: Open Call Flow` |
 
----
+## 시작하기
 
-## 주요 기능
+Python 3.10 이상, VS Code 1.85 이상이 필요합니다. Git 이력 기능에는 Git이 필요합니다. 핵심 분석기·JSON export·확장 패키징은 Python 표준 라이브러리만 사용합니다. 검증 환경은 Python 3.12.2입니다.
 
-현재 KnitCode에서는 다음 기능을 지원합니다.
-
-- Python 소스 코드 AST 파싱
-- 함수 및 클래스 정의 추출
-- `import`, `from ... import ...` 분석
-- 함수 및 메서드 호출 추출
-- Caller → Callee 관계 분석
-- 파일 간(Cross-file) 함수 호출 추적
-- 클래스 상속 관계 분석
-- `self.method()` 호출 해석
-- `super().method()` 호출 해석
-- 명시적인 부모 클래스 메서드 호출 해석
-- 클래스 생성자 호출 → `__init__` 연결
-- 변수에 저장된 callable을 통한 간접 호출 분석
-- List Comprehension 내부 호출 분석
-- Nested Lambda Scope 처리
-- Call Graph 생성
-- Interactive HTML 그래프 시각화
-- Precision / Recall / F1-score 기반 성능 평가
-
----
-
-## 분석 과정
-
-KnitCode의 기본 분석 파이프라인은 다음과 같습니다.
-
-```text
-Python Project
-      │
-      ▼
-  parser.py
-      │
-      ▼
-  visitor.py
-      │
-      ▼
- resolver.py
-      │
-      ▼
-   graph.py
-      │
-      ├──────────────► evaluate.py
-      │
-      ▼
- visualize.py
-      │
-      ▼
-Interactive Call Graph
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/python -m pytest -q
+.venv/bin/python -m backend.export tests/fixtures/advanced_project
 ```
 
-### `parser.py`
+아래 명령으로 현재 분석기를 포함한 설치 파일을 만듭니다. npm이나 외부 웹 서버는 필요하지 않습니다.
 
-Python 파일을 읽고 `ast.parse()`를 이용하여 소스 코드를 AST로 변환합니다.
-
-### `visitor.py`
-
-`ast.NodeVisitor`를 기반으로 AST를 순회하면서 다음과 같은 정보를 수집합니다.
-
-- 함수 정의
-- 클래스 정의
-- import
-- 함수 및 메서드 호출
-- scope
-- source location
-
-### `resolver.py`
-
-`visitor.py`에서 수집한 호출 정보를 실제 코드 정의와 연결합니다.
-
-단순한 함수 호출뿐만 아니라 파일 간 호출, 클래스 메서드, 상속 관계, `self`, `super()` 등의 Python 코드 패턴을 고려하여 caller와 callee를 해석합니다.
-
-### `graph.py`
-
-분석된 caller → callee 관계를 이용하여 프로젝트의 Call Graph를 구성합니다.
-
-### `visualize.py`
-
-생성된 Call Graph를 Interactive HTML 형태로 시각화합니다.
-
-### `evaluate.py`
-
-KnitCode가 분석한 Call Edge와 Ground Truth를 비교하여 다음 지표를 계산합니다.
-
-- Precision
-- Recall
-- F1-score
-
----
-
-## 프로젝트 구조
-
-```text
-knitcode/
-├── analyzer/
-│   ├── __init__.py
-│   ├── parser.py
-│   ├── visitor.py
-│   ├── resolver.py
-│   ├── graph.py
-│   ├── visualize.py
-│   └── evaluate.py
-│
-├── git_analyzer/
-│   ├── history.py
-│   └── cochange.py
-│
-├── backend/
-│   └── api.py
-│
-├── frontend/
-│
-├── tests/
-│   ├── fixtures/
-│   ├── test_parser.py
-│   └── test_advanced_project.py
-│
-├── .gitignore
-└── README.md
+```sh
+.venv/bin/python scripts/package_extension.py
+.venv/bin/python scripts/package_flow_extension.py
 ```
 
----
+생성 파일은 `dist/knitcode-0.1.1.vsix`, `dist/knitcode-flow-0.1.1.vsix`입니다. VS Code에서 **Extensions → Install from VSIX…**로 각각 설치하고 분석할 Python 프로젝트 폴더를 연 뒤 위 명령을 실행합니다. 두 확장은 동시에 설치할 수 있습니다.
 
-## Benchmark
+첫 확인에는 `tests/fixtures/advanced_project` 폴더를 사용하세요. Python 경로를 찾지 못하면 `knitcode.pythonPath` 또는 `knitcodeFlow.pythonPath`에 가상환경 Python의 절대 경로를 설정합니다. 파일을 저장한 뒤 패널의 **재분석**으로 갱신합니다. 분석기 소스 변경은 이미 설치한 확장에 자동 반영되지 않으므로 다시 패키징·설치해야 합니다.
 
-KnitCode의 Call Graph 분석 성능을 확인하기 위해 **PyAnalyzer benchmark의 Sublist3r 프로젝트**를 이용하여 평가했습니다.
+## 분석 범위
 
-평가 대상은 Sublist3r 프로젝트 내부의 함수 및 메서드 호출 관계입니다.
+- 프로젝트 내부 호출, 상속·생성자·메서드, 일부 인자·반환값·컨테이너 값 흐름을 추론합니다.
+- property, with, lambda 및 제한된 동적 메서드 호출과 argparse 명령 등록·선택을 처리합니다.
+- 외부 라이브러리와 동적 Python 기능 전체를 해석하지 않습니다. 정적 후보가 모든 입력에서 실행된다는 뜻은 아닙니다.
+- Git 공동 변경은 기본 최근 90일/비병합 커밋 최대 300개에서 두 파일이 함께 변경된 기록이며 인과관계가 아닙니다.
+- 확장은 신뢰한 workspace에서 저장된 소스만 분석합니다. 큰 프로젝트의 전체 성능은 보장하지 않으며 실행 제한은 180초입니다.
 
-### 최종 결과
+선택적으로 공개 함수의 외부 입력 타입을 JSON 계약으로 제공할 수 있습니다. [예제](reports/release-2026-10-16/entrypoints.example.json)는 asciinema 소스 루트 기준입니다. 명시한 타입은 추가 입력 가정이며 자동 추론 결과와 구분해야 합니다.
 
-| 평가 지표 | 결과 |
-|---|---:|
-| Ground Truth Edge | 115 |
-| True Positive | 115 |
-| False Positive | 0 |
-| False Negative | 0 |
-| Precision | 1.0000 |
-| Recall | 1.0000 |
-| F1-score | 1.0000 |
-
-현재 구현에서는 평가 대상인 **Sublist3r의 Project-internal Call Edge 115개를 모두 정확하게 탐지**했습니다.
-
----
-
-## 분석 기능 개선 과정
-
-초기 구현에서는 기본적인 함수 호출 관계만 분석할 수 있었지만, 실제 Python 프로젝트를 분석하면서 다양한 호출 패턴을 순차적으로 지원하도록 개선했습니다.
-
-```text
-기본 함수 호출 분석
-        ↓
-상속 / self 메서드 처리
-        ↓
-super() / 부모 클래스 메서드 처리
-        ↓
-클래스 생성자 → __init__ 처리
-        ↓
-Callable Collection / List Comprehension 처리
-        ↓
-Cross-module Import 처리
-        ↓
-Nested Lambda Scope 처리
+```sh
+.venv/bin/python -m backend.export /path/to/python/project --entrypoints /path/to/entrypoints.json
 ```
 
-이러한 개선을 통해 Sublist3r benchmark에서 최종적으로 다음 성능을 달성했습니다.
+Python API는 `CallResolver(root, entrypoints=config)` 및 `export_project(root, entrypoints=config)`를 지원합니다. 외부 입력 계약은 현재 확장의 별도 UI 설정으로 제공하지 않습니다.
 
-```text
-Precision = 1.0000
-Recall    = 1.0000
-F1-score  = 1.0000
-```
+기존 HTML 그래프 기능인 `analyzer.visualize`를 사용할 때만 별도로 `pip install pyvis`가 필요합니다.
 
----
+## 검증 결과
 
-## 실행 방법
+2026-10-16 기본 분석, 원본 ground truth, 명시적 외부 입력 없음:
 
-프로젝트 루트 디렉터리에서 실행합니다.
+| 프로젝트 | Python 줄 수 | TP | FP | FN | F1 |
+|---|---:|---:|---:|---:|---:|
+| Sublist3r | 1,672 | 115 | 0 | 0 | 1.0000 |
+| autojump | 2,945 | 205 | 15 | 12 | 0.9382 |
+| fabric | 2,303 | 44 | 8 | 18 | 0.7719 |
+| face_classification | 1,895 | 97 | 4 | 2 | 0.9700 |
+| asciinema | 1,553 | 131 | 50 | 13 | 0.8062 |
 
-### Call Graph 생성
+테스트 **139개 통과**. 테스트에는 분석기 회귀, JSON/Git 이력, VSIX 내용, 사용 가능한 환경에서의 JavaScriptCore 기반 Flow 모의 DOM 검증이 포함됩니다. 실제 VS Code Extension Host의 설치·레이아웃은 별도 확인이 필요합니다.
 
-```bash
-python -m analyzer.graph
-```
+정답과의 불일치에는 분석 실패뿐 아니라 표기·범위 차이가 포함될 수 있습니다. 정답 교정안이나 외부 입력을 적용한 수치를 기본 F1로 보고하지 않습니다. [검증 요약·재현 방법](reports/release-2026-10-16/README.md), [입력·정답·분석기 해시](reports/release-2026-10-16/summary.json)를 참고하세요.
 
-### 그래프 시각화
+## 저장소 구성
 
-```bash
-python -m analyzer.visualize
-```
+- `analyzer/`: AST·호출 해석·값 흐름·평가
+- `backend/export.py`: 분석 결과 JSON CLI/API
+- `git_analyzer/`: Git 이력·공동 변경
+- `vscode-extension/`, `vscode-flow-extension/`: 두 확장 소스
+- `tests/`: 테스트와 작은 자체 fixture
+- `scripts/`: 평가 및 패키징 도구
+- `reports/release-2026-10-16/`: 공개 검증 스냅샷
 
-### Benchmark 평가
-
-```bash
-python -m analyzer.evaluate
-```
-
-### 테스트 실행
-
-```bash
-pytest
-```
-
-기본 테스트 수집 범위는 `tests/`이며 외부 benchmark 프로젝트의 테스트는 제외합니다.
-
-### 호출 관계 표현
-
-- 같은 파일의 클래스와 `from ... import Class`로 가져온 클래스는 동일한 생성자 해석 규칙을 사용합니다.
-- 프로젝트 내부에서 `__init__`을 찾으면 해당 메서드로 `calls` edge를 연결합니다. 같은 파일의 부모 클래스에서 상속받은 `__init__`도 탐색합니다.
-- 내부 `__init__`을 찾지 못하면 클래스 노드로 `instantiates` edge를 연결합니다.
-- lambda 본문은 한 번만 순회하며, 내부 호출은 해당 lambda의 이름에 귀속합니다. 기존 enclosing function → lambda 관계는 유지합니다. 이 관계는 lambda의 런타임 실행을 보장하지 않습니다.
-- 그래프는 정의 정보를 우선 등록하여 호출 순서와 관계없이 메서드의 타입, 클래스명, 정의 줄 번호를 유지합니다.
-
----
-
-## 현재 범위
-
-현재 KnitCode는 **Python 프로젝트의 정적 분석**을 중심으로 개발하고 있습니다.
-
-Sublist3r benchmark에서 F1-score 1.0을 달성했지만, 이는 현재 평가한 Sublist3r의 Project-internal Call Edge를 기준으로 한 결과입니다.
-
-따라서 모든 Python 프로젝트의 호출 관계를 완벽하게 분석할 수 있다는 의미는 아닙니다. Python의 동적 특성으로 인해 runtime monkey patching, reflection, 동적으로 생성되는 함수 호출 등은 추가적인 분석 방법이 필요할 수 있습니다.
+가상환경, 외부 benchmark 복사본, 생성 HTML/VSIX 및 새 중간 실험 자료는 Git에 포함하지 않습니다. 이전 커밋에 이미 포함된 baseline 보고서는 이력으로 유지합니다. 현재 개발 상태는 [CHECKPOINT.md](CHECKPOINT.md)에 기록합니다.
