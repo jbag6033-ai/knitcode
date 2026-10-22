@@ -1,0 +1,4511 @@
+[
+  {
+    "caller": "fabric.config.Config.__init__",
+    "target": "fabric.config.Config.set_runtime_ssh_path",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:74:8:2",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 74,
+    "column": 8,
+    "source": "self.set_runtime_ssh_path(kwargs.pop(\"runtime_ssh_path\", None))",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.config.Config",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.config.Config.__init__",
+    "target": "fabric.config.Config.load_ssh_config",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:97:12:13",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 97,
+    "column": 12,
+    "source": "self.load_ssh_config()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.config.Config",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.config.Config.load_ssh_config",
+    "target": "fabric.config.Config._load_ssh_files",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:127:12:15",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 127,
+    "column": 12,
+    "source": "self._load_ssh_files()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.config.Config",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.load_ssh_config",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.config.Config.clone",
+    "target": "fabric.config.Config.load_ssh_config",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:151:8:20",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 151,
+    "column": 8,
+    "source": "self.load_ssh_config()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.config.Config",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.clone",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.config.Config._load_ssh_files",
+    "target": "fabric.config.Config._load_ssh_file",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:186:12:29",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 186,
+    "column": 12,
+    "source": "self._load_ssh_file(os.path.expanduser(path))",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.config.Config",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Config._load_ssh_files",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.config.Config._load_ssh_files",
+    "target": "fabric.config.Config._load_ssh_file",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:189:16:31",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 189,
+    "column": 16,
+    "source": "self._load_ssh_file(os.path.expanduser(path))",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.config.Config",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Config._load_ssh_files",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.config.Config.global_defaults",
+    "target": "fabric.util.get_local_user",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:250:20:42",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 250,
+    "column": 20,
+    "source": "get_local_user()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "get_local_user"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.global_defaults",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "fabric.config.Config.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:256:21:4",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 256,
+    "column": 21,
+    "source": "Config()",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.config.Config",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "fabric.config.Config.clone",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:261:21:6",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 261,
+    "column": 21,
+    "source": "config.clone(into=Config)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmpwheciye8/integration/connection.py:84:21 > root:METHOD:integration.connection.Connection_.sudo.setup",
+      "context:METHOD:fabric.connection.Connection.__init__",
+      "context:METHOD:fabric.executor.ConnectionCall.make_context > METHOD:fabric.connection.Connection.__init__",
+      "context:METHOD:integration.concurrency.concurrency.setup > METHOD:fabric.connection.Connection.__init__",
+      "context:METHOD:integration.connection.Connection_.large_remote_commands_finish_cleanly > METHOD:fabric.connection.Connection.__init__",
+      "context:METHOD:integration.connection.Connection_.local.wraps_invoke_run > METHOD:fabric.connection.Connection.__init__",
+      "context:METHOD:integration.connection.Connection_.mixed_use_of_local_and_run > METHOD:fabric.connection.Connection.__init__",
+      "context:METHOD:integration.connection.Connection_.run.simple_command_on_host > METHOD:fabric.connection.Connection.__init__",
+      "context:METHOD:integration.connection.Connection_.run.simple_command_with_pty > METHOD:fabric.connection.Connection.__init__",
+      "context:METHOD:integration.connection.Connection_.ssh_connections.close_method_closes_connection > METHOD:integration.connection.Connection_.ssh_connections.open_method_generates_real_connection > METHOD:fabric.connection.Connection.__init__",
+      "context:METHOD:integration.connection.Connection_.ssh_connections.open_method_generates_real_connection > METHOD:fabric.connection.Connection.__init__",
+      "context:METHOD:integration.connection.Connection_.sudo.setup > METHOD:fabric.connection.Connection.__init__",
+      "context:METHOD:integration.transfer.Transfer_.get.setup > METHOD:fabric.connection.Connection.__init__",
+      "context:METHOD:integration.transfer.Transfer_.put.setup > METHOD:fabric.connection.Connection.__init__",
+      "receiver:fabric.config.Config",
+      "receiver_alternative:none",
+      "receiver_alternative:unknown"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__init__",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "fabric.connection.Connection.derive_shorthand",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:266:20:8",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 266,
+    "column": 20,
+    "source": "self.derive_shorthand(host)",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "fabric.connection.Connection.get_gateway",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:303:59:17",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 303,
+    "column": 59,
+    "source": "self.get_gateway()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "fabric.connection.Connection.resolve_connect_kwargs",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:330:30:20",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 330,
+    "column": 30,
+    "source": "self.resolve_connect_kwargs(connect_kwargs)",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.get_gateway",
+    "target": "fabric.connection.Connection.derive_shorthand",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:384:19:29",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 384,
+    "column": 19,
+    "source": "self.derive_shorthand(hop)",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.get_gateway",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.get_gateway",
+    "target": "fabric.connection.Connection.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:391:22:32",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 391,
+    "column": 22,
+    "source": "Connection(hop, **kwargs)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.get_gateway",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__eq__",
+    "target": "fabric.connection.Connection._identity",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:434:15:41",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 434,
+    "column": 15,
+    "source": "self._identity()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__eq__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__lt__",
+    "target": "fabric.connection.Connection._identity",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:437:15:43",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 437,
+    "column": 15,
+    "source": "self._identity()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__lt__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__hash__",
+    "target": "fabric.connection.Connection._identity",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:442:20:46",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 442,
+    "column": 20,
+    "source": "self._identity()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__hash__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.open",
+    "target": "fabric.connection.Connection.open_gateway",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:517:29:59",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 517,
+    "column": 29,
+    "source": "self.open_gateway()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.open",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__exit__",
+    "target": "fabric.connection.Connection.close",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:584:8:74",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 584,
+    "column": 8,
+    "source": "self.close()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__exit__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.get",
+    "target": "fabric.transfer.Transfer.get",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:664:15:84",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 664,
+    "column": 15,
+    "source": "Transfer(self).get(*args, **kwargs)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmpwheciye8/fabric/connection.py:664:15 > root:METHOD:fabric.connection.Connection.get",
+      "context:METHOD:fabric.connection.Connection.get",
+      "receiver:fabric.transfer.Transfer"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.get",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "fabric.connection.Connection.get",
+    "target": "fabric.transfer.Transfer.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:664:15:85",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 664,
+    "column": 15,
+    "source": "Transfer(self)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.transfer.Transfer"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.get",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.put",
+    "target": "fabric.transfer.Transfer.put",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:675:15:86",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 675,
+    "column": 15,
+    "source": "Transfer(self).put(*args, **kwargs)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmpwheciye8/fabric/connection.py:675:15 > root:METHOD:fabric.connection.Connection.put",
+      "context:METHOD:fabric.connection.Connection.put",
+      "receiver:fabric.transfer.Transfer"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.put",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "fabric.connection.Connection.put",
+    "target": "fabric.transfer.Transfer.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:675:15:87",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 675,
+    "column": 15,
+    "source": "Transfer(self)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.transfer.Transfer"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.put",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_local",
+    "target": "fabric.tunnels.TunnelManager.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:736:18:89",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 736,
+    "column": 18,
+    "source": "TunnelManager(\n            local_port=local_port,\n            local_host=local_host,\n            remote_port=remote_port,\n            remote_host=remote_host,\n            # TODO: not a huge fan of handing in our transport, but...?\n            transport=self.transport,\n            finished=finished,\n        )",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.tunnels.TunnelManager",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.forward_local",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_remote.callback",
+    "target": "fabric.tunnels.Tunnel.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:858:21:97",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 858,
+    "column": 21,
+    "source": "Tunnel(channel=channel, sock=sock, finished=Event())",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.tunnels.Tunnel",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.forward_remote.callback",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "fabric.executor.FabExecutor.expand_calls",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:27:23:4",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 27,
+    "column": 23,
+    "source": "self.expand_calls(call.pre, apply_hosts=False)",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.executor.FabExecutor",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "FabExecutor.expand_calls",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "fabric.executor.FabExecutor.parameterize",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:30:27:6",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 30,
+    "column": 27,
+    "source": "self.parameterize(call, host)",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.executor.FabExecutor",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "FabExecutor.expand_calls",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "fabric.executor.FabExecutor.expand_calls",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:36:23:9",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 36,
+    "column": 23,
+    "source": "self.expand_calls(call.post, apply_hosts=False)",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.executor.FabExecutor",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "FabExecutor.expand_calls",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "fabric.exceptions.NothingToDo",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:42:22:10",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 42,
+    "column": 22,
+    "source": "NothingToDo(\n                    \"Was told to run a command, but not given any hosts to run it on!\"  # noqa\n                )",
+    "rule": "import_or_same_module",
+    "trace": [
+      "NothingToDo"
+    ],
+    "module_level": false,
+    "execution_scope": "FabExecutor.expand_calls",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "fabric.executor.FabExecutor.parameterize",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:55:27:15",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 55,
+    "column": 27,
+    "source": "self.parameterize(anon, host)",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.executor.FabExecutor",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "FabExecutor.expand_calls",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.executor.ConnectionCall.make_context",
+    "target": "fabric.connection.Connection.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:84:15:19",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 84,
+    "column": 15,
+    "source": "Connection(host=self.host, config=config)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "ConnectionCall.make_context",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.Group.from_connections",
+    "target": "fabric.group.Group.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:81:16:2",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 81,
+    "column": 16,
+    "source": "cls()",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.group.Group",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Group.from_connections",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "fabric.group.SerialGroup.run",
+    "target": "fabric.group.GroupResult.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:144:18:4",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 144,
+    "column": 18,
+    "source": "GroupResult()",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.group.GroupResult",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "SerialGroup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.SerialGroup.run",
+    "target": "fabric.exceptions.GroupException.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:153:18:6",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 153,
+    "column": 18,
+    "source": "GroupException(results)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.exceptions.GroupException",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "SerialGroup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.ThreadingGroup.run",
+    "target": "fabric.group.GroupResult.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:171:18:9",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 171,
+    "column": 18,
+    "source": "GroupResult()",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.group.GroupResult",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "ThreadingGroup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.ThreadingGroup.run",
+    "target": "fabric.exceptions.GroupException.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:210:18:19",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 210,
+    "column": 18,
+    "source": "GroupException(results)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.exceptions.GroupException",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "ThreadingGroup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.GroupResult.succeeded",
+    "target": "fabric.group.GroupResult._bifurcate",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:259:8:24",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 259,
+    "column": 8,
+    "source": "self._bifurcate()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.group.GroupResult",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "GroupResult.succeeded",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.GroupResult.failed",
+    "target": "fabric.group.GroupResult._bifurcate",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:269:8:25",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 269,
+    "column": 8,
+    "source": "self._bifurcate()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.group.GroupResult",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "GroupResult.failed",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.main.make_program",
+    "target": "fabric.main.Fab",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:143:11:28",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 143,
+    "column": 11,
+    "source": "Fab(\n        name=\"Fabric\",\n        version=fabric,\n        executor_class=FabExecutor,\n        config_class=Config,\n    )",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:Fab@18"
+    ],
+    "module_level": false,
+    "execution_scope": "make_program",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "Fab",
+        "line": 18
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "fabric.main",
+    "target": "fabric.main.make_program",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:151:10:29",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 151,
+    "column": 10,
+    "source": "make_program()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:make_program@142"
+    ],
+    "module_level": true,
+    "execution_scope": "<module>",
+    "execution_phase": "module_initialization",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "make_program",
+        "line": 142
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "fabric.runners.Remote.generate_result",
+    "target": "fabric.runners.Result.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/runners.py:68:15:11",
+    "file": "tmpwheciye8/fabric/runners.py",
+    "line": 68,
+    "column": 15,
+    "source": "Result(**kwargs)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.runners.Result",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Remote.generate_result",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "fabric.transfer.Result.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:139:15:16",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 139,
+    "column": 15,
+    "source": "Result(\n            orig_remote=orig_remote,\n            remote=remote,\n            orig_local=orig_local,\n            local=local,\n            connection=self.connection,\n        )",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.transfer.Result"
+    ],
+    "module_level": false,
+    "execution_scope": "Transfer.get",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Transfer.is_remote_dir",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:212:13:25",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 212,
+    "column": 13,
+    "source": "self.is_remote_dir(remote)",
+    "rule": "self_method",
+    "trace": [
+      "fabric.transfer.Transfer"
+    ],
+    "module_level": false,
+    "execution_scope": "Transfer.put",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Result.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:277:15:50",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 277,
+    "column": 15,
+    "source": "Result(\n            orig_remote=orig_remote,\n            remote=remote,\n            orig_local=orig_local,\n            local=local,\n            connection=self.connection,\n        )",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.transfer.Result"
+    ],
+    "module_level": false,
+    "execution_scope": "Transfer.put",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "fabric.tunnels.Tunnel.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:88:21:13",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 88,
+    "column": 21,
+    "source": "Tunnel(channel=channel, sock=tun_sock, finished=finished)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.tunnels.Tunnel",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "TunnelManager._run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.tunnels.Tunnel._run",
+    "target": "fabric.tunnels.Tunnel.read_and_write",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:133:33:26",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 133,
+    "column": 33,
+    "source": "self.read_and_write(\n                        self.sock, self.channel, self.socket_chunk_size\n                    )",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.tunnels.Tunnel",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Tunnel._run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.tunnels.Tunnel._run",
+    "target": "fabric.tunnels.Tunnel.read_and_write",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:137:33:27",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 137,
+    "column": 33,
+    "source": "self.read_and_write(\n                        self.channel, self.sock, self.channel_chunk_size\n                    )",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.tunnels.Tunnel",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Tunnel._run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.setup",
+    "target": "fabric.connection.Connection.__init__",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:31:15:5",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 31,
+    "column": 15,
+    "source": "Connection(\"localhost\")",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "concurrency.setup",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.setup",
+    "target": "fabric.connection.Connection.__init__",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:32:15:6",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 32,
+    "column": 15,
+    "source": "Connection(\"localhost\")",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "concurrency.setup",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.setup",
+    "target": "fabric.connection.Connection.__init__",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:33:15:7",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 33,
+    "column": 15,
+    "source": "Connection(\"localhost\")",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "concurrency.setup",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.connection.Connection_.ssh_connections.open_method_generates_real_connection",
+    "target": "fabric.connection.Connection.__init__",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:18:16:2",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 18,
+    "column": 16,
+    "source": "Connection(\"localhost\")",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection_.ssh_connections.open_method_generates_real_connection",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.connection.Connection_.ssh_connections.open_method_generates_real_connection",
+    "target": "fabric.connection.Connection.open",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:19:12:3",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 19,
+    "column": 12,
+    "source": "c.open()",
+    "rule": "instance_flow_reaching_assignment",
+    "trace": [
+      "constructed:Connection@18",
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection_.ssh_connections.open_method_generates_real_connection",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "constructed",
+        "name": "Connection",
+        "line": 18
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "integration.connection.Connection_.ssh_connections.close_method_closes_connection",
+    "target": "integration.connection.Connection_.ssh_connections.open_method_generates_real_connection",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:27:16:5",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 27,
+    "column": 16,
+    "source": "self.open_method_generates_real_connection()",
+    "rule": "self_method",
+    "trace": [
+      "integration.connection.Connection_.ssh_connections"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection_.ssh_connections.close_method_closes_connection",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.connection.Connection_.ssh_connections.close_method_closes_connection",
+    "target": "fabric.connection.Connection.close",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:28:12:6",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 28,
+    "column": 12,
+    "source": "c.close()",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmpwheciye8/integration/connection.py:18:16 > tmpwheciye8/integration/connection.py:27:16 > root:METHOD:integration.connection.Connection_.ssh_connections.close_method_closes_connection",
+      "context:METHOD:integration.connection.Connection_.ssh_connections.close_method_closes_connection",
+      "receiver:fabric.connection.Connection",
+      "return",
+      "return:integration.connection.Connection_.ssh_connections.open_method_generates_real_connection"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection_.ssh_connections.close_method_closes_connection",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "integration.connection.Connection_.run.simple_command_on_host",
+    "target": "fabric.connection.Connection.__init__",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:37:21:9",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 37,
+    "column": 21,
+    "source": "Connection(\"localhost\")",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection_.run.simple_command_on_host",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.connection.Connection_.run.simple_command_with_pty",
+    "target": "fabric.connection.Connection.__init__",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:48:21:11",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 48,
+    "column": 21,
+    "source": "Connection(\"localhost\")",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection_.run.simple_command_with_pty",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.connection.Connection_.local.wraps_invoke_run",
+    "target": "fabric.connection.Connection.__init__",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:62:18:17",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 62,
+    "column": 18,
+    "source": "Connection(\"localhost\")",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection_.local.wraps_invoke_run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.connection.Connection_.local.wraps_invoke_run",
+    "target": "fabric.connection.Connection.local",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:63:21:18",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 63,
+    "column": 21,
+    "source": "cxn.local(\"echo foo\", hide=True)",
+    "rule": "instance_flow_reaching_assignment",
+    "trace": [
+      "constructed:Connection@62",
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection_.local.wraps_invoke_run",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "constructed",
+        "name": "Connection",
+        "line": 62
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "integration.connection.Connection_.mixed_use_of_local_and_run",
+    "target": "fabric.connection.Connection.__init__",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:71:14:19",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 71,
+    "column": 14,
+    "source": "Connection(\"localhost\")",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection_.mixed_use_of_local_and_run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.connection.Connection_.mixed_use_of_local_and_run",
+    "target": "fabric.connection.Connection.local",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:72:17:20",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 72,
+    "column": 17,
+    "source": "cxn.local(\"echo foo\", hide=True)",
+    "rule": "instance_flow_reaching_assignment",
+    "trace": [
+      "constructed:Connection@71",
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection_.mixed_use_of_local_and_run",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "constructed",
+        "name": "Connection",
+        "line": 71
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "integration.connection.Connection_.sudo.setup",
+    "target": "fabric.config.Config.__init__",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:84:21:22",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 84,
+    "column": 21,
+    "source": "Config(\n                {\"sudo\": {\"password\": \"mypass\"}, \"run\": {\"hide\": True}}\n            )",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.config.Config",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection_.sudo.setup",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.connection.Connection_.sudo.setup",
+    "target": "fabric.connection.Connection.__init__",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:87:23:23",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 87,
+    "column": 23,
+    "source": "Connection(\"localhost\", config=config)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection_.sudo.setup",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.connection.Connection_.sudo.sudo_command",
+    "target": "integration.connection.skip_outside_travis",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:93:12:24",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 93,
+    "column": 12,
+    "source": "skip_outside_travis()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:skip_outside_travis@10"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection_.sudo.sudo_command",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "skip_outside_travis",
+        "line": 10
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "integration.connection.Connection_.sudo.mixed_sudo_and_normal_commands",
+    "target": "integration.connection.skip_outside_travis",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:100:12:27",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 100,
+    "column": 12,
+    "source": "skip_outside_travis()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:skip_outside_travis@10"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection_.sudo.mixed_sudo_and_normal_commands",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "skip_outside_travis",
+        "line": 10
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "integration.connection.Connection_.large_remote_commands_finish_cleanly",
+    "target": "fabric.connection.Connection.__init__",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:111:14:32",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 111,
+    "column": 14,
+    "source": "Connection(\"localhost\")",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection_.large_remote_commands_finish_cleanly",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.group.Group_.simple_command",
+    "target": "fabric.group.ThreadingGroup",
+    "call_id": "CALL:tmpwheciye8/integration/group.py:9:16:0",
+    "file": "tmpwheciye8/integration/group.py",
+    "line": 9,
+    "column": 16,
+    "source": "Group(\"localhost\", \"127.0.0.1\")",
+    "rule": "import_or_same_module",
+    "trace": [
+      "Group"
+    ],
+    "module_level": false,
+    "execution_scope": "Group_.simple_command",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.group.Group_.simple_command",
+    "target": "fabric.group.ThreadingGroup.run",
+    "call_id": "CALL:tmpwheciye8/integration/group.py:10:17:1",
+    "file": "tmpwheciye8/integration/group.py",
+    "line": 10,
+    "column": 17,
+    "source": "group.run(\"echo foo\", hide=True)",
+    "rule": "instance_flow_reaching_assignment",
+    "trace": [
+      "constructed:Group@9",
+      "fabric.group.ThreadingGroup",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Group_.simple_command",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "constructed",
+        "name": "Group",
+        "line": 9
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "integration.group.Group_.failed_command",
+    "target": "fabric.group.ThreadingGroup",
+    "call_id": "CALL:tmpwheciye8/integration/group.py:15:16:4",
+    "file": "tmpwheciye8/integration/group.py",
+    "line": 15,
+    "column": 16,
+    "source": "Group(\"localhost\", \"127.0.0.1\")",
+    "rule": "import_or_same_module",
+    "trace": [
+      "Group"
+    ],
+    "module_level": false,
+    "execution_scope": "Group_.failed_command",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.group.Group_.failed_command",
+    "target": "fabric.group.ThreadingGroup.run",
+    "call_id": "CALL:tmpwheciye8/integration/group.py:17:12:5",
+    "file": "tmpwheciye8/integration/group.py",
+    "line": 17,
+    "column": 12,
+    "source": "group.run(\"lolnope\", hide=True)",
+    "rule": "instance_flow_reaching_assignment",
+    "trace": [
+      "constructed:Group@15",
+      "fabric.group.ThreadingGroup",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Group_.failed_command",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "constructed",
+        "name": "Group",
+        "line": 15
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "integration.group.Group_.excepted_command",
+    "target": "fabric.group.ThreadingGroup",
+    "call_id": "CALL:tmpwheciye8/integration/group.py:28:16:7",
+    "file": "tmpwheciye8/integration/group.py",
+    "line": 28,
+    "column": 16,
+    "source": "Group(\"nopebadhost1\", \"nopebadhost2\")",
+    "rule": "import_or_same_module",
+    "trace": [
+      "Group"
+    ],
+    "module_level": false,
+    "execution_scope": "Group_.excepted_command",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.group.Group_.excepted_command",
+    "target": "fabric.group.ThreadingGroup.run",
+    "call_id": "CALL:tmpwheciye8/integration/group.py:30:12:8",
+    "file": "tmpwheciye8/integration/group.py",
+    "line": 30,
+    "column": 12,
+    "source": "group.run(\"lolnope\", hide=True)",
+    "rule": "instance_flow_reaching_assignment",
+    "trace": [
+      "constructed:Group@28",
+      "fabric.group.ThreadingGroup",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Group_.excepted_command",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "constructed",
+        "name": "Group",
+        "line": 28
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "integration.transfer.Transfer_.get.setup",
+    "target": "fabric.connection.Connection.__init__",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:17:21:2",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 17,
+    "column": 21,
+    "source": "Connection(\"localhost\")",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Transfer_.get.setup",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.get.setup",
+    "target": "integration.transfer._support",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:18:26:3",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 18,
+    "column": 26,
+    "source": "_support(\"file.txt\")",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_support@10"
+    ],
+    "module_level": false,
+    "execution_scope": "Transfer_.get.setup",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_support",
+        "line": 10
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "integration.transfer.Transfer_.put.setup",
+    "target": "fabric.connection.Connection.__init__",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:54:21:22",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 54,
+    "column": 21,
+    "source": "Connection(\"localhost\")",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Transfer_.put.setup",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.put.base_case",
+    "target": "integration.transfer._support",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:59:24:26",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 59,
+    "column": 24,
+    "source": "_support()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_support@10"
+    ],
+    "module_level": false,
+    "execution_scope": "Transfer_.put.base_case",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_support",
+        "line": 10
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "integration.transfer.Transfer_.put.base_case",
+    "target": "integration.transfer._support",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:71:35:36",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 71,
+    "column": 35,
+    "source": "_support(\"file.txt\")",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_support@10"
+    ],
+    "module_level": false,
+    "execution_scope": "Transfer_.put.base_case",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_support",
+        "line": 10
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "fabric.connection.Connection.open",
+    "target": "fabric.connection.Connection.is_connected",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/fabric/connection.py:492:11",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 492,
+    "column": 11,
+    "source": "self.is_connected",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.connection.Connection.close",
+    "target": "fabric.connection.Connection.is_connected",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/fabric/connection.py:575:11",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 575,
+    "column": 11,
+    "source": "self.is_connected",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.main.Fab.load_collection",
+    "target": "fabric.main.Fab._remainder_only",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/fabric/main.py:76:11",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 76,
+    "column": 11,
+    "source": "self._remainder_only",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.main.Fab.no_tasks_given",
+    "target": "fabric.main.Fab._remainder_only",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/fabric/main.py:88:15",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 88,
+    "column": 15,
+    "source": "self._remainder_only",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.is_remote_dir",
+    "target": "fabric.transfer.Transfer.sftp",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/fabric/transfer.py:37:32",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 37,
+    "column": 32,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "fabric.transfer.Transfer.sftp",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/fabric/transfer.py:107:12",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 107,
+    "column": 12,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "fabric.transfer.Transfer.sftp",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/fabric/transfer.py:107:34",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 107,
+    "column": 34,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "fabric.transfer.Transfer.sftp",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/fabric/transfer.py:128:12",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 128,
+    "column": 12,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "fabric.transfer.Transfer.sftp",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/fabric/transfer.py:130:12",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 130,
+    "column": 12,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "fabric.transfer.Transfer.sftp",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/fabric/transfer.py:135:30",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 135,
+    "column": 30,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Transfer.sftp",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/fabric/transfer.py:233:12",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 233,
+    "column": 12,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Transfer.sftp",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/fabric/transfer.py:233:34",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 233,
+    "column": 34,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Transfer.sftp",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/fabric/transfer.py:263:16",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 263,
+    "column": 16,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Transfer.sftp",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/fabric/transfer.py:268:12",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 268,
+    "column": 12,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Transfer.sftp",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/fabric/transfer.py:275:16",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 275,
+    "column": 16,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "integration.connection.Connection_.ssh_connections.open_method_generates_real_connection",
+    "target": "fabric.connection.Connection.is_connected",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/integration/connection.py:21:19",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 21,
+    "column": 19,
+    "source": "c.is_connected",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "integration.connection.Connection_.ssh_connections.close_method_closes_connection",
+    "target": "fabric.connection.Connection.is_connected",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/integration/connection.py:30:19",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 30,
+    "column": 19,
+    "source": "c.is_connected",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "integration.connection.Connection_.local.wraps_invoke_run",
+    "target": "fabric.connection.Connection.is_connected",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/integration/connection.py:65:23",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 65,
+    "column": 23,
+    "source": "cxn.is_connected",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "integration.connection.Connection_.mixed_use_of_local_and_run",
+    "target": "fabric.connection.Connection.is_connected",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/integration/connection.py:74:19",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 74,
+    "column": 19,
+    "source": "cxn.is_connected",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "integration.connection.Connection_.mixed_use_of_local_and_run",
+    "target": "fabric.connection.Connection.is_connected",
+    "call_id": null,
+    "property_access_id": "tmpwheciye8/integration/connection.py:76:15",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 76,
+    "column": 15,
+    "source": "cxn.is_connected",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric._version",
+    "target": "<**PyStr**>.join",
+    "call_id": "CALL:tmpwheciye8/fabric/_version.py:2:14:0",
+    "file": "tmpwheciye8/fabric/_version.py",
+    "line": 2,
+    "column": 14,
+    "source": "\".\".join(map(str, __version_info__))",
+    "rule": "LITERAL_BUILTIN_JOIN",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric._version",
+    "target": "<builtin>.map",
+    "call_id": "CALL:tmpwheciye8/fabric/_version.py:2:23:1",
+    "file": "tmpwheciye8/fabric/_version.py",
+    "line": 2,
+    "column": 23,
+    "source": "map(str, __version_info__)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config.__init__",
+    "target": "paramiko.config.SSHConfig",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:88:25:9",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 88,
+    "column": 25,
+    "source": "SSHConfig()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config.__init__",
+    "target": "<builtin>.super",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:93:8:12",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 93,
+    "column": 8,
+    "source": "super(Config, self)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config.clone",
+    "target": "<builtin>.super",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:139:14:17",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 139,
+    "column": 14,
+    "source": "super(Config, self)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config.clone",
+    "target": "<builtin>.setattr",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:148:12:18",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 148,
+    "column": 12,
+    "source": "setattr(new, attr, getattr(self, attr))",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config.clone",
+    "target": "<builtin>.getattr",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:148:31:19",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 148,
+    "column": 31,
+    "source": "getattr(self, attr)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config._clone_init_kwargs",
+    "target": "<builtin>.super",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:157:17:22",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 157,
+    "column": 17,
+    "source": "super(Config, self)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config._clone_init_kwargs",
+    "target": "paramiko.config.SSHConfig",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:162:21:23",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 162,
+    "column": 21,
+    "source": "SSHConfig()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config._clone_init_kwargs",
+    "target": "copy.deepcopy",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:165:29:24",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 165,
+    "column": 29,
+    "source": "copy.deepcopy(self.base_ssh_config._config)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config._clone_init_kwargs",
+    "target": "<builtin>.dict",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:166:15:25",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 166,
+    "column": 15,
+    "source": "dict(kwargs, ssh_config=new_config)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config._load_ssh_files",
+    "target": "os.path.exists",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:183:19:26",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 183,
+    "column": 19,
+    "source": "os.path.exists(path)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config._load_ssh_files",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:184:22:27",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 184,
+    "column": 22,
+    "source": "\"No such file or directory: {!r}\".format(path)",
+    "rule": "LITERAL_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config._load_ssh_files",
+    "target": "<builtin>.IOError",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:185:22:28",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 185,
+    "column": 22,
+    "source": "IOError(errno.ENOENT, msg)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config._load_ssh_files",
+    "target": "os.path.expanduser",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:186:32:30",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 186,
+    "column": 32,
+    "source": "os.path.expanduser(path)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config._load_ssh_files",
+    "target": "os.path.expanduser",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:189:36:32",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 189,
+    "column": 36,
+    "source": "os.path.expanduser(path)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config._load_ssh_file",
+    "target": "os.path.isfile",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:199:11:33",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 199,
+    "column": 11,
+    "source": "os.path.isfile(path)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config._load_ssh_file",
+    "target": "<builtin>.len",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:200:24:34",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 200,
+    "column": 24,
+    "source": "len(self.base_ssh_config._config)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config._load_ssh_file",
+    "target": "<builtin>.open",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:201:17:35",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 201,
+    "column": 17,
+    "source": "open(path)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config._load_ssh_file",
+    "target": "<builtin>.len",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:203:24:37",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 203,
+    "column": 24,
+    "source": "len(self.base_ssh_config._config)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config._load_ssh_file",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:205:18:39",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 205,
+    "column": 18,
+    "source": "msg.format(new_rules - old_rules, path)",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config.global_defaults",
+    "target": "invoke.config.Config.global_defaults",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:235:19:41",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 235,
+    "column": 19,
+    "source": "InvokeConfig.global_defaults()",
+    "rule": "UNSHADOWED_IMPORT_ORIGIN",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.config.Config.global_defaults",
+    "target": "invoke.config.merge_dicts",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:252:8:43",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 252,
+    "column": 8,
+    "source": "merge_dicts(defaults, ours)",
+    "rule": "UNSHADOWED_IMPORT_ORIGIN",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "<builtin>.super",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:251:8:3",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 251,
+    "column": 8,
+    "source": "super(Connection, self)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "<builtin>.isinstance",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:260:17:5",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 260,
+    "column": 17,
+    "source": "isinstance(config, Config)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "<builtin>.ValueError",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:271:22:9",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 271,
+    "column": 22,
+    "source": "ValueError(err.format(\"user\"))",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:271:33:10",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 271,
+    "column": 33,
+    "source": "err.format(\"user\")",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "<builtin>.ValueError",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:275:22:11",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 275,
+    "column": 22,
+    "source": "ValueError(err.format(\"port\"))",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:275:33:12",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 275,
+    "column": 33,
+    "source": "err.format(\"port\")",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "<builtin>.int",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:296:28:15",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 296,
+    "column": 28,
+    "source": "int(self.ssh_config.get(\"port\", self.config.port))",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "<builtin>.int",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:324:30:19",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 324,
+    "column": 30,
+    "source": "int(connect_timeout)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "paramiko.client.SSHClient",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:333:17:21",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 333,
+    "column": 17,
+    "source": "SSHClient()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "paramiko.client.SSHClient.set_missing_host_key_policy",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:334:8:22",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 334,
+    "column": 8,
+    "source": "client.set_missing_host_key_policy(AutoAddPolicy())",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "paramiko.client.AutoAddPolicy",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:334:43:23",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 334,
+    "column": 43,
+    "source": "AutoAddPolicy()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.get_gateway",
+    "target": "<builtin>.reversed",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:376:19:27",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 376,
+    "column": 19,
+    "source": "reversed(self.ssh_config[\"proxyjump\"].split(\",\"))",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.get_gateway",
+    "target": "<builtin>.dict",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:388:25:30",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 388,
+    "column": 25,
+    "source": "dict(config=self.config.clone())",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__repr__",
+    "target": "<**PyList**>.append",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:405:12:33",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 405,
+    "column": 12,
+    "source": "bits.append((\"user\", self.user))",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__repr__",
+    "target": "<**PyList**>.append",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:409:12:34",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 409,
+    "column": 12,
+    "source": "bits.append((\"port\", self.port))",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__repr__",
+    "target": "<builtin>.isinstance",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:418:15:35",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 418,
+    "column": 15,
+    "source": "isinstance(self.gateway, string_types)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__repr__",
+    "target": "<**PyList**>.append",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:420:12:36",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 420,
+    "column": 12,
+    "source": "bits.append((\"gw\", val))",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__repr__",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:421:15:37",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 421,
+    "column": 15,
+    "source": "\"<Connection {}>\".format(\n            \" \".join(\"{}={}\".format(*x) for x in bits)\n        )",
+    "rule": "LITERAL_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__repr__",
+    "target": "<**PyStr**>.join",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:422:12:38",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 422,
+    "column": 12,
+    "source": "\" \".join(\"{}={}\".format(*x) for x in bits)",
+    "rule": "LITERAL_BUILTIN_JOIN",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__repr__",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:422:21:39",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 422,
+    "column": 21,
+    "source": "\"{}={}\".format(*x)",
+    "rule": "LITERAL_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__eq__",
+    "target": "<builtin>.isinstance",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:432:15:40",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 432,
+    "column": 15,
+    "source": "isinstance(other, Connection)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.__hash__",
+    "target": "<builtin>.hash",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:442:15:45",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 442,
+    "column": 15,
+    "source": "hash(self._identity())",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.derive_shorthand",
+    "target": "<builtin>.int",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:462:19:52",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 462,
+    "column": 19,
+    "source": "int(port)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.open",
+    "target": "<**PyStr**>.split",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:496:19:53",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 496,
+    "column": 19,
+    "source": "\"\"\"\n            hostname\n            port\n            username\n        \"\"\".split()",
+    "rule": "LITERAL_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.open",
+    "target": "<builtin>.ValueError",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:502:22:54",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 502,
+    "column": 22,
+    "source": "ValueError(err.format(key))",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.open",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:502:33:55",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 502,
+    "column": 33,
+    "source": "err.format(key)",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.open",
+    "target": "<builtin>.ValueError",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:508:18:56",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 508,
+    "column": 18,
+    "source": "ValueError(err.format(\"timeout\"))",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.open",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:508:29:57",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 508,
+    "column": 29,
+    "source": "err.format(\"timeout\")",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.open",
+    "target": "<builtin>.dict",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:510:17:58",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 510,
+    "column": 17,
+    "source": "dict(\n            self.connect_kwargs,\n            username=self.user,\n            hostname=self.host,\n            port=self.port,\n        )",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.open_gateway",
+    "target": "<builtin>.isinstance",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:539:11:62",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 539,
+    "column": 11,
+    "source": "isinstance(self.gateway, string_types)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.open_gateway",
+    "target": "paramiko.config.SSHConfig",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:543:23:63",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 543,
+    "column": 23,
+    "source": "SSHConfig()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.open_gateway",
+    "target": "paramiko.config.SSHConfig.parse",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:545:12:64",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 545,
+    "column": 12,
+    "source": "ssh_conf.parse(StringIO(dummy.format(self.host, self.gateway)))",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.connection.Connection.open_gateway",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:545:36:66",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 545,
+    "column": 36,
+    "source": "dummy.format(self.host, self.gateway)",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.open_gateway",
+    "target": "paramiko.proxy.ProxyCommand",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:546:19:67",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 546,
+    "column": 19,
+    "source": "ProxyCommand(ssh_conf.lookup(self.host)[\"proxycommand\"])",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.open_gateway",
+    "target": "paramiko.config.SSHConfig.lookup",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:546:32:68",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 546,
+    "column": 32,
+    "source": "ssh_conf.lookup(self.host)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.connection.Connection.open_gateway",
+    "target": "<builtin>.int",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:560:34:71",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 560,
+    "column": 34,
+    "source": "int(self.port)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.create_session",
+    "target": "paramiko.agent.AgentRequestHandler",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:590:34:76",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 590,
+    "column": 34,
+    "source": "AgentRequestHandler(channel)",
+    "rule": "UNSHADOWED_IMPORT_ORIGIN",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.local",
+    "target": "<builtin>.super",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:637:15:82",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 637,
+    "column": 15,
+    "source": "super(Connection, self)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_local",
+    "target": "threading.Event",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:735:19:88",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 735,
+    "column": 19,
+    "source": "Event()",
+    "rule": "UNSHADOWED_IMPORT_ORIGIN",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_local",
+    "target": "threading.Event.set",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:753:12:91",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 753,
+    "column": 12,
+    "source": "finished.set()",
+    "rule": "IMPORTED_CONSTRUCTOR_RESULT",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_local",
+    "target": "invoke.exceptions.ThreadException",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:772:26:94",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 772,
+    "column": 26,
+    "source": "ThreadException([wrapper])",
+    "rule": "UNSHADOWED_IMPORT_ORIGIN",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_remote.callback",
+    "target": "socket.socket",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:852:19:95",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 852,
+    "column": 19,
+    "source": "socket.socket()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_remote.callback",
+    "target": "socket.socket.connect",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:854:12:96",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 854,
+    "column": 12,
+    "source": "sock.connect((local_host, local_port))",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_remote.callback",
+    "target": "threading.Event",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:858:65:98",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 858,
+    "column": 65,
+    "source": "Event()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_remote.callback",
+    "target": "<**PyList**>.append",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:861:12:100",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 861,
+    "column": 12,
+    "source": "tunnels.append(tunnel)",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "<builtin>.isinstance",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:19:15:1",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 19,
+    "column": 15,
+    "source": "isinstance(call, Task)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "invoke.Call",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:20:23:2",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 20,
+    "column": 23,
+    "source": "Call(task=call)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "<**PyList**>.extend",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:27:12:3",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 27,
+    "column": 12,
+    "source": "ret.extend(self.expand_calls(call.pre, apply_hosts=False))",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "<**PyList**>.append",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:30:16:5",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 30,
+    "column": 16,
+    "source": "ret.append(self.parameterize(call, host))",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "<**PyList**>.append",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:34:16:7",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 34,
+    "column": 16,
+    "source": "ret.append(call)",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "<**PyList**>.extend",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:36:12:8",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 36,
+    "column": 12,
+    "source": "ret.extend(self.expand_calls(call.post, apply_hosts=False))",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "invoke.Call",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:50:19:12",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 50,
+    "column": 19,
+    "source": "Call(Task(body=anonymous))",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "invoke.Task",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:50:24:13",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 50,
+    "column": 24,
+    "source": "Task(body=anonymous)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "<**PyList**>.append",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:55:16:14",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 55,
+    "column": 16,
+    "source": "ret.append(self.parameterize(anon, host))",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.parameterize",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:62:14:17",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 62,
+    "column": 14,
+    "source": "\"Parameterizing {!r} for host {!r}\".format(call, host)",
+    "rule": "LITERAL_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.group.Group.__init__",
+    "target": "<builtin>.map",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:70:20:1",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 70,
+    "column": 20,
+    "source": "map(Connection, hosts)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.group.ThreadingGroup.run",
+    "target": "<builtin>.dict",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:175:24:11",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 175,
+    "column": 24,
+    "source": "dict(cxn=cxn, queue=queue, args=args, kwargs=kwargs)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.group.ThreadingGroup.run",
+    "target": "invoke.util.ExceptionHandlingThread",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:176:21:12",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 176,
+    "column": 21,
+    "source": "ExceptionHandlingThread(\n                target=thread_worker, kwargs=my_kwargs\n            )",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.group.ThreadingGroup.run",
+    "target": "<**PyList**>.append",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:179:12:13",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 179,
+    "column": 12,
+    "source": "threads.append(thread)",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.group.ThreadingGroup.run",
+    "target": "invoke.util.ExceptionHandlingThread.start",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:181:12:14",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 181,
+    "column": 12,
+    "source": "thread.start()",
+    "rule": "IMPORTED_CONSTRUCTOR_RESULT",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.group.ThreadingGroup.run",
+    "target": "invoke.util.ExceptionHandlingThread.join",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:186:12:15",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 186,
+    "column": 12,
+    "source": "thread.join()",
+    "rule": "IMPORTED_CONSTRUCTOR_RESULT",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.group.ThreadingGroup.run",
+    "target": "invoke.util.ExceptionHandlingThread.exception",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:202:22:18",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 202,
+    "column": 22,
+    "source": "thread.exception()",
+    "rule": "IMPORTED_CONSTRUCTOR_RESULT",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.group.GroupResult.__init__",
+    "target": "<builtin>.super",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:236:8:21",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 236,
+    "column": 8,
+    "source": "super(dict, self)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.group.GroupResult._bifurcate",
+    "target": "<builtin>.isinstance",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:247:15:23",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 247,
+    "column": 15,
+    "source": "isinstance(value, BaseException)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.print_version",
+    "target": "<builtin>.super",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:20:8:1",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 20,
+    "column": 8,
+    "source": "super(Fab, self)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.print_version",
+    "target": "<builtin>.print",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:21:8:2",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 21,
+    "column": 8,
+    "source": "print(\"Paramiko {}\".format(paramiko))",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.print_version",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:21:14:3",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 21,
+    "column": 14,
+    "source": "\"Paramiko {}\".format(paramiko)",
+    "rule": "LITERAL_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.print_version",
+    "target": "<builtin>.print",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:22:8:4",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 22,
+    "column": 8,
+    "source": "print(\"Invoke {}\".format(invoke))",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.print_version",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:22:14:5",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 22,
+    "column": 14,
+    "source": "\"Invoke {}\".format(invoke)",
+    "rule": "LITERAL_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.core_args",
+    "target": "<builtin>.super",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:25:20:7",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 25,
+    "column": 20,
+    "source": "super(Fab, self)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.core_args",
+    "target": "invoke.Argument",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:27:12:8",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 27,
+    "column": 12,
+    "source": "Argument(\n                names=(\"S\", \"ssh-config\"),\n                help=\"Path to runtime SSH config file.\",\n            )",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.core_args",
+    "target": "invoke.Argument",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:31:12:9",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 31,
+    "column": 12,
+    "source": "Argument(\n                names=(\"H\", \"hosts\"),\n                help=\"Comma-separated host name(s) to execute tasks against.\",\n            )",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.core_args",
+    "target": "invoke.Argument",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:35:12:10",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 35,
+    "column": 12,
+    "source": "Argument(\n                names=(\"i\", \"identity\"),\n                kind=list,  # Same as OpenSSH, can give >1 key\n                # TODO: automatically add hint about iterable-ness to Invoke\n                # help display machinery?\n                help=\"Path to runtime SSH identity (key) file. May be given multiple times.\",  # noqa\n            )",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.core_args",
+    "target": "invoke.Argument",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:43:12:11",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 43,
+    "column": 12,
+    "source": "Argument(\n                names=(\"prompt-for-login-password\",),\n                kind=bool,\n                help=\"Request an upfront SSH-auth password prompt.\",\n            )",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.core_args",
+    "target": "invoke.Argument",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:48:12:12",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 48,
+    "column": 12,
+    "source": "Argument(\n                names=(\"prompt-for-passphrase\",),\n                kind=bool,\n                help=\"Request an upfront SSH key passphrase prompt.\",\n            )",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.load_collection",
+    "target": "invoke.Collection",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:81:30:13",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 81,
+    "column": 30,
+    "source": "Collection()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.load_collection",
+    "target": "<builtin>.super",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:83:12:15",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 83,
+    "column": 12,
+    "source": "super(Fab, self)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.no_tasks_given",
+    "target": "<builtin>.super",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:89:12:17",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 89,
+    "column": 12,
+    "source": "super(Fab, self)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.update_config",
+    "target": "<builtin>.super",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:111:8:22",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 111,
+    "column": 8,
+    "source": "super(Fab, self)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.update_config",
+    "target": "getpass.getpass",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:131:41:25",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 131,
+    "column": 41,
+    "source": "getpass.getpass(prompt)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.main.Fab.update_config",
+    "target": "getpass.getpass",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:134:43:26",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 134,
+    "column": 43,
+    "source": "getpass.getpass(prompt)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.runners.Remote.start",
+    "target": "invoke.pty_size",
+    "call_id": "CALL:tmpwheciye8/fabric/runners.py:21:25:1",
+    "file": "tmpwheciye8/fabric/runners.py",
+    "line": 21,
+    "column": 25,
+    "source": "pty_size()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.runners.Remote.stop",
+    "target": "<builtin>.hasattr",
+    "call_id": "CALL:tmpwheciye8/fabric/runners.py:71:11:12",
+    "file": "tmpwheciye8/fabric/runners.py",
+    "line": 71,
+    "column": 11,
+    "source": "hasattr(self, \"channel\")",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.runners.Result.__init__",
+    "target": "<builtin>.super",
+    "call_id": "CALL:tmpwheciye8/fabric/runners.py:108:8:16",
+    "file": "tmpwheciye8/fabric/runners.py",
+    "line": 108,
+    "column": 8,
+    "source": "super(Result, self)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.is_remote_dir",
+    "target": "stat.S_ISDIR",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:37:19:1",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 37,
+    "column": 19,
+    "source": "stat.S_ISDIR(self.sftp.stat(path).st_mode)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "<builtin>.ValueError",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:104:18:3",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 104,
+    "column": 18,
+    "source": "ValueError(\"Remote path must not be empty!\")",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "posixpath.join",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:106:17:4",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 106,
+    "column": 17,
+    "source": "posixpath.join(\n            self.sftp.getcwd() or self.sftp.normalize(\".\"), remote\n        )",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "<builtin>.hasattr",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:114:23:7",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 114,
+    "column": 23,
+    "source": "hasattr(local, \"write\")",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "<builtin>.callable",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:114:51:8",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 114,
+    "column": 51,
+    "source": "callable(local.write)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "posixpath.basename",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:116:20:9",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 116,
+    "column": 20,
+    "source": "posixpath.basename(remote)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "os.path.abspath",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:118:20:10",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 118,
+    "column": 20,
+    "source": "os.path.abspath(local)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "stat.S_IMODE",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:136:23:14",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 136,
+    "column": 23,
+    "source": "stat.S_IMODE(remote_mode)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "os.chmod",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:137:16:15",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 137,
+    "column": 16,
+    "source": "os.chmod(local, mode)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "<builtin>.ValueError",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:194:18:17",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 194,
+    "column": 18,
+    "source": "ValueError(\"Local path must not be empty!\")",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "<builtin>.hasattr",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:196:23:18",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 196,
+    "column": 23,
+    "source": "hasattr(local, \"write\")",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "<builtin>.callable",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:196:51:19",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 196,
+    "column": 51,
+    "source": "callable(local.write)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "<builtin>.getattr",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:201:25:20",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 201,
+    "column": 25,
+    "source": "getattr(local, \"name\", None)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "os.path.basename",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:203:25:21",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 203,
+    "column": 25,
+    "source": "os.path.basename(local)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "<builtin>.ValueError",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:206:22:22",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 206,
+    "column": 22,
+    "source": "ValueError(\n                    \"Must give non-empty remote path when local is a file-like object!\"  # noqa\n                )",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:211:22:24",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 211,
+    "column": 22,
+    "source": "\"Massaged empty remote path into {!r}\".format(remote)",
+    "rule": "LITERAL_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "posixpath.join",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:216:25:26",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 216,
+    "column": 25,
+    "source": "posixpath.join(remote, local_base)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "<builtin>.ValueError",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:219:26:27",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 219,
+    "column": 26,
+    "source": "ValueError(\n                        \"Can't put a file-like-object into a directory unless it has a non-empty .name attribute!\"  # noqa\n                    )",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "<builtin>.ValueError",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:225:26:28",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 225,
+    "column": 26,
+    "source": "ValueError(\n                        \"Somehow got an empty local file basename ({!r}) when uploading to a directory ({!r})!\".format(  # noqa\n                            local_base, remote\n                        )\n                    )",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:226:24:29",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 226,
+    "column": 24,
+    "source": "\"Somehow got an empty local file basename ({!r}) when uploading to a directory ({!r})!\".format(  # noqa\n                            local_base, remote\n                        )",
+    "rule": "LITERAL_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "posixpath.join",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:232:17:30",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 232,
+    "column": 17,
+    "source": "posixpath.join(\n            self.sftp.getcwd() or self.sftp.normalize(\".\"), remote\n        )",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:237:18:34",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 237,
+    "column": 18,
+    "source": "msg.format(prejoined_remote, remote)",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "os.path.abspath",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:242:20:35",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 242,
+    "column": 20,
+    "source": "os.path.abspath(local)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:245:20:37",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 245,
+    "column": 20,
+    "source": "\"Massaged relative local path {!r} into {!r}\".format(\n                        orig_local, local\n                    )",
+    "rule": "LITERAL_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:259:18:39",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 259,
+    "column": 18,
+    "source": "msg.format(local, remote)",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:267:18:45",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 267,
+    "column": 18,
+    "source": "\"Uploading {!r} to {!r}\".format(local, remote)",
+    "rule": "LITERAL_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "os.stat",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:273:29:47",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 273,
+    "column": 29,
+    "source": "os.stat(local)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "stat.S_IMODE",
+    "call_id": "CALL:tmpwheciye8/fabric/transfer.py:274:23:48",
+    "file": "tmpwheciye8/fabric/transfer.py",
+    "line": 274,
+    "column": 23,
+    "source": "stat.S_IMODE(local_mode)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager.__init__",
+    "target": "<builtin>.super",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:42:8:1",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 42,
+    "column": 8,
+    "source": "super(TunnelManager, self)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "socket.socket",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:53:15:2",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 53,
+    "column": 15,
+    "source": "socket.socket(socket.AF_INET, socket.SOCK_STREAM)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "socket.socket.setsockopt",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:55:8:3",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 55,
+    "column": 8,
+    "source": "sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "socket.socket.setblocking",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:59:8:4",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 59,
+    "column": 8,
+    "source": "sock.setblocking(0)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "socket.socket.bind",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:60:8:5",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 60,
+    "column": 8,
+    "source": "sock.bind(self.local_address)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "socket.socket.listen",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:61:8:6",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 61,
+    "column": 8,
+    "source": "sock.listen(1)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "socket.socket.accept",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:68:39:8",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 68,
+    "column": 39,
+    "source": "sock.accept()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "time.sleep",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:74:20:10",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 74,
+    "column": 20,
+    "source": "time.sleep(0.01)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "threading.Event",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:87:23:12",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 87,
+    "column": 23,
+    "source": "Event()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "<**PyList**>.append",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:90:12:15",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 90,
+    "column": 12,
+    "source": "tunnels.append(tunnel)",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "<**PyList**>.append",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:102:16:19",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 102,
+    "column": 16,
+    "source": "exceptions.append(wrapper)",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "invoke.exceptions.ThreadException",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:105:18:20",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 105,
+    "column": 18,
+    "source": "ThreadException(exceptions)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "socket.socket.close",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:109:8:21",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 109,
+    "column": 8,
+    "source": "sock.close()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.tunnels.Tunnel.__init__",
+    "target": "<builtin>.super",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:125:8:23",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 125,
+    "column": 8,
+    "source": "super(Tunnel, self)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.tunnels.Tunnel._run",
+    "target": "select.select",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:131:26:25",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 131,
+    "column": 26,
+    "source": "select.select([self.sock, self.channel], [], [], 1)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.tunnels.Tunnel.read_and_write",
+    "target": "<builtin>.len",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:155:11:31",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 155,
+    "column": 11,
+    "source": "len(data)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.util",
+    "target": "logging.getLogger",
+    "call_id": "CALL:tmpwheciye8/fabric/util.py:8:6:0",
+    "file": "tmpwheciye8/fabric/util.py",
+    "line": 8,
+    "column": 6,
+    "source": "logging.getLogger(\"fabric\")",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.util",
+    "target": "<builtin>.globals",
+    "call_id": "CALL:tmpwheciye8/fabric/util.py:10:4:1",
+    "file": "tmpwheciye8/fabric/util.py",
+    "line": 10,
+    "column": 4,
+    "source": "globals()",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.util",
+    "target": "<builtin>.getattr",
+    "call_id": "CALL:tmpwheciye8/fabric/util.py:10:19:2",
+    "file": "tmpwheciye8/fabric/util.py",
+    "line": 10,
+    "column": 19,
+    "source": "getattr(log, x)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "fabric.util.get_local_user",
+    "target": "getpass.getuser",
+    "call_id": "CALL:tmpwheciye8/fabric/util.py:31:19:3",
+    "file": "tmpwheciye8/fabric/util.py",
+    "line": 31,
+    "column": 19,
+    "source": "getpass.getuser()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.concurrency._worker",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:17:10:0",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 17,
+    "column": 10,
+    "source": "\"tail -n {} {} | head -n {}\".format(tail, _words, count)",
+    "rule": "LITERAL_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "pytest.skip",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:52:8:10",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 52,
+    "column": 8,
+    "source": "skip()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "invoke.vendor.six.moves.queue.Queue",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:60:16:11",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 60,
+    "column": 16,
+    "source": "Queue()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "codecs.open",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:62:13:12",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 62,
+    "column": 13,
+    "source": "codecs.open(_words, encoding=\"utf-8\")",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "<builtin>.len",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:65:20:15",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 65,
+    "column": 20,
+    "source": "len(data)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "<builtin>.len",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:66:20:16",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 66,
+    "column": 20,
+    "source": "len(data)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "<builtin>.len",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:66:32:17",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 66,
+    "column": 32,
+    "source": "len(self.cxns)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "<builtin>.enumerate",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:67:22:18",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 67,
+    "column": 22,
+    "source": "enumerate(self.cxns)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "<builtin>.max",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:69:18:19",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 69,
+    "column": 18,
+    "source": "max([start + chunksize, num_words])",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "<builtin>.dict",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:71:21:20",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 71,
+    "column": 21,
+    "source": "dict(\n                queue=queue,\n                cxn=cxn,\n                start=start,\n                num_words=num_words,\n                count=len(chunk),\n                expected=chunk,\n            )",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "<builtin>.len",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:76:22:21",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 76,
+    "column": 22,
+    "source": "len(chunk)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "invoke.util.ExceptionHandlingThread",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:79:21:22",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 79,
+    "column": 21,
+    "source": "ExceptionHandlingThread(target=_worker, kwargs=kwargs)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "<**PyList**>.append",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:80:12:23",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 80,
+    "column": 12,
+    "source": "threads.append(thread)",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "invoke.util.ExceptionHandlingThread.start",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:82:12:24",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 82,
+    "column": 12,
+    "source": "t.start()",
+    "rule": "IMPORTED_CONSTRUCTOR_RESULT",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "invoke.util.ExceptionHandlingThread.join",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:84:12:25",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 84,
+    "column": 12,
+    "source": "t.join(5)",
+    "rule": "IMPORTED_CONSTRUCTOR_RESULT",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "invoke.vendor.six.moves.queue.Queue.empty",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:85:18:26",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 85,
+    "column": 18,
+    "source": "queue.empty()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "invoke.vendor.six.moves.queue.Queue.get",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:86:36:27",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 86,
+    "column": 36,
+    "source": "queue.get(block=False)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "invoke.vendor.six.moves.zip_longest",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:87:44:28",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 87,
+    "column": 44,
+    "source": "zip_longest(result, expected)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/integration/concurrency.py:88:22:29",
+    "file": "tmpwheciye8/integration/concurrency.py",
+    "line": 88,
+    "column": 22,
+    "source": "u\"({2!r}, {3!r}->{4!r}) {0!r} != {1!r}\".format(\n                    resultword, expectedword, cxn, expected[0], expected[-1]\n                )",
+    "rule": "LITERAL_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.connection.skip_outside_travis",
+    "target": "os.environ.get",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:11:11:0",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 11,
+    "column": 11,
+    "source": "os.environ.get(\"TRAVIS\", False)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.connection.skip_outside_travis",
+    "target": "pytest.skip",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:12:8:1",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 12,
+    "column": 8,
+    "source": "skip()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.connection.Connection_.run.simple_command_with_pty",
+    "target": "invoke.pty_size",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:52:25:14",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 52,
+    "column": 25,
+    "source": "pty_size()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.connection.Connection_.run.simple_command_with_pty",
+    "target": "<builtin>.tuple",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:53:19:15",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 53,
+    "column": 19,
+    "source": "tuple(map(int, found))",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.connection.Connection_.run.simple_command_with_pty",
+    "target": "<builtin>.map",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:53:25:16",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 53,
+    "column": 25,
+    "source": "map(int, found)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.connection.Connection_.large_remote_commands_finish_cleanly",
+    "target": "<builtin>.open",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:112:13:33",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 112,
+    "column": 13,
+    "source": "open(path)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.connection.Connection_.large_remote_commands_finish_cleanly",
+    "target": "<**PyStr**>.format",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:114:25:37",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 114,
+    "column": 25,
+    "source": "\"cat {}\".format(path)",
+    "rule": "LITERAL_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.connection.Connection_.large_remote_commands_finish_cleanly",
+    "target": "<builtin>.len",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:118:15:40",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 118,
+    "column": 15,
+    "source": "len(lines)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.connection.Connection_.large_remote_commands_finish_cleanly",
+    "target": "<builtin>.len",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:118:29:41",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 118,
+    "column": 29,
+    "source": "len(words)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.group.Group_.excepted_command",
+    "target": "<builtin>.isinstance",
+    "call_id": "CALL:tmpwheciye8/integration/group.py:33:23:10",
+    "file": "tmpwheciye8/integration/group.py",
+    "line": 33,
+    "column": 23,
+    "source": "isinstance(value, gaierror)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.transfer._support",
+    "target": "os.path.join",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:11:11:0",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 11,
+    "column": 11,
+    "source": "os.path.join(os.path.dirname(__file__), \"_support\", *parts)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.transfer._support",
+    "target": "os.path.dirname",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:11:24:1",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 11,
+    "column": 24,
+    "source": "os.path.dirname(__file__)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.get.base_case",
+    "target": "<builtin>.str",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:32:35:9",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 32,
+    "column": 35,
+    "source": "str(local)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.get.file_like_objects",
+    "target": "io.BytesIO",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:36:17:10",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 36,
+    "column": 17,
+    "source": "BytesIO()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.get.file_like_objects",
+    "target": "io.BytesIO.getvalue",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:38:19:12",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 38,
+    "column": 19,
+    "source": "fd.getvalue()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.get.mode_preservation",
+    "target": "<builtin>.str",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:49:30:18",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 49,
+    "column": 30,
+    "source": "str(remote)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.get.mode_preservation",
+    "target": "<builtin>.str",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:49:49:19",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 49,
+    "column": 49,
+    "source": "str(local)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.get.mode_preservation",
+    "target": "stat.S_IMODE",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:50:19:20",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 50,
+    "column": 19,
+    "source": "stat.S_IMODE(local.stat().mode)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.put.setup",
+    "target": "py.path.local.mkdtemp",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:55:26:25",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 55,
+    "column": 26,
+    "source": "path.local.mkdtemp()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.put.base_case",
+    "target": "py.path.local",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:60:17:28",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 60,
+    "column": 17,
+    "source": "path.local(local_dir)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.put.base_case",
+    "target": "<builtin>.str",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:63:36:32",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 63,
+    "column": 36,
+    "source": "str(tmpdir)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.put.file_like_objects",
+    "target": "io.BytesIO",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:75:17:37",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 75,
+    "column": 17,
+    "source": "BytesIO()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.put.file_like_objects",
+    "target": "io.BytesIO.write",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:76:12:38",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 76,
+    "column": 12,
+    "source": "fd.write(b\"yup\\n\")",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.put.file_like_objects",
+    "target": "<builtin>.str",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:77:25:39",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 77,
+    "column": 25,
+    "source": "str(self.remote)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.put.mode_preservation",
+    "target": "<builtin>.str",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:90:30:47",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 90,
+    "column": 30,
+    "source": "str(remote)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.put.mode_preservation",
+    "target": "<builtin>.str",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:90:49:48",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 90,
+    "column": 49,
+    "source": "str(local)",
+    "rule": "UNSHADOWED_BUILTIN_NAME",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.put.mode_preservation",
+    "target": "stat.S_IMODE",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:91:19:49",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 91,
+    "column": 19,
+    "source": "stat.S_IMODE(remote.stat().mode)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "alabaster.get_path",
+    "call_id": "CALL:tmpwheciye8/sites/shared_conf.py:9:19:0",
+    "file": "tmpwheciye8/sites/shared_conf.py",
+    "line": 9,
+    "column": 19,
+    "source": "alabaster.get_path()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "os.path.join",
+    "call_id": "CALL:tmpwheciye8/sites/shared_conf.py:13:20:1",
+    "file": "tmpwheciye8/sites/shared_conf.py",
+    "line": 13,
+    "column": 20,
+    "source": "join(\"..\", \"_shared_static\")",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "<**PyList**>.append",
+    "call_id": "CALL:tmpwheciye8/sites/shared_conf.py:37:0:2",
+    "file": "tmpwheciye8/sites/shared_conf.py",
+    "line": 37,
+    "column": 0,
+    "source": "extensions.append(\"sphinx.ext.doctest\")",
+    "rule": "FLOW_BUILTIN_METHOD",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "os.path.abspath",
+    "call_id": "CALL:tmpwheciye8/sites/shared_conf.py:39:16:3",
+    "file": "tmpwheciye8/sites/shared_conf.py",
+    "line": 39,
+    "column": 16,
+    "source": "abspath(join(dirname(__file__), \"..\", \"tests\"))",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "os.path.join",
+    "call_id": "CALL:tmpwheciye8/sites/shared_conf.py:39:24:4",
+    "file": "tmpwheciye8/sites/shared_conf.py",
+    "line": 39,
+    "column": 24,
+    "source": "join(dirname(__file__), \"..\", \"tests\")",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "os.path.dirname",
+    "call_id": "CALL:tmpwheciye8/sites/shared_conf.py:39:29:5",
+    "file": "tmpwheciye8/sites/shared_conf.py",
+    "line": 39,
+    "column": 29,
+    "source": "dirname(__file__)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "os.environ.get",
+    "call_id": "CALL:tmpwheciye8/sites/shared_conf.py:44:9:6",
+    "file": "tmpwheciye8/sites/shared_conf.py",
+    "line": 44,
+    "column": 9,
+    "source": "os.environ.get(\"READTHEDOCS\")",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "os.environ.get",
+    "call_id": "CALL:tmpwheciye8/sites/shared_conf.py:45:12:7",
+    "file": "tmpwheciye8/sites/shared_conf.py",
+    "line": 45,
+    "column": 12,
+    "source": "os.environ.get(\"TRAVIS\", False)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "os.path.join",
+    "call_id": "CALL:tmpwheciye8/sites/shared_conf.py:49:13:8",
+    "file": "tmpwheciye8/sites/shared_conf.py",
+    "line": 49,
+    "column": 13,
+    "source": "join(\n    dirname(__file__), \"..\", \"..\", \"invoke\", \"sites\", \"docs\", \"_build\"\n)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "os.path.dirname",
+    "call_id": "CALL:tmpwheciye8/sites/shared_conf.py:50:4:9",
+    "file": "tmpwheciye8/sites/shared_conf.py",
+    "line": 50,
+    "column": 4,
+    "source": "dirname(__file__)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "os.path.join",
+    "call_id": "CALL:tmpwheciye8/sites/shared_conf.py:54:17:10",
+    "file": "tmpwheciye8/sites/shared_conf.py",
+    "line": 54,
+    "column": 17,
+    "source": "join(\n    dirname(__file__), \"..\", \"..\", \"invoke\", \"sites\", \"www\", \"_build\"\n)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "os.path.dirname",
+    "call_id": "CALL:tmpwheciye8/sites/shared_conf.py:55:4:11",
+    "file": "tmpwheciye8/sites/shared_conf.py",
+    "line": 55,
+    "column": 4,
+    "source": "dirname(__file__)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "os.path.join",
+    "call_id": "CALL:tmpwheciye8/sites/shared_conf.py:60:14:12",
+    "file": "tmpwheciye8/sites/shared_conf.py",
+    "line": 60,
+    "column": 14,
+    "source": "join(\n    dirname(__file__), \"..\", \"..\", \"paramiko\", \"sites\", \"docs\", \"_build\"\n)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "os.path.dirname",
+    "call_id": "CALL:tmpwheciye8/sites/shared_conf.py:61:4:13",
+    "file": "tmpwheciye8/sites/shared_conf.py",
+    "line": 61,
+    "column": 4,
+    "source": "dirname(__file__)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "datetime.datetime.now",
+    "call_id": "CALL:tmpwheciye8/sites/shared_conf.py:74:7:14",
+    "file": "tmpwheciye8/sites/shared_conf.py",
+    "line": 74,
+    "column": 7,
+    "source": "datetime.now()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "tasks.publish",
+    "target": "invocations.util.tmpdir",
+    "call_id": "CALL:tmpwheciye8/tasks.py:45:9:5",
+    "file": "tmpwheciye8/tasks.py",
+    "line": 45,
+    "column": 9,
+    "source": "tmpdir(skip_cleanup=dry_run, explicit=directory)",
+    "rule": "UNSHADOWED_IMPORT_ORIGIN",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "tasks.publish",
+    "target": "functools.partial",
+    "call_id": "CALL:tmpwheciye8/tasks.py:48:18:6",
+    "file": "tmpwheciye8/tasks.py",
+    "line": 48,
+    "column": 18,
+    "source": "partial(\n            release.build, c, sdist=sdist, wheel=wheel, directory=directory\n        )",
+    "rule": "UNSHADOWED_IMPORT_ORIGIN",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "tasks.publish",
+    "target": "invocations.packaging.release.upload",
+    "call_id": "CALL:tmpwheciye8/tasks.py:57:8:9",
+    "file": "tmpwheciye8/tasks.py",
+    "line": 57,
+    "column": 8,
+    "source": "release.upload(c, directory, index, sign, dry_run)",
+    "rule": "UNSHADOWED_IMPORT_ORIGIN",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "tasks.integration",
+    "target": "invocations.pytest.integration",
+    "call_id": "CALL:tmpwheciye8/tasks.py:74:11:10",
+    "file": "tmpwheciye8/tasks.py",
+    "line": 74,
+    "column": 11,
+    "source": "integration_(c, opts, pty, x, k, verbose, color, capture, module)",
+    "rule": "UNSHADOWED_IMPORT_ORIGIN",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "tasks",
+    "target": "invoke.Collection",
+    "call_id": "CALL:tmpwheciye8/tasks.py:80:13:11",
+    "file": "tmpwheciye8/tasks.py",
+    "line": 80,
+    "column": 13,
+    "source": "Collection(\n    \"release\", release.build, release.status, publish, release.prepare\n)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "tasks",
+    "target": "invoke.Collection",
+    "call_id": "CALL:tmpwheciye8/tasks.py:84:5:12",
+    "file": "tmpwheciye8/tasks.py",
+    "line": 84,
+    "column": 5,
+    "source": "Collection(\n    blacken,\n    coverage,\n    docs,\n    integration,\n    my_release,\n    sites,\n    test,\n    travis,\n    watch_docs,\n    www,\n)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_ORIGIN"
+  },
+  {
+    "caller": "tasks",
+    "target": "invoke.Collection.configure",
+    "call_id": "CALL:tmpwheciye8/tasks.py:96:0:13",
+    "file": "tmpwheciye8/tasks.py",
+    "line": 96,
+    "column": 0,
+    "source": "ns.configure(\n    {\n        \"tests\": {\n            # TODO: have pytest tasks honor these?\n            \"package\": \"fabric\",\n            \"logformat\": LOG_FORMAT,\n        },\n        \"packaging\": {\n            # NOTE: this is currently for identifying the source directory.\n            # Should it get used for actual releasing, needs changing.\n            \"package\": \"fabric\",\n            \"sign\": True,\n            \"wheel\": True,\n            \"check_desc\": True,\n            \"changelog_file\": \"sites/www/changelog.rst\",\n        },\n        # TODO: perhaps move this into a tertiary, non automatically loaded,\n        # conf file so that both this & the code under test can reference it?\n        # Meh.\n        \"travis\": {\n            \"sudo\": {\"user\": \"sudouser\", \"password\": \"mypass\"},\n            \"black\": {\"version\": \"18.6b4\"},\n        },\n    }\n)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric._version",
+    "target": "<builtin>.str",
+    "call_id": "CALL:tmpwheciye8/fabric/_version.py:2:23:1",
+    "file": "tmpwheciye8/fabric/_version.py",
+    "line": 2,
+    "column": 23,
+    "source": "map(str, __version_info__)",
+    "rule": "EAGER_MAP_CONSUMER_CALLBACK",
+    "certainty": "CALLBACK_MAY_EXECUTE"
+  },
+  {
+    "caller": "integration.connection.Connection_.run.simple_command_with_pty",
+    "target": "<builtin>.int",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:53:25:16",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 53,
+    "column": 25,
+    "source": "map(int, found)",
+    "rule": "EAGER_MAP_CONSUMER_CALLBACK",
+    "certainty": "CALLBACK_MAY_EXECUTE"
+  },
+  {
+    "caller": "fabric.config.Config.__init__",
+    "target": "invoke.config.Config._set",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:76:8:5",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 76,
+    "column": 8,
+    "source": "self._set(_system_ssh_path=system_path)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.config.Config.__init__",
+    "target": "invoke.config.Config._set",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:77:8:6",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 77,
+    "column": 8,
+    "source": "self._set(_user_ssh_path=kwargs.pop(\"user_ssh_path\", \"~/.ssh/config\"))",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.config.Config.__init__",
+    "target": "invoke.config.Config._set",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:83:8:8",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 83,
+    "column": 8,
+    "source": "self._set(_given_explicit_object=explicit)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.config.Config.__init__",
+    "target": "invoke.config.Config._set",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:89:8:10",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 89,
+    "column": 8,
+    "source": "self._set(base_ssh_config=ssh_config)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.config.Config.__init__",
+    "target": "invoke.config.Config.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:93:8:11",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 93,
+    "column": 8,
+    "source": "super(Config, self).__init__(*args, **kwargs)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.config.Config.set_runtime_ssh_path",
+    "target": "invoke.config.Config._set",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:108:8:14",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 108,
+    "column": 8,
+    "source": "self._set(_runtime_ssh_path=path)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.config.Config.clone",
+    "target": "invoke.config.Config.clone",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:139:14:16",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 139,
+    "column": 14,
+    "source": "super(Config, self).clone(*args, **kwargs)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.config.Config._clone_init_kwargs",
+    "target": "invoke.config.Config._clone_init_kwargs",
+    "call_id": "CALL:tmpwheciye8/fabric/config.py:157:17:21",
+    "file": "tmpwheciye8/fabric/config.py",
+    "line": 157,
+    "column": 17,
+    "source": "super(Config, self)._clone_init_kwargs(*args, **kw)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "invoke.Context.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:251:8:2",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 251,
+    "column": 8,
+    "source": "super(Connection, self).__init__(config=config)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "invoke.Context._set",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:262:8:7",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 262,
+    "column": 8,
+    "source": "self._set(_config=config)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.connection.Connection.open",
+    "target": "paramiko.client.SSHClient.connect",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:524:8:60",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 524,
+    "column": 8,
+    "source": "self.client.connect(**kwargs)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.connection.Connection.open",
+    "target": "paramiko.client.SSHClient.get_transport",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:525:25:61",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 525,
+    "column": 25,
+    "source": "self.client.get_transport()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.connection.Connection.close",
+    "target": "paramiko.client.SSHClient.close",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:576:12:72",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 576,
+    "column": 12,
+    "source": "self.client.close()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.connection.Connection.local",
+    "target": "invoke.Context.run",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:637:15:81",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 637,
+    "column": 15,
+    "source": "super(Connection, self).run(*args, **kwargs)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_remote.callback",
+    "target": "invoke.util.ExceptionHandlingThread.start",
+    "call_id": "CALL:tmpwheciye8/fabric/connection.py:859:12:99",
+    "file": "tmpwheciye8/fabric/connection.py",
+    "line": 859,
+    "column": 12,
+    "source": "tunnel.start()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.parameterize",
+    "target": "invoke.Call.clone",
+    "call_id": "CALL:tmpwheciye8/fabric/executor.py:65:16:18",
+    "file": "tmpwheciye8/fabric/executor.py",
+    "line": 65,
+    "column": 16,
+    "source": "call.clone(into=ConnectionCall)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.group.Group.__init__",
+    "target": "<**PyList**>.extend",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:70:8:0",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 70,
+    "column": 8,
+    "source": "self.extend(map(Connection, hosts))",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.group.Group.from_connections",
+    "target": "<**PyList**>.extend",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:82:8:3",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 82,
+    "column": 8,
+    "source": "group.extend(connections)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.group.GroupResult._bifurcate",
+    "target": "<**PyDict**>.items",
+    "call_id": "CALL:tmpwheciye8/fabric/group.py:246:26:22",
+    "file": "tmpwheciye8/fabric/group.py",
+    "line": 246,
+    "column": 26,
+    "source": "self.items()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.main.Fab.print_version",
+    "target": "invoke.Program.print_version",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:20:8:0",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 20,
+    "column": 8,
+    "source": "super(Fab, self).print_version()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.main.Fab.core_args",
+    "target": "invoke.Program.core_args",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:25:20:6",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 25,
+    "column": 20,
+    "source": "super(Fab, self).core_args()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.main.Fab.load_collection",
+    "target": "invoke.Program.load_collection",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:83:12:14",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 83,
+    "column": 12,
+    "source": "super(Fab, self).load_collection()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.main.Fab.no_tasks_given",
+    "target": "invoke.Program.no_tasks_given",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:89:12:16",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 89,
+    "column": 12,
+    "source": "super(Fab, self).no_tasks_given()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.main.Fab.create_config",
+    "target": "invoke.Program.config_class",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:95:22:18",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 95,
+    "column": 22,
+    "source": "self.config_class(lazy=True)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.main.Fab.update_config",
+    "target": "invoke.Program.update_config",
+    "call_id": "CALL:tmpwheciye8/fabric/main.py:111:8:21",
+    "file": "tmpwheciye8/fabric/main.py",
+    "line": 111,
+    "column": 8,
+    "source": "super(Fab, self).update_config(merge=False)",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager.__init__",
+    "target": "invoke.util.ExceptionHandlingThread.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:42:8:0",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 42,
+    "column": 8,
+    "source": "super(TunnelManager, self).__init__()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "invoke.util.ExceptionHandlingThread.start",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:89:12:14",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 89,
+    "column": 12,
+    "source": "tunnel.start()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "fabric.tunnels.Tunnel.__init__",
+    "target": "invoke.util.ExceptionHandlingThread.__init__",
+    "call_id": "CALL:tmpwheciye8/fabric/tunnels.py:125:8:22",
+    "file": "tmpwheciye8/fabric/tunnels.py",
+    "line": 125,
+    "column": 8,
+    "source": "super(Tunnel, self).__init__()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "integration.connection.Connection_.ssh_connections.open_method_generates_real_connection",
+    "target": "paramiko.client.SSHClient.get_transport",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:20:19:4",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 20,
+    "column": 19,
+    "source": "c.client.get_transport()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "integration.connection.Connection_.ssh_connections.close_method_closes_connection",
+    "target": "paramiko.client.SSHClient.get_transport",
+    "call_id": "CALL:tmpwheciye8/integration/connection.py:29:19:7",
+    "file": "tmpwheciye8/integration/connection.py",
+    "line": 29,
+    "column": 19,
+    "source": "c.client.get_transport()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.put.setup",
+    "target": "py.path.local.mkdtemp.join",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:55:26:24",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 55,
+    "column": 26,
+    "source": "path.local.mkdtemp().join(\"file.txt\")",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  },
+  {
+    "caller": "integration.transfer.Transfer_.put.base_case",
+    "target": "py.path.local.as_cwd",
+    "call_id": "CALL:tmpwheciye8/integration/transfer.py:60:17:27",
+    "file": "tmpwheciye8/integration/transfer.py",
+    "line": 60,
+    "column": 17,
+    "source": "path.local(local_dir).as_cwd()",
+    "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+    "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+  }
+]

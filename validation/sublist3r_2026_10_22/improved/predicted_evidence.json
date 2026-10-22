@@ -1,0 +1,4500 @@
+[
+  {
+    "caller": "subbrute.subbrute.verify_nameservers.__init__",
+    "target": "subbrute.subbrute.signal_init",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:43:8:2",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 43,
+    "column": 8,
+    "source": "signal_init()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "signal_init"
+    ],
+    "module_level": false,
+    "execution_scope": "verify_nameservers.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.verify_nameservers.add_nameserver",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:85:16:7",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 85,
+    "column": 16,
+    "source": "trace(\"Added nameserver:\", nameserver)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "verify_nameservers.add_nameserver",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.verify_nameservers.verify",
+    "target": "subbrute.subbrute.verify_nameservers.find_wildcards",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:105:27:12",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 105,
+    "column": 27,
+    "source": "self.find_wildcards(self.target)",
+    "rule": "self_method",
+    "trace": [
+      "subbrute.subbrute.verify_nameservers"
+    ],
+    "module_level": false,
+    "execution_scope": "verify_nameservers.verify",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.verify_nameservers.verify",
+    "target": "subbrute.subbrute.verify_nameservers.add_nameserver",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:108:28:13",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 108,
+    "column": 28,
+    "source": "self.add_nameserver(server)",
+    "rule": "self_method",
+    "trace": [
+      "subbrute.subbrute.verify_nameservers"
+    ],
+    "module_level": false,
+    "execution_scope": "verify_nameservers.verify",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.verify_nameservers.verify",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:111:28:14",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 111,
+    "column": 28,
+    "source": "trace(\"Rejected nameserver - wildcard:\", server)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "verify_nameservers.verify",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.verify_nameservers.verify",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:114:20:15",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 114,
+    "column": 20,
+    "source": "trace(\"Rejected nameserver - unreliable:\", server, type(e))",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "verify_nameservers.verify",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.verify_nameservers.run",
+    "target": "subbrute.subbrute.verify_nameservers.verify",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:120:15:18",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 120,
+    "column": 15,
+    "source": "self.verify(self.resolver_list)",
+    "rule": "self_method",
+    "trace": [
+      "subbrute.subbrute.verify_nameservers"
+    ],
+    "module_level": false,
+    "execution_scope": "verify_nameservers.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.verify_nameservers.run",
+    "target": "subbrute.subbrute.verify_nameservers.verify",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:124:12:20",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 124,
+    "column": 12,
+    "source": "self.verify(self.backup_resolver)",
+    "rule": "self_method",
+    "trace": [
+      "subbrute.subbrute.verify_nameservers"
+    ],
+    "module_level": false,
+    "execution_scope": "verify_nameservers.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.verify_nameservers.find_wildcards",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:143:16:25",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 143,
+    "column": 16,
+    "source": "trace(\"Spam DNS detected:\", host)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "verify_nameservers.find_wildcards",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.verify_nameservers.find_wildcards",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:171:20:31",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 171,
+    "column": 20,
+    "source": "trace(\"wildcard exception:\", self.resolver.nameservers, type(e))",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "verify_nameservers.find_wildcards",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.__init__",
+    "target": "subbrute.subbrute.signal_init",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:181:8:34",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 181,
+    "column": 8,
+    "source": "signal_init()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "signal_init"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.get_ns_blocking",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:209:12:39",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 209,
+    "column": 12,
+    "source": "trace(\"get_ns_blocking - Resolver list is empty.\")",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.get_ns_blocking",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.check",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:216:8:41",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 216,
+    "column": 8,
+    "source": "trace(\"Checking:\", host)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.check",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.check",
+    "target": "subbrute.subbrute.lookup.get_ns",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:221:41:43",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 221,
+    "column": 41,
+    "source": "self.get_ns()",
+    "rule": "self_method",
+    "trace": [
+      "subbrute.subbrute.lookup"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.check",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.check",
+    "target": "subbrute.subbrute.extract_hosts",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:229:28:45",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 229,
+    "column": 28,
+    "source": "extract_hosts(str(resp.response), self.domain)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "extract_hosts"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.check",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.check",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:233:28:47",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 233,
+    "column": 28,
+    "source": "trace(\"Found host with spider:\", h)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.check",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.check",
+    "target": "subbrute.subbrute.lookup.get_ns_blocking",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:259:49:57",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 259,
+    "column": 49,
+    "source": "self.get_ns_blocking()",
+    "rule": "self_method",
+    "trace": [
+      "subbrute.subbrute.lookup"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.check",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.check",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:267:24:60",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 267,
+    "column": 24,
+    "source": "trace(\"NoAnswer retry\")",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.check",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.check",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:271:20:62",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 271,
+    "column": 20,
+    "source": "trace(\"lookup failure:\", host, retries)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.check",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.check",
+    "target": "subbrute.subbrute.error",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:295:20:68",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 295,
+    "column": 20,
+    "source": "error(\"DNS record type not supported:\", record_type)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "error"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.check",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.check",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:297:20:69",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 297,
+    "column": 20,
+    "source": "trace(\"Problem processing host:\", host)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.check",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.run",
+    "target": "subbrute.subbrute.lookup.get_ns_blocking",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:303:37:70",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 303,
+    "column": 37,
+    "source": "self.get_ns_blocking()",
+    "rule": "self_method",
+    "trace": [
+      "subbrute.subbrute.lookup"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.run",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:316:20:74",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 316,
+    "column": 20,
+    "source": "trace('End of work queue')",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.run",
+    "target": "subbrute.subbrute.lookup.check",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:331:31:78",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 331,
+    "column": 31,
+    "source": "self.check(hostname, record_type, timeout_retries)",
+    "rule": "self_method",
+    "trace": [
+      "subbrute.subbrute.lookup"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.run",
+    "target": "subbrute.subbrute.lookup.check",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:334:31:79",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 334,
+    "column": 31,
+    "source": "self.check(hostname, record_type)",
+    "rule": "self_method",
+    "trace": [
+      "subbrute.subbrute.lookup"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.run",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:336:16:81",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 336,
+    "column": 16,
+    "source": "trace(response)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.lookup.run",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:345:28:83",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 345,
+    "column": 28,
+    "source": "trace(\"resovled wildcard:\", hostname)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "lookup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.extract_subdomains",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:392:16:99",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 392,
+    "column": 16,
+    "source": "trace(str(p), \" : \", i)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "extract_subdomains",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.print_target",
+    "target": "subbrute.subbrute.run",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:410:4:104",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 410,
+    "column": 4,
+    "source": "run(target, record_type, subdomains, resolve_list, process_count)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "run"
+    ],
+    "module_level": false,
+    "execution_scope": "print_target",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.print_target",
+    "target": "subbrute.subbrute.run",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:411:18:105",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 411,
+    "column": 18,
+    "source": "run(target, record_type, subdomains, resolve_list, process_count)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "run"
+    ],
+    "module_level": false,
+    "execution_scope": "print_target",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.run",
+    "target": "subbrute.subbrute.check_open",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:425:17:111",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 425,
+    "column": 17,
+    "source": "check_open(subdomains)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "check_open"
+    ],
+    "module_level": false,
+    "execution_scope": "run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.run",
+    "target": "subbrute.subbrute.check_open",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:426:19:112",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 426,
+    "column": 19,
+    "source": "check_open(resolve_list)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "check_open"
+    ],
+    "module_level": false,
+    "execution_scope": "run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.run",
+    "target": "subbrute.subbrute.verify_nameservers",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:441:30:122",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 441,
+    "column": 30,
+    "source": "verify_nameservers(target, record_type, resolve_q, resolve_list, wildcards)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:verify_nameservers@38"
+    ],
+    "module_level": false,
+    "execution_scope": "run",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "verify_nameservers",
+        "line": 38
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "subbrute.subbrute.run",
+    "target": "subbrute.subbrute.verify_nameservers.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:441:30:122",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 441,
+    "column": 30,
+    "source": "verify_nameservers(target, record_type, resolve_q, resolve_list, wildcards)",
+    "rule": "constructor_init",
+    "trace": [
+      "subbrute.subbrute.verify_nameservers"
+    ],
+    "module_level": false,
+    "execution_scope": "run",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "verify_nameservers",
+        "line": 38
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "subbrute.subbrute.run",
+    "target": "subbrute.subbrute.lookup",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:466:17:133",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 466,
+    "column": 17,
+    "source": "lookup(in_q, out_q, resolve_q, target, wildcards, spider_blacklist)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:lookup@177"
+    ],
+    "module_level": false,
+    "execution_scope": "run",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "lookup",
+        "line": 177
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "subbrute.subbrute.run",
+    "target": "subbrute.subbrute.lookup.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:466:17:133",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 466,
+    "column": 17,
+    "source": "lookup(in_q, out_q, resolve_q, target, wildcards, spider_blacklist)",
+    "rule": "constructor_init",
+    "trace": [
+      "subbrute.subbrute.lookup"
+    ],
+    "module_level": false,
+    "execution_scope": "run",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "lookup",
+        "line": 177
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "subbrute.subbrute.run",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:488:4:139",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 488,
+    "column": 4,
+    "source": "trace(\"killing nameserver process\")",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.run",
+    "target": "subbrute.subbrute.killproc",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:491:8:140",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 491,
+    "column": 8,
+    "source": "killproc(pid = verify_nameservers_proc.pid)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "killproc"
+    ],
+    "module_level": false,
+    "execution_scope": "run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.run",
+    "target": "subbrute.subbrute.verify_nameservers.end",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:494:8:141",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 494,
+    "column": 8,
+    "source": "verify_nameservers_proc.end()",
+    "rule": "instance_flow_reaching_assignment",
+    "trace": [
+      "constructed:verify_nameservers@38",
+      "subbrute.subbrute.verify_nameservers"
+    ],
+    "module_level": false,
+    "execution_scope": "run",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "constructed",
+        "name": "verify_nameservers",
+        "line": 38
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "subbrute.subbrute.run",
+    "target": "subbrute.subbrute.trace",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:495:4:142",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 495,
+    "column": 4,
+    "source": "trace(\"End\")",
+    "rule": "import_or_same_module",
+    "trace": [
+      "trace"
+    ],
+    "module_level": false,
+    "execution_scope": "run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "subbrute.subbrute.check_open",
+    "target": "subbrute.subbrute.error",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:536:8:159",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 536,
+    "column": 8,
+    "source": "error(\"File not found:\", input_file)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:error@523"
+    ],
+    "module_level": false,
+    "execution_scope": "check_open",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "error",
+        "line": 523
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "subbrute.subbrute.check_open",
+    "target": "subbrute.subbrute.error",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:538:8:161",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 538,
+    "column": 8,
+    "source": "error(\"File is empty:\", input_file)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:error@523"
+    ],
+    "module_level": false,
+    "execution_scope": "check_open",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "error",
+        "line": 523
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "subbrute.subbrute",
+    "target": "subbrute.subbrute.extract_subdomains",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:591:17:186",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 591,
+    "column": 17,
+    "source": "extract_subdomains(options.filter)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:extract_subdomains@375"
+    ],
+    "module_level": true,
+    "execution_scope": "<module>",
+    "execution_phase": "module_initialization",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "extract_subdomains",
+        "line": 375
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "subbrute.subbrute",
+    "target": "subbrute.subbrute.check_open",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:596:18:189",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 596,
+    "column": 18,
+    "source": "check_open(options.targets)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:check_open@530"
+    ],
+    "module_level": true,
+    "execution_scope": "<module>",
+    "execution_phase": "module_initialization",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "check_open",
+        "line": 530
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "subbrute.subbrute",
+    "target": "subbrute.subbrute.error",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:605:12:191",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 605,
+    "column": 12,
+    "source": "error(\"Failed writing to file:\", options.output)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:error@523"
+    ],
+    "module_level": true,
+    "execution_scope": "<module>",
+    "execution_phase": "module_initialization",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "error",
+        "line": 523
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "subbrute.subbrute",
+    "target": "subbrute.subbrute.error",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:612:12:193",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 612,
+    "column": 12,
+    "source": "error(\"Failed writing to file:\", options.json)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:error@523"
+    ],
+    "module_level": true,
+    "execution_scope": "<module>",
+    "execution_phase": "module_initialization",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "error",
+        "line": 523
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "subbrute.subbrute",
+    "target": "subbrute.subbrute.print_target",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/subbrute/subbrute.py:633:12:198",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 633,
+    "column": 12,
+    "source": "print_target(target, record_type, options.subs, options.resolvers, options.process_count, output, json_output)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:print_target@407"
+    ],
+    "module_level": true,
+    "execution_scope": "<module>",
+    "execution_phase": "module_initialization",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "print_target",
+        "line": 407
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.parser_error",
+    "target": "sublist3r.banner",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:87:4:6",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 87,
+    "column": 4,
+    "source": "banner()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:banner@74"
+    ],
+    "module_level": false,
+    "execution_scope": "parser_error",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "banner",
+        "line": 74
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.enumratorBase.__init__",
+    "target": "sublist3r.enumratorBase.print_banner",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:160:8:27",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 160,
+    "column": 8,
+    "source": "self.print_banner()",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "enumratorBase.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.enumratorBase.print_banner",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:169:8:29",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 169,
+    "column": 8,
+    "source": "self.print_(G + \"[-] Searching now in %s..\" % (self.engine_name) + W)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "enumratorBase.print_banner",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.enumratorBase.send_req",
+    "target": "sublist3r.enumratorBase.get_response",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:179:15:32",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 179,
+    "column": 15,
+    "source": "self.get_response(resp)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "enumratorBase.send_req",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.enumratorBase.enumerate",
+    "target": "sublist3r.enumratorBase.generate_query",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:227:20:34",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 227,
+    "column": 20,
+    "source": "self.generate_query()",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "enumratorBase.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.enumratorBase.enumerate",
+    "target": "sublist3r.enumratorBase.check_max_subdomains",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:232:15:36",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 232,
+    "column": 15,
+    "source": "self.check_max_subdomains(count)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "enumratorBase.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.enumratorBase.enumerate",
+    "target": "sublist3r.enumratorBase.get_page",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:233:26:37",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 233,
+    "column": 26,
+    "source": "self.get_page(page_no)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "enumratorBase.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.enumratorBase.enumerate",
+    "target": "sublist3r.enumratorBase.check_max_pages",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:235:15:38",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 235,
+    "column": 15,
+    "source": "self.check_max_pages(page_no)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "enumratorBase.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.enumratorBase.enumerate",
+    "target": "sublist3r.enumratorBase.send_req",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:237:19:39",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 237,
+    "column": 19,
+    "source": "self.send_req(query, page_no)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "enumratorBase.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.enumratorBase.enumerate",
+    "target": "sublist3r.enumratorBase.check_response_errors",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:240:19:40",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 240,
+    "column": 19,
+    "source": "self.check_response_errors(resp)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "enumratorBase.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.enumratorBase.enumerate",
+    "target": "sublist3r.enumratorBase.extract_domains",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:242:20:41",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 242,
+    "column": 20,
+    "source": "self.extract_domains(resp)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "enumratorBase.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.enumratorBase.enumerate",
+    "target": "sublist3r.enumratorBase.get_page",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:247:26:42",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 247,
+    "column": 26,
+    "source": "self.get_page(page_no)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "enumratorBase.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.enumratorBase.enumerate",
+    "target": "sublist3r.enumratorBase.should_sleep",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:254:12:43",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 254,
+    "column": 12,
+    "source": "self.should_sleep()",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "enumratorBase.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.enumratorBaseThreaded.__init__",
+    "target": "sublist3r.enumratorBase.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:262:8:45",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 262,
+    "column": 8,
+    "source": "enumratorBase.__init__(self, base_url, engine_name, domain, subdomains, silent=silent, verbose=verbose)",
+    "rule": "explicit_class_method",
+    "trace": [
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "enumratorBaseThreaded.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.enumratorBaseThreaded.run",
+    "target": "sublist3r.enumratorBase.enumerate",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:269:22:47",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 269,
+    "column": 22,
+    "source": "self.enumerate()",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "enumratorBaseThreaded.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.GoogleEnum.__init__",
+    "target": "sublist3r.enumratorBaseThreaded.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:281:8:49",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 281,
+    "column": 8,
+    "source": "super(GoogleEnum, self).__init__(base_url, self.engine_name, domain, subdomains, q=q, silent=silent, verbose=verbose)",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:sublist3r.GoogleEnum",
+      "anchor:sublist3r.GoogleEnum",
+      "sublist3r.enumratorBaseThreaded"
+    ],
+    "module_level": false,
+    "execution_scope": "GoogleEnum.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "sublist3r.GoogleEnum.extract_domains",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:297:24:57",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 297,
+    "column": 24,
+    "source": "self.print_(\"%s%s: %s%s\" % (R, self.engine_name, W, subdomain))",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.GoogleEnum",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "GoogleEnum.extract_domains",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.GoogleEnum.check_response_errors",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:305:12:62",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 305,
+    "column": 12,
+    "source": "self.print_(R + \"[!] Error: Google probably now is blocking our requests\" + W)",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.GoogleEnum",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "GoogleEnum.check_response_errors",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.GoogleEnum.check_response_errors",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:306:12:63",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 306,
+    "column": 12,
+    "source": "self.print_(R + \"[~] Finished now the Google Enumeration ...\" + W)",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.GoogleEnum",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "GoogleEnum.check_response_errors",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.YahooEnum.__init__",
+    "target": "sublist3r.enumratorBaseThreaded.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:331:8:68",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 331,
+    "column": 8,
+    "source": "super(YahooEnum, self).__init__(base_url, self.engine_name, domain, subdomains, q=q, silent=silent, verbose=verbose)",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:sublist3r.YahooEnum",
+      "anchor:sublist3r.YahooEnum",
+      "sublist3r.enumratorBaseThreaded"
+    ],
+    "module_level": false,
+    "execution_scope": "YahooEnum.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "sublist3r.YahooEnum.extract_domains",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:352:24:78",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 352,
+    "column": 24,
+    "source": "self.print_(\"%s%s: %s%s\" % (R, self.engine_name, W, subdomain))",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.YahooEnum",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "YahooEnum.extract_domains",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.AskEnum.__init__",
+    "target": "sublist3r.enumratorBaseThreaded.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:382:8:84",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 382,
+    "column": 8,
+    "source": "enumratorBaseThreaded.__init__(self, base_url, self.engine_name, domain, subdomains, q=q, silent=silent, verbose=verbose)",
+    "rule": "explicit_class_method",
+    "trace": [
+      "sublist3r.enumratorBaseThreaded"
+    ],
+    "module_level": false,
+    "execution_scope": "AskEnum.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.AskEnum.extract_domains",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:397:24:90",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 397,
+    "column": 24,
+    "source": "self.print_(\"%s%s: %s%s\" % (R, self.engine_name, W, subdomain))",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.AskEnum",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "AskEnum.extract_domains",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.BingEnum.__init__",
+    "target": "sublist3r.enumratorBaseThreaded.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:425:8:96",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 425,
+    "column": 8,
+    "source": "enumratorBaseThreaded.__init__(self, base_url, self.engine_name, domain, subdomains, q=q, silent=silent)",
+    "rule": "explicit_class_method",
+    "trace": [
+      "sublist3r.enumratorBaseThreaded"
+    ],
+    "module_level": false,
+    "execution_scope": "BingEnum.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.BingEnum.extract_domains",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:446:24:105",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 446,
+    "column": 24,
+    "source": "self.print_(\"%s%s: %s%s\" % (R, self.engine_name, W, subdomain))",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.BingEnum",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "BingEnum.extract_domains",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.BaiduEnum.__init__",
+    "target": "sublist3r.enumratorBaseThreaded.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:470:8:111",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 470,
+    "column": 8,
+    "source": "enumratorBaseThreaded.__init__(self, base_url, self.engine_name, domain, subdomains, q=q, silent=silent, verbose=verbose)",
+    "rule": "explicit_class_method",
+    "trace": [
+      "sublist3r.enumratorBaseThreaded"
+    ],
+    "module_level": false,
+    "execution_scope": "BaiduEnum.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.BaiduEnum.extract_domains",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:492:28:120",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 492,
+    "column": 28,
+    "source": "self.print_(\"%s%s: %s%s\" % (R, self.engine_name, W, subdomain))",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.BaiduEnum",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "BaiduEnum.extract_domains",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.BaiduEnum.extract_domains",
+    "target": "sublist3r.BaiduEnum.findsubs",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:497:31:123",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 497,
+    "column": 31,
+    "source": "self.findsubs(subdomain_list)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.BaiduEnum"
+    ],
+    "module_level": false,
+    "execution_scope": "BaiduEnum.extract_domains",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.NetcraftEnum.__init__",
+    "target": "sublist3r.enumratorBaseThreaded.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:529:8:134",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 529,
+    "column": 8,
+    "source": "super(NetcraftEnum, self).__init__(self.base_url, self.engine_name, domain, subdomains, q=q, silent=silent, verbose=verbose)",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:sublist3r.NetcraftEnum",
+      "anchor:sublist3r.NetcraftEnum",
+      "sublist3r.enumratorBaseThreaded"
+    ],
+    "module_level": false,
+    "execution_scope": "NetcraftEnum.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "sublist3r.NetcraftEnum.req",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:538:12:137",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 538,
+    "column": 12,
+    "source": "self.print_(e)",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.NetcraftEnum",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "NetcraftEnum.req",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.NetcraftEnum.get_cookies",
+    "target": "sublist3r.NetcraftEnum.create_cookies",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:559:22:148",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 559,
+    "column": 22,
+    "source": "self.create_cookies(headers['set-cookie'])",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.NetcraftEnum"
+    ],
+    "module_level": false,
+    "execution_scope": "NetcraftEnum.get_cookies",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.NetcraftEnum.enumerate",
+    "target": "sublist3r.NetcraftEnum.req",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:566:15:150",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 566,
+    "column": 15,
+    "source": "self.req(start_url)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.NetcraftEnum"
+    ],
+    "module_level": false,
+    "execution_scope": "NetcraftEnum.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.NetcraftEnum.enumerate",
+    "target": "sublist3r.NetcraftEnum.get_cookies",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:567:18:151",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 567,
+    "column": 18,
+    "source": "self.get_cookies(resp.headers)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.NetcraftEnum"
+    ],
+    "module_level": false,
+    "execution_scope": "NetcraftEnum.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.NetcraftEnum.enumerate",
+    "target": "sublist3r.enumratorBase.get_response",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:570:19:153",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 570,
+    "column": 19,
+    "source": "self.get_response(self.req(url, cookies))",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.NetcraftEnum",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "NetcraftEnum.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.NetcraftEnum.enumerate",
+    "target": "sublist3r.NetcraftEnum.req",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:570:37:154",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 570,
+    "column": 37,
+    "source": "self.req(url, cookies)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.NetcraftEnum"
+    ],
+    "module_level": false,
+    "execution_scope": "NetcraftEnum.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.NetcraftEnum.enumerate",
+    "target": "sublist3r.NetcraftEnum.extract_domains",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:571:12:155",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 571,
+    "column": 12,
+    "source": "self.extract_domains(resp)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.NetcraftEnum"
+    ],
+    "module_level": false,
+    "execution_scope": "NetcraftEnum.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.NetcraftEnum.enumerate",
+    "target": "sublist3r.NetcraftEnum.get_next",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:575:18:156",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 575,
+    "column": 18,
+    "source": "self.get_next(resp)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.NetcraftEnum"
+    ],
+    "module_level": false,
+    "execution_scope": "NetcraftEnum.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.NetcraftEnum.extract_domains",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:588:24:162",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 588,
+    "column": 24,
+    "source": "self.print_(\"%s%s: %s%s\" % (R, self.engine_name, W, subdomain))",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.NetcraftEnum",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "NetcraftEnum.extract_domains",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.DNSdumpster.__init__",
+    "target": "sublist3r.enumratorBaseThreaded.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:604:8:166",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 604,
+    "column": 8,
+    "source": "super(DNSdumpster, self).__init__(base_url, self.engine_name, domain, subdomains, q=q, silent=silent, verbose=verbose)",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:sublist3r.DNSdumpster",
+      "anchor:sublist3r.DNSdumpster",
+      "sublist3r.enumratorBaseThreaded"
+    ],
+    "module_level": false,
+    "execution_scope": "DNSdumpster.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "sublist3r.DNSdumpster.check_host",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:616:20:172",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 616,
+    "column": 20,
+    "source": "self.print_(\"%s%s: %s%s\" % (R, self.engine_name, W, host))",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.DNSdumpster",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "DNSdumpster.check_host",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.DNSdumpster.req",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:634:12:178",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 634,
+    "column": 12,
+    "source": "self.print_(e)",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.DNSdumpster",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "DNSdumpster.req",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.DNSdumpster.req",
+    "target": "sublist3r.enumratorBase.get_response",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:636:15:179",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 636,
+    "column": 15,
+    "source": "self.get_response(resp)",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.DNSdumpster",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "DNSdumpster.req",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.DNSdumpster.enumerate",
+    "target": "sublist3r.DNSdumpster.req",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:644:15:183",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 644,
+    "column": 15,
+    "source": "self.req('GET', self.base_url)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.DNSdumpster"
+    ],
+    "module_level": false,
+    "execution_scope": "DNSdumpster.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.DNSdumpster.enumerate",
+    "target": "sublist3r.DNSdumpster.get_csrftoken",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:645:16:184",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 645,
+    "column": 16,
+    "source": "self.get_csrftoken(resp)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.DNSdumpster"
+    ],
+    "module_level": false,
+    "execution_scope": "DNSdumpster.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.DNSdumpster.enumerate",
+    "target": "sublist3r.DNSdumpster.req",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:647:20:185",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 647,
+    "column": 20,
+    "source": "self.req('POST', self.base_url, params)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.DNSdumpster"
+    ],
+    "module_level": false,
+    "execution_scope": "DNSdumpster.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.DNSdumpster.enumerate",
+    "target": "sublist3r.DNSdumpster.extract_domains",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:648:8:186",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 648,
+    "column": 8,
+    "source": "self.extract_domains(post_resp)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.DNSdumpster"
+    ],
+    "module_level": false,
+    "execution_scope": "DNSdumpster.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.Virustotal.__init__",
+    "target": "sublist3r.enumratorBaseThreaded.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:681:8:201",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 681,
+    "column": 8,
+    "source": "super(Virustotal, self).__init__(base_url, self.engine_name, domain, subdomains, q=q, silent=silent, verbose=verbose)",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:sublist3r.Virustotal",
+      "anchor:sublist3r.Virustotal",
+      "sublist3r.enumratorBaseThreaded"
+    ],
+    "module_level": false,
+    "execution_scope": "Virustotal.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "sublist3r.Virustotal.send_req",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:690:12:205",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 690,
+    "column": 12,
+    "source": "self.print_(e)",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.Virustotal",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "Virustotal.send_req",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.Virustotal.send_req",
+    "target": "sublist3r.enumratorBase.get_response",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:693:15:206",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 693,
+    "column": 15,
+    "source": "self.get_response(resp)",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.Virustotal",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "Virustotal.send_req",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.Virustotal.enumerate",
+    "target": "sublist3r.Virustotal.send_req",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:698:19:207",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 698,
+    "column": 19,
+    "source": "self.send_req(self.url)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.Virustotal"
+    ],
+    "module_level": false,
+    "execution_scope": "Virustotal.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.Virustotal.enumerate",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:701:16:209",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 701,
+    "column": 16,
+    "source": "self.print_(R + \"[!] Error: Virustotal probably now is blocking our requests\" + W)",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.Virustotal",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "Virustotal.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.Virustotal.enumerate",
+    "target": "sublist3r.Virustotal.extract_domains",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:707:12:210",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 707,
+    "column": 12,
+    "source": "self.extract_domains(resp)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.Virustotal"
+    ],
+    "module_level": false,
+    "execution_scope": "Virustotal.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.Virustotal.extract_domains",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:720:28:212",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 720,
+    "column": 28,
+    "source": "self.print_(\"%s%s: %s%s\" % (R, self.engine_name, W, subdomain))",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.Virustotal",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "Virustotal.extract_domains",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.ThreatCrowd.__init__",
+    "target": "sublist3r.enumratorBaseThreaded.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:733:8:216",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 733,
+    "column": 8,
+    "source": "super(ThreatCrowd, self).__init__(base_url, self.engine_name, domain, subdomains, q=q, silent=silent, verbose=verbose)",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:sublist3r.ThreatCrowd",
+      "anchor:sublist3r.ThreatCrowd",
+      "sublist3r.enumratorBaseThreaded"
+    ],
+    "module_level": false,
+    "execution_scope": "ThreatCrowd.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "sublist3r.ThreatCrowd.req",
+    "target": "sublist3r.enumratorBase.get_response",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:742:15:219",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 742,
+    "column": 15,
+    "source": "self.get_response(resp)",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.ThreatCrowd",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "ThreatCrowd.req",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.ThreatCrowd.enumerate",
+    "target": "sublist3r.ThreatCrowd.req",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:746:15:221",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 746,
+    "column": 15,
+    "source": "self.req(url)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.ThreatCrowd"
+    ],
+    "module_level": false,
+    "execution_scope": "ThreatCrowd.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.ThreatCrowd.enumerate",
+    "target": "sublist3r.ThreatCrowd.extract_domains",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:747:8:222",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 747,
+    "column": 8,
+    "source": "self.extract_domains(resp)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.ThreatCrowd"
+    ],
+    "module_level": false,
+    "execution_scope": "ThreatCrowd.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.ThreatCrowd.extract_domains",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:759:24:226",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 759,
+    "column": 24,
+    "source": "self.print_(\"%s%s: %s%s\" % (R, self.engine_name, W, subdomain))",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.ThreatCrowd",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "ThreatCrowd.extract_domains",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.CrtSearch.__init__",
+    "target": "sublist3r.enumratorBaseThreaded.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:772:8:230",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 772,
+    "column": 8,
+    "source": "super(CrtSearch, self).__init__(base_url, self.engine_name, domain, subdomains, q=q, silent=silent, verbose=verbose)",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:sublist3r.CrtSearch",
+      "anchor:sublist3r.CrtSearch",
+      "sublist3r.enumratorBaseThreaded"
+    ],
+    "module_level": false,
+    "execution_scope": "CrtSearch.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "sublist3r.CrtSearch.req",
+    "target": "sublist3r.enumratorBase.get_response",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:781:15:233",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 781,
+    "column": 15,
+    "source": "self.get_response(resp)",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.CrtSearch",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "CrtSearch.req",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.CrtSearch.enumerate",
+    "target": "sublist3r.CrtSearch.req",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:785:15:235",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 785,
+    "column": 15,
+    "source": "self.req(url)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.CrtSearch"
+    ],
+    "module_level": false,
+    "execution_scope": "CrtSearch.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.CrtSearch.enumerate",
+    "target": "sublist3r.CrtSearch.extract_domains",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:787:12:236",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 787,
+    "column": 12,
+    "source": "self.extract_domains(resp)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.CrtSearch"
+    ],
+    "module_level": false,
+    "execution_scope": "CrtSearch.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.CrtSearch.extract_domains",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:804:24:242",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 804,
+    "column": 24,
+    "source": "self.print_(\"%s%s: %s%s\" % (R, self.engine_name, W, subdomain))",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.CrtSearch",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "CrtSearch.extract_domains",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.PassiveDNS.__init__",
+    "target": "sublist3r.enumratorBaseThreaded.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:817:8:246",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 817,
+    "column": 8,
+    "source": "super(PassiveDNS, self).__init__(base_url, self.engine_name, domain, subdomains, q=q, silent=silent, verbose=verbose)",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:sublist3r.PassiveDNS",
+      "anchor:sublist3r.PassiveDNS",
+      "sublist3r.enumratorBaseThreaded"
+    ],
+    "module_level": false,
+    "execution_scope": "PassiveDNS.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "sublist3r.PassiveDNS.req",
+    "target": "sublist3r.enumratorBase.get_response",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:826:15:249",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 826,
+    "column": 15,
+    "source": "self.get_response(resp)",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.PassiveDNS",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "PassiveDNS.req",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.PassiveDNS.enumerate",
+    "target": "sublist3r.PassiveDNS.req",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:830:15:251",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 830,
+    "column": 15,
+    "source": "self.req(url)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.PassiveDNS"
+    ],
+    "module_level": false,
+    "execution_scope": "PassiveDNS.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.PassiveDNS.enumerate",
+    "target": "sublist3r.PassiveDNS.extract_domains",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:834:8:252",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 834,
+    "column": 8,
+    "source": "self.extract_domains(resp)",
+    "rule": "self_method",
+    "trace": [
+      "sublist3r.PassiveDNS"
+    ],
+    "module_level": false,
+    "execution_scope": "PassiveDNS.enumerate",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.PassiveDNS.extract_domains",
+    "target": "sublist3r.enumratorBase.print_",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:843:24:254",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 843,
+    "column": 24,
+    "source": "self.print_(\"%s%s: %s%s\" % (R, self.engine_name, W, subdomain))",
+    "rule": "self_inheritance",
+    "trace": [
+      "sublist3r.PassiveDNS",
+      "sublist3r.enumratorBaseThreaded",
+      "multiprocessing.Process",
+      "multiprocessing.process.BaseProcess",
+      "sublist3r.enumratorBase"
+    ],
+    "module_level": false,
+    "execution_scope": "PassiveDNS.extract_domains",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.BaiduEnum",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "flow_collection_candidates",
+    "trace": [
+      "reference:BaiduEnum@463",
+      "reference:YahooEnum@324",
+      "reference:GoogleEnum@274",
+      "reference:BingEnum@418",
+      "reference:AskEnum@375",
+      "reference:NetcraftEnum@523",
+      "reference:DNSdumpster@595",
+      "reference:Virustotal@674",
+      "reference:ThreatCrowd@726",
+      "reference:CrtSearch@765",
+      "reference:PassiveDNS@810"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.BaiduEnum.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "constructor_init",
+    "trace": [
+      "sublist3r.BaiduEnum"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.YahooEnum",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "flow_collection_candidates",
+    "trace": [
+      "reference:BaiduEnum@463",
+      "reference:YahooEnum@324",
+      "reference:GoogleEnum@274",
+      "reference:BingEnum@418",
+      "reference:AskEnum@375",
+      "reference:NetcraftEnum@523",
+      "reference:DNSdumpster@595",
+      "reference:Virustotal@674",
+      "reference:ThreatCrowd@726",
+      "reference:CrtSearch@765",
+      "reference:PassiveDNS@810"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.YahooEnum.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "constructor_init",
+    "trace": [
+      "sublist3r.YahooEnum"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.GoogleEnum",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "flow_collection_candidates",
+    "trace": [
+      "reference:BaiduEnum@463",
+      "reference:YahooEnum@324",
+      "reference:GoogleEnum@274",
+      "reference:BingEnum@418",
+      "reference:AskEnum@375",
+      "reference:NetcraftEnum@523",
+      "reference:DNSdumpster@595",
+      "reference:Virustotal@674",
+      "reference:ThreatCrowd@726",
+      "reference:CrtSearch@765",
+      "reference:PassiveDNS@810"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.GoogleEnum.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "constructor_init",
+    "trace": [
+      "sublist3r.GoogleEnum"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.BingEnum",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "flow_collection_candidates",
+    "trace": [
+      "reference:BaiduEnum@463",
+      "reference:YahooEnum@324",
+      "reference:GoogleEnum@274",
+      "reference:BingEnum@418",
+      "reference:AskEnum@375",
+      "reference:NetcraftEnum@523",
+      "reference:DNSdumpster@595",
+      "reference:Virustotal@674",
+      "reference:ThreatCrowd@726",
+      "reference:CrtSearch@765",
+      "reference:PassiveDNS@810"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.BingEnum.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "constructor_init",
+    "trace": [
+      "sublist3r.BingEnum"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.AskEnum",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "flow_collection_candidates",
+    "trace": [
+      "reference:BaiduEnum@463",
+      "reference:YahooEnum@324",
+      "reference:GoogleEnum@274",
+      "reference:BingEnum@418",
+      "reference:AskEnum@375",
+      "reference:NetcraftEnum@523",
+      "reference:DNSdumpster@595",
+      "reference:Virustotal@674",
+      "reference:ThreatCrowd@726",
+      "reference:CrtSearch@765",
+      "reference:PassiveDNS@810"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.AskEnum.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "constructor_init",
+    "trace": [
+      "sublist3r.AskEnum"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.NetcraftEnum",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "flow_collection_candidates",
+    "trace": [
+      "reference:BaiduEnum@463",
+      "reference:YahooEnum@324",
+      "reference:GoogleEnum@274",
+      "reference:BingEnum@418",
+      "reference:AskEnum@375",
+      "reference:NetcraftEnum@523",
+      "reference:DNSdumpster@595",
+      "reference:Virustotal@674",
+      "reference:ThreatCrowd@726",
+      "reference:CrtSearch@765",
+      "reference:PassiveDNS@810"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.NetcraftEnum.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "constructor_init",
+    "trace": [
+      "sublist3r.NetcraftEnum"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.DNSdumpster",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "flow_collection_candidates",
+    "trace": [
+      "reference:BaiduEnum@463",
+      "reference:YahooEnum@324",
+      "reference:GoogleEnum@274",
+      "reference:BingEnum@418",
+      "reference:AskEnum@375",
+      "reference:NetcraftEnum@523",
+      "reference:DNSdumpster@595",
+      "reference:Virustotal@674",
+      "reference:ThreatCrowd@726",
+      "reference:CrtSearch@765",
+      "reference:PassiveDNS@810"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.DNSdumpster.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "constructor_init",
+    "trace": [
+      "sublist3r.DNSdumpster"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.Virustotal",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "flow_collection_candidates",
+    "trace": [
+      "reference:BaiduEnum@463",
+      "reference:YahooEnum@324",
+      "reference:GoogleEnum@274",
+      "reference:BingEnum@418",
+      "reference:AskEnum@375",
+      "reference:NetcraftEnum@523",
+      "reference:DNSdumpster@595",
+      "reference:Virustotal@674",
+      "reference:ThreatCrowd@726",
+      "reference:CrtSearch@765",
+      "reference:PassiveDNS@810"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.Virustotal.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "constructor_init",
+    "trace": [
+      "sublist3r.Virustotal"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.ThreatCrowd",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "flow_collection_candidates",
+    "trace": [
+      "reference:BaiduEnum@463",
+      "reference:YahooEnum@324",
+      "reference:GoogleEnum@274",
+      "reference:BingEnum@418",
+      "reference:AskEnum@375",
+      "reference:NetcraftEnum@523",
+      "reference:DNSdumpster@595",
+      "reference:Virustotal@674",
+      "reference:ThreatCrowd@726",
+      "reference:CrtSearch@765",
+      "reference:PassiveDNS@810"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.ThreatCrowd.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "constructor_init",
+    "trace": [
+      "sublist3r.ThreatCrowd"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.CrtSearch",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "flow_collection_candidates",
+    "trace": [
+      "reference:BaiduEnum@463",
+      "reference:YahooEnum@324",
+      "reference:GoogleEnum@274",
+      "reference:BingEnum@418",
+      "reference:AskEnum@375",
+      "reference:NetcraftEnum@523",
+      "reference:DNSdumpster@595",
+      "reference:Virustotal@674",
+      "reference:ThreatCrowd@726",
+      "reference:CrtSearch@765",
+      "reference:PassiveDNS@810"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.CrtSearch.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "constructor_init",
+    "trace": [
+      "sublist3r.CrtSearch"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.PassiveDNS",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "flow_collection_candidates",
+    "trace": [
+      "reference:BaiduEnum@463",
+      "reference:YahooEnum@324",
+      "reference:GoogleEnum@274",
+      "reference:BingEnum@418",
+      "reference:AskEnum@375",
+      "reference:NetcraftEnum@523",
+      "reference:DNSdumpster@595",
+      "reference:Virustotal@674",
+      "reference:ThreatCrowd@726",
+      "reference:CrtSearch@765",
+      "reference:PassiveDNS@810"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.PassiveDNS.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:938:13:288",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 938,
+    "column": 13,
+    "source": "enum(domain, [], q=subdomains_queue, silent=silent, verbose=verbose)",
+    "rule": "constructor_init",
+    "trace": [
+      "sublist3r.PassiveDNS"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "BaiduEnum",
+        "line": 463,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "YahooEnum",
+        "line": 324,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "GoogleEnum",
+        "line": 274,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "BingEnum",
+        "line": 418,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AskEnum",
+        "line": 375,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "NetcraftEnum",
+        "line": 523,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "DNSdumpster",
+        "line": 595,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "Virustotal",
+        "line": 674,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "ThreatCrowd",
+        "line": 726,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "CrtSearch",
+        "line": 765,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "PassiveDNS",
+        "line": 810,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "subbrute.subbrute.print_target",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:958:26:298",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 958,
+    "column": 26,
+    "source": "subbrute.print_target(parsed_domain.netloc, record_type, subs, resolvers, process_count, output, json_output, search_list, verbose)",
+    "rule": "imported_module",
+    "trace": [
+      "subbrute.subbrute"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.write_file",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:966:12:301",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 966,
+    "column": 12,
+    "source": "write_file(savefile, subdomains)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:write_file@109"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "write_file",
+        "line": 109
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.portscan",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:Sublist3r/sublist3r.py:975:20:306",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 975,
+    "column": 20,
+    "source": "portscan(subdomains, ports)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:portscan@849"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "portscan",
+        "line": 849
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.portscan.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:975:20:306",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 975,
+    "column": 20,
+    "source": "portscan(subdomains, ports)",
+    "rule": "constructor_init",
+    "trace": [
+      "sublist3r.portscan"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "portscan",
+        "line": 849
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.portscan.run",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:976:12:307",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 976,
+    "column": 12,
+    "source": "pscan.run()",
+    "rule": "instance_flow_reaching_assignment",
+    "trace": [
+      "constructed:portscan@849",
+      "sublist3r.portscan"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "constructed",
+        "name": "portscan",
+        "line": 849
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.interactive",
+    "target": "sublist3r.parse_args",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:985:11:309",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 985,
+    "column": 11,
+    "source": "parse_args()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:parse_args@93"
+    ],
+    "module_level": false,
+    "execution_scope": "interactive",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "parse_args",
+        "line": 93
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.interactive",
+    "target": "sublist3r.no_color",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:996:8:310",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 996,
+    "column": 8,
+    "source": "no_color()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:no_color@69"
+    ],
+    "module_level": false,
+    "execution_scope": "interactive",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "no_color",
+        "line": 69
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.interactive",
+    "target": "sublist3r.banner",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:997:4:311",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 997,
+    "column": 4,
+    "source": "banner()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:banner@74"
+    ],
+    "module_level": false,
+    "execution_scope": "interactive",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "banner",
+        "line": 74
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r.interactive",
+    "target": "sublist3r.main",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:998:10:312",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 998,
+    "column": 10,
+    "source": "main(domain, threads, savefile, ports, silent=False, verbose=verbose, enable_bruteforce=enable_bruteforce, engines=engines)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:main@879"
+    ],
+    "module_level": false,
+    "execution_scope": "interactive",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "main",
+        "line": 879
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "sublist3r",
+    "target": "sublist3r.interactive",
+    "relation": "CALLS",
+    "call_id": "CALL:Sublist3r/sublist3r.py:1001:4:313",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 1001,
+    "column": 4,
+    "source": "interactive()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:interactive@984"
+    ],
+    "module_level": true,
+    "execution_scope": "<module>",
+    "execution_phase": "module_initialization",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "interactive",
+        "line": 984
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "subbrute.subbrute.extract_subdomains",
+    "target": "subbrute.subbrute.extract_subdomains.<lambda1>",
+    "relation": "CALLS",
+    "call_id": null,
+    "callback_call_id": "CALL:Sublist3r/subbrute/subbrute.py:404:18:102",
+    "file": "Sublist3r/subbrute/subbrute.py",
+    "line": 404,
+    "column": 18,
+    "source": "sorted(subs.keys(), key = lambda x: subs[x], reverse = True)",
+    "rule": "builtin_sorted_key_callback",
+    "certainty": "callback_may_execute",
+    "module_level": false,
+    "note": "Key may execute for non-empty valid input; callback body/return values are not interpreted."
+  },
+  {
+    "caller": "sublist3r.main",
+    "target": "sublist3r.subdomain_sorting_key",
+    "relation": "CALLS",
+    "call_id": null,
+    "callback_call_id": "CALL:Sublist3r/sublist3r.py:963:21:300",
+    "file": "Sublist3r/sublist3r.py",
+    "line": 963,
+    "column": 21,
+    "source": "sorted(subdomains, key=subdomain_sorting_key)",
+    "rule": "builtin_sorted_key_callback",
+    "certainty": "callback_may_execute",
+    "module_level": false,
+    "note": "Key may execute for non-empty valid input; callback body/return values are not interpreted."
+  }
+]

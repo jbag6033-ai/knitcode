@@ -1,0 +1,4460 @@
+[
+  {
+    "caller": "autojump_argparse.sorted",
+    "target": "autojump_argparse.sorted",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:110:17:0",
+    "file": "bin/autojump_argparse.py",
+    "line": 110,
+    "column": 17,
+    "source": "sorted(iterable)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "sorted"
+    ],
+    "module_level": false,
+    "execution_scope": "sorted",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._AttributeHolder.__repr__",
+    "target": "autojump_argparse._AttributeHolder._get_args",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:147:19:5",
+    "file": "bin/autojump_argparse.py",
+    "line": 147,
+    "column": 19,
+    "source": "self._get_args()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._AttributeHolder"
+    ],
+    "module_level": false,
+    "execution_scope": "_AttributeHolder.__repr__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._AttributeHolder.__repr__",
+    "target": "autojump_argparse._AttributeHolder._get_kwargs",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:149:27:8",
+    "file": "bin/autojump_argparse.py",
+    "line": 149,
+    "column": 27,
+    "source": "self._get_kwargs()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._AttributeHolder"
+    ],
+    "module_level": false,
+    "execution_scope": "_AttributeHolder.__repr__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._AttributeHolder._get_kwargs",
+    "target": "autojump_argparse.sorted",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:154:15:11",
+    "file": "bin/autojump_argparse.py",
+    "line": 154,
+    "column": 15,
+    "source": "sorted(self.__dict__.items())",
+    "rule": "flow_maybe_unbound",
+    "trace": [
+      "reference:sorted@109"
+    ],
+    "module_level": false,
+    "execution_scope": "_AttributeHolder._get_kwargs",
+    "execution_phase": "function_body",
+    "certainty": "conditional_may_call",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "sorted",
+        "line": 109
+      }
+    ],
+    "may_be_unbound": true
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter.__init__",
+    "target": "autojump_argparse.HelpFormatter._Section",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:203:29:17",
+    "file": "bin/autojump_argparse.py",
+    "line": 203,
+    "column": 29,
+    "source": "self._Section(self, None)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:root:METHOD:autojump_argparse.ArgumentDefaultsHelpFormatter._get_help_string",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._add_item",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._dedent",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._expand_help",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._fill_text",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._format_action",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._format_action_invocation",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._format_actions_usage",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._format_args",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._format_text",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._format_usage",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._get_help_string",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._indent",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._iter_indented_subactions",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._join_parts",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._metavar_formatter",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter._split_lines",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter.add_argument",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter.add_arguments",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter.add_text",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter.add_usage",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter.end_section",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter.format_help",
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter.start_section",
+      "allocation:root:METHOD:autojump_argparse.RawDescriptionHelpFormatter._fill_text",
+      "allocation:root:METHOD:autojump_argparse.RawTextHelpFormatter._split_lines",
+      "context:METHOD:autojump_argparse.HelpFormatter.__init__",
+      "receiver:autojump_argparse.ArgumentDefaultsHelpFormatter",
+      "receiver:autojump_argparse.HelpFormatter",
+      "receiver:autojump_argparse.RawDescriptionHelpFormatter",
+      "receiver:autojump_argparse.RawTextHelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter.__init__",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter.__init__",
+    "target": "autojump_argparse.HelpFormatter._Section.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:203:29:17",
+    "file": "bin/autojump_argparse.py",
+    "line": 203,
+    "column": 29,
+    "source": "self._Section(self, None)",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse.HelpFormatter._Section"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter.__init__",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._Section.format_help",
+    "target": "autojump_argparse.HelpFormatter._indent",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:232:16:20",
+    "file": "bin/autojump_argparse.py",
+    "line": 232,
+    "column": 16,
+    "source": "self.formatter._indent()",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter.format_help",
+      "context:METHOD:autojump_argparse.HelpFormatter._Section.format_help",
+      "context:METHOD:autojump_argparse.HelpFormatter.format_help > METHOD:autojump_argparse.HelpFormatter._Section.format_help",
+      "field",
+      "receiver:autojump_argparse.HelpFormatter",
+      "receiver_alternative:unknown"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._Section.format_help",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._Section.format_help",
+    "target": "autojump_argparse.HelpFormatter._join_parts",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:236:24:22",
+    "file": "bin/autojump_argparse.py",
+    "line": 236,
+    "column": 24,
+    "source": "join([func(*args) for func, args in self.items])",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "bound_method_alias",
+      "context:METHOD:autojump_argparse.HelpFormatter._Section.format_help",
+      "context:METHOD:autojump_argparse.HelpFormatter.format_help > METHOD:autojump_argparse.HelpFormatter._Section.format_help",
+      "field"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._Section.format_help",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._Section.format_help",
+    "target": "autojump_argparse.HelpFormatter._dedent",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:238:16:24",
+    "file": "bin/autojump_argparse.py",
+    "line": 238,
+    "column": 16,
+    "source": "self.formatter._dedent()",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter.format_help",
+      "context:METHOD:autojump_argparse.HelpFormatter._Section.format_help",
+      "context:METHOD:autojump_argparse.HelpFormatter.format_help > METHOD:autojump_argparse.HelpFormatter._Section.format_help",
+      "field",
+      "receiver:autojump_argparse.HelpFormatter",
+      "receiver_alternative:unknown"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._Section.format_help",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._Section.format_help",
+    "target": "autojump_argparse.HelpFormatter._join_parts",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:252:19:25",
+    "file": "bin/autojump_argparse.py",
+    "line": 252,
+    "column": 19,
+    "source": "join(['\\n', heading, item_help, '\\n'])",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "bound_method_alias",
+      "context:METHOD:autojump_argparse.HelpFormatter._Section.format_help",
+      "context:METHOD:autojump_argparse.HelpFormatter.format_help > METHOD:autojump_argparse.HelpFormatter._Section.format_help",
+      "field"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._Section.format_help",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter.start_section",
+    "target": "autojump_argparse.HelpFormatter._indent",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:261:8:27",
+    "file": "bin/autojump_argparse.py",
+    "line": 261,
+    "column": 8,
+    "source": "self._indent()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter.start_section",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter.start_section",
+    "target": "autojump_argparse.HelpFormatter._Section",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:262:18:28",
+    "file": "bin/autojump_argparse.py",
+    "line": 262,
+    "column": 18,
+    "source": "self._Section(self, self._current_section, heading)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:root:METHOD:autojump_argparse.HelpFormatter.start_section",
+      "context:METHOD:autojump_argparse.HelpFormatter.start_section",
+      "receiver:autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter.start_section",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter.start_section",
+    "target": "autojump_argparse.HelpFormatter._Section.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:262:18:28",
+    "file": "bin/autojump_argparse.py",
+    "line": 262,
+    "column": 18,
+    "source": "self._Section(self, self._current_section, heading)",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse.HelpFormatter._Section"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter.start_section",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter.start_section",
+    "target": "autojump_argparse.HelpFormatter._add_item",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:263:8:29",
+    "file": "bin/autojump_argparse.py",
+    "line": 263,
+    "column": 8,
+    "source": "self._add_item(section.format_help, [])",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter.start_section",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter.end_section",
+    "target": "autojump_argparse.HelpFormatter._dedent",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:268:8:30",
+    "file": "bin/autojump_argparse.py",
+    "line": 268,
+    "column": 8,
+    "source": "self._dedent()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter.end_section",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter.add_text",
+    "target": "autojump_argparse.HelpFormatter._add_item",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:272:12:31",
+    "file": "bin/autojump_argparse.py",
+    "line": 272,
+    "column": 12,
+    "source": "self._add_item(self._format_text, [text])",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter.add_text",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter.add_usage",
+    "target": "autojump_argparse.HelpFormatter._add_item",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:277:12:32",
+    "file": "bin/autojump_argparse.py",
+    "line": 277,
+    "column": 12,
+    "source": "self._add_item(self._format_usage, args)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter.add_usage",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter.add_argument",
+    "target": "autojump_argparse.HelpFormatter._format_action_invocation",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:284:27:33",
+    "file": "bin/autojump_argparse.py",
+    "line": 284,
+    "column": 27,
+    "source": "get_invocation(action)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "bound_method_alias",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_argument",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_arguments > METHOD:autojump_argparse.HelpFormatter.add_argument",
+      "field"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter.add_argument",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter.add_argument",
+    "target": "autojump_argparse.HelpFormatter._iter_indented_subactions",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:285:29:34",
+    "file": "bin/autojump_argparse.py",
+    "line": 285,
+    "column": 29,
+    "source": "self._iter_indented_subactions(action)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter.add_argument",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter.add_argument",
+    "target": "autojump_argparse.HelpFormatter._format_action_invocation",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:286:35:36",
+    "file": "bin/autojump_argparse.py",
+    "line": 286,
+    "column": 35,
+    "source": "get_invocation(subaction)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "bound_method_alias",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_argument",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_arguments > METHOD:autojump_argparse.HelpFormatter.add_argument",
+      "field"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter.add_argument",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter.add_argument",
+    "target": "autojump_argparse.HelpFormatter._add_item",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:297:12:40",
+    "file": "bin/autojump_argparse.py",
+    "line": 297,
+    "column": 12,
+    "source": "self._add_item(self._format_action, [action])",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter.add_argument",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter.add_arguments",
+    "target": "autojump_argparse.HelpFormatter.add_argument",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:301:12:41",
+    "file": "bin/autojump_argparse.py",
+    "line": 301,
+    "column": 12,
+    "source": "self.add_argument(action)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter.add_arguments",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter.format_help",
+    "target": "autojump_argparse.HelpFormatter._Section.format_help",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:307:15:42",
+    "file": "bin/autojump_argparse.py",
+    "line": 307,
+    "column": 15,
+    "source": "self._root_section.format_help()",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:bin/autojump_argparse.py:203:29 > root:METHOD:autojump_argparse.HelpFormatter.format_help",
+      "context:METHOD:autojump_argparse.HelpFormatter.format_help",
+      "field",
+      "receiver:autojump_argparse.HelpFormatter._Section"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter.format_help",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_usage",
+    "target": "autojump_argparse.HelpFormatter._format_actions_usage",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:347:27:52",
+    "file": "bin/autojump_argparse.py",
+    "line": 347,
+    "column": 27,
+    "source": "format(optionals + positionals, groups)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "bound_method_alias",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_usage",
+      "field"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_usage",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_usage",
+    "target": "autojump_argparse.HelpFormatter._format_actions_usage",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:356:28:56",
+    "file": "bin/autojump_argparse.py",
+    "line": 356,
+    "column": 28,
+    "source": "format(optionals, groups)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "bound_method_alias",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_usage",
+      "field"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_usage",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_usage",
+    "target": "autojump_argparse.HelpFormatter._format_actions_usage",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:357:28:57",
+    "file": "bin/autojump_argparse.py",
+    "line": 357,
+    "column": 28,
+    "source": "format(positionals, groups)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "bound_method_alias",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_usage",
+      "field"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_usage",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_usage",
+    "target": "autojump_argparse.HelpFormatter._format_usage.get_lines",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:388:32:77",
+    "file": "bin/autojump_argparse.py",
+    "line": 388,
+    "column": 32,
+    "source": "get_lines([prog] + opt_parts, indent, prefix)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:get_lines@364"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_usage",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "get_lines",
+        "line": 364
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_usage",
+    "target": "autojump_argparse.HelpFormatter._format_usage.get_lines",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:389:37:79",
+    "file": "bin/autojump_argparse.py",
+    "line": 389,
+    "column": 37,
+    "source": "get_lines(pos_parts, indent)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:get_lines@364"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_usage",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "get_lines",
+        "line": 364
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_usage",
+    "target": "autojump_argparse.HelpFormatter._format_usage.get_lines",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:391:32:80",
+    "file": "bin/autojump_argparse.py",
+    "line": 391,
+    "column": 32,
+    "source": "get_lines([prog] + pos_parts, indent, prefix)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:get_lines@364"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_usage",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "get_lines",
+        "line": 364
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_usage",
+    "target": "autojump_argparse.HelpFormatter._format_usage.get_lines",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:399:28:82",
+    "file": "bin/autojump_argparse.py",
+    "line": 399,
+    "column": 28,
+    "source": "get_lines(parts, indent)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:get_lines@364"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_usage",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "get_lines",
+        "line": 364
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_usage",
+    "target": "autojump_argparse.HelpFormatter._format_usage.get_lines",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:402:37:85",
+    "file": "bin/autojump_argparse.py",
+    "line": 402,
+    "column": 37,
+    "source": "get_lines(opt_parts, indent)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:get_lines@364"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_usage",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "get_lines",
+        "line": 364
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_usage",
+    "target": "autojump_argparse.HelpFormatter._format_usage.get_lines",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:403:37:87",
+    "file": "bin/autojump_argparse.py",
+    "line": 403,
+    "column": 37,
+    "source": "get_lines(pos_parts, indent)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:get_lines@364"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_usage",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "get_lines",
+        "line": 364
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_actions_usage",
+    "target": "autojump_argparse.HelpFormatter._format_args",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:456:23:100",
+    "file": "bin/autojump_argparse.py",
+    "line": 456,
+    "column": 23,
+    "source": "self._format_args(action, action.dest)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_actions_usage",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_actions_usage",
+    "target": "autojump_argparse.HelpFormatter._format_args",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:479:34:103",
+    "file": "bin/autojump_argparse.py",
+    "line": 479,
+    "column": 34,
+    "source": "self._format_args(action, default)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_actions_usage",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_actions_usage",
+    "target": "autojump_argparse.sorted",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:490:17:105",
+    "file": "bin/autojump_argparse.py",
+    "line": 490,
+    "column": 17,
+    "source": "sorted(inserts, reverse=True)",
+    "rule": "flow_maybe_unbound",
+    "trace": [
+      "reference:sorted@109"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_actions_usage",
+    "execution_phase": "function_body",
+    "certainty": "conditional_may_call",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "sorted",
+        "line": 109
+      }
+    ],
+    "may_be_unbound": true
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_text",
+    "target": "autojump_argparse.HelpFormatter._fill_text",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:513:15:113",
+    "file": "bin/autojump_argparse.py",
+    "line": 513,
+    "column": 15,
+    "source": "self._fill_text(text, text_width, indent)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_text",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_action",
+    "target": "autojump_argparse.HelpFormatter._format_action_invocation",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:523:24:115",
+    "file": "bin/autojump_argparse.py",
+    "line": 523,
+    "column": 24,
+    "source": "self._format_action_invocation(action)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_action",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_action",
+    "target": "autojump_argparse.HelpFormatter._expand_help",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:547:24:117",
+    "file": "bin/autojump_argparse.py",
+    "line": 547,
+    "column": 24,
+    "source": "self._expand_help(action)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_action",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_action",
+    "target": "autojump_argparse.HelpFormatter._split_lines",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:548:25:118",
+    "file": "bin/autojump_argparse.py",
+    "line": 548,
+    "column": 25,
+    "source": "self._split_lines(help_text, help_width)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_action",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_action",
+    "target": "autojump_argparse.HelpFormatter._iter_indented_subactions",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:558:25:123",
+    "file": "bin/autojump_argparse.py",
+    "line": 558,
+    "column": 25,
+    "source": "self._iter_indented_subactions(action)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_action",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_action",
+    "target": "autojump_argparse.HelpFormatter._format_action",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:559:25:125",
+    "file": "bin/autojump_argparse.py",
+    "line": 559,
+    "column": 25,
+    "source": "self._format_action(subaction)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_action",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_action",
+    "target": "autojump_argparse.HelpFormatter._join_parts",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:562:15:126",
+    "file": "bin/autojump_argparse.py",
+    "line": 562,
+    "column": 15,
+    "source": "self._join_parts(parts)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_action",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_action_invocation",
+    "target": "autojump_argparse.HelpFormatter._metavar_formatter",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:566:23:128",
+    "file": "bin/autojump_argparse.py",
+    "line": 566,
+    "column": 23,
+    "source": "self._metavar_formatter(action, action.dest)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_action_invocation",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_action_invocation",
+    "target": "autojump_argparse.HelpFormatter._format_args",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:581:30:131",
+    "file": "bin/autojump_argparse.py",
+    "line": 581,
+    "column": 30,
+    "source": "self._format_args(action, default)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_action_invocation",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_args",
+    "target": "autojump_argparse.HelpFormatter._metavar_formatter",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:604:22:137",
+    "file": "bin/autojump_argparse.py",
+    "line": 604,
+    "column": 22,
+    "source": "self._metavar_formatter(action, default_metavar)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_args",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_args",
+    "target": "autojump_argparse.HelpFormatter._metavar_formatter.format",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:606:28:138",
+    "file": "bin/autojump_argparse.py",
+    "line": 606,
+    "column": 28,
+    "source": "get_metavar(1)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "context:METHOD:autojump_argparse.HelpFormatter._format_action > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_actions_usage > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_usage > METHOD:autojump_argparse.HelpFormatter._format_actions_usage > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_argument > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_arguments > METHOD:autojump_argparse.HelpFormatter.add_argument > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "return",
+      "return:autojump_argparse.HelpFormatter._metavar_formatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_args",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_args",
+    "target": "autojump_argparse.HelpFormatter._metavar_formatter.format",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:608:30:139",
+    "file": "bin/autojump_argparse.py",
+    "line": 608,
+    "column": 30,
+    "source": "get_metavar(1)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "context:METHOD:autojump_argparse.HelpFormatter._format_action > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_actions_usage > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_usage > METHOD:autojump_argparse.HelpFormatter._format_actions_usage > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_argument > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_arguments > METHOD:autojump_argparse.HelpFormatter.add_argument > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "return",
+      "return:autojump_argparse.HelpFormatter._metavar_formatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_args",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_args",
+    "target": "autojump_argparse.HelpFormatter._metavar_formatter.format",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:610:39:140",
+    "file": "bin/autojump_argparse.py",
+    "line": 610,
+    "column": 39,
+    "source": "get_metavar(2)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "context:METHOD:autojump_argparse.HelpFormatter._format_action > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_actions_usage > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_usage > METHOD:autojump_argparse.HelpFormatter._format_actions_usage > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_argument > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_arguments > METHOD:autojump_argparse.HelpFormatter.add_argument > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "return",
+      "return:autojump_argparse.HelpFormatter._metavar_formatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_args",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_args",
+    "target": "autojump_argparse.HelpFormatter._metavar_formatter.format",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:612:37:141",
+    "file": "bin/autojump_argparse.py",
+    "line": 612,
+    "column": 37,
+    "source": "get_metavar(2)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "context:METHOD:autojump_argparse.HelpFormatter._format_action > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_actions_usage > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_usage > METHOD:autojump_argparse.HelpFormatter._format_actions_usage > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_argument > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_arguments > METHOD:autojump_argparse.HelpFormatter.add_argument > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "return",
+      "return:autojump_argparse.HelpFormatter._metavar_formatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_args",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_args",
+    "target": "autojump_argparse.HelpFormatter._metavar_formatter.format",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:616:32:142",
+    "file": "bin/autojump_argparse.py",
+    "line": 616,
+    "column": 32,
+    "source": "get_metavar(1)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "context:METHOD:autojump_argparse.HelpFormatter._format_action > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_actions_usage > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_usage > METHOD:autojump_argparse.HelpFormatter._format_actions_usage > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_argument > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_arguments > METHOD:autojump_argparse.HelpFormatter.add_argument > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "return",
+      "return:autojump_argparse.HelpFormatter._metavar_formatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_args",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._format_args",
+    "target": "autojump_argparse.HelpFormatter._metavar_formatter.format",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:619:41:145",
+    "file": "bin/autojump_argparse.py",
+    "line": 619,
+    "column": 41,
+    "source": "get_metavar(action.nargs)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "context:METHOD:autojump_argparse.HelpFormatter._format_action > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_actions_usage > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter._format_usage > METHOD:autojump_argparse.HelpFormatter._format_actions_usage > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_argument > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "context:METHOD:autojump_argparse.HelpFormatter.add_arguments > METHOD:autojump_argparse.HelpFormatter.add_argument > METHOD:autojump_argparse.HelpFormatter._format_action_invocation > METHOD:autojump_argparse.HelpFormatter._format_args",
+      "return",
+      "return:autojump_argparse.HelpFormatter._metavar_formatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._format_args",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._expand_help",
+    "target": "autojump_argparse.HelpFormatter._get_help_string",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:633:15:154",
+    "file": "bin/autojump_argparse.py",
+    "line": 633,
+    "column": 15,
+    "source": "self._get_help_string(action)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._expand_help",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._iter_indented_subactions",
+    "target": "autojump_argparse.HelpFormatter._indent",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:641:12:155",
+    "file": "bin/autojump_argparse.py",
+    "line": 641,
+    "column": 12,
+    "source": "self._indent()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._iter_indented_subactions",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.HelpFormatter._iter_indented_subactions",
+    "target": "autojump_argparse.HelpFormatter._dedent",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:644:12:157",
+    "file": "bin/autojump_argparse.py",
+    "line": 644,
+    "column": 12,
+    "source": "self._dedent()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.HelpFormatter"
+    ],
+    "module_level": false,
+    "execution_scope": "HelpFormatter._iter_indented_subactions",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentError.__init__",
+    "target": "autojump_argparse._get_action_name",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:729:29:168",
+    "file": "bin/autojump_argparse.py",
+    "line": 729,
+    "column": 29,
+    "source": "_get_action_name(argument)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_get_action_name@707"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentError.__init__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_get_action_name",
+        "line": 707
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse._StoreAction.__init__",
+    "target": "autojump_argparse.Action.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:870:8:175",
+    "file": "bin/autojump_argparse.py",
+    "line": 870,
+    "column": 8,
+    "source": "super(_StoreAction, self).__init__(\n            option_strings=option_strings,\n            dest=dest,\n            nargs=nargs,\n            const=const,\n            default=default,\n            type=type,\n            choices=choices,\n            required=required,\n            help=help,\n            metavar=metavar,\n        )",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:autojump_argparse._StoreAction",
+      "anchor:autojump_argparse._StoreAction",
+      "autojump_argparse.Action"
+    ],
+    "module_level": false,
+    "execution_scope": "_StoreAction.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "autojump_argparse._StoreConstAction.__init__",
+    "target": "autojump_argparse.Action.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:899:8:178",
+    "file": "bin/autojump_argparse.py",
+    "line": 899,
+    "column": 8,
+    "source": "super(_StoreConstAction, self).__init__(\n            option_strings=option_strings,\n            dest=dest,\n            nargs=0,\n            const=const,\n            default=default,\n            required=required,\n            help=help,\n        )",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:autojump_argparse._StoreConstAction",
+      "anchor:autojump_argparse._StoreConstAction",
+      "autojump_argparse.Action",
+      "receiver:autojump_argparse._StoreTrueAction",
+      "anchor:autojump_argparse._StoreConstAction",
+      "autojump_argparse.Action",
+      "receiver:autojump_argparse._StoreFalseAction",
+      "anchor:autojump_argparse._StoreConstAction",
+      "autojump_argparse.Action"
+    ],
+    "module_level": false,
+    "execution_scope": "_StoreConstAction.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "autojump_argparse._StoreTrueAction.__init__",
+    "target": "autojump_argparse._StoreConstAction.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:923:8:181",
+    "file": "bin/autojump_argparse.py",
+    "line": 923,
+    "column": 8,
+    "source": "super(_StoreTrueAction, self).__init__(\n            option_strings=option_strings,\n            dest=dest,\n            const=True,\n            default=default,\n            required=required,\n            help=help,\n        )",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:autojump_argparse._StoreTrueAction",
+      "anchor:autojump_argparse._StoreTrueAction",
+      "autojump_argparse._StoreConstAction"
+    ],
+    "module_level": false,
+    "execution_scope": "_StoreTrueAction.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "autojump_argparse._StoreFalseAction.__init__",
+    "target": "autojump_argparse._StoreConstAction.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:943:8:183",
+    "file": "bin/autojump_argparse.py",
+    "line": 943,
+    "column": 8,
+    "source": "super(_StoreFalseAction, self).__init__(\n            option_strings=option_strings,\n            dest=dest,\n            const=False,\n            default=default,\n            required=required,\n            help=help,\n        )",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:autojump_argparse._StoreFalseAction",
+      "anchor:autojump_argparse._StoreFalseAction",
+      "autojump_argparse._StoreConstAction"
+    ],
+    "module_level": false,
+    "execution_scope": "_StoreFalseAction.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "autojump_argparse._AppendAction.__init__",
+    "target": "autojump_argparse.Action.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:976:8:187",
+    "file": "bin/autojump_argparse.py",
+    "line": 976,
+    "column": 8,
+    "source": "super(_AppendAction, self).__init__(\n            option_strings=option_strings,\n            dest=dest,\n            nargs=nargs,\n            const=const,\n            default=default,\n            type=type,\n            choices=choices,\n            required=required,\n            help=help,\n            metavar=metavar,\n        )",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:autojump_argparse._AppendAction",
+      "anchor:autojump_argparse._AppendAction",
+      "autojump_argparse.Action"
+    ],
+    "module_level": false,
+    "execution_scope": "_AppendAction.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "autojump_argparse._AppendAction.__call__",
+    "target": "autojump_argparse._ensure_value",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:990:27:190",
+    "file": "bin/autojump_argparse.py",
+    "line": 990,
+    "column": 27,
+    "source": "_ensure_value(namespace, self.dest, [])",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_ensure_value@160"
+    ],
+    "module_level": false,
+    "execution_scope": "_AppendAction.__call__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_ensure_value",
+        "line": 160
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse._AppendConstAction.__init__",
+    "target": "autojump_argparse.Action.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1007:8:193",
+    "file": "bin/autojump_argparse.py",
+    "line": 1007,
+    "column": 8,
+    "source": "super(_AppendConstAction, self).__init__(\n            option_strings=option_strings,\n            dest=dest,\n            nargs=0,\n            const=const,\n            default=default,\n            required=required,\n            help=help,\n            metavar=metavar,\n        )",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:autojump_argparse._AppendConstAction",
+      "anchor:autojump_argparse._AppendConstAction",
+      "autojump_argparse.Action"
+    ],
+    "module_level": false,
+    "execution_scope": "_AppendConstAction.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "autojump_argparse._AppendConstAction.__call__",
+    "target": "autojump_argparse._ensure_value",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1019:27:196",
+    "file": "bin/autojump_argparse.py",
+    "line": 1019,
+    "column": 27,
+    "source": "_ensure_value(namespace, self.dest, [])",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_ensure_value@160"
+    ],
+    "module_level": false,
+    "execution_scope": "_AppendConstAction.__call__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_ensure_value",
+        "line": 160
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse._CountAction.__init__",
+    "target": "autojump_argparse.Action.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1034:8:199",
+    "file": "bin/autojump_argparse.py",
+    "line": 1034,
+    "column": 8,
+    "source": "super(_CountAction, self).__init__(\n            option_strings=option_strings,\n            dest=dest,\n            nargs=0,\n            default=default,\n            required=required,\n            help=help,\n        )",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:autojump_argparse._CountAction",
+      "anchor:autojump_argparse._CountAction",
+      "autojump_argparse.Action"
+    ],
+    "module_level": false,
+    "execution_scope": "_CountAction.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "autojump_argparse._CountAction.__call__",
+    "target": "autojump_argparse._ensure_value",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1044:20:201",
+    "file": "bin/autojump_argparse.py",
+    "line": 1044,
+    "column": 20,
+    "source": "_ensure_value(namespace, self.dest, 0)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_ensure_value@160"
+    ],
+    "module_level": false,
+    "execution_scope": "_CountAction.__call__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_ensure_value",
+        "line": 160
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse._HelpAction.__init__",
+    "target": "autojump_argparse.Action.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1057:8:203",
+    "file": "bin/autojump_argparse.py",
+    "line": 1057,
+    "column": 8,
+    "source": "super(_HelpAction, self).__init__(\n            option_strings=option_strings,\n            dest=dest,\n            default=default,\n            nargs=0,\n            help=help,\n        )",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:autojump_argparse._HelpAction",
+      "anchor:autojump_argparse._HelpAction",
+      "autojump_argparse.Action"
+    ],
+    "module_level": false,
+    "execution_scope": "_HelpAction.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "autojump_argparse._VersionAction.__init__",
+    "target": "autojump_argparse.Action.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1080:8:207",
+    "file": "bin/autojump_argparse.py",
+    "line": 1080,
+    "column": 8,
+    "source": "super(_VersionAction, self).__init__(\n            option_strings=option_strings,\n            dest=dest,\n            default=default,\n            nargs=0,\n            help=help,\n        )",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:autojump_argparse._VersionAction",
+      "anchor:autojump_argparse._VersionAction",
+      "autojump_argparse.Action"
+    ],
+    "module_level": false,
+    "execution_scope": "_VersionAction.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "autojump_argparse._SubParsersAction.__init__",
+    "target": "autojump_argparse.Action.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1121:8:215",
+    "file": "bin/autojump_argparse.py",
+    "line": 1121,
+    "column": 8,
+    "source": "super(_SubParsersAction, self).__init__(\n            option_strings=option_strings,\n            dest=dest,\n            nargs=PARSER,\n            choices=self._name_parser_map,\n            help=help,\n            metavar=metavar,\n        )",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:autojump_argparse._SubParsersAction",
+      "anchor:autojump_argparse._SubParsersAction",
+      "autojump_argparse.Action"
+    ],
+    "module_level": false,
+    "execution_scope": "_SubParsersAction.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "autojump_argparse._SubParsersAction.add_parser",
+    "target": "autojump_argparse._SubParsersAction._ChoicesPseudoAction",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:1138:28:219",
+    "file": "bin/autojump_argparse.py",
+    "line": 1138,
+    "column": 28,
+    "source": "self._ChoicesPseudoAction(name, help)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:root:METHOD:autojump_argparse._SubParsersAction.add_parser",
+      "context:METHOD:autojump_argparse._SubParsersAction.add_parser",
+      "receiver:autojump_argparse._SubParsersAction"
+    ],
+    "module_level": false,
+    "execution_scope": "_SubParsersAction.add_parser",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse._SubParsersAction.add_parser",
+    "target": "autojump_argparse._SubParsersAction._ChoicesPseudoAction.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1138:28:219",
+    "file": "bin/autojump_argparse.py",
+    "line": 1138,
+    "column": 28,
+    "source": "self._ChoicesPseudoAction(name, help)",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse._SubParsersAction._ChoicesPseudoAction"
+    ],
+    "module_level": false,
+    "execution_scope": "_SubParsersAction.add_parser",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse._SubParsersAction.__call__",
+    "target": "autojump_argparse.ArgumentError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:1163:18:225",
+    "file": "bin/autojump_argparse.py",
+    "line": 1163,
+    "column": 18,
+    "source": "ArgumentError(self, msg)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:ArgumentError@720"
+    ],
+    "module_level": false,
+    "execution_scope": "_SubParsersAction.__call__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse._SubParsersAction.__call__",
+    "target": "autojump_argparse.ArgumentError.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1163:18:225",
+    "file": "bin/autojump_argparse.py",
+    "line": 1163,
+    "column": 18,
+    "source": "ArgumentError(self, msg)",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse.ArgumentError",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "_SubParsersAction.__call__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.__init__",
+    "target": "autojump_argparse._ActionsContainer.register",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1269:8:243",
+    "file": "bin/autojump_argparse.py",
+    "line": 1269,
+    "column": 8,
+    "source": "self.register('action', None, _StoreAction)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.__init__",
+    "target": "autojump_argparse._ActionsContainer.register",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1270:8:244",
+    "file": "bin/autojump_argparse.py",
+    "line": 1270,
+    "column": 8,
+    "source": "self.register('action', 'store', _StoreAction)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.__init__",
+    "target": "autojump_argparse._ActionsContainer.register",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1271:8:245",
+    "file": "bin/autojump_argparse.py",
+    "line": 1271,
+    "column": 8,
+    "source": "self.register('action', 'store_const', _StoreConstAction)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.__init__",
+    "target": "autojump_argparse._ActionsContainer.register",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1272:8:246",
+    "file": "bin/autojump_argparse.py",
+    "line": 1272,
+    "column": 8,
+    "source": "self.register('action', 'store_true', _StoreTrueAction)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.__init__",
+    "target": "autojump_argparse._ActionsContainer.register",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1273:8:247",
+    "file": "bin/autojump_argparse.py",
+    "line": 1273,
+    "column": 8,
+    "source": "self.register('action', 'store_false', _StoreFalseAction)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.__init__",
+    "target": "autojump_argparse._ActionsContainer.register",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1274:8:248",
+    "file": "bin/autojump_argparse.py",
+    "line": 1274,
+    "column": 8,
+    "source": "self.register('action', 'append', _AppendAction)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.__init__",
+    "target": "autojump_argparse._ActionsContainer.register",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1275:8:249",
+    "file": "bin/autojump_argparse.py",
+    "line": 1275,
+    "column": 8,
+    "source": "self.register('action', 'append_const', _AppendConstAction)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.__init__",
+    "target": "autojump_argparse._ActionsContainer.register",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1276:8:250",
+    "file": "bin/autojump_argparse.py",
+    "line": 1276,
+    "column": 8,
+    "source": "self.register('action', 'count', _CountAction)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.__init__",
+    "target": "autojump_argparse._ActionsContainer.register",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1277:8:251",
+    "file": "bin/autojump_argparse.py",
+    "line": 1277,
+    "column": 8,
+    "source": "self.register('action', 'help', _HelpAction)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.__init__",
+    "target": "autojump_argparse._ActionsContainer.register",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1278:8:252",
+    "file": "bin/autojump_argparse.py",
+    "line": 1278,
+    "column": 8,
+    "source": "self.register('action', 'version', _VersionAction)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.__init__",
+    "target": "autojump_argparse._ActionsContainer.register",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1279:8:253",
+    "file": "bin/autojump_argparse.py",
+    "line": 1279,
+    "column": 8,
+    "source": "self.register('action', 'parsers', _SubParsersAction)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.__init__",
+    "target": "autojump_argparse._ActionsContainer._get_handler",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1282:8:254",
+    "file": "bin/autojump_argparse.py",
+    "line": 1282,
+    "column": 8,
+    "source": "self._get_handler()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.add_argument",
+    "target": "autojump_argparse._ActionsContainer._get_positional_kwargs",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1346:21:262",
+    "file": "bin/autojump_argparse.py",
+    "line": 1346,
+    "column": 21,
+    "source": "self._get_positional_kwargs(*args, **kwargs)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.add_argument",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.add_argument",
+    "target": "autojump_argparse._ActionsContainer._get_optional_kwargs",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1350:21:263",
+    "file": "bin/autojump_argparse.py",
+    "line": 1350,
+    "column": 21,
+    "source": "self._get_optional_kwargs(*args, **kwargs)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.add_argument",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.add_argument",
+    "target": "autojump_argparse._ActionsContainer._pop_action_class",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1361:23:264",
+    "file": "bin/autojump_argparse.py",
+    "line": 1361,
+    "column": 23,
+    "source": "self._pop_action_class(kwargs)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.add_argument",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.add_argument",
+    "target": "autojump_argparse._callable",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1362:15:265",
+    "file": "bin/autojump_argparse.py",
+    "line": 1362,
+    "column": 15,
+    "source": "_callable(action_class)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_callable@116"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.add_argument",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_callable",
+        "line": 116
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.add_argument",
+    "target": "autojump_argparse._ActionsContainer._registry_get",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1367:20:268",
+    "file": "bin/autojump_argparse.py",
+    "line": 1367,
+    "column": 20,
+    "source": "self._registry_get('type', action.type, action.type)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.add_argument",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.add_argument",
+    "target": "autojump_argparse._callable",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1368:15:269",
+    "file": "bin/autojump_argparse.py",
+    "line": 1368,
+    "column": 15,
+    "source": "_callable(type_func)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_callable@116"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.add_argument",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_callable",
+        "line": 116
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.add_argument",
+    "target": "autojump_argparse.ArgumentParser._add_action",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1371:15:271",
+    "file": "bin/autojump_argparse.py",
+    "line": 1371,
+    "column": 15,
+    "source": "self._add_action(action)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._add_action",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._check_value",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_formatter",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_kwargs",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_nargs_pattern",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_option_tuples",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_optional_actions",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_positional_actions",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_value",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_values",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._match_argument",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._match_arguments_partial",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._parse_known_args",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._parse_optional",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._print_message",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._read_args_from_files",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.add_subparsers",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.convert_arg_line_to_args",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.error",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.exit",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.format_help",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.format_usage",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.format_version",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.parse_args",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.parse_known_args",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.print_help",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.print_usage",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.print_version",
+      "allocation:root:METHOD:autojump_argparse._ActionsContainer.add_argument",
+      "context:METHOD:autojump_argparse.ArgumentParser.__init__ > METHOD:autojump_argparse._ActionsContainer.add_argument",
+      "context:METHOD:autojump_argparse._ActionsContainer.add_argument",
+      "receiver:autojump_argparse.ArgumentParser",
+      "receiver:autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.add_argument",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.add_argument",
+    "target": "autojump_argparse._ActionsContainer._add_action",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1371:15:271",
+    "file": "bin/autojump_argparse.py",
+    "line": 1371,
+    "column": 15,
+    "source": "self._add_action(action)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._add_action",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._check_value",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_formatter",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_kwargs",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_nargs_pattern",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_option_tuples",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_optional_actions",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_positional_actions",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_value",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._get_values",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._match_argument",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._match_arguments_partial",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._parse_known_args",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._parse_optional",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._print_message",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser._read_args_from_files",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.add_subparsers",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.convert_arg_line_to_args",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.error",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.exit",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.format_help",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.format_usage",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.format_version",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.parse_args",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.parse_known_args",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.print_help",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.print_usage",
+      "allocation:root:METHOD:autojump_argparse.ArgumentParser.print_version",
+      "allocation:root:METHOD:autojump_argparse._ActionsContainer.add_argument",
+      "context:METHOD:autojump_argparse.ArgumentParser.__init__ > METHOD:autojump_argparse._ActionsContainer.add_argument",
+      "context:METHOD:autojump_argparse._ActionsContainer.add_argument",
+      "receiver:autojump_argparse.ArgumentParser",
+      "receiver:autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.add_argument",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.add_argument_group",
+    "target": "autojump_argparse._ArgumentGroup",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:1374:16:272",
+    "file": "bin/autojump_argparse.py",
+    "line": 1374,
+    "column": 16,
+    "source": "_ArgumentGroup(self, *args, **kwargs)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "_ArgumentGroup"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.add_argument_group",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.add_argument_group",
+    "target": "autojump_argparse._ArgumentGroup.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1374:16:272",
+    "file": "bin/autojump_argparse.py",
+    "line": 1374,
+    "column": 16,
+    "source": "_ArgumentGroup(self, *args, **kwargs)",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse._ArgumentGroup"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.add_argument_group",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.add_mutually_exclusive_group",
+    "target": "autojump_argparse._MutuallyExclusiveGroup",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:1379:16:274",
+    "file": "bin/autojump_argparse.py",
+    "line": 1379,
+    "column": 16,
+    "source": "_MutuallyExclusiveGroup(self, **kwargs)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "_MutuallyExclusiveGroup"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.add_mutually_exclusive_group",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer.add_mutually_exclusive_group",
+    "target": "autojump_argparse._MutuallyExclusiveGroup.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1379:16:274",
+    "file": "bin/autojump_argparse.py",
+    "line": 1379,
+    "column": 16,
+    "source": "_MutuallyExclusiveGroup(self, **kwargs)",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse._MutuallyExclusiveGroup"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer.add_mutually_exclusive_group",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer._add_action",
+    "target": "autojump_argparse._ActionsContainer._check_conflict",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1385:8:276",
+    "file": "bin/autojump_argparse.py",
+    "line": 1385,
+    "column": 8,
+    "source": "self._check_conflict(action)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer._add_action",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer._add_container_actions",
+    "target": "autojump_argparse._ActionsContainer.add_argument_group",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1423:47:283",
+    "file": "bin/autojump_argparse.py",
+    "line": 1423,
+    "column": 47,
+    "source": "self.add_argument_group(\n                    title=group.title,\n                    description=group.description,\n                    conflict_handler=group.conflict_handler,\n                )",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer._add_container_actions",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer._add_container_actions",
+    "target": "autojump_argparse._ActionsContainer.add_mutually_exclusive_group",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1437:26:284",
+    "file": "bin/autojump_argparse.py",
+    "line": 1437,
+    "column": 26,
+    "source": "self.add_mutually_exclusive_group(\n                required=group.required,\n            )",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer._add_container_actions",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer._pop_action_class",
+    "target": "autojump_argparse._ActionsContainer._registry_get",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1504:15:304",
+    "file": "bin/autojump_argparse.py",
+    "line": 1504,
+    "column": 15,
+    "source": "self._registry_get('action', action, action)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer._pop_action_class",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer._check_conflict",
+    "target": "autojump_argparse._ActionsContainer._get_handler",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1526:31:309",
+    "file": "bin/autojump_argparse.py",
+    "line": 1526,
+    "column": 31,
+    "source": "self._get_handler()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer._check_conflict",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer._handle_conflict_error",
+    "target": "autojump_argparse.ArgumentError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:1536:14:313",
+    "file": "bin/autojump_argparse.py",
+    "line": 1536,
+    "column": 14,
+    "source": "ArgumentError(action, message % conflict_string)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:ArgumentError@720"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer._handle_conflict_error",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse._ActionsContainer._handle_conflict_error",
+    "target": "autojump_argparse.ArgumentError.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1536:14:313",
+    "file": "bin/autojump_argparse.py",
+    "line": 1536,
+    "column": 14,
+    "source": "ArgumentError(action, message % conflict_string)",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse.ArgumentError",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "_ActionsContainer._handle_conflict_error",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse._ArgumentGroup._add_action",
+    "target": "autojump_argparse._ActionsContainer._add_action",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1577:17:322",
+    "file": "bin/autojump_argparse.py",
+    "line": 1577,
+    "column": 17,
+    "source": "super(_ArgumentGroup, self)._add_action(action)",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:autojump_argparse._ArgumentGroup",
+      "anchor:autojump_argparse._ArgumentGroup",
+      "autojump_argparse._ActionsContainer",
+      "receiver:autojump_argparse._MutuallyExclusiveGroup",
+      "anchor:autojump_argparse._ArgumentGroup",
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ArgumentGroup._add_action",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "autojump_argparse._ArgumentGroup._remove_action",
+    "target": "autojump_argparse._ActionsContainer._remove_action",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1582:8:325",
+    "file": "bin/autojump_argparse.py",
+    "line": 1582,
+    "column": 8,
+    "source": "super(_ArgumentGroup, self)._remove_action(action)",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:autojump_argparse._ArgumentGroup",
+      "anchor:autojump_argparse._ArgumentGroup",
+      "autojump_argparse._ActionsContainer",
+      "receiver:autojump_argparse._MutuallyExclusiveGroup",
+      "anchor:autojump_argparse._ArgumentGroup",
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "_ArgumentGroup._remove_action",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "autojump_argparse._MutuallyExclusiveGroup.__init__",
+    "target": "autojump_argparse._ArgumentGroup.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1589:8:328",
+    "file": "bin/autojump_argparse.py",
+    "line": 1589,
+    "column": 8,
+    "source": "super(_MutuallyExclusiveGroup, self).__init__(container)",
+    "rule": "super_c3_may_call",
+    "trace": [
+      "receiver:autojump_argparse._MutuallyExclusiveGroup",
+      "anchor:autojump_argparse._MutuallyExclusiveGroup",
+      "autojump_argparse._ArgumentGroup"
+    ],
+    "module_level": false,
+    "execution_scope": "_MutuallyExclusiveGroup.__init__",
+    "execution_phase": "function_body",
+    "certainty": "receiver_hierarchy_may_call"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.__init__",
+    "target": "autojump_argparse._ActionsContainer.add_argument_group",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1671:28:340",
+    "file": "bin/autojump_argparse.py",
+    "line": 1671,
+    "column": 28,
+    "source": "add_group(_('positional arguments'))",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "bound_method_alias",
+      "context:METHOD:autojump_argparse.ArgumentParser.__init__",
+      "field"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.__init__",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.__init__",
+    "target": "autojump_argparse._ActionsContainer.add_argument_group",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1672:26:342",
+    "file": "bin/autojump_argparse.py",
+    "line": 1672,
+    "column": 26,
+    "source": "add_group(_('optional arguments'))",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "bound_method_alias",
+      "context:METHOD:autojump_argparse.ArgumentParser.__init__",
+      "field"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.__init__",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.__init__",
+    "target": "autojump_argparse._ActionsContainer.register",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1678:8:344",
+    "file": "bin/autojump_argparse.py",
+    "line": 1678,
+    "column": 8,
+    "source": "self.register('type', None, identity)",
+    "rule": "self_inheritance",
+    "trace": [
+      "autojump_argparse.ArgumentParser",
+      "autojump_argparse._AttributeHolder",
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.__init__",
+    "target": "autojump_argparse._ActionsContainer.add_argument",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1687:12:345",
+    "file": "bin/autojump_argparse.py",
+    "line": 1687,
+    "column": 12,
+    "source": "self.add_argument(\n                default_prefix + 'h', default_prefix * 2 + 'help',\n                action='help', default=SUPPRESS,\n                help=_('show this help message and exit'),\n            )",
+    "rule": "self_inheritance",
+    "trace": [
+      "autojump_argparse.ArgumentParser",
+      "autojump_argparse._AttributeHolder",
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.__init__",
+    "target": "autojump_argparse._ActionsContainer.add_argument",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1693:12:347",
+    "file": "bin/autojump_argparse.py",
+    "line": 1693,
+    "column": 12,
+    "source": "self.add_argument(\n                default_prefix + 'v', default_prefix * 2 + 'version',\n                action='version', default=SUPPRESS,\n                version=self.version,\n                help=_(\"show program's version number and exit\"),\n            )",
+    "rule": "self_inheritance",
+    "trace": [
+      "autojump_argparse.ArgumentParser",
+      "autojump_argparse._AttributeHolder",
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.__init__",
+    "target": "autojump_argparse._ActionsContainer._add_container_actions",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1702:12:349",
+    "file": "bin/autojump_argparse.py",
+    "line": 1702,
+    "column": 12,
+    "source": "self._add_container_actions(parent)",
+    "rule": "self_inheritance",
+    "trace": [
+      "autojump_argparse.ArgumentParser",
+      "autojump_argparse._AttributeHolder",
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.add_subparsers",
+    "target": "autojump_argparse.ArgumentParser.error",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1730:12:352",
+    "file": "bin/autojump_argparse.py",
+    "line": 1730,
+    "column": 12,
+    "source": "self.error(_('cannot have multiple subparser arguments'))",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.add_subparsers",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.add_subparsers",
+    "target": "autojump_argparse._ActionsContainer.add_argument_group",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1738:31:360",
+    "file": "bin/autojump_argparse.py",
+    "line": 1738,
+    "column": 31,
+    "source": "self.add_argument_group(title, description)",
+    "rule": "self_inheritance",
+    "trace": [
+      "autojump_argparse.ArgumentParser",
+      "autojump_argparse._AttributeHolder",
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.add_subparsers",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.add_subparsers",
+    "target": "autojump_argparse.ArgumentParser._get_formatter",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1745:24:362",
+    "file": "bin/autojump_argparse.py",
+    "line": 1745,
+    "column": 24,
+    "source": "self._get_formatter()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.add_subparsers",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.add_subparsers",
+    "target": "autojump_argparse.ArgumentParser._get_positional_actions",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1746:26:363",
+    "file": "bin/autojump_argparse.py",
+    "line": 1746,
+    "column": 26,
+    "source": "self._get_positional_actions()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.add_subparsers",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.add_subparsers",
+    "target": "autojump_argparse._ActionsContainer._pop_action_class",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1752:24:367",
+    "file": "bin/autojump_argparse.py",
+    "line": 1752,
+    "column": 24,
+    "source": "self._pop_action_class(kwargs, 'parsers')",
+    "rule": "self_inheritance",
+    "trace": [
+      "autojump_argparse.ArgumentParser",
+      "autojump_argparse._AttributeHolder",
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.add_subparsers",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.parse_args",
+    "target": "autojump_argparse.ArgumentParser.parse_known_args",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1784:21:372",
+    "file": "bin/autojump_argparse.py",
+    "line": 1784,
+    "column": 21,
+    "source": "self.parse_known_args(args, namespace)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.parse_args",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.parse_args",
+    "target": "autojump_argparse.ArgumentParser.error",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1787:12:374",
+    "file": "bin/autojump_argparse.py",
+    "line": 1787,
+    "column": 12,
+    "source": "self.error(msg % ' '.join(argv))",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.parse_args",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.parse_known_args",
+    "target": "autojump_argparse.Namespace",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:1797:24:376",
+    "file": "bin/autojump_argparse.py",
+    "line": 1797,
+    "column": 24,
+    "source": "Namespace()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:Namespace@1225"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.parse_known_args",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "Namespace",
+        "line": 1225
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.parse_known_args",
+    "target": "autojump_argparse.Namespace.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1797:24:376",
+    "file": "bin/autojump_argparse.py",
+    "line": 1797,
+    "column": 24,
+    "source": "Namespace()",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse.Namespace"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.parse_known_args",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "Namespace",
+        "line": 1225
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.parse_known_args",
+    "target": "autojump_argparse.ArgumentParser._get_value",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1806:38:379",
+    "file": "bin/autojump_argparse.py",
+    "line": 1806,
+    "column": 38,
+    "source": "self._get_value(action, default)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.parse_known_args",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.parse_known_args",
+    "target": "autojump_argparse.ArgumentParser._parse_known_args",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1816:30:383",
+    "file": "bin/autojump_argparse.py",
+    "line": 1816,
+    "column": 30,
+    "source": "self._parse_known_args(args, namespace)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.parse_known_args",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.parse_known_args",
+    "target": "autojump_argparse.ArgumentParser.error",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1823:12:389",
+    "file": "bin/autojump_argparse.py",
+    "line": 1823,
+    "column": 12,
+    "source": "self.error(str(err))",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.parse_known_args",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args",
+    "target": "autojump_argparse.ArgumentParser._read_args_from_files",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1828:26:391",
+    "file": "bin/autojump_argparse.py",
+    "line": 1828,
+    "column": 26,
+    "source": "self._read_args_from_files(arg_strings)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args",
+    "target": "autojump_argparse.ArgumentParser._parse_optional",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1857:31:400",
+    "file": "bin/autojump_argparse.py",
+    "line": 1857,
+    "column": 31,
+    "source": "self._parse_optional(arg_string)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args.take_action",
+    "target": "autojump_argparse.ArgumentParser._get_values",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1874:30:406",
+    "file": "bin/autojump_argparse.py",
+    "line": 1874,
+    "column": 30,
+    "source": "self._get_values(action, argument_strings)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args.take_action",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args.take_action",
+    "target": "autojump_argparse._get_action_name",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1884:38:410",
+    "file": "bin/autojump_argparse.py",
+    "line": 1884,
+    "column": 38,
+    "source": "_get_action_name(conflict_action)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_get_action_name@707"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args.take_action",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_get_action_name",
+        "line": 707
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args.take_action",
+    "target": "autojump_argparse.ArgumentError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:1885:30:411",
+    "file": "bin/autojump_argparse.py",
+    "line": 1885,
+    "column": 30,
+    "source": "ArgumentError(action, msg % action_name)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:ArgumentError@720"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args.take_action",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args.take_action",
+    "target": "autojump_argparse.ArgumentError.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1885:30:411",
+    "file": "bin/autojump_argparse.py",
+    "line": 1885,
+    "column": 30,
+    "source": "ArgumentError(action, msg % action_name)",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse.ArgumentError",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args.take_action",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args.consume_optional",
+    "target": "autojump_argparse.ArgumentError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:1930:34:417",
+    "file": "bin/autojump_argparse.py",
+    "line": 1930,
+    "column": 34,
+    "source": "ArgumentError(action, msg % explicit_arg)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:ArgumentError@720"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args.consume_optional",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args.consume_optional",
+    "target": "autojump_argparse.ArgumentError.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1930:34:417",
+    "file": "bin/autojump_argparse.py",
+    "line": 1930,
+    "column": 34,
+    "source": "ArgumentError(action, msg % explicit_arg)",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse.ArgumentError",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args.consume_optional",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args.consume_optional",
+    "target": "autojump_argparse.ArgumentError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:1944:30:420",
+    "file": "bin/autojump_argparse.py",
+    "line": 1944,
+    "column": 30,
+    "source": "ArgumentError(action, msg % explicit_arg)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:ArgumentError@720"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args.consume_optional",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args.consume_optional",
+    "target": "autojump_argparse.ArgumentError.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1944:30:420",
+    "file": "bin/autojump_argparse.py",
+    "line": 1944,
+    "column": 30,
+    "source": "ArgumentError(action, msg % explicit_arg)",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse.ArgumentError",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args.consume_optional",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args.consume_optional",
+    "target": "autojump_argparse.ArgumentParser._parse_known_args.take_action",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1962:16:423",
+    "file": "bin/autojump_argparse.py",
+    "line": 1962,
+    "column": 16,
+    "source": "take_action(action, args, option_string)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:take_action@1872"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args.consume_optional",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "take_action",
+        "line": 1872
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args",
+    "target": "autojump_argparse.ArgumentParser._get_positional_actions",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1967:22:424",
+    "file": "bin/autojump_argparse.py",
+    "line": 1967,
+    "column": 22,
+    "source": "self._get_positional_actions()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args.consume_positionals",
+    "target": "autojump_argparse.ArgumentParser._parse_known_args.take_action",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:1981:16:427",
+    "file": "bin/autojump_argparse.py",
+    "line": 1981,
+    "column": 16,
+    "source": "take_action(action, args)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:take_action@1872"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args.consume_positionals",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "take_action",
+        "line": 1872
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args",
+    "target": "autojump_argparse.ArgumentParser._parse_known_args.consume_positionals",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2005:40:431",
+    "file": "bin/autojump_argparse.py",
+    "line": 2005,
+    "column": 40,
+    "source": "consume_positionals(start_index)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:consume_positionals@1970"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "consume_positionals",
+        "line": 1970
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args",
+    "target": "autojump_argparse.ArgumentParser._parse_known_args.consume_optional",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2023:26:433",
+    "file": "bin/autojump_argparse.py",
+    "line": 2023,
+    "column": 26,
+    "source": "consume_optional(start_index)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:consume_optional@1893"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "consume_optional",
+        "line": 1893
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args",
+    "target": "autojump_argparse.ArgumentParser._parse_known_args.consume_positionals",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2026:21:434",
+    "file": "bin/autojump_argparse.py",
+    "line": 2026,
+    "column": 21,
+    "source": "consume_positionals(start_index)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:consume_positionals@1970"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "consume_positionals",
+        "line": 1970
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args",
+    "target": "autojump_argparse.ArgumentParser.error",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2034:12:436",
+    "file": "bin/autojump_argparse.py",
+    "line": 2034,
+    "column": 12,
+    "source": "self.error(_('too few arguments'))",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args",
+    "target": "autojump_argparse._get_action_name",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2040:27:438",
+    "file": "bin/autojump_argparse.py",
+    "line": 2040,
+    "column": 27,
+    "source": "_get_action_name(action)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_get_action_name@707"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_get_action_name",
+        "line": 707
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args",
+    "target": "autojump_argparse.ArgumentParser.error",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2041:20:439",
+    "file": "bin/autojump_argparse.py",
+    "line": 2041,
+    "column": 20,
+    "source": "self.error(_('argument %s is required') % name)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args",
+    "target": "autojump_argparse._get_action_name",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2053:24:441",
+    "file": "bin/autojump_argparse.py",
+    "line": 2053,
+    "column": 24,
+    "source": "_get_action_name(action)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_get_action_name@707"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_get_action_name",
+        "line": 707
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_known_args",
+    "target": "autojump_argparse.ArgumentParser.error",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2058:20:443",
+    "file": "bin/autojump_argparse.py",
+    "line": 2058,
+    "column": 20,
+    "source": "self.error(msg % ' '.join(names))",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_known_args",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._read_args_from_files",
+    "target": "autojump_argparse.ArgumentParser.convert_arg_line_to_args",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2079:39:449",
+    "file": "bin/autojump_argparse.py",
+    "line": 2079,
+    "column": 39,
+    "source": "self.convert_arg_line_to_args(arg_line)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._read_args_from_files",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._read_args_from_files",
+    "target": "autojump_argparse.ArgumentParser._read_args_from_files",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2081:38:451",
+    "file": "bin/autojump_argparse.py",
+    "line": 2081,
+    "column": 38,
+    "source": "self._read_args_from_files(arg_strings)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._read_args_from_files",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._read_args_from_files",
+    "target": "autojump_argparse.ArgumentParser.error",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2087:20:455",
+    "file": "bin/autojump_argparse.py",
+    "line": 2087,
+    "column": 20,
+    "source": "self.error(str(err))",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._read_args_from_files",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._match_argument",
+    "target": "autojump_argparse.ArgumentParser._get_nargs_pattern",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2097:24:457",
+    "file": "bin/autojump_argparse.py",
+    "line": 2097,
+    "column": 24,
+    "source": "self._get_nargs_pattern(action)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._match_argument",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._match_argument",
+    "target": "autojump_argparse.ArgumentError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:2109:18:464",
+    "file": "bin/autojump_argparse.py",
+    "line": 2109,
+    "column": 18,
+    "source": "ArgumentError(action, msg)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:ArgumentError@720"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._match_argument",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._match_argument",
+    "target": "autojump_argparse.ArgumentError.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2109:18:464",
+    "file": "bin/autojump_argparse.py",
+    "line": 2109,
+    "column": 18,
+    "source": "ArgumentError(action, msg)",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse.ArgumentError",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._match_argument",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._match_arguments_partial",
+    "target": "autojump_argparse.ArgumentParser._get_nargs_pattern",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2121:16:470",
+    "file": "bin/autojump_argparse.py",
+    "line": 2121,
+    "column": 16,
+    "source": "self._get_nargs_pattern(action)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._match_arguments_partial",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_optional",
+    "target": "autojump_argparse.ArgumentParser._get_option_tuples",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2159:24:477",
+    "file": "bin/autojump_argparse.py",
+    "line": 2159,
+    "column": 24,
+    "source": "self._get_option_tuples(arg_string)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_optional",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._parse_optional",
+    "target": "autojump_argparse.ArgumentParser.error",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2167:12:480",
+    "file": "bin/autojump_argparse.py",
+    "line": 2167,
+    "column": 12,
+    "source": "self.error(_('ambiguous option: %s could match %s') % tup)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._parse_optional",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_option_tuples",
+    "target": "autojump_argparse.ArgumentParser.error",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2229:12:490",
+    "file": "bin/autojump_argparse.py",
+    "line": 2229,
+    "column": 12,
+    "source": "self.error(_('unexpected option string: %s') % option_string)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_option_tuples",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_values",
+    "target": "autojump_argparse.ArgumentParser._get_value",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2290:24:496",
+    "file": "bin/autojump_argparse.py",
+    "line": 2290,
+    "column": 24,
+    "source": "self._get_value(action, value)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_values",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_values",
+    "target": "autojump_argparse.ArgumentParser._check_value",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2291:16:497",
+    "file": "bin/autojump_argparse.py",
+    "line": 2291,
+    "column": 16,
+    "source": "self._check_value(action, value)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_values",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_values",
+    "target": "autojump_argparse.ArgumentParser._check_value",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2303:12:498",
+    "file": "bin/autojump_argparse.py",
+    "line": 2303,
+    "column": 12,
+    "source": "self._check_value(action, value)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_values",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_values",
+    "target": "autojump_argparse.ArgumentParser._get_value",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2308:20:500",
+    "file": "bin/autojump_argparse.py",
+    "line": 2308,
+    "column": 20,
+    "source": "self._get_value(action, arg_string)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_values",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_values",
+    "target": "autojump_argparse.ArgumentParser._check_value",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2309:12:501",
+    "file": "bin/autojump_argparse.py",
+    "line": 2309,
+    "column": 12,
+    "source": "self._check_value(action, value)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_values",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_values",
+    "target": "autojump_argparse.ArgumentParser._get_value",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2313:21:502",
+    "file": "bin/autojump_argparse.py",
+    "line": 2313,
+    "column": 21,
+    "source": "self._get_value(action, v)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_values",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_values",
+    "target": "autojump_argparse.ArgumentParser._get_value",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2317:21:503",
+    "file": "bin/autojump_argparse.py",
+    "line": 2317,
+    "column": 21,
+    "source": "self._get_value(action, v)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_values",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_values",
+    "target": "autojump_argparse.ArgumentParser._check_value",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2318:12:504",
+    "file": "bin/autojump_argparse.py",
+    "line": 2318,
+    "column": 12,
+    "source": "self._check_value(action, value[0])",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_values",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_values",
+    "target": "autojump_argparse.ArgumentParser._get_value",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2322:21:505",
+    "file": "bin/autojump_argparse.py",
+    "line": 2322,
+    "column": 21,
+    "source": "self._get_value(action, v)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_values",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_values",
+    "target": "autojump_argparse.ArgumentParser._check_value",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2324:16:506",
+    "file": "bin/autojump_argparse.py",
+    "line": 2324,
+    "column": 16,
+    "source": "self._check_value(action, v)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_values",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_value",
+    "target": "autojump_argparse._ActionsContainer._registry_get",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2330:20:507",
+    "file": "bin/autojump_argparse.py",
+    "line": 2330,
+    "column": 20,
+    "source": "self._registry_get('type', action.type, action.type)",
+    "rule": "self_inheritance",
+    "trace": [
+      "autojump_argparse.ArgumentParser",
+      "autojump_argparse._AttributeHolder",
+      "autojump_argparse._ActionsContainer"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_value",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_value",
+    "target": "autojump_argparse._callable",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2331:15:508",
+    "file": "bin/autojump_argparse.py",
+    "line": 2331,
+    "column": 15,
+    "source": "_callable(type_func)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_callable@116"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_value",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_callable",
+        "line": 116
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_value",
+    "target": "autojump_argparse.ArgumentError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:2333:18:510",
+    "file": "bin/autojump_argparse.py",
+    "line": 2333,
+    "column": 18,
+    "source": "ArgumentError(action, msg % type_func)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:ArgumentError@720"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_value",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_value",
+    "target": "autojump_argparse.ArgumentError.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2333:18:510",
+    "file": "bin/autojump_argparse.py",
+    "line": 2333,
+    "column": 18,
+    "source": "ArgumentError(action, msg % type_func)",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse.ArgumentError",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_value",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_value",
+    "target": "autojump_argparse.ArgumentError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:2343:18:516",
+    "file": "bin/autojump_argparse.py",
+    "line": 2343,
+    "column": 18,
+    "source": "ArgumentError(action, msg)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:ArgumentError@720"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_value",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_value",
+    "target": "autojump_argparse.ArgumentError.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2343:18:516",
+    "file": "bin/autojump_argparse.py",
+    "line": 2343,
+    "column": 18,
+    "source": "ArgumentError(action, msg)",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse.ArgumentError",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_value",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_value",
+    "target": "autojump_argparse.ArgumentError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:2349:18:520",
+    "file": "bin/autojump_argparse.py",
+    "line": 2349,
+    "column": 18,
+    "source": "ArgumentError(action, msg % (name, arg_string))",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:ArgumentError@720"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_value",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._get_value",
+    "target": "autojump_argparse.ArgumentError.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2349:18:520",
+    "file": "bin/autojump_argparse.py",
+    "line": 2349,
+    "column": 18,
+    "source": "ArgumentError(action, msg % (name, arg_string))",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse.ArgumentError",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._get_value",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._check_value",
+    "target": "autojump_argparse.ArgumentError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:bin/autojump_argparse.py:2359:18:524",
+    "file": "bin/autojump_argparse.py",
+    "line": 2359,
+    "column": 18,
+    "source": "ArgumentError(action, msg)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:ArgumentError@720"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._check_value",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser._check_value",
+    "target": "autojump_argparse.ArgumentError.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2359:18:524",
+    "file": "bin/autojump_argparse.py",
+    "line": 2359,
+    "column": 18,
+    "source": "ArgumentError(action, msg)",
+    "rule": "constructor_init",
+    "trace": [
+      "autojump_argparse.ArgumentError",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser._check_value",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ArgumentError",
+        "line": 720
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.format_usage",
+    "target": "autojump_argparse.ArgumentParser._get_formatter",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2365:20:525",
+    "file": "bin/autojump_argparse.py",
+    "line": 2365,
+    "column": 20,
+    "source": "self._get_formatter()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.format_usage",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.format_help",
+    "target": "autojump_argparse.ArgumentParser._get_formatter",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2373:20:528",
+    "file": "bin/autojump_argparse.py",
+    "line": 2373,
+    "column": 20,
+    "source": "self._get_formatter()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.format_help",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.format_version",
+    "target": "autojump_argparse.ArgumentParser._get_formatter",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2404:20:538",
+    "file": "bin/autojump_argparse.py",
+    "line": 2404,
+    "column": 20,
+    "source": "self._get_formatter()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.format_version",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.print_usage",
+    "target": "autojump_argparse.ArgumentParser._print_message",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2417:8:542",
+    "file": "bin/autojump_argparse.py",
+    "line": 2417,
+    "column": 8,
+    "source": "self._print_message(self.format_usage(), file)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.print_usage",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.print_usage",
+    "target": "autojump_argparse.ArgumentParser.format_usage",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2417:28:543",
+    "file": "bin/autojump_argparse.py",
+    "line": 2417,
+    "column": 28,
+    "source": "self.format_usage()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.print_usage",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.print_help",
+    "target": "autojump_argparse.ArgumentParser._print_message",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2422:8:544",
+    "file": "bin/autojump_argparse.py",
+    "line": 2422,
+    "column": 8,
+    "source": "self._print_message(self.format_help(), file)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.print_help",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.print_help",
+    "target": "autojump_argparse.ArgumentParser.format_help",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2422:28:545",
+    "file": "bin/autojump_argparse.py",
+    "line": 2422,
+    "column": 28,
+    "source": "self.format_help()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.print_help",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.print_version",
+    "target": "autojump_argparse.ArgumentParser._print_message",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2431:8:547",
+    "file": "bin/autojump_argparse.py",
+    "line": 2431,
+    "column": 8,
+    "source": "self._print_message(self.format_version(), file)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.print_version",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.print_version",
+    "target": "autojump_argparse.ArgumentParser.format_version",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2431:28:548",
+    "file": "bin/autojump_argparse.py",
+    "line": 2431,
+    "column": 28,
+    "source": "self.format_version()",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.print_version",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.exit",
+    "target": "autojump_argparse.ArgumentParser._print_message",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2444:12:550",
+    "file": "bin/autojump_argparse.py",
+    "line": 2444,
+    "column": 12,
+    "source": "self._print_message(message, _sys.stderr)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.exit",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.error",
+    "target": "autojump_argparse.ArgumentParser.print_usage",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2456:8:552",
+    "file": "bin/autojump_argparse.py",
+    "line": 2456,
+    "column": 8,
+    "source": "self.print_usage(_sys.stderr)",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.error",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_argparse.ArgumentParser.error",
+    "target": "autojump_argparse.ArgumentParser.exit",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_argparse.py:2457:8:553",
+    "file": "bin/autojump_argparse.py",
+    "line": 2457,
+    "column": 8,
+    "source": "self.exit(2, _('%s: error: %s\\n') % (self.prog, message))",
+    "rule": "self_method",
+    "trace": [
+      "autojump_argparse.ArgumentParser"
+    ],
+    "module_level": false,
+    "execution_scope": "ArgumentParser.error",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_data.entriefy",
+    "target": "autojump_utils.is_python3",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_data.py:47:7:2",
+    "file": "bin/autojump_data.py",
+    "line": 47,
+    "column": 7,
+    "source": "is_python3()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "is_python3"
+    ],
+    "module_level": false,
+    "execution_scope": "entriefy",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_data.load",
+    "target": "autojump_utils.is_osx",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_data.py:61:7:9",
+    "file": "bin/autojump_data.py",
+    "line": 61,
+    "column": 7,
+    "source": "is_osx()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "is_osx"
+    ],
+    "module_level": false,
+    "execution_scope": "load",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_data.load",
+    "target": "autojump_data.migrate_osx_xdg_data",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_data.py:62:8:11",
+    "file": "bin/autojump_data.py",
+    "line": 62,
+    "column": 8,
+    "source": "migrate_osx_xdg_data(config)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "migrate_osx_xdg_data"
+    ],
+    "module_level": false,
+    "execution_scope": "load",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_data.load",
+    "target": "autojump_data.load_backup",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_data.py:88:15:22",
+    "file": "bin/autojump_data.py",
+    "line": 88,
+    "column": 15,
+    "source": "load_backup(config)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "load_backup"
+    ],
+    "module_level": false,
+    "execution_scope": "load",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_data.load_backup",
+    "target": "autojump_utils.move_file",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_data.py:93:8:24",
+    "file": "bin/autojump_data.py",
+    "line": 93,
+    "column": 8,
+    "source": "move_file(config['backup_path'], config['data_path'])",
+    "rule": "import_or_same_module",
+    "trace": [
+      "move_file"
+    ],
+    "module_level": false,
+    "execution_scope": "load_backup",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_data.load_backup",
+    "target": "autojump_data.load",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_data.py:94:15:25",
+    "file": "bin/autojump_data.py",
+    "line": 94,
+    "column": 15,
+    "source": "load(config)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:load@52"
+    ],
+    "module_level": false,
+    "execution_scope": "load_backup",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "load",
+        "line": 52
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_data.migrate_osx_xdg_data",
+    "target": "autojump_utils.is_osx",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_data.py:103:11:26",
+    "file": "bin/autojump_data.py",
+    "line": 103,
+    "column": 11,
+    "source": "is_osx()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "is_osx"
+    ],
+    "module_level": false,
+    "execution_scope": "migrate_osx_xdg_data",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_data.migrate_osx_xdg_data",
+    "target": "autojump_utils.move_file",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_data.py:111:8:33",
+    "file": "bin/autojump_data.py",
+    "line": 111,
+    "column": 8,
+    "source": "move_file(data_path, config['data_path'])",
+    "rule": "import_or_same_module",
+    "trace": [
+      "move_file"
+    ],
+    "module_level": false,
+    "execution_scope": "migrate_osx_xdg_data",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_data.migrate_osx_xdg_data",
+    "target": "autojump_utils.move_file",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_data.py:113:8:35",
+    "file": "bin/autojump_data.py",
+    "line": 113,
+    "column": 8,
+    "source": "move_file(backup_path, config['backup_path'])",
+    "rule": "import_or_same_module",
+    "trace": [
+      "move_file"
+    ],
+    "module_level": false,
+    "execution_scope": "migrate_osx_xdg_data",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_data.save",
+    "target": "autojump_utils.create_dir",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_data.py:124:4:41",
+    "file": "bin/autojump_data.py",
+    "line": 124,
+    "column": 4,
+    "source": "create_dir(data_dir)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "create_dir"
+    ],
+    "module_level": false,
+    "execution_scope": "save",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_data.save",
+    "target": "autojump_utils.unico",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_data.py:134:24:47",
+    "file": "bin/autojump_data.py",
+    "line": 134,
+    "column": 24,
+    "source": "unico('%s\\t%s\\n' % (weight, path))",
+    "rule": "import_or_same_module",
+    "trace": [
+      "unico"
+    ],
+    "module_level": false,
+    "execution_scope": "save",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_data.save",
+    "target": "autojump_utils.move_file",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_data.py:143:4:52",
+    "file": "bin/autojump_data.py",
+    "line": 143,
+    "column": 4,
+    "source": "move_file(temp.name, config['data_path'])",
+    "rule": "import_or_same_module",
+    "trace": [
+      "move_file"
+    ],
+    "module_level": false,
+    "execution_scope": "save",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_match",
+    "target": "autojump_utils.is_python3",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_match.py:11:3:0",
+    "file": "bin/autojump_match.py",
+    "line": 11,
+    "column": 3,
+    "source": "is_python3()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "is_python3"
+    ],
+    "module_level": true,
+    "execution_scope": "<module>",
+    "execution_phase": "module_initialization",
+    "certainty": "module_initialization_may_execute"
+  },
+  {
+    "caller": "autojump_match.match_fuzzy.<lambda1>",
+    "target": "autojump_utils.last",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_match.py:115:27:9",
+    "file": "bin/autojump_match.py",
+    "line": 115,
+    "column": 27,
+    "source": "last(os.path.split(path))",
+    "rule": "import_or_same_module",
+    "trace": [
+      "last"
+    ],
+    "module_level": false,
+    "execution_scope": "match_fuzzy.<lambda@115:14>",
+    "execution_phase": "lambda_body"
+  },
+  {
+    "caller": "autojump_match.match_fuzzy",
+    "target": "autojump_utils.last",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_match.py:117:17:12",
+    "file": "bin/autojump_match.py",
+    "line": 117,
+    "column": 17,
+    "source": "last(needles)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "last"
+    ],
+    "module_level": false,
+    "execution_scope": "match_fuzzy",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_match.match_fuzzy",
+    "target": "autojump_utils.last",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_match.py:123:17:17",
+    "file": "bin/autojump_match.py",
+    "line": 123,
+    "column": 17,
+    "source": "last(needles)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "last"
+    ],
+    "module_level": false,
+    "execution_scope": "match_fuzzy",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_utils.encode_local",
+    "target": "autojump_utils.is_python3",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_utils.py:32:7:1",
+    "file": "bin/autojump_utils.py",
+    "line": 32,
+    "column": 7,
+    "source": "is_python3()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "is_python3"
+    ],
+    "module_level": false,
+    "execution_scope": "encode_local",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_utils.first",
+    "target": "autojump_utils.is_python3",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_utils.py:40:11:5",
+    "file": "bin/autojump_utils.py",
+    "line": 40,
+    "column": 11,
+    "source": "is_python3()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "is_python3"
+    ],
+    "module_level": false,
+    "execution_scope": "first",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_utils.has_uppercase",
+    "target": "autojump_utils.is_python3",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_utils.py:83:7:17",
+    "file": "bin/autojump_utils.py",
+    "line": 83,
+    "column": 7,
+    "source": "is_python3()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "is_python3"
+    ],
+    "module_level": false,
+    "execution_scope": "has_uppercase",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_utils.last",
+    "target": "autojump_utils.is_python3",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_utils.py:120:11:29",
+    "file": "bin/autojump_utils.py",
+    "line": 120,
+    "column": 11,
+    "source": "is_python3()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:is_python3@100"
+    ],
+    "module_level": false,
+    "execution_scope": "last",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "is_python3",
+        "line": 100
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_utils.move_file",
+    "target": "autojump_utils.is_windows",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_utils.py:137:7:32",
+    "file": "bin/autojump_utils.py",
+    "line": 137,
+    "column": 7,
+    "source": "is_windows()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:is_windows@112"
+    ],
+    "module_level": false,
+    "execution_scope": "move_file",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "is_windows",
+        "line": 112
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_utils.print_entry",
+    "target": "autojump_utils.print_local",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_utils.py:144:4:36",
+    "file": "bin/autojump_utils.py",
+    "line": 144,
+    "column": 4,
+    "source": "print_local('%.1f:\\t%s' % (entry.weight, entry.path))",
+    "rule": "import_or_same_module",
+    "trace": [
+      "print_local"
+    ],
+    "module_level": false,
+    "execution_scope": "print_entry",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "autojump_utils.print_local",
+    "target": "autojump_utils.encode_local",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_utils.py:148:10:38",
+    "file": "bin/autojump_utils.py",
+    "line": 148,
+    "column": 10,
+    "source": "encode_local(string)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:encode_local@30"
+    ],
+    "module_level": false,
+    "execution_scope": "print_local",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "encode_local",
+        "line": 30
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_utils.print_tab_menu",
+    "target": "autojump_utils.print_local",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_utils.py:161:8:40",
+    "file": "bin/autojump_utils.py",
+    "line": 161,
+    "column": 8,
+    "source": "print_local(\n            '%s%s%d%s%s' % (\n                needle,\n                separator,\n                i + 1,\n                separator,\n                entry.path,\n            ),\n        )",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:print_local@147"
+    ],
+    "module_level": false,
+    "execution_scope": "print_tab_menu",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "print_local",
+        "line": 147
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_utils.sanitize.<lambda1>",
+    "target": "autojump_utils.unico",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_utils.py:174:22:41",
+    "file": "bin/autojump_utils.py",
+    "line": 174,
+    "column": 22,
+    "source": "unico(x)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "unico"
+    ],
+    "module_level": false,
+    "execution_scope": "sanitize.<lambda@174:12>",
+    "execution_phase": "lambda_body"
+  },
+  {
+    "caller": "autojump_utils.sanitize.<lambda1>",
+    "target": "autojump_utils.unico",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_utils.py:174:51:43",
+    "file": "bin/autojump_utils.py",
+    "line": 174,
+    "column": 51,
+    "source": "unico(x)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "unico"
+    ],
+    "module_level": false,
+    "execution_scope": "sanitize.<lambda@174:12>",
+    "execution_phase": "lambda_body"
+  },
+  {
+    "caller": "autojump_utils.second",
+    "target": "autojump_utils.is_python2",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_utils.py:181:11:47",
+    "file": "bin/autojump_utils.py",
+    "line": 181,
+    "column": 11,
+    "source": "is_python2()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:is_python2@96"
+    ],
+    "module_level": false,
+    "execution_scope": "second",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "is_python2",
+        "line": 96
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_utils.second",
+    "target": "autojump_utils.is_python3",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_utils.py:184:13:50",
+    "file": "bin/autojump_utils.py",
+    "line": 184,
+    "column": 13,
+    "source": "is_python3()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:is_python3@100"
+    ],
+    "module_level": false,
+    "execution_scope": "second",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "is_python3",
+        "line": 100
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_utils.surround_quotes",
+    "target": "autojump_utils.in_bash",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_utils.py:196:7:53",
+    "file": "bin/autojump_utils.py",
+    "line": 196,
+    "column": 7,
+    "source": "in_bash()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:in_bash@88"
+    ],
+    "module_level": false,
+    "execution_scope": "surround_quotes",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "in_bash",
+        "line": 88
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "autojump_utils.unico",
+    "target": "autojump_utils.is_python2",
+    "relation": "CALLS",
+    "call_id": "CALL:bin/autojump_utils.py:209:7:56",
+    "file": "bin/autojump_utils.py",
+    "line": 209,
+    "column": 7,
+    "source": "is_python2()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:is_python2@96"
+    ],
+    "module_level": false,
+    "execution_scope": "unico",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "is_python2",
+        "line": 96
+      }
+    ],
+    "may_be_unbound": false
+  }
+]

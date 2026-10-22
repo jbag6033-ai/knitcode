@@ -1,0 +1,3423 @@
+[
+  {
+    "caller": "asciinema.record_asciicast",
+    "target": "asciinema.recorder.record",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/__init__.py:15:4:1",
+    "file": "tmpmtoa3ay8/asciinema/__init__.py",
+    "line": 15,
+    "column": 4,
+    "source": "asciinema.recorder.record(\n        path,\n        command=command,\n        append=append,\n        idle_time_limit=idle_time_limit,\n        rec_stdin=rec_stdin,\n        title=title,\n        metadata=metadata,\n        command_env=command_env,\n        capture_env=capture_env\n    )",
+    "rule": "imported_module",
+    "trace": [
+      "asciinema"
+    ],
+    "module_level": false,
+    "execution_scope": "record_asciicast",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.__main__.main",
+    "target": "asciinema.config.load",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/__main__.py:34:14:7",
+    "file": "tmpmtoa3ay8/asciinema/__main__.py",
+    "line": 34,
+    "column": 14,
+    "source": "config.load()",
+    "rule": "imported_module",
+    "trace": [
+      "asciinema.config"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.__main__.main",
+    "target": "asciinema.__main__.maybe_str",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/__main__.py:75:144:23",
+    "file": "tmpmtoa3ay8/asciinema/__main__.py",
+    "line": 75,
+    "column": 144,
+    "source": "maybe_str(cfg.record_idle_time_limit)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:maybe_str@23"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "maybe_str",
+        "line": 23
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.__main__.main",
+    "target": "asciinema.__main__.maybe_str",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/__main__.py:83:152:30",
+    "file": "tmpmtoa3ay8/asciinema/__main__.py",
+    "line": 83,
+    "column": 152,
+    "source": "maybe_str(cfg.play_idle_time_limit)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:maybe_str@23"
+    ],
+    "module_level": false,
+    "execution_scope": "main",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "maybe_str",
+        "line": 23
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.__main__",
+    "target": "asciinema.__main__.main",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/__main__.py:115:4:49",
+    "file": "tmpmtoa3ay8/asciinema/__main__.py",
+    "line": 115,
+    "column": 4,
+    "source": "main()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:main@28"
+    ],
+    "module_level": true,
+    "execution_scope": "<module>",
+    "execution_phase": "module_initialization",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "main",
+        "line": 28
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.api.Api.__init__",
+    "target": "asciinema.urllib_http_adapter.URLLibHttpAdapter",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/api.py:21:74:0",
+    "file": "tmpmtoa3ay8/asciinema/api.py",
+    "line": 21,
+    "column": 74,
+    "source": "URLLibHttpAdapter()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "URLLibHttpAdapter"
+    ],
+    "module_level": false,
+    "execution_scope": "Api.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.api.Api.upload_asciicast",
+    "target": "asciinema.urllib_http_adapter.URLLibHttpAdapter.post",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/api.py:35:40:5",
+    "file": "tmpmtoa3ay8/asciinema/api.py",
+    "line": 35,
+    "column": 40,
+    "source": "self.http_adapter.post(\n                    self.upload_url(),\n                    files={\"asciicast\": (\"ascii.cast\", f)},\n                    headers=self._headers(),\n                    username=self.user,\n                    password=self.install_id\n                )",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmpmtoa3ay8/asciinema/api.py:21:74 > root:METHOD:asciinema.api.Api.upload_asciicast",
+      "allocation:tmpmtoa3ay8/asciinema/api.py:21:74 > tmpmtoa3ay8/asciinema/commands/command.py:10:19 > tmpmtoa3ay8/asciinema/commands/record.py:16:8 > root:METHOD:asciinema.commands.record.RecordCommand.execute",
+      "allocation:tmpmtoa3ay8/asciinema/api.py:21:74 > tmpmtoa3ay8/asciinema/commands/command.py:10:19 > tmpmtoa3ay8/asciinema/commands/upload.py:8:8 > root:METHOD:asciinema.commands.upload.UploadCommand.execute",
+      "context:METHOD:asciinema.api.Api.upload_asciicast",
+      "context:METHOD:asciinema.commands.record.RecordCommand.execute > METHOD:asciinema.api.Api.upload_asciicast",
+      "context:METHOD:asciinema.commands.upload.UploadCommand.execute > METHOD:asciinema.api.Api.upload_asciicast",
+      "field",
+      "receiver:asciinema.urllib_http_adapter.URLLibHttpAdapter",
+      "receiver_alternative:unknown"
+    ],
+    "module_level": false,
+    "execution_scope": "Api.upload_asciicast",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "asciinema.api.Api.upload_asciicast",
+    "target": "asciinema.api.Api.upload_url",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/api.py:36:20:6",
+    "file": "tmpmtoa3ay8/asciinema/api.py",
+    "line": 36,
+    "column": 20,
+    "source": "self.upload_url()",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.api.Api"
+    ],
+    "module_level": false,
+    "execution_scope": "Api.upload_asciicast",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.api.Api.upload_asciicast",
+    "target": "asciinema.api.Api._headers",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/api.py:38:28:7",
+    "file": "tmpmtoa3ay8/asciinema/api.py",
+    "line": 38,
+    "column": 28,
+    "source": "self._headers()",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.api.Api"
+    ],
+    "module_level": false,
+    "execution_scope": "Api.upload_asciicast",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.api.Api.upload_asciicast",
+    "target": "asciinema.api.APIError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/api.py:43:22:8",
+    "file": "tmpmtoa3ay8/asciinema/api.py",
+    "line": 43,
+    "column": 22,
+    "source": "APIError(str(e))",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:APIError@11"
+    ],
+    "module_level": false,
+    "execution_scope": "Api.upload_asciicast",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "APIError",
+        "line": 11
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.api.Api.upload_asciicast",
+    "target": "asciinema.api.Api._handle_error",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/api.py:46:12:10",
+    "file": "tmpmtoa3ay8/asciinema/api.py",
+    "line": 46,
+    "column": 12,
+    "source": "self._handle_error(status, body)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.api.Api"
+    ],
+    "module_level": false,
+    "execution_scope": "Api.upload_asciicast",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.api.Api._headers",
+    "target": "asciinema.api.Api._user_agent",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/api.py:56:30:14",
+    "file": "tmpmtoa3ay8/asciinema/api.py",
+    "line": 56,
+    "column": 30,
+    "source": "self._user_agent()",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.api.Api"
+    ],
+    "module_level": false,
+    "execution_scope": "Api._headers",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.api.Api._handle_error",
+    "target": "asciinema.api.APIError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/api.py:85:14:20",
+    "file": "tmpmtoa3ay8/asciinema/api.py",
+    "line": 85,
+    "column": 14,
+    "source": "APIError(error)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:APIError@11"
+    ],
+    "module_level": false,
+    "execution_scope": "Api._handle_error",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "APIError",
+        "line": 11
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.open_url",
+    "target": "asciinema.asciicast.Parser",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/__init__.py:60:21:17",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/__init__.py",
+    "line": 60,
+    "column": 21,
+    "source": "Parser()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:Parser@18"
+    ],
+    "module_level": false,
+    "execution_scope": "open_url",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "Parser",
+        "line": 18
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.open_url",
+    "target": "asciinema.asciicast.Parser.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/__init__.py:60:21:17",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/__init__.py",
+    "line": 60,
+    "column": 21,
+    "source": "Parser()",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.asciicast.Parser",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "open_url",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "Parser",
+        "line": 18
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.open_url",
+    "target": "asciinema.asciicast.LoadError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/__init__.py:65:22:19",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/__init__.py",
+    "line": 65,
+    "column": 22,
+    "source": "LoadError(\"\"\"<link rel=\"alternate\" type=\"application/x-asciicast\" href=\"...\"> not found in fetched HTML document\"\"\")",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:LoadError@14"
+    ],
+    "module_level": false,
+    "execution_scope": "open_url",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "LoadError",
+        "line": 14
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.open_url",
+    "target": "asciinema.asciicast.open_url",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/__init__.py:76:19:25",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/__init__.py",
+    "line": 76,
+    "column": 19,
+    "source": "open_url(new_url)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "open_url"
+    ],
+    "module_level": false,
+    "execution_scope": "open_url",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.asciicast.open_from_url.__enter__",
+    "target": "asciinema.asciicast.open_url",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/__init__.py:91:24:28",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/__init__.py",
+    "line": 91,
+    "column": 24,
+    "source": "open_url(self.url)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:open_url@36"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_url.__enter__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "open_url",
+        "line": 36
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.open_from_url.__enter__",
+    "target": "asciinema.asciicast.v2.open_from_file",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/__init__.py:95:31:30",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/__init__.py",
+    "line": 95,
+    "column": 31,
+    "source": "v2.open_from_file(first_line, self.file)",
+    "rule": "imported_module",
+    "trace": [
+      "asciinema.asciicast.v2"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_url.__enter__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.asciicast.open_from_url.__enter__",
+    "target": "asciinema.asciicast.v2.open_from_file.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/__init__.py:95:31:30",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/__init__.py",
+    "line": 95,
+    "column": 31,
+    "source": "v2.open_from_file(first_line, self.file)",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.asciicast.v2.open_from_file"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_url.__enter__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.asciicast.open_from_url.__enter__",
+    "target": "asciinema.asciicast.v2.open_from_file.__enter__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/__init__.py:96:23:31",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/__init__.py",
+    "line": 96,
+    "column": 23,
+    "source": "self.context.__enter__()",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmpmtoa3ay8/asciinema/asciicast/__init__.py:95:31 > root:METHOD:asciinema.asciicast.open_from_url.__enter__",
+      "context:METHOD:asciinema.asciicast.open_from_url.__enter__",
+      "field",
+      "receiver:asciinema.asciicast.v2.open_from_file"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_url.__enter__",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "asciinema.asciicast.open_from_url.__enter__",
+    "target": "asciinema.asciicast.v1.open_from_file",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/__init__.py:99:35:32",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/__init__.py",
+    "line": 99,
+    "column": 35,
+    "source": "v1.open_from_file(first_line, self.file)",
+    "rule": "imported_module",
+    "trace": [
+      "asciinema.asciicast.v1"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_url.__enter__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.asciicast.open_from_url.__enter__",
+    "target": "asciinema.asciicast.v1.open_from_file.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/__init__.py:99:35:32",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/__init__.py",
+    "line": 99,
+    "column": 35,
+    "source": "v1.open_from_file(first_line, self.file)",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.asciicast.v1.open_from_file"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_url.__enter__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.asciicast.open_from_url.__enter__",
+    "target": "asciinema.asciicast.v1.open_from_file.__enter__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/__init__.py:100:27:33",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/__init__.py",
+    "line": 100,
+    "column": 27,
+    "source": "self.context.__enter__()",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmpmtoa3ay8/asciinema/asciicast/__init__.py:99:35 > root:METHOD:asciinema.asciicast.open_from_url.__enter__",
+      "context:METHOD:asciinema.asciicast.open_from_url.__enter__",
+      "field",
+      "receiver:asciinema.asciicast.v1.open_from_file"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_url.__enter__",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "asciinema.asciicast.open_from_url.__enter__",
+    "target": "asciinema.asciicast.LoadError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/__init__.py:102:26:34",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/__init__.py",
+    "line": 102,
+    "column": 26,
+    "source": "LoadError(self.FORMAT_ERROR)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:LoadError@14"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_url.__enter__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "LoadError",
+        "line": 14
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.open_from_url.__enter__",
+    "target": "asciinema.asciicast.LoadError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/__init__.py:105:18:35",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/__init__.py",
+    "line": 105,
+    "column": 18,
+    "source": "LoadError(str(e))",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:LoadError@14"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_url.__enter__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "LoadError",
+        "line": 14
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.v1.Asciicast.events",
+    "target": "asciinema.asciicast.v1.Asciicast.stdout_events",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v1.py:35:15:1",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v1.py",
+    "line": 35,
+    "column": 15,
+    "source": "self.stdout_events()",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.asciicast.v1.Asciicast"
+    ],
+    "module_level": false,
+    "execution_scope": "Asciicast.events",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.asciicast.v1.Asciicast.stdout_events",
+    "target": "asciinema.asciicast.events.to_absolute_time",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v1.py:38:15:2",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v1.py",
+    "line": 38,
+    "column": 15,
+    "source": "to_absolute_time(self.__stdout_events())",
+    "rule": "import_or_same_module",
+    "trace": [
+      "to_absolute_time"
+    ],
+    "module_level": false,
+    "execution_scope": "Asciicast.stdout_events",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.asciicast.v1.Asciicast.stdout_events",
+    "target": "asciinema.asciicast.v1.Asciicast.__stdout_events",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v1.py:38:32:3",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v1.py",
+    "line": 38,
+    "column": 32,
+    "source": "self.__stdout_events()",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.asciicast.v1.Asciicast"
+    ],
+    "module_level": false,
+    "execution_scope": "Asciicast.stdout_events",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.asciicast.v1.open_from_file.__enter__",
+    "target": "asciinema.asciicast.v1.Asciicast",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v1.py:53:23:7",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v1.py",
+    "line": 53,
+    "column": 23,
+    "source": "Asciicast(attrs)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:Asciicast@17"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_file.__enter__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "Asciicast",
+        "line": 17
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.v1.open_from_file.__enter__",
+    "target": "asciinema.asciicast.v1.Asciicast.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v1.py:53:23:7",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v1.py",
+    "line": 53,
+    "column": 23,
+    "source": "Asciicast(attrs)",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.asciicast.v1.Asciicast"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_file.__enter__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "Asciicast",
+        "line": 17
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.v1.open_from_file.__enter__",
+    "target": "asciinema.asciicast.v1.LoadError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v1.py:55:22:8",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v1.py",
+    "line": 55,
+    "column": 22,
+    "source": "LoadError(self.FORMAT_ERROR)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:LoadError@13"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_file.__enter__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "LoadError",
+        "line": 13
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.v1.open_from_file.__enter__",
+    "target": "asciinema.asciicast.v1.LoadError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v1.py:57:18:9",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v1.py",
+    "line": 57,
+    "column": 18,
+    "source": "LoadError(self.FORMAT_ERROR)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:LoadError@13"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_file.__enter__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "LoadError",
+        "line": 13
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.v2.Asciicast.stdout_events",
+    "target": "asciinema.asciicast.v2.Asciicast.events",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v2.py:29:32:2",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v2.py",
+    "line": 29,
+    "column": 32,
+    "source": "self.events()",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.asciicast.v2.Asciicast"
+    ],
+    "module_level": false,
+    "execution_scope": "Asciicast.stdout_events",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.asciicast.v2.build_from_header_and_file",
+    "target": "asciinema.asciicast.v2.Asciicast",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v2.py:35:11:3",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v2.py",
+    "line": 35,
+    "column": 11,
+    "source": "Asciicast(f, header)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:Asciicast@16"
+    ],
+    "module_level": false,
+    "execution_scope": "build_from_header_and_file",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "Asciicast",
+        "line": 16
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.v2.build_from_header_and_file",
+    "target": "asciinema.asciicast.v2.Asciicast.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v2.py:35:11:3",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v2.py",
+    "line": 35,
+    "column": 11,
+    "source": "Asciicast(f, header)",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.asciicast.v2.Asciicast"
+    ],
+    "module_level": false,
+    "execution_scope": "build_from_header_and_file",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "Asciicast",
+        "line": 16
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.v2.open_from_file.__enter__",
+    "target": "asciinema.asciicast.v2.build_from_header_and_file",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v2.py:49:23:6",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v2.py",
+    "line": 49,
+    "column": 23,
+    "source": "build_from_header_and_file(v2_header, self.file)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:build_from_header_and_file@34"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_file.__enter__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "build_from_header_and_file",
+        "line": 34
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.v2.open_from_file.__enter__",
+    "target": "asciinema.asciicast.v2.LoadError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v2.py:51:22:7",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v2.py",
+    "line": 51,
+    "column": 22,
+    "source": "LoadError(self.FORMAT_ERROR)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:LoadError@12"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_file.__enter__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "LoadError",
+        "line": 12
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.v2.open_from_file.__enter__",
+    "target": "asciinema.asciicast.v2.LoadError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v2.py:53:18:8",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v2.py",
+    "line": 53,
+    "column": 18,
+    "source": "LoadError(self.FORMAT_ERROR)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:LoadError@12"
+    ],
+    "module_level": false,
+    "execution_scope": "open_from_file.__enter__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "LoadError",
+        "line": 12
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.v2.get_duration",
+    "target": "asciinema.asciicast.v2.open_from_file",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v2.py:62:13:12",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v2.py",
+    "line": 62,
+    "column": 13,
+    "source": "open_from_file(first_line, f)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:open_from_file@38"
+    ],
+    "module_level": false,
+    "execution_scope": "get_duration",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "open_from_file",
+        "line": 38
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.v2.get_duration",
+    "target": "asciinema.asciicast.v2.open_from_file.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v2.py:62:13:12",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v2.py",
+    "line": 62,
+    "column": 13,
+    "source": "open_from_file(first_line, f)",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.asciicast.v2.open_from_file"
+    ],
+    "module_level": false,
+    "execution_scope": "get_duration",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "open_from_file",
+        "line": 38
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.v2.writer.__init__",
+    "target": "asciinema.asciicast.v2.build_header",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v2.py:96:26:23",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v2.py",
+    "line": 96,
+    "column": 26,
+    "source": "build_header(width, height, metadata or {})",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:build_header@68"
+    ],
+    "module_level": false,
+    "execution_scope": "writer.__init__",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "build_header",
+        "line": 68
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.asciicast.v2.writer.__enter__",
+    "target": "asciinema.asciicast.v2.writer.__write_line",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v2.py:102:12:25",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v2.py",
+    "line": 102,
+    "column": 12,
+    "source": "self.__write_line(self.header)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.asciicast.v2.writer"
+    ],
+    "module_level": false,
+    "execution_scope": "writer.__enter__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.asciicast.v2.writer.write_stdout",
+    "target": "asciinema.asciicast.v2.writer.__write_event",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v2.py:113:8:30",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v2.py",
+    "line": 113,
+    "column": 8,
+    "source": "self.__write_event(ts, 'o', data)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.asciicast.v2.writer"
+    ],
+    "module_level": false,
+    "execution_scope": "writer.write_stdout",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.asciicast.v2.writer.write_stdin",
+    "target": "asciinema.asciicast.v2.writer.__write_event",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v2.py:119:8:34",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v2.py",
+    "line": 119,
+    "column": 8,
+    "source": "self.__write_event(ts, 'i', data)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.asciicast.v2.writer"
+    ],
+    "module_level": false,
+    "execution_scope": "writer.write_stdin",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.asciicast.v2.writer.__write_event",
+    "target": "asciinema.asciicast.v2.writer.__write_line",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/asciicast/v2.py:122:8:35",
+    "file": "tmpmtoa3ay8/asciinema/asciicast/v2.py",
+    "line": 122,
+    "column": 8,
+    "source": "self.__write_line([round(ts, 6), etype, data])",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.asciicast.v2.writer"
+    ],
+    "module_level": false,
+    "execution_scope": "writer.__write_event",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.auth.AuthCommand.__init__",
+    "target": "asciinema.commands.command.Command.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/auth.py:7:8:0",
+    "file": "tmpmtoa3ay8/asciinema/commands/auth.py",
+    "line": 7,
+    "column": 8,
+    "source": "Command.__init__(self, args, config, env)",
+    "rule": "explicit_class_method",
+    "trace": [
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "AuthCommand.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.auth.AuthCommand.execute",
+    "target": "asciinema.commands.command.Command.print",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/auth.py:10:8:1",
+    "file": "tmpmtoa3ay8/asciinema/commands/auth.py",
+    "line": 10,
+    "column": 8,
+    "source": "self.print('Open the following URL in a web browser to link your '\n                   'install ID with your %s user account:\\n\\n'\n                   '%s\\n\\n'\n                   'This will associate all recordings uploaded from this machine '\n                   '(past and future ones) to your account, '\n                   'and allow you to manage them (change title/theme, delete) at %s.'\n                   % (self.api.hostname(), self.api.auth_url(), self.api.hostname()))",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.auth.AuthCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "AuthCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.auth.AuthCommand.execute",
+    "target": "asciinema.api.Api.hostname",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/auth.py:16:22:2",
+    "file": "tmpmtoa3ay8/asciinema/commands/auth.py",
+    "line": 16,
+    "column": 22,
+    "source": "self.api.hostname()",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmpmtoa3ay8/asciinema/commands/command.py:10:19 > tmpmtoa3ay8/asciinema/commands/auth.py:7:8 > root:METHOD:asciinema.commands.auth.AuthCommand.execute",
+      "context:METHOD:asciinema.commands.auth.AuthCommand.execute",
+      "field",
+      "receiver:asciinema.api.Api"
+    ],
+    "module_level": false,
+    "execution_scope": "AuthCommand.execute",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "asciinema.commands.auth.AuthCommand.execute",
+    "target": "asciinema.api.Api.auth_url",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/auth.py:16:43:3",
+    "file": "tmpmtoa3ay8/asciinema/commands/auth.py",
+    "line": 16,
+    "column": 43,
+    "source": "self.api.auth_url()",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmpmtoa3ay8/asciinema/commands/command.py:10:19 > tmpmtoa3ay8/asciinema/commands/auth.py:7:8 > root:METHOD:asciinema.commands.auth.AuthCommand.execute",
+      "context:METHOD:asciinema.commands.auth.AuthCommand.execute",
+      "field",
+      "receiver:asciinema.api.Api"
+    ],
+    "module_level": false,
+    "execution_scope": "AuthCommand.execute",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "asciinema.commands.auth.AuthCommand.execute",
+    "target": "asciinema.api.Api.hostname",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/auth.py:16:64:4",
+    "file": "tmpmtoa3ay8/asciinema/commands/auth.py",
+    "line": 16,
+    "column": 64,
+    "source": "self.api.hostname()",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmpmtoa3ay8/asciinema/commands/command.py:10:19 > tmpmtoa3ay8/asciinema/commands/auth.py:7:8 > root:METHOD:asciinema.commands.auth.AuthCommand.execute",
+      "context:METHOD:asciinema.commands.auth.AuthCommand.execute",
+      "field",
+      "receiver:asciinema.api.Api"
+    ],
+    "module_level": false,
+    "execution_scope": "AuthCommand.execute",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "asciinema.commands.cat.CatCommand.__init__",
+    "target": "asciinema.commands.command.Command.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/cat.py:10:8:0",
+    "file": "tmpmtoa3ay8/asciinema/commands/cat.py",
+    "line": 10,
+    "column": 8,
+    "source": "Command.__init__(self, args, config, env)",
+    "rule": "explicit_class_method",
+    "trace": [
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "CatCommand.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.cat.CatCommand.execute",
+    "target": "asciinema.asciicast.open_from_url",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/cat.py:15:17:1",
+    "file": "tmpmtoa3ay8/asciinema/commands/cat.py",
+    "line": 15,
+    "column": 17,
+    "source": "asciicast.open_from_url(self.filename)",
+    "rule": "imported_module",
+    "trace": [
+      "asciinema.asciicast"
+    ],
+    "module_level": false,
+    "execution_scope": "CatCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.cat.CatCommand.execute",
+    "target": "asciinema.asciicast.open_from_url.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/cat.py:15:17:1",
+    "file": "tmpmtoa3ay8/asciinema/commands/cat.py",
+    "line": 15,
+    "column": 17,
+    "source": "asciicast.open_from_url(self.filename)",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.asciicast.open_from_url"
+    ],
+    "module_level": false,
+    "execution_scope": "CatCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.cat.CatCommand.execute",
+    "target": "asciinema.commands.command.Command.print_error",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/cat.py:21:12:5",
+    "file": "tmpmtoa3ay8/asciinema/commands/cat.py",
+    "line": 21,
+    "column": 12,
+    "source": "self.print_error(\"printing failed: %s\" % str(e))",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.cat.CatCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "CatCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.command.Command.__init__",
+    "target": "asciinema.api.Api",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/command.py:10:19:0",
+    "file": "tmpmtoa3ay8/asciinema/commands/command.py",
+    "line": 10,
+    "column": 19,
+    "source": "Api(config.api_url, env.get(\"USER\"), config.install_id)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "Api"
+    ],
+    "module_level": false,
+    "execution_scope": "Command.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.command.Command.__init__",
+    "target": "asciinema.api.Api.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/command.py:10:19:0",
+    "file": "tmpmtoa3ay8/asciinema/commands/command.py",
+    "line": 10,
+    "column": 19,
+    "source": "Api(config.api_url, env.get(\"USER\"), config.install_id)",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.api.Api"
+    ],
+    "module_level": false,
+    "execution_scope": "Command.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.command.Command.print_info",
+    "target": "asciinema.commands.command.Command.print",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/command.py:17:8:3",
+    "file": "tmpmtoa3ay8/asciinema/commands/command.py",
+    "line": 17,
+    "column": 8,
+    "source": "self.print(\"\\x1b[0;32masciinema: %s\\x1b[0m\" % text)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "Command.print_info",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.command.Command.print_warning",
+    "target": "asciinema.commands.command.Command.print",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/command.py:20:8:4",
+    "file": "tmpmtoa3ay8/asciinema/commands/command.py",
+    "line": 20,
+    "column": 8,
+    "source": "self.print(\"\\x1b[0;33masciinema: %s\\x1b[0m\" % text)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "Command.print_warning",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.command.Command.print_error",
+    "target": "asciinema.commands.command.Command.print",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/command.py:23:8:5",
+    "file": "tmpmtoa3ay8/asciinema/commands/command.py",
+    "line": 23,
+    "column": 8,
+    "source": "self.print(\"\\x1b[0;31masciinema: %s\\x1b[0m\" % text, file=sys.stderr, force=True)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "Command.print_error",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.play.PlayCommand.__init__",
+    "target": "asciinema.commands.command.Command.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/play.py:9:8:0",
+    "file": "tmpmtoa3ay8/asciinema/commands/play.py",
+    "line": 9,
+    "column": 8,
+    "source": "Command.__init__(self, args, config, env)",
+    "rule": "explicit_class_method",
+    "trace": [
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "PlayCommand.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.play.PlayCommand.__init__",
+    "target": "asciinema.player.Player",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/play.py:13:56:1",
+    "file": "tmpmtoa3ay8/asciinema/commands/play.py",
+    "line": 13,
+    "column": 56,
+    "source": "Player()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "Player"
+    ],
+    "module_level": false,
+    "execution_scope": "PlayCommand.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.play.PlayCommand.execute",
+    "target": "asciinema.asciicast.open_from_url",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/play.py:17:17:2",
+    "file": "tmpmtoa3ay8/asciinema/commands/play.py",
+    "line": 17,
+    "column": 17,
+    "source": "asciicast.open_from_url(self.filename)",
+    "rule": "imported_module",
+    "trace": [
+      "asciinema.asciicast"
+    ],
+    "module_level": false,
+    "execution_scope": "PlayCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.play.PlayCommand.execute",
+    "target": "asciinema.asciicast.open_from_url.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/play.py:17:17:2",
+    "file": "tmpmtoa3ay8/asciinema/commands/play.py",
+    "line": 17,
+    "column": 17,
+    "source": "asciicast.open_from_url(self.filename)",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.asciicast.open_from_url"
+    ],
+    "module_level": false,
+    "execution_scope": "PlayCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.play.PlayCommand.execute",
+    "target": "asciinema.player.Player.play",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/play.py:18:16:3",
+    "file": "tmpmtoa3ay8/asciinema/commands/play.py",
+    "line": 18,
+    "column": 16,
+    "source": "self.player.play(a, self.idle_time_limit, self.speed)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmpmtoa3ay8/asciinema/commands/play.py:13:56 > root:METHOD:asciinema.commands.play.PlayCommand.execute",
+      "context:METHOD:asciinema.commands.play.PlayCommand.execute",
+      "field",
+      "receiver:asciinema.player.Player",
+      "receiver_alternative:unknown"
+    ],
+    "module_level": false,
+    "execution_scope": "PlayCommand.execute",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "asciinema.commands.play.PlayCommand.execute",
+    "target": "asciinema.commands.command.Command.print_error",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/play.py:21:12:4",
+    "file": "tmpmtoa3ay8/asciinema/commands/play.py",
+    "line": 21,
+    "column": 12,
+    "source": "self.print_error(\"playback failed: %s\" % str(e))",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.play.PlayCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "PlayCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.__init__",
+    "target": "asciinema.commands.command.Command.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:16:8:0",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 16,
+    "column": 8,
+    "source": "Command.__init__(self, args, config, env)",
+    "rule": "explicit_class_method",
+    "trace": [
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.__init__",
+    "target": "asciinema.notifier.get_notifier",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:29:24:1",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 29,
+    "column": 24,
+    "source": "notifier.get_notifier(config.notifications_enabled, config.notifications_command)",
+    "rule": "imported_module",
+    "trace": [
+      "asciinema.notifier"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_error",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:38:16:2",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 38,
+    "column": 16,
+    "source": "self.print_error(\"filename required when recording in raw mode\")",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.record._tmp_path",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:41:32:3",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 41,
+    "column": 32,
+    "source": "_tmp_path()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "_tmp_path"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_error",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:46:16:6",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 46,
+    "column": 16,
+    "source": "self.print_error(\"can't write to %s\" % self.filename)",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_error",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:54:16:10",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 54,
+    "column": 16,
+    "source": "self.print_error(\"%s already exists, aborting\" % self.filename)",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_error",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:55:16:11",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 55,
+    "column": 16,
+    "source": "self.print_error(\"use --append option if you want to append to existing recording\")",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_info",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:59:12:12",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 59,
+    "column": 12,
+    "source": "self.print_info(\"appending to asciicast at %s\" % self.filename)",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_info",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:61:12:13",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 61,
+    "column": 12,
+    "source": "self.print_info(\"recording asciicast to %s\" % self.filename)",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_info",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:64:12:14",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 64,
+    "column": 12,
+    "source": "self.print_info(\"\"\"exit opened program when you're done\"\"\")",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_info",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:66:12:15",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 66,
+    "column": 12,
+    "source": "self.print_info(\"\"\"press <ctrl-d> or type \"exit\" when you're done\"\"\")",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.recorder.record",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:71:12:20",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 71,
+    "column": 12,
+    "source": "recorder.record(\n                self.filename,\n                command=self.command,\n                append=append,\n                title=self.title,\n                idle_time_limit=self.idle_time_limit,\n                command_env=self.env,\n                capture_env=vars,\n                rec_stdin=self.rec_stdin,\n                writer=self.writer,\n                notifier=self.notifier\n            )",
+    "rule": "imported_module",
+    "trace": [
+      "asciinema.recorder"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_error",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:84:12:21",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 84,
+    "column": 12,
+    "source": "self.print_error(\"can only append to asciicast v2 format recordings\")",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_info",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:87:8:22",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 87,
+    "column": 8,
+    "source": "self.print_info(\"recording finished\")",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_info",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:91:16:23",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 91,
+    "column": 16,
+    "source": "self.print_info(\"press <enter> to upload to %s, <ctrl-c> to save locally\"\n                                % self.api.hostname())",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.api.Api.hostname",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:92:34:24",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 92,
+    "column": 34,
+    "source": "self.api.hostname()",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmpmtoa3ay8/asciinema/commands/command.py:10:19 > tmpmtoa3ay8/asciinema/commands/record.py:16:8 > root:METHOD:asciinema.commands.record.RecordCommand.execute",
+      "context:METHOD:asciinema.commands.record.RecordCommand.execute",
+      "field",
+      "receiver:asciinema.api.Api",
+      "receiver_alternative:unknown"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:96:20:26",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 96,
+    "column": 20,
+    "source": "self.print(\"\\r\", end=\"\")",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_info",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:97:20:27",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 97,
+    "column": 20,
+    "source": "self.print_info(\"asciicast saved to %s\" % self.filename)",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.api.Api.upload_asciicast",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:101:31:28",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 101,
+    "column": 31,
+    "source": "self.api.upload_asciicast(self.filename)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmpmtoa3ay8/asciinema/commands/command.py:10:19 > tmpmtoa3ay8/asciinema/commands/record.py:16:8 > root:METHOD:asciinema.commands.record.RecordCommand.execute",
+      "context:METHOD:asciinema.commands.record.RecordCommand.execute",
+      "field",
+      "receiver:asciinema.api.Api",
+      "receiver_alternative:unknown"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_warning",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:104:20:29",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 104,
+    "column": 20,
+    "source": "self.print_warning(warn)",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:107:16:31",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 107,
+    "column": 16,
+    "source": "self.print(result.get('message') or result['url'])",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:110:16:33",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 110,
+    "column": 16,
+    "source": "self.print(\"\\r\\x1b[A\", end=\"\")",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_error",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:111:16:34",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 111,
+    "column": 16,
+    "source": "self.print_error(\"upload failed: %s\" % str(e))",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_error",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:112:16:36",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 112,
+    "column": 16,
+    "source": "self.print_error(\"retry later by running: asciinema upload %s\" % self.filename)",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.record.RecordCommand.execute",
+    "target": "asciinema.commands.command.Command.print_info",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/record.py:115:12:37",
+    "file": "tmpmtoa3ay8/asciinema/commands/record.py",
+    "line": 115,
+    "column": 12,
+    "source": "self.print_info(\"asciicast saved to %s\" % self.filename)",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.record.RecordCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "RecordCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.upload.UploadCommand.__init__",
+    "target": "asciinema.commands.command.Command.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/upload.py:8:8:0",
+    "file": "tmpmtoa3ay8/asciinema/commands/upload.py",
+    "line": 8,
+    "column": 8,
+    "source": "Command.__init__(self, args, config, env)",
+    "rule": "explicit_class_method",
+    "trace": [
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "UploadCommand.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.upload.UploadCommand.execute",
+    "target": "asciinema.api.Api.upload_asciicast",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/upload.py:13:27:1",
+    "file": "tmpmtoa3ay8/asciinema/commands/upload.py",
+    "line": 13,
+    "column": 27,
+    "source": "self.api.upload_asciicast(self.filename)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmpmtoa3ay8/asciinema/commands/command.py:10:19 > tmpmtoa3ay8/asciinema/commands/upload.py:8:8 > root:METHOD:asciinema.commands.upload.UploadCommand.execute",
+      "context:METHOD:asciinema.commands.upload.UploadCommand.execute",
+      "field",
+      "receiver:asciinema.api.Api"
+    ],
+    "module_level": false,
+    "execution_scope": "UploadCommand.execute",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "asciinema.commands.upload.UploadCommand.execute",
+    "target": "asciinema.commands.command.Command.print_warning",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/upload.py:16:16:2",
+    "file": "tmpmtoa3ay8/asciinema/commands/upload.py",
+    "line": 16,
+    "column": 16,
+    "source": "self.print_warning(warn)",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.upload.UploadCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "UploadCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.upload.UploadCommand.execute",
+    "target": "asciinema.commands.command.Command.print",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/upload.py:18:12:3",
+    "file": "tmpmtoa3ay8/asciinema/commands/upload.py",
+    "line": 18,
+    "column": 12,
+    "source": "self.print(result.get('message') or result['url'])",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.upload.UploadCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "UploadCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.upload.UploadCommand.execute",
+    "target": "asciinema.commands.command.Command.print_error",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/upload.py:21:12:5",
+    "file": "tmpmtoa3ay8/asciinema/commands/upload.py",
+    "line": 21,
+    "column": 12,
+    "source": "self.print_error(\"upload failed: %s\" % str(e))",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.upload.UploadCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "UploadCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.upload.UploadCommand.execute",
+    "target": "asciinema.commands.command.Command.print_error",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/upload.py:25:12:7",
+    "file": "tmpmtoa3ay8/asciinema/commands/upload.py",
+    "line": 25,
+    "column": 12,
+    "source": "self.print_error(\"upload failed: %s\" % str(e))",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.upload.UploadCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "UploadCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.commands.upload.UploadCommand.execute",
+    "target": "asciinema.commands.command.Command.print_error",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/commands/upload.py:26:12:9",
+    "file": "tmpmtoa3ay8/asciinema/commands/upload.py",
+    "line": 26,
+    "column": 12,
+    "source": "self.print_error(\"retry later by running: asciinema upload %s\" % self.filename)",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.commands.upload.UploadCommand",
+      "asciinema.commands.command.Command"
+    ],
+    "module_level": false,
+    "execution_scope": "UploadCommand.execute",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.config.Config.upgrade",
+    "target": "asciinema.config.Config.__api_token",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/config.py:30:17:4",
+    "file": "tmpmtoa3ay8/asciinema/config.py",
+    "line": 30,
+    "column": 17,
+    "source": "self.__api_token()",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.config.Config"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.upgrade",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.config.Config.upgrade",
+    "target": "asciinema.config.Config.__user_token",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/config.py:30:39:5",
+    "file": "tmpmtoa3ay8/asciinema/config.py",
+    "line": 30,
+    "column": 39,
+    "source": "self.__user_token()",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.config.Config"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.upgrade",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.config.Config.upgrade",
+    "target": "asciinema.config.Config.__gen_install_id",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/config.py:30:62:6",
+    "file": "tmpmtoa3ay8/asciinema/config.py",
+    "line": 30,
+    "column": 62,
+    "source": "self.__gen_install_id()",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.config.Config"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.upgrade",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.config.Config.upgrade",
+    "target": "asciinema.config.Config.__save_install_id",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/config.py:31:12:7",
+    "file": "tmpmtoa3ay8/asciinema/config.py",
+    "line": 31,
+    "column": 12,
+    "source": "self.__save_install_id(id)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.config.Config"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.upgrade",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.config.Config.upgrade",
+    "target": "asciinema.config.ConfigError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/config.py:38:18:12",
+    "file": "tmpmtoa3ay8/asciinema/config.py",
+    "line": 38,
+    "column": 18,
+    "source": "ConfigError('ASCIINEMA_API_TOKEN variable is no longer supported, please use ASCIINEMA_INSTALL_ID instead')",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:ConfigError@8"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.upgrade",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ConfigError",
+        "line": 8
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.config.Config.__save_install_id",
+    "target": "asciinema.config.Config.__create_config_home",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/config.py:50:8:19",
+    "file": "tmpmtoa3ay8/asciinema/config.py",
+    "line": 50,
+    "column": 8,
+    "source": "self.__create_config_home()",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.config.Config"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.__save_install_id",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.config.Config.install_id",
+    "target": "asciinema.config.Config.__read_install_id",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/config.py:73:53:27",
+    "file": "tmpmtoa3ay8/asciinema/config.py",
+    "line": 73,
+    "column": 53,
+    "source": "self.__read_install_id()",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.config.Config"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.install_id",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.config.Config.install_id",
+    "target": "asciinema.config.ConfigError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/config.py:78:18:28",
+    "file": "tmpmtoa3ay8/asciinema/config.py",
+    "line": 78,
+    "column": 18,
+    "source": "ConfigError('no install ID found')",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:ConfigError@8"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.install_id",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "ConfigError",
+        "line": 8
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.config.load",
+    "target": "asciinema.config.Config",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/config.py:154:13:52",
+    "file": "tmpmtoa3ay8/asciinema/config.py",
+    "line": 154,
+    "column": 13,
+    "source": "Config(get_config_home(env), env)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:Config@16"
+    ],
+    "module_level": false,
+    "execution_scope": "load",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "Config",
+        "line": 16
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.config.load",
+    "target": "asciinema.config.Config.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/config.py:154:13:52",
+    "file": "tmpmtoa3ay8/asciinema/config.py",
+    "line": 154,
+    "column": 13,
+    "source": "Config(get_config_home(env), env)",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.config.Config"
+    ],
+    "module_level": false,
+    "execution_scope": "load",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "Config",
+        "line": 16
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.config.load",
+    "target": "asciinema.config.get_config_home",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/config.py:154:20:53",
+    "file": "tmpmtoa3ay8/asciinema/config.py",
+    "line": 154,
+    "column": 20,
+    "source": "get_config_home(env)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:get_config_home@130"
+    ],
+    "module_level": false,
+    "execution_scope": "load",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "get_config_home",
+        "line": 130
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.config.load",
+    "target": "asciinema.config.Config.upgrade",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/config.py:155:4:54",
+    "file": "tmpmtoa3ay8/asciinema/config.py",
+    "line": 155,
+    "column": 4,
+    "source": "config.upgrade()",
+    "rule": "instance_flow_reaching_assignment",
+    "trace": [
+      "constructed:Config@16",
+      "asciinema.config.Config"
+    ],
+    "module_level": false,
+    "execution_scope": "load",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "constructed",
+        "name": "Config",
+        "line": 16
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.notifier.LibNotifyNotifier.args",
+    "target": "asciinema.notifier.Notifier.get_icon_path",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/notifier.py:34:20:9",
+    "file": "tmpmtoa3ay8/asciinema/notifier.py",
+    "line": 34,
+    "column": 20,
+    "source": "self.get_icon_path()",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.notifier.LibNotifyNotifier",
+      "asciinema.notifier.Notifier"
+    ],
+    "module_level": false,
+    "execution_scope": "LibNotifyNotifier.args",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.notifier.TerminalNotifier.args",
+    "target": "asciinema.notifier.Notifier.get_icon_path",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/notifier.py:46:20:10",
+    "file": "tmpmtoa3ay8/asciinema/notifier.py",
+    "line": 46,
+    "column": 20,
+    "source": "self.get_icon_path()",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.notifier.TerminalNotifier",
+      "asciinema.notifier.Notifier"
+    ],
+    "module_level": false,
+    "execution_scope": "TerminalNotifier.args",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.notifier.CustomCommandNotifier.notify",
+    "target": "asciinema.notifier.Notifier.get_icon_path",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/notifier.py:63:27:13",
+    "file": "tmpmtoa3ay8/asciinema/notifier.py",
+    "line": 63,
+    "column": 27,
+    "source": "self.get_icon_path()",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.notifier.CustomCommandNotifier",
+      "asciinema.notifier.Notifier"
+    ],
+    "module_level": false,
+    "execution_scope": "CustomCommandNotifier.notify",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.notifier.get_notifier",
+    "target": "asciinema.notifier.CustomCommandNotifier",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/notifier.py:75:19:15",
+    "file": "tmpmtoa3ay8/asciinema/notifier.py",
+    "line": 75,
+    "column": 19,
+    "source": "CustomCommandNotifier(command)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:CustomCommandNotifier@54"
+    ],
+    "module_level": false,
+    "execution_scope": "get_notifier",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "CustomCommandNotifier",
+        "line": 54
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.notifier.get_notifier",
+    "target": "asciinema.notifier.CustomCommandNotifier.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/notifier.py:75:19:15",
+    "file": "tmpmtoa3ay8/asciinema/notifier.py",
+    "line": 75,
+    "column": 19,
+    "source": "CustomCommandNotifier(command)",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.notifier.CustomCommandNotifier"
+    ],
+    "module_level": false,
+    "execution_scope": "get_notifier",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "CustomCommandNotifier",
+        "line": 54
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.notifier.get_notifier",
+    "target": "asciinema.notifier.TerminalNotifier",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/notifier.py:78:20:16",
+    "file": "tmpmtoa3ay8/asciinema/notifier.py",
+    "line": 78,
+    "column": 20,
+    "source": "c()",
+    "rule": "flow_collection_candidates",
+    "trace": [
+      "reference:TerminalNotifier@42",
+      "reference:AppleScriptNotifier@22",
+      "reference:LibNotifyNotifier@30"
+    ],
+    "module_level": false,
+    "execution_scope": "get_notifier",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "TerminalNotifier",
+        "line": 42,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AppleScriptNotifier",
+        "line": 22,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "LibNotifyNotifier",
+        "line": 30,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.notifier.get_notifier",
+    "target": "asciinema.notifier.AppleScriptNotifier",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/notifier.py:78:20:16",
+    "file": "tmpmtoa3ay8/asciinema/notifier.py",
+    "line": 78,
+    "column": 20,
+    "source": "c()",
+    "rule": "flow_collection_candidates",
+    "trace": [
+      "reference:TerminalNotifier@42",
+      "reference:AppleScriptNotifier@22",
+      "reference:LibNotifyNotifier@30"
+    ],
+    "module_level": false,
+    "execution_scope": "get_notifier",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "TerminalNotifier",
+        "line": 42,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AppleScriptNotifier",
+        "line": 22,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "LibNotifyNotifier",
+        "line": 30,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.notifier.get_notifier",
+    "target": "asciinema.notifier.LibNotifyNotifier",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/notifier.py:78:20:16",
+    "file": "tmpmtoa3ay8/asciinema/notifier.py",
+    "line": 78,
+    "column": 20,
+    "source": "c()",
+    "rule": "flow_collection_candidates",
+    "trace": [
+      "reference:TerminalNotifier@42",
+      "reference:AppleScriptNotifier@22",
+      "reference:LibNotifyNotifier@30"
+    ],
+    "module_level": false,
+    "execution_scope": "get_notifier",
+    "execution_phase": "function_body",
+    "certainty": "multiple_possible_targets",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "TerminalNotifier",
+        "line": 42,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "AppleScriptNotifier",
+        "line": 22,
+        "from_collection": true
+      },
+      {
+        "kind": "reference",
+        "name": "LibNotifyNotifier",
+        "line": 30,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.notifier.get_notifier",
+    "target": "asciinema.notifier.Notifier.is_available",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/notifier.py:80:19:17",
+    "file": "tmpmtoa3ay8/asciinema/notifier.py",
+    "line": 80,
+    "column": 19,
+    "source": "n.is_available()",
+    "rule": "instance_flow_collection_candidates",
+    "trace": [
+      "constructed:TerminalNotifier@42",
+      "constructed:AppleScriptNotifier@22",
+      "constructed:LibNotifyNotifier@30",
+      "asciinema.notifier.TerminalNotifier",
+      "asciinema.notifier.Notifier",
+      "asciinema.notifier.AppleScriptNotifier",
+      "asciinema.notifier.Notifier",
+      "asciinema.notifier.LibNotifyNotifier",
+      "asciinema.notifier.Notifier"
+    ],
+    "module_level": false,
+    "execution_scope": "get_notifier",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "constructed",
+        "name": "TerminalNotifier",
+        "line": 42,
+        "from_collection": true
+      },
+      {
+        "kind": "constructed",
+        "name": "AppleScriptNotifier",
+        "line": 22,
+        "from_collection": true
+      },
+      {
+        "kind": "constructed",
+        "name": "LibNotifyNotifier",
+        "line": 30,
+        "from_collection": true
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.notifier.get_notifier",
+    "target": "asciinema.notifier.NoopNotifier",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/notifier.py:83:11:18",
+    "file": "tmpmtoa3ay8/asciinema/notifier.py",
+    "line": 83,
+    "column": 11,
+    "source": "NoopNotifier()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:NoopNotifier@67"
+    ],
+    "module_level": false,
+    "execution_scope": "get_notifier",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "NoopNotifier",
+        "line": 67
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.player.Player.play",
+    "target": "asciinema.term.raw",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/player.py:14:17:1",
+    "file": "tmpmtoa3ay8/asciinema/player.py",
+    "line": 14,
+    "column": 17,
+    "source": "raw(stdin.fileno())",
+    "rule": "import_or_same_module",
+    "trace": [
+      "raw"
+    ],
+    "module_level": false,
+    "execution_scope": "Player.play",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.player.Player.play",
+    "target": "asciinema.term.raw.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/player.py:14:17:1",
+    "file": "tmpmtoa3ay8/asciinema/player.py",
+    "line": 14,
+    "column": 17,
+    "source": "raw(stdin.fileno())",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.term.raw"
+    ],
+    "module_level": false,
+    "execution_scope": "Player.play",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.player.Player.play",
+    "target": "asciinema.player.Player._play",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/player.py:15:16:3",
+    "file": "tmpmtoa3ay8/asciinema/player.py",
+    "line": 15,
+    "column": 16,
+    "source": "self._play(asciicast, idle_time_limit, speed, stdin)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.player.Player"
+    ],
+    "module_level": false,
+    "execution_scope": "Player.play",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.player.Player.play",
+    "target": "asciinema.player.Player._play",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/player.py:17:12:4",
+    "file": "tmpmtoa3ay8/asciinema/player.py",
+    "line": 17,
+    "column": 12,
+    "source": "self._play(asciicast, idle_time_limit, speed, None)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.player.Player"
+    ],
+    "module_level": false,
+    "execution_scope": "Player.play",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.player.Player._play",
+    "target": "asciinema.asciicast.events.to_relative_time",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/player.py:23:17:6",
+    "file": "tmpmtoa3ay8/asciinema/player.py",
+    "line": 23,
+    "column": 17,
+    "source": "ev.to_relative_time(stdout)",
+    "rule": "imported_module",
+    "trace": [
+      "asciinema.asciicast.events"
+    ],
+    "module_level": false,
+    "execution_scope": "Player._play",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.player.Player._play",
+    "target": "asciinema.asciicast.events.cap_relative_time",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/player.py:24:17:7",
+    "file": "tmpmtoa3ay8/asciinema/player.py",
+    "line": 24,
+    "column": 17,
+    "source": "ev.cap_relative_time(stdout, idle_time_limit)",
+    "rule": "imported_module",
+    "trace": [
+      "asciinema.asciicast.events"
+    ],
+    "module_level": false,
+    "execution_scope": "Player._play",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.player.Player._play",
+    "target": "asciinema.asciicast.events.to_absolute_time",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/player.py:25:17:8",
+    "file": "tmpmtoa3ay8/asciinema/player.py",
+    "line": 25,
+    "column": 17,
+    "source": "ev.to_absolute_time(stdout)",
+    "rule": "imported_module",
+    "trace": [
+      "asciinema.asciicast.events"
+    ],
+    "module_level": false,
+    "execution_scope": "Player._play",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.player.Player._play",
+    "target": "asciinema.asciicast.events.adjust_speed",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/player.py:26:17:9",
+    "file": "tmpmtoa3ay8/asciinema/player.py",
+    "line": 26,
+    "column": 17,
+    "source": "ev.adjust_speed(stdout, speed)",
+    "rule": "imported_module",
+    "trace": [
+      "asciinema.asciicast.events"
+    ],
+    "module_level": false,
+    "execution_scope": "Player._play",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.player.Player._play",
+    "target": "asciinema.term.read_blocking",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/player.py:39:31:12",
+    "file": "tmpmtoa3ay8/asciinema/player.py",
+    "line": 39,
+    "column": 31,
+    "source": "read_blocking(stdin.fileno(), 1000)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "read_blocking"
+    ],
+    "module_level": false,
+    "execution_scope": "Player._play",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.player.Player._play",
+    "target": "asciinema.term.read_blocking",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/player.py:56:27:16",
+    "file": "tmpmtoa3ay8/asciinema/player.py",
+    "line": 56,
+    "column": 27,
+    "source": "read_blocking(stdin.fileno(), delay)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "read_blocking"
+    ],
+    "module_level": false,
+    "execution_scope": "Player._play",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.pty.record._handle_master_read",
+    "target": "asciinema.pty.record._write_stdout",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/pty.py:53:8:9",
+    "file": "tmpmtoa3ay8/asciinema/pty.py",
+    "line": 53,
+    "column": 8,
+    "source": "_write_stdout(data)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_write_stdout@42"
+    ],
+    "module_level": false,
+    "execution_scope": "record._handle_master_read",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_write_stdout",
+        "line": 42
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.pty.record._handle_stdin_read",
+    "target": "asciinema.pty.record._notify",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/pty.py:72:16:12",
+    "file": "tmpmtoa3ay8/asciinema/pty.py",
+    "line": 72,
+    "column": 16,
+    "source": "_notify('Resumed recording')",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_notify@23"
+    ],
+    "module_level": false,
+    "execution_scope": "record._handle_stdin_read",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_notify",
+        "line": 23
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.pty.record._handle_stdin_read",
+    "target": "asciinema.pty.record._notify",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/pty.py:75:16:14",
+    "file": "tmpmtoa3ay8/asciinema/pty.py",
+    "line": 75,
+    "column": 16,
+    "source": "_notify('Paused recording')",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_notify@23"
+    ],
+    "module_level": false,
+    "execution_scope": "record._handle_stdin_read",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_notify",
+        "line": 23
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.pty.record._handle_stdin_read",
+    "target": "asciinema.pty.record._write_master",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/pty.py:77:12:15",
+    "file": "tmpmtoa3ay8/asciinema/pty.py",
+    "line": 77,
+    "column": 12,
+    "source": "_write_master(data)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_write_master@55"
+    ],
+    "module_level": false,
+    "execution_scope": "record._handle_stdin_read",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_write_master",
+        "line": 55
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.pty.record._copy",
+    "target": "asciinema.pty.record._handle_master_read",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/pty.py:112:20:23",
+    "file": "tmpmtoa3ay8/asciinema/pty.py",
+    "line": 112,
+    "column": 20,
+    "source": "_handle_master_read(data)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_handle_master_read@47"
+    ],
+    "module_level": false,
+    "execution_scope": "record._copy",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_handle_master_read",
+        "line": 47
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.pty.record._copy",
+    "target": "asciinema.pty.record._handle_stdin_read",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/pty.py:119:20:26",
+    "file": "tmpmtoa3ay8/asciinema/pty.py",
+    "line": 119,
+    "column": 20,
+    "source": "_handle_stdin_read(data)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_handle_stdin_read@62"
+    ],
+    "module_level": false,
+    "execution_scope": "record._copy",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_handle_stdin_read",
+        "line": 62
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.pty.record._copy",
+    "target": "asciinema.pty.record._set_pty_size",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/pty.py:130:28:31",
+    "file": "tmpmtoa3ay8/asciinema/pty.py",
+    "line": 130,
+    "column": 28,
+    "source": "_set_pty_size()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_set_pty_size@27"
+    ],
+    "module_level": false,
+    "execution_scope": "record._copy",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_set_pty_size",
+        "line": 27
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.pty.record",
+    "target": "asciinema.pty.record._signals",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/pty.py:144:19:38",
+    "file": "tmpmtoa3ay8/asciinema/pty.py",
+    "line": 144,
+    "column": 19,
+    "source": "_signals(map(lambda s: (s, lambda signal, frame: None),\n                                [signal.SIGWINCH,\n                                    signal.SIGCHLD,\n                                    signal.SIGHUP,\n                                    signal.SIGTERM,\n                                    signal.SIGQUIT]))",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_signals@82"
+    ],
+    "module_level": false,
+    "execution_scope": "record",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_signals",
+        "line": 82
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.pty.record",
+    "target": "asciinema.pty.record._set_pty_size",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/pty.py:151:4:40",
+    "file": "tmpmtoa3ay8/asciinema/pty.py",
+    "line": 151,
+    "column": 4,
+    "source": "_set_pty_size()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_set_pty_size@27"
+    ],
+    "module_level": false,
+    "execution_scope": "record",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_set_pty_size",
+        "line": 27
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.pty.record",
+    "target": "asciinema.term.raw",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/pty.py:155:9:42",
+    "file": "tmpmtoa3ay8/asciinema/pty.py",
+    "line": 155,
+    "column": 9,
+    "source": "raw(pty.STDIN_FILENO)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "raw"
+    ],
+    "module_level": false,
+    "execution_scope": "record",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.pty.record",
+    "target": "asciinema.term.raw.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/pty.py:155:9:42",
+    "file": "tmpmtoa3ay8/asciinema/pty.py",
+    "line": 155,
+    "column": 9,
+    "source": "raw(pty.STDIN_FILENO)",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.term.raw"
+    ],
+    "module_level": false,
+    "execution_scope": "record",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.pty.record",
+    "target": "asciinema.pty.record._copy",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/pty.py:157:12:43",
+    "file": "tmpmtoa3ay8/asciinema/pty.py",
+    "line": 157,
+    "column": 12,
+    "source": "_copy(pipe_r)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_copy@88"
+    ],
+    "module_level": false,
+    "execution_scope": "record",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_copy",
+        "line": 88
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.pty.record",
+    "target": "asciinema.pty.record._signals",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/pty.py:161:4:44",
+    "file": "tmpmtoa3ay8/asciinema/pty.py",
+    "line": 161,
+    "column": 4,
+    "source": "_signals(old_handlers)",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:_signals@82"
+    ],
+    "module_level": false,
+    "execution_scope": "record",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "_signals",
+        "line": 82
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.recorder.record",
+    "target": "asciinema.term.get_size",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/recorder.py:23:11:2",
+    "file": "tmpmtoa3ay8/asciinema/recorder.py",
+    "line": 23,
+    "column": 11,
+    "source": "term.get_size()",
+    "rule": "imported_module",
+    "trace": [
+      "asciinema.term"
+    ],
+    "module_level": false,
+    "execution_scope": "record",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.recorder.record",
+    "target": "asciinema.asciicast.v2.get_duration",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/recorder.py:45:22:8",
+    "file": "tmpmtoa3ay8/asciinema/recorder.py",
+    "line": 45,
+    "column": 22,
+    "source": "v2.get_duration(path)",
+    "rule": "imported_module",
+    "trace": [
+      "asciinema.asciicast.v2"
+    ],
+    "module_level": false,
+    "execution_scope": "record",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.recorder.record",
+    "target": "asciinema.recorder.async_writer",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/recorder.py:47:9:9",
+    "file": "tmpmtoa3ay8/asciinema/recorder.py",
+    "line": 47,
+    "column": 9,
+    "source": "async_writer(writer, path, full_metadata, append)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "async_writer"
+    ],
+    "module_level": false,
+    "execution_scope": "record",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.recorder.record",
+    "target": "asciinema.recorder.async_writer.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/recorder.py:47:9:9",
+    "file": "tmpmtoa3ay8/asciinema/recorder.py",
+    "line": 47,
+    "column": 9,
+    "source": "async_writer(writer, path, full_metadata, append)",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.recorder.async_writer"
+    ],
+    "module_level": false,
+    "execution_scope": "record",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.recorder.record",
+    "target": "asciinema.recorder.async_notifier",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/recorder.py:48:13:10",
+    "file": "tmpmtoa3ay8/asciinema/recorder.py",
+    "line": 48,
+    "column": 13,
+    "source": "async_notifier(notifier)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "async_notifier"
+    ],
+    "module_level": false,
+    "execution_scope": "record",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.recorder.record",
+    "target": "asciinema.recorder.async_notifier.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/recorder.py:48:13:10",
+    "file": "tmpmtoa3ay8/asciinema/recorder.py",
+    "line": 48,
+    "column": 13,
+    "source": "async_notifier(notifier)",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.recorder.async_notifier"
+    ],
+    "module_level": false,
+    "execution_scope": "record",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.recorder.async_writer.__init__",
+    "target": "asciinema.async_worker.async_worker.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/recorder.py:61:8:12",
+    "file": "tmpmtoa3ay8/asciinema/recorder.py",
+    "line": 61,
+    "column": 8,
+    "source": "async_worker.__init__(self)",
+    "rule": "explicit_class_method",
+    "trace": [
+      "asciinema.async_worker.async_worker"
+    ],
+    "module_level": false,
+    "execution_scope": "async_writer.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.recorder.async_writer.write_stdin",
+    "target": "asciinema.async_worker.async_worker.enqueue",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/recorder.py:68:8:13",
+    "file": "tmpmtoa3ay8/asciinema/recorder.py",
+    "line": 68,
+    "column": 8,
+    "source": "self.enqueue([ts, 'i', data])",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.recorder.async_writer",
+      "asciinema.async_worker.async_worker"
+    ],
+    "module_level": false,
+    "execution_scope": "async_writer.write_stdin",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.recorder.async_writer.write_stdout",
+    "target": "asciinema.async_worker.async_worker.enqueue",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/recorder.py:71:8:14",
+    "file": "tmpmtoa3ay8/asciinema/recorder.py",
+    "line": 71,
+    "column": 8,
+    "source": "self.enqueue([ts, 'o', data])",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.recorder.async_writer",
+      "asciinema.async_worker.async_worker"
+    ],
+    "module_level": false,
+    "execution_scope": "async_writer.write_stdout",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.recorder.async_notifier.__init__",
+    "target": "asciinema.async_worker.async_worker.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/recorder.py:86:8:19",
+    "file": "tmpmtoa3ay8/asciinema/recorder.py",
+    "line": 86,
+    "column": 8,
+    "source": "async_worker.__init__(self)",
+    "rule": "explicit_class_method",
+    "trace": [
+      "asciinema.async_worker.async_worker"
+    ],
+    "module_level": false,
+    "execution_scope": "async_notifier.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.recorder.async_notifier.notify",
+    "target": "asciinema.async_worker.async_worker.enqueue",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/recorder.py:90:8:20",
+    "file": "tmpmtoa3ay8/asciinema/recorder.py",
+    "line": 90,
+    "column": 8,
+    "source": "self.enqueue(text)",
+    "rule": "self_inheritance",
+    "trace": [
+      "asciinema.recorder.async_notifier",
+      "asciinema.async_worker.async_worker"
+    ],
+    "module_level": false,
+    "execution_scope": "async_notifier.notify",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.iter",
+    "target": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.u",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:32:18:6",
+    "file": "tmpmtoa3ay8/asciinema/urllib_http_adapter.py",
+    "line": 32,
+    "column": 18,
+    "source": "self.u(key)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.urllib_http_adapter.MultipartFormdataEncoder"
+    ],
+    "module_level": false,
+    "execution_scope": "MultipartFormdataEncoder.iter",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.iter",
+    "target": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.u",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:34:26:11",
+    "file": "tmpmtoa3ay8/asciinema/urllib_http_adapter.py",
+    "line": 34,
+    "column": 26,
+    "source": "self.u('Content-Disposition: form-data; name=\"{}\"\\r\\n')",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.urllib_http_adapter.MultipartFormdataEncoder"
+    ],
+    "module_level": false,
+    "execution_scope": "MultipartFormdataEncoder.iter",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.iter",
+    "target": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.u",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:38:26:17",
+    "file": "tmpmtoa3ay8/asciinema/urllib_http_adapter.py",
+    "line": 38,
+    "column": 26,
+    "source": "self.u(value)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.urllib_http_adapter.MultipartFormdataEncoder"
+    ],
+    "module_level": false,
+    "execution_scope": "MultipartFormdataEncoder.iter",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.iter",
+    "target": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.u",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:42:18:20",
+    "file": "tmpmtoa3ay8/asciinema/urllib_http_adapter.py",
+    "line": 42,
+    "column": 18,
+    "source": "self.u(key)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.urllib_http_adapter.MultipartFormdataEncoder"
+    ],
+    "module_level": false,
+    "execution_scope": "MultipartFormdataEncoder.iter",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.iter",
+    "target": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.u",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:43:23:21",
+    "file": "tmpmtoa3ay8/asciinema/urllib_http_adapter.py",
+    "line": 43,
+    "column": 23,
+    "source": "self.u(filename)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.urllib_http_adapter.MultipartFormdataEncoder"
+    ],
+    "module_level": false,
+    "execution_scope": "MultipartFormdataEncoder.iter",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.iter",
+    "target": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.u",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:45:26:26",
+    "file": "tmpmtoa3ay8/asciinema/urllib_http_adapter.py",
+    "line": 45,
+    "column": 26,
+    "source": "self.u('Content-Disposition: form-data; name=\"{}\"; filename=\"{}\"\\r\\n')",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.urllib_http_adapter.MultipartFormdataEncoder"
+    ],
+    "module_level": false,
+    "execution_scope": "MultipartFormdataEncoder.iter",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.encode",
+    "target": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.iter",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:55:32:35",
+    "file": "tmpmtoa3ay8/asciinema/urllib_http_adapter.py",
+    "line": 55,
+    "column": 32,
+    "source": "self.iter(fields, files)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.urllib_http_adapter.MultipartFormdataEncoder"
+    ],
+    "module_level": false,
+    "execution_scope": "MultipartFormdataEncoder.encode",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.urllib_http_adapter.URLLibHttpAdapter.post",
+    "target": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.encode",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:63:29:38",
+    "file": "tmpmtoa3ay8/asciinema/urllib_http_adapter.py",
+    "line": 63,
+    "column": 29,
+    "source": "MultipartFormdataEncoder().encode(fields, files)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:63:29 > root:METHOD:asciinema.urllib_http_adapter.URLLibHttpAdapter.post",
+      "allocation:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:63:29 > tmpmtoa3ay8/asciinema/api.py:35:40 > root:METHOD:asciinema.api.Api.upload_asciicast",
+      "allocation:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:63:29 > tmpmtoa3ay8/asciinema/api.py:35:40 > tmpmtoa3ay8/asciinema/commands/record.py:101:31 > root:METHOD:asciinema.commands.record.RecordCommand.execute",
+      "allocation:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:63:29 > tmpmtoa3ay8/asciinema/api.py:35:40 > tmpmtoa3ay8/asciinema/commands/upload.py:13:27 > root:METHOD:asciinema.commands.upload.UploadCommand.execute",
+      "context:METHOD:asciinema.api.Api.upload_asciicast > METHOD:asciinema.urllib_http_adapter.URLLibHttpAdapter.post",
+      "context:METHOD:asciinema.commands.record.RecordCommand.execute > METHOD:asciinema.api.Api.upload_asciicast > METHOD:asciinema.urllib_http_adapter.URLLibHttpAdapter.post",
+      "context:METHOD:asciinema.commands.upload.UploadCommand.execute > METHOD:asciinema.api.Api.upload_asciicast > METHOD:asciinema.urllib_http_adapter.URLLibHttpAdapter.post",
+      "context:METHOD:asciinema.urllib_http_adapter.URLLibHttpAdapter.post",
+      "receiver:asciinema.urllib_http_adapter.MultipartFormdataEncoder"
+    ],
+    "module_level": false,
+    "execution_scope": "URLLibHttpAdapter.post",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "asciinema.urllib_http_adapter.URLLibHttpAdapter.post",
+    "target": "asciinema.urllib_http_adapter.MultipartFormdataEncoder",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:63:29:39",
+    "file": "tmpmtoa3ay8/asciinema/urllib_http_adapter.py",
+    "line": 63,
+    "column": 29,
+    "source": "MultipartFormdataEncoder()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:MultipartFormdataEncoder@13"
+    ],
+    "module_level": false,
+    "execution_scope": "URLLibHttpAdapter.post",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "MultipartFormdataEncoder",
+        "line": 13
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.urllib_http_adapter.URLLibHttpAdapter.post",
+    "target": "asciinema.urllib_http_adapter.MultipartFormdataEncoder.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:63:29:39",
+    "file": "tmpmtoa3ay8/asciinema/urllib_http_adapter.py",
+    "line": 63,
+    "column": 29,
+    "source": "MultipartFormdataEncoder()",
+    "rule": "constructor_init",
+    "trace": [
+      "asciinema.urllib_http_adapter.MultipartFormdataEncoder"
+    ],
+    "module_level": false,
+    "execution_scope": "URLLibHttpAdapter.post",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "MultipartFormdataEncoder",
+        "line": 13
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "asciinema.urllib_http_adapter.URLLibHttpAdapter.post",
+    "target": "asciinema.urllib_http_adapter.URLLibHttpAdapter._parse_headers",
+    "relation": "CALLS",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:78:22:45",
+    "file": "tmpmtoa3ay8/asciinema/urllib_http_adapter.py",
+    "line": 78,
+    "column": 22,
+    "source": "self._parse_headers(response)",
+    "rule": "self_method",
+    "trace": [
+      "asciinema.urllib_http_adapter.URLLibHttpAdapter"
+    ],
+    "module_level": false,
+    "execution_scope": "URLLibHttpAdapter.post",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "asciinema.urllib_http_adapter.URLLibHttpAdapter.post",
+    "target": "asciinema.http_adapter.HTTPConnectionError",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmpmtoa3ay8/asciinema/urllib_http_adapter.py:85:18:50",
+    "file": "tmpmtoa3ay8/asciinema/urllib_http_adapter.py",
+    "line": 85,
+    "column": 18,
+    "source": "HTTPConnectionError(str(e))",
+    "rule": "import_or_same_module",
+    "trace": [
+      "HTTPConnectionError"
+    ],
+    "module_level": false,
+    "execution_scope": "URLLibHttpAdapter.post",
+    "execution_phase": "function_body"
+  }
+]

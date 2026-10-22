@@ -1,0 +1,147 @@
+﻿group,file,line,callee,caller,expected,actual,status,certainty,passed,scenario,source_excerpt
+exact_binding,src/flask/__main__.py,3,main,,"[""FUNCTION:flask.cli.main""]","[""FUNCTION:flask.cli.main""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,"Default namespaces, import binding unchanged.","1: from .cli import main
+2: 
+3: main()"
+exact_binding,src/flask/app.py,408,send_from_directory,METHOD:flask.app.Flask.send_static_file,"[""FUNCTION:flask.helpers.send_from_directory""]","[""FUNCTION:flask.helpers.send_from_directory""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,"Default namespaces, import binding unchanged.","406:         # call it here so it works for blueprints too.
+407:         max_age = self.get_send_file_max_age(filename)
+408:         return send_from_directory(
+409:             t.cast(str, self.static_folder), filename, max_age=max_age
+410:         )"
+exact_binding,src/flask/app.py,707,get_load_dotenv,METHOD:flask.app.Flask.run,"[""FUNCTION:flask.helpers.get_load_dotenv""]","[""FUNCTION:flask.helpers.get_load_dotenv""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,"Default namespaces, import binding unchanged.","705:             return
+706: 
+707:         if get_load_dotenv(load_dotenv):
+708:             cli.load_dotenv()
+709: "
+exact_binding,src/flask/app.py,708,cli.load_dotenv,METHOD:flask.app.Flask.run,"[""FUNCTION:flask.cli.load_dotenv""]","[""FUNCTION:flask.cli.load_dotenv""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,"Default namespaces, import binding unchanged.","706: 
+707:         if get_load_dotenv(load_dotenv):
+708:             cli.load_dotenv()
+709: 
+710:             # if set, env var overrides existing value"
+exact_binding,src/flask/cli.py,348,prepare_import,METHOD:flask.cli.ScriptInfo.load_app,"[""FUNCTION:flask.cli.prepare_import""]","[""FUNCTION:flask.cli.prepare_import""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,"Default namespaces, import binding unchanged.","346:                     re.split(r"":(?![\\/])"", self.app_import_path, maxsplit=1) + [None]
+347:                 )[:2]
+348:                 import_name = prepare_import(path)
+349:                 app = locate_app(import_name, name)
+350:             else:"
+exact_binding,src/flask/cli.py,349,locate_app,METHOD:flask.cli.ScriptInfo.load_app,"[""FUNCTION:flask.cli.locate_app""]","[""FUNCTION:flask.cli.locate_app""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,"Default namespaces, import binding unchanged.","347:                 )[:2]
+348:                 import_name = prepare_import(path)
+349:                 app = locate_app(import_name, name)
+350:             else:
+351:                 for path in (""wsgi.py"", ""app.py""):"
+exact_binding,src/flask/helpers.py,529,_prepare_send_file_kwargs,FUNCTION:flask.helpers.send_file,"[""FUNCTION:flask.helpers._prepare_send_file_kwargs""]","[""FUNCTION:flask.helpers._prepare_send_file_kwargs""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,"Default namespaces, import binding unchanged.","527:     """"""
+528:     return werkzeug.utils.send_file(  # type: ignore[return-value]
+529:         **_prepare_send_file_kwargs(
+530:             path_or_file=path_or_file,
+531:             environ=request.environ,"
+exact_binding,src/flask/helpers.py,583,_prepare_send_file_kwargs,FUNCTION:flask.helpers.send_from_directory,"[""FUNCTION:flask.helpers._prepare_send_file_kwargs""]","[""FUNCTION:flask.helpers._prepare_send_file_kwargs""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,"Default namespaces, import binding unchanged.","581:     """"""
+582:     return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+583:         directory, path, **_prepare_send_file_kwargs(**kwargs)
+584:     )
+585: "
+exact_binding,src/flask/templating.py,148,_render,FUNCTION:flask.templating.render_template,"[""FUNCTION:flask.templating._render""]","[""FUNCTION:flask.templating._render""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,"Default namespaces, import binding unchanged.","146:     ctx = app_ctx._get_current_object()
+147:     template = ctx.app.jinja_env.get_or_select_template(template_name_or_list)
+148:     return _render(ctx, template, context)
+149: 
+150: "
+exact_binding,src/flask/templating.py,160,_render,FUNCTION:flask.templating.render_template_string,"[""FUNCTION:flask.templating._render""]","[""FUNCTION:flask.templating._render""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,"Default namespaces, import binding unchanged.","158:     ctx = app_ctx._get_current_object()
+159:     template = ctx.app.jinja_env.from_string(source)
+160:     return _render(ctx, template, context)
+161: 
+162: "
+exact_binding,src/flask/json/tag.py,323,dumps,METHOD:flask.json.tag.TaggedJSONSerializer.dumps,"[""FUNCTION:flask.json.dumps""]","[""FUNCTION:flask.json.dumps""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,"Default namespaces, import binding unchanged.","321:     def dumps(self, value: t.Any) -> str:
+322:         """"""Tag the value and dump it to a compact JSON string.""""""
+323:         return dumps(self.tag(value), separators=("","", "":""))
+324: 
+325:     def loads(self, value: str) -> t.Any:"
+exact_binding,src/flask/json/tag.py,327,loads,METHOD:flask.json.tag.TaggedJSONSerializer.loads,"[""FUNCTION:flask.json.loads""]","[""FUNCTION:flask.json.loads""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,"Default namespaces, import binding unchanged.","325:     def loads(self, value: str) -> t.Any:
+326:         """"""Load data from a JSON string and deserialized any tagged objects.""""""
+327:         return self._untag_scan(loads(value))"
+exact_binding,src/flask/json/__init__.py,44,_json.dumps,FUNCTION:flask.json.dumps,[],[],KNOWN_NON_INTERNAL,PROVEN_STATIC_ORIGIN,True,"Default namespaces, import binding unchanged.","42: 
+43:     kwargs.setdefault(""default"", _default)
+44:     return _json.dumps(obj, **kwargs)
+45: 
+46: "
+exact_binding,src/flask/json/__init__.py,105,_json.loads,FUNCTION:flask.json.loads,[],[],KNOWN_NON_INTERNAL,PROVEN_STATIC_ORIGIN,True,"Default namespaces, import binding unchanged.","103:         return current_app.json.loads(s, **kwargs)
+104: 
+105:     return _json.loads(s, **kwargs)
+106: 
+107: "
+required_base_scenario,src/flask/app.py,987,self.make_default_options_response,METHOD:flask.app.Flask.dispatch_request,"[""METHOD:flask.app.Flask.make_default_options_response""]","[""METHOD:flask.app.Flask.make_default_options_response""]",RESOLVED_INTERNAL,MAY_CALL,True,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"985:             and req.method == ""OPTIONS""
+986:         ):
+987:             return self.make_default_options_response(ctx)
+988:         # otherwise dispatch to the handler for that endpoint
+989:         view_args: dict[str, t.Any] = req.view_args  # type: ignore[assignment]"
+required_base_scenario,src/flask/app.py,1014,self.preprocess_request,METHOD:flask.app.Flask.full_dispatch_request,"[""METHOD:flask.app.Flask.preprocess_request""]","[""METHOD:flask.app.Flask.preprocess_request""]",RESOLVED_INTERNAL,MAY_CALL,True,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"1012:         try:
+1013:             request_started.send(self, _async_wrapper=self.ensure_sync)
+1014:             rv = self.preprocess_request(ctx)
+1015:             if rv is None:
+1016:                 rv = self.dispatch_request(ctx)"
+required_base_scenario,src/flask/app.py,1016,self.dispatch_request,METHOD:flask.app.Flask.full_dispatch_request,"[""METHOD:flask.app.Flask.dispatch_request""]","[""METHOD:flask.app.Flask.dispatch_request""]",RESOLVED_INTERNAL,MAY_CALL,True,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"1014:             rv = self.preprocess_request(ctx)
+1015:             if rv is None:
+1016:                 rv = self.dispatch_request(ctx)
+1017:         except Exception as e:
+1018:             rv = self.handle_user_exception(ctx, e)"
+required_base_scenario,src/flask/app.py,1018,self.handle_user_exception,METHOD:flask.app.Flask.full_dispatch_request,"[""METHOD:flask.app.Flask.handle_user_exception""]","[""METHOD:flask.app.Flask.handle_user_exception""]",RESOLVED_INTERNAL,MAY_CALL,True,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"1016:                 rv = self.dispatch_request(ctx)
+1017:         except Exception as e:
+1018:             rv = self.handle_user_exception(ctx, e)
+1019:         return self.finalize_request(ctx, rv)
+1020: "
+required_base_scenario,src/flask/app.py,1019,self.finalize_request,METHOD:flask.app.Flask.full_dispatch_request,"[""METHOD:flask.app.Flask.finalize_request""]","[""METHOD:flask.app.Flask.finalize_request""]",RESOLVED_INTERNAL,MAY_CALL,True,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"1017:         except Exception as e:
+1018:             rv = self.handle_user_exception(ctx, e)
+1019:         return self.finalize_request(ctx, rv)
+1020: 
+1021:     def finalize_request("
+required_base_scenario,src/flask/app.py,1039,self.make_response,METHOD:flask.app.Flask.finalize_request,"[""METHOD:flask.app.Flask.make_response""]","[""METHOD:flask.app.Flask.make_response""]",RESOLVED_INTERNAL,MAY_CALL,True,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"1037:         :internal:
+1038:         """"""
+1039:         response = self.make_response(rv)
+1040:         try:
+1041:             response = self.process_response(ctx, response)"
+required_base_scenario,src/flask/app.py,1041,self.process_response,METHOD:flask.app.Flask.finalize_request,"[""METHOD:flask.app.Flask.process_response""]","[""METHOD:flask.app.Flask.process_response""]",RESOLVED_INTERNAL,MAY_CALL,True,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"1039:         response = self.make_response(rv)
+1040:         try:
+1041:             response = self.process_response(ctx, response)
+1042:             request_finished.send(
+1043:                 self, _async_wrapper=self.ensure_sync, response=response"
+required_base_scenario,src/flask/app.py,1075,self.async_to_sync,METHOD:flask.app.Flask.ensure_sync,"[""METHOD:flask.app.Flask.async_to_sync""]","[""METHOD:flask.app.Flask.async_to_sync""]",RESOLVED_INTERNAL,MAY_CALL,True,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"1073:         """"""
+1074:         if iscoroutinefunction(func):
+1075:             return self.async_to_sync(func)
+1076: 
+1077:         return func"
+required_base_scenario,src/flask/app.py,1597,self.full_dispatch_request,METHOD:flask.app.Flask.wsgi_app,"[""METHOD:flask.app.Flask.full_dispatch_request""]","[""METHOD:flask.app.Flask.full_dispatch_request""]",RESOLVED_INTERNAL,MAY_CALL,True,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"1595:             try:
+1596:                 ctx.push()
+1597:                 response = self.full_dispatch_request(ctx)
+1598:             except Exception as e:
+1599:                 error = e"
+required_base_scenario,src/flask/templating.py,125,app.update_template_context,FUNCTION:flask.templating._render,"[""METHOD:flask.app.Flask.update_template_context""]",[],UNKNOWN,UNVERIFIED,False,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"123: def _render(ctx: AppContext, template: Template, context: dict[str, t.Any]) -> str:
+124:     app = ctx.app
+125:     app.update_template_context(ctx, context)
+126:     before_render_template.send(
+127:         app, _async_wrapper=app.ensure_sync, template=template, context=context"
+required_base_scenario,src/flask/json/__init__.py,41,current_app.json.dumps,FUNCTION:flask.json.dumps,"[""METHOD:flask.json.provider.DefaultJSONProvider.dumps""]",[],UNKNOWN,UNVERIFIED,False,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"39:     """"""
+40:     if current_app:
+41:         return current_app.json.dumps(obj, **kwargs)
+42: 
+43:     kwargs.setdefault(""default"", _default)"
+required_base_scenario,src/flask/json/__init__.py,103,current_app.json.loads,FUNCTION:flask.json.loads,"[""METHOD:flask.json.provider.DefaultJSONProvider.loads""]",[],UNKNOWN,UNVERIFIED,False,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"101:     """"""
+102:     if current_app:
+103:         return current_app.json.loads(s, **kwargs)
+104: 
+105:     return _json.loads(s, **kwargs)"
+required_base_scenario,src/flask/config.py,124,self.from_pyfile,METHOD:flask.config.Config.from_envvar,"[""METHOD:flask.config.Config.from_pyfile""]","[""METHOD:flask.config.Config.from_pyfile""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"122:                 "" file""
+123:             )
+124:         return self.from_pyfile(rv, silent=silent)
+125: 
+126:     def from_prefixed_env("
+required_base_scenario,src/flask/config.py,215,self.from_object,METHOD:flask.config.Config.from_pyfile,"[""METHOD:flask.config.Config.from_object""]","[""METHOD:flask.config.Config.from_object""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"213:             e.strerror = f""Unable to load configuration file ({e.strerror})""
+214:             raise
+215:         self.from_object(d)
+216:         return True
+217: "
+required_base_scenario,src/flask/config.py,302,self.from_mapping,METHOD:flask.config.Config.from_file,"[""METHOD:flask.config.Config.from_mapping""]","[""METHOD:flask.config.Config.from_mapping""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"300:             raise
+301: 
+302:         return self.from_mapping(obj)
+303: 
+304:     def from_mapping("
+required_base_scenario,src/flask/json/tag.py,323,self.tag,METHOD:flask.json.tag.TaggedJSONSerializer.dumps,"[""METHOD:flask.json.tag.TaggedJSONSerializer.tag""]","[""METHOD:flask.json.tag.TaggedJSONSerializer.tag""]",RESOLVED_INTERNAL,SOURCE_BACKED,True,Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.,"321:     def dumps(self, value: t.Any) -> str:
+322:         """"""Tag the value and dump it to a compact JSON string.""""""
+323:         return dumps(self.tag(value), separators=("","", "":""))
+324: 
+325:     def loads(self, value: str) -> t.Any:"

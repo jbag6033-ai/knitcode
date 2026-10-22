@@ -1,0 +1,341 @@
+{
+  "autojump_argparse.ArgumentError.__init__": [
+    "autojump_argparse._get_action_name"
+  ],
+  "autojump_argparse.ArgumentParser.__init__": [
+    "autojump_argparse._ActionsContainer._add_container_actions",
+    "autojump_argparse._ActionsContainer.add_argument",
+    "autojump_argparse._ActionsContainer.add_argument_group",
+    "autojump_argparse._ActionsContainer.register"
+  ],
+  "autojump_argparse.ArgumentParser._check_value": [
+    "autojump_argparse.ArgumentError.__init__"
+  ],
+  "autojump_argparse.ArgumentParser._get_option_tuples": [
+    "autojump_argparse.ArgumentParser.error"
+  ],
+  "autojump_argparse.ArgumentParser._get_value": [
+    "autojump_argparse.ArgumentError.__init__",
+    "autojump_argparse._ActionsContainer._registry_get",
+    "autojump_argparse._callable"
+  ],
+  "autojump_argparse.ArgumentParser._get_values": [
+    "autojump_argparse.ArgumentParser._check_value",
+    "autojump_argparse.ArgumentParser._get_value"
+  ],
+  "autojump_argparse.ArgumentParser._match_argument": [
+    "autojump_argparse.ArgumentError.__init__",
+    "autojump_argparse.ArgumentParser._get_nargs_pattern"
+  ],
+  "autojump_argparse.ArgumentParser._match_arguments_partial": [
+    "autojump_argparse.ArgumentParser._get_nargs_pattern"
+  ],
+  "autojump_argparse.ArgumentParser._parse_known_args": [
+    "autojump_argparse.ArgumentParser._get_positional_actions",
+    "autojump_argparse.ArgumentParser._parse_known_args.consume_optional",
+    "autojump_argparse.ArgumentParser._parse_known_args.consume_positionals",
+    "autojump_argparse.ArgumentParser._parse_optional",
+    "autojump_argparse.ArgumentParser._read_args_from_files",
+    "autojump_argparse.ArgumentParser.error",
+    "autojump_argparse._get_action_name"
+  ],
+  "autojump_argparse.ArgumentParser._parse_known_args.consume_optional": [
+    "autojump_argparse.ArgumentError.__init__",
+    "autojump_argparse.ArgumentParser._parse_known_args.take_action"
+  ],
+  "autojump_argparse.ArgumentParser._parse_known_args.consume_positionals": [
+    "autojump_argparse.ArgumentParser._parse_known_args.take_action"
+  ],
+  "autojump_argparse.ArgumentParser._parse_known_args.take_action": [
+    "autojump_argparse.ArgumentError.__init__",
+    "autojump_argparse.ArgumentParser._get_values",
+    "autojump_argparse._get_action_name"
+  ],
+  "autojump_argparse.ArgumentParser._parse_optional": [
+    "autojump_argparse.ArgumentParser._get_option_tuples",
+    "autojump_argparse.ArgumentParser.error"
+  ],
+  "autojump_argparse.ArgumentParser._read_args_from_files": [
+    "autojump_argparse.ArgumentParser._read_args_from_files",
+    "autojump_argparse.ArgumentParser.convert_arg_line_to_args",
+    "autojump_argparse.ArgumentParser.error"
+  ],
+  "autojump_argparse.ArgumentParser.add_subparsers": [
+    "autojump_argparse.ArgumentParser._get_formatter",
+    "autojump_argparse.ArgumentParser._get_positional_actions",
+    "autojump_argparse.ArgumentParser.error",
+    "autojump_argparse._ActionsContainer._pop_action_class",
+    "autojump_argparse._ActionsContainer.add_argument_group"
+  ],
+  "autojump_argparse.ArgumentParser.error": [
+    "autojump_argparse.ArgumentParser.exit",
+    "autojump_argparse.ArgumentParser.print_usage"
+  ],
+  "autojump_argparse.ArgumentParser.exit": [
+    "autojump_argparse.ArgumentParser._print_message"
+  ],
+  "autojump_argparse.ArgumentParser.format_help": [
+    "autojump_argparse.ArgumentParser._get_formatter"
+  ],
+  "autojump_argparse.ArgumentParser.format_usage": [
+    "autojump_argparse.ArgumentParser._get_formatter"
+  ],
+  "autojump_argparse.ArgumentParser.format_version": [
+    "autojump_argparse.ArgumentParser._get_formatter"
+  ],
+  "autojump_argparse.ArgumentParser.parse_args": [
+    "autojump_argparse.ArgumentParser.error",
+    "autojump_argparse.ArgumentParser.parse_known_args"
+  ],
+  "autojump_argparse.ArgumentParser.parse_known_args": [
+    "autojump_argparse.ArgumentParser._get_value",
+    "autojump_argparse.ArgumentParser._parse_known_args",
+    "autojump_argparse.ArgumentParser.error",
+    "autojump_argparse.Namespace.__init__"
+  ],
+  "autojump_argparse.ArgumentParser.print_help": [
+    "autojump_argparse.ArgumentParser._print_message",
+    "autojump_argparse.ArgumentParser.format_help"
+  ],
+  "autojump_argparse.ArgumentParser.print_usage": [
+    "autojump_argparse.ArgumentParser._print_message",
+    "autojump_argparse.ArgumentParser.format_usage"
+  ],
+  "autojump_argparse.ArgumentParser.print_version": [
+    "autojump_argparse.ArgumentParser._print_message",
+    "autojump_argparse.ArgumentParser.format_version"
+  ],
+  "autojump_argparse.HelpFormatter._Section.format_help": [
+    "autojump_argparse.HelpFormatter._dedent",
+    "autojump_argparse.HelpFormatter._indent",
+    "autojump_argparse.HelpFormatter._join_parts"
+  ],
+  "autojump_argparse.HelpFormatter.__init__": [
+    "autojump_argparse.HelpFormatter._Section.__init__"
+  ],
+  "autojump_argparse.HelpFormatter._expand_help": [
+    "autojump_argparse.HelpFormatter._get_help_string"
+  ],
+  "autojump_argparse.HelpFormatter._format_action": [
+    "autojump_argparse.HelpFormatter._expand_help",
+    "autojump_argparse.HelpFormatter._format_action",
+    "autojump_argparse.HelpFormatter._format_action_invocation",
+    "autojump_argparse.HelpFormatter._iter_indented_subactions",
+    "autojump_argparse.HelpFormatter._join_parts",
+    "autojump_argparse.HelpFormatter._split_lines"
+  ],
+  "autojump_argparse.HelpFormatter._format_action_invocation": [
+    "autojump_argparse.HelpFormatter._format_args",
+    "autojump_argparse.HelpFormatter._metavar_formatter"
+  ],
+  "autojump_argparse.HelpFormatter._format_actions_usage": [
+    "autojump_argparse.HelpFormatter._format_args",
+    "autojump_argparse.sorted"
+  ],
+  "autojump_argparse.HelpFormatter._format_args": [
+    "autojump_argparse.HelpFormatter._metavar_formatter",
+    "autojump_argparse.HelpFormatter._metavar_formatter.format"
+  ],
+  "autojump_argparse.HelpFormatter._format_text": [
+    "autojump_argparse.HelpFormatter._fill_text"
+  ],
+  "autojump_argparse.HelpFormatter._format_usage": [
+    "autojump_argparse.HelpFormatter._format_actions_usage",
+    "autojump_argparse.HelpFormatter._format_usage.get_lines"
+  ],
+  "autojump_argparse.HelpFormatter._iter_indented_subactions": [
+    "autojump_argparse.HelpFormatter._dedent",
+    "autojump_argparse.HelpFormatter._indent"
+  ],
+  "autojump_argparse.HelpFormatter.add_argument": [
+    "autojump_argparse.HelpFormatter._add_item",
+    "autojump_argparse.HelpFormatter._format_action_invocation",
+    "autojump_argparse.HelpFormatter._iter_indented_subactions"
+  ],
+  "autojump_argparse.HelpFormatter.add_arguments": [
+    "autojump_argparse.HelpFormatter.add_argument"
+  ],
+  "autojump_argparse.HelpFormatter.add_text": [
+    "autojump_argparse.HelpFormatter._add_item"
+  ],
+  "autojump_argparse.HelpFormatter.add_usage": [
+    "autojump_argparse.HelpFormatter._add_item"
+  ],
+  "autojump_argparse.HelpFormatter.end_section": [
+    "autojump_argparse.HelpFormatter._dedent"
+  ],
+  "autojump_argparse.HelpFormatter.format_help": [
+    "autojump_argparse.HelpFormatter._Section.format_help"
+  ],
+  "autojump_argparse.HelpFormatter.start_section": [
+    "autojump_argparse.HelpFormatter._Section.__init__",
+    "autojump_argparse.HelpFormatter._add_item",
+    "autojump_argparse.HelpFormatter._indent"
+  ],
+  "autojump_argparse._ActionsContainer.__init__": [
+    "autojump_argparse._ActionsContainer._get_handler",
+    "autojump_argparse._ActionsContainer.register"
+  ],
+  "autojump_argparse._ActionsContainer._add_action": [
+    "autojump_argparse._ActionsContainer._check_conflict"
+  ],
+  "autojump_argparse._ActionsContainer._add_container_actions": [
+    "autojump_argparse._ActionsContainer.add_argument_group",
+    "autojump_argparse._ActionsContainer.add_mutually_exclusive_group"
+  ],
+  "autojump_argparse._ActionsContainer._check_conflict": [
+    "autojump_argparse._ActionsContainer._get_handler"
+  ],
+  "autojump_argparse._ActionsContainer._handle_conflict_error": [
+    "autojump_argparse.ArgumentError.__init__"
+  ],
+  "autojump_argparse._ActionsContainer._pop_action_class": [
+    "autojump_argparse._ActionsContainer._registry_get"
+  ],
+  "autojump_argparse._ActionsContainer.add_argument": [
+    "autojump_argparse.ArgumentParser._add_action",
+    "autojump_argparse._ActionsContainer._add_action",
+    "autojump_argparse._ActionsContainer._get_optional_kwargs",
+    "autojump_argparse._ActionsContainer._get_positional_kwargs",
+    "autojump_argparse._ActionsContainer._pop_action_class",
+    "autojump_argparse._ActionsContainer._registry_get",
+    "autojump_argparse._callable"
+  ],
+  "autojump_argparse._ActionsContainer.add_argument_group": [
+    "autojump_argparse._ArgumentGroup.__init__"
+  ],
+  "autojump_argparse._ActionsContainer.add_mutually_exclusive_group": [
+    "autojump_argparse._MutuallyExclusiveGroup.__init__"
+  ],
+  "autojump_argparse._AppendAction.__call__": [
+    "autojump_argparse._ensure_value"
+  ],
+  "autojump_argparse._AppendAction.__init__": [
+    "autojump_argparse.Action.__init__"
+  ],
+  "autojump_argparse._AppendConstAction.__call__": [
+    "autojump_argparse._ensure_value"
+  ],
+  "autojump_argparse._AppendConstAction.__init__": [
+    "autojump_argparse.Action.__init__"
+  ],
+  "autojump_argparse._ArgumentGroup._add_action": [
+    "autojump_argparse._ActionsContainer._add_action"
+  ],
+  "autojump_argparse._ArgumentGroup._remove_action": [
+    "autojump_argparse._ActionsContainer._remove_action"
+  ],
+  "autojump_argparse._AttributeHolder.__repr__": [
+    "autojump_argparse._AttributeHolder._get_args",
+    "autojump_argparse._AttributeHolder._get_kwargs"
+  ],
+  "autojump_argparse._AttributeHolder._get_kwargs": [
+    "autojump_argparse.sorted"
+  ],
+  "autojump_argparse._CountAction.__call__": [
+    "autojump_argparse._ensure_value"
+  ],
+  "autojump_argparse._CountAction.__init__": [
+    "autojump_argparse.Action.__init__"
+  ],
+  "autojump_argparse._HelpAction.__init__": [
+    "autojump_argparse.Action.__init__"
+  ],
+  "autojump_argparse._MutuallyExclusiveGroup.__init__": [
+    "autojump_argparse._ArgumentGroup.__init__"
+  ],
+  "autojump_argparse._StoreAction.__init__": [
+    "autojump_argparse.Action.__init__"
+  ],
+  "autojump_argparse._StoreConstAction.__init__": [
+    "autojump_argparse.Action.__init__"
+  ],
+  "autojump_argparse._StoreFalseAction.__init__": [
+    "autojump_argparse._StoreConstAction.__init__"
+  ],
+  "autojump_argparse._StoreTrueAction.__init__": [
+    "autojump_argparse._StoreConstAction.__init__"
+  ],
+  "autojump_argparse._SubParsersAction.__call__": [
+    "autojump_argparse.ArgumentError.__init__"
+  ],
+  "autojump_argparse._SubParsersAction.__init__": [
+    "autojump_argparse.Action.__init__"
+  ],
+  "autojump_argparse._SubParsersAction.add_parser": [
+    "autojump_argparse._SubParsersAction._ChoicesPseudoAction.__init__"
+  ],
+  "autojump_argparse._VersionAction.__init__": [
+    "autojump_argparse.Action.__init__"
+  ],
+  "autojump_argparse.sorted": [
+    "autojump_argparse.sorted"
+  ],
+  "autojump_data.entriefy": [
+    "autojump_utils.is_python3"
+  ],
+  "autojump_data.load": [
+    "autojump_data.load_backup",
+    "autojump_data.migrate_osx_xdg_data",
+    "autojump_utils.is_osx"
+  ],
+  "autojump_data.load_backup": [
+    "autojump_data.load",
+    "autojump_utils.move_file"
+  ],
+  "autojump_data.migrate_osx_xdg_data": [
+    "autojump_utils.is_osx",
+    "autojump_utils.move_file"
+  ],
+  "autojump_data.save": [
+    "autojump_utils.create_dir",
+    "autojump_utils.move_file",
+    "autojump_utils.unico"
+  ],
+  "autojump_match": [
+    "autojump_utils.is_python3"
+  ],
+  "autojump_match.match_fuzzy": [
+    "autojump_utils.last"
+  ],
+  "autojump_match.match_fuzzy.<lambda1>": [
+    "autojump_utils.last"
+  ],
+  "autojump_utils.encode_local": [
+    "autojump_utils.is_python3"
+  ],
+  "autojump_utils.first": [
+    "autojump_utils.is_python3"
+  ],
+  "autojump_utils.has_uppercase": [
+    "autojump_utils.is_python3"
+  ],
+  "autojump_utils.last": [
+    "autojump_utils.is_python3"
+  ],
+  "autojump_utils.move_file": [
+    "autojump_utils.is_windows"
+  ],
+  "autojump_utils.print_entry": [
+    "autojump_utils.print_local"
+  ],
+  "autojump_utils.print_local": [
+    "autojump_utils.encode_local"
+  ],
+  "autojump_utils.print_tab_menu": [
+    "autojump_utils.print_local"
+  ],
+  "autojump_utils.sanitize.<lambda1>": [
+    "autojump_utils.unico"
+  ],
+  "autojump_utils.second": [
+    "autojump_utils.is_python2",
+    "autojump_utils.is_python3"
+  ],
+  "autojump_utils.surround_quotes": [
+    "autojump_utils.in_bash"
+  ],
+  "autojump_utils.unico": [
+    "autojump_utils.is_python2"
+  ]
+}

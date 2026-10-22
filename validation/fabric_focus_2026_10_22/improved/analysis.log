@@ -1,0 +1,33 @@
+=== KnitCode static call graph v2.5 (static object-flow extension) ===
+Commit          : not a git repo
+Python files    : 12
+Parse errors    : 0
+Symbols         : 98
+Call sites      : 333
+Resolved sites  : 46
+Unresolved sites: 287
+Module-level resolved sites: 1
+Collection indirect sites   : 0
+Graph edges     : 154 (CONTAINS/INHERITS/CALLS/INSTANTIATES)
+Object Flow     : 12356 expression steps, 2 budget/recursion cutoffs (entry limit 6000)
+Ambiguous sites : 0 (multiple may-call candidates)
+Conditional     : 0 (may be unbound)
+Call-site status:
+  RESOLVED_INTERNAL   : 46
+  KNOWN_NON_INTERNAL  : 141
+  UNKNOWN             : 146
+Known non-internal origin:
+  BUILTIN             : 91
+  STDLIB              : 28
+  EXTERNAL_IMPORT     : 22
+Classification :
+  BUILTIN             : 58
+  BUILTIN_METHOD      : 22
+  STDLIB              : 28
+  EXTERNAL_IMPORT     : 25
+  INDIRECT_CALL       : 10
+  FIELD_CHAIN         : 53
+  RECEIVER_UNKNOWN    : 83
+  DYNAMIC_UNKNOWN     : 8
+  Note: categories are heuristic, not verified ground truth.
+Output          : /Users/jeff_park/knitcode/validation/fabric_focus_2026_10_22/improved/analysis (report.html, classification JSON/CSV, call_statuses JSON/CSV)

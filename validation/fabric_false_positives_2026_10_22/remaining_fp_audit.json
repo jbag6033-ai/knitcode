@@ -1,0 +1,932 @@
+[
+  {
+    "caller": "fabric.config.Config.__init__",
+    "target": "invoke.config.Config.__init__",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.config.Config.__init__",
+        "target": "invoke.config.Config.__init__",
+        "call_id": "CALL:tmp5qlojs1r/fabric/config.py:93:8:11",
+        "file": "tmp5qlojs1r/fabric/config.py",
+        "line": 93,
+        "column": 8,
+        "source": "super(Config, self).__init__(*args, **kwargs)",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.config.Config._load_ssh_files",
+    "target": "<**PyStr**>.format",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.config.Config._load_ssh_files",
+        "target": "<**PyStr**>.format",
+        "call_id": "CALL:tmp5qlojs1r/fabric/config.py:184:22:27",
+        "file": "tmp5qlojs1r/fabric/config.py",
+        "line": 184,
+        "column": 22,
+        "source": "\"No such file or directory: {!r}\".format(path)",
+        "rule": "LITERAL_BUILTIN_METHOD",
+        "certainty": "SYMBOLIC_ORIGIN"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "invoke.Context.__init__",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.connection.Connection.__init__",
+        "target": "invoke.Context.__init__",
+        "call_id": "CALL:tmp5qlojs1r/fabric/connection.py:251:8:2",
+        "file": "tmp5qlojs1r/fabric/connection.py",
+        "line": 251,
+        "column": 8,
+        "source": "super(Connection, self).__init__(config=config)",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.connection.Connection.close",
+    "target": "fabric.connection.Connection.is_connected",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "implicit_property_access_in_source",
+    "evidence": [
+      {
+        "caller": "fabric.connection.Connection.close",
+        "target": "fabric.connection.Connection.is_connected",
+        "call_id": null,
+        "property_access_id": "tmp5qlojs1r/fabric/connection.py:575:11",
+        "file": "tmp5qlojs1r/fabric/connection.py",
+        "line": 575,
+        "column": 11,
+        "source": "self.is_connected",
+        "rule": "property_getter_access",
+        "certainty": "descriptor_may_execute",
+        "module_level": false
+      }
+    ]
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_remote.callback",
+    "target": "invoke.util.ExceptionHandlingThread.start",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.connection.Connection.forward_remote.callback",
+        "target": "invoke.util.ExceptionHandlingThread.start",
+        "call_id": "CALL:tmp5qlojs1r/fabric/connection.py:859:12:99",
+        "file": "tmp5qlojs1r/fabric/connection.py",
+        "line": 859,
+        "column": 12,
+        "source": "tunnel.start()",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_remote.callback",
+    "target": "socket.socket.connect",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.connection.Connection.forward_remote.callback",
+        "target": "socket.socket.connect",
+        "call_id": "CALL:tmp5qlojs1r/fabric/connection.py:854:12:96",
+        "file": "tmp5qlojs1r/fabric/connection.py",
+        "line": 854,
+        "column": 12,
+        "source": "sock.connect((local_host, local_port))",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.connection.Connection.open_gateway",
+    "target": "paramiko.config.SSHConfig.lookup",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.connection.Connection.open_gateway",
+        "target": "paramiko.config.SSHConfig.lookup",
+        "call_id": "CALL:tmp5qlojs1r/fabric/connection.py:546:32:68",
+        "file": "tmp5qlojs1r/fabric/connection.py",
+        "line": 546,
+        "column": 32,
+        "source": "ssh_conf.lookup(self.host)",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.connection.Connection.open_gateway",
+    "target": "paramiko.config.SSHConfig.parse",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.connection.Connection.open_gateway",
+        "target": "paramiko.config.SSHConfig.parse",
+        "call_id": "CALL:tmp5qlojs1r/fabric/connection.py:545:12:64",
+        "file": "tmp5qlojs1r/fabric/connection.py",
+        "line": 545,
+        "column": 12,
+        "source": "ssh_conf.parse(StringIO(dummy.format(self.host, self.gateway)))",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.executor.ConnectionCall.make_context",
+    "target": "fabric.connection.Connection.__init__",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.executor.ConnectionCall.make_context",
+        "target": "fabric.connection.Connection.__init__",
+        "call_id": "CALL:tmp5qlojs1r/fabric/executor.py:84:15:19",
+        "file": "tmp5qlojs1r/fabric/executor.py",
+        "line": 84,
+        "column": 15,
+        "source": "Connection(host=self.host, config=config)",
+        "rule": "constructor_init",
+        "trace": [
+          "fabric.connection.Connection",
+          "unknown_base"
+        ],
+        "module_level": false,
+        "execution_scope": "ConnectionCall.make_context",
+        "execution_phase": "function_body"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "fabric.exceptions.NothingToDo",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.executor.FabExecutor.expand_calls",
+        "target": "fabric.exceptions.NothingToDo",
+        "call_id": "CALL:tmp5qlojs1r/fabric/executor.py:42:22:10",
+        "file": "tmp5qlojs1r/fabric/executor.py",
+        "line": 42,
+        "column": 22,
+        "source": "NothingToDo(\n                    \"Was told to run a command, but not given any hosts to run it on!\"  # noqa\n                )",
+        "rule": "import_or_same_module",
+        "trace": [
+          "NothingToDo"
+        ],
+        "module_level": false,
+        "execution_scope": "FabExecutor.expand_calls",
+        "execution_phase": "function_body"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.parameterize",
+    "target": "<**PyStr**>.format",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.executor.FabExecutor.parameterize",
+        "target": "<**PyStr**>.format",
+        "call_id": "CALL:tmp5qlojs1r/fabric/executor.py:62:14:17",
+        "file": "tmp5qlojs1r/fabric/executor.py",
+        "line": 62,
+        "column": 14,
+        "source": "\"Parameterizing {!r} for host {!r}\".format(call, host)",
+        "rule": "LITERAL_BUILTIN_METHOD",
+        "certainty": "SYMBOLIC_ORIGIN"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.group.ThreadingGroup.run",
+    "target": "invoke.util.ExceptionHandlingThread.exception",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.group.ThreadingGroup.run",
+        "target": "invoke.util.ExceptionHandlingThread.exception",
+        "call_id": "CALL:tmp5qlojs1r/fabric/group.py:202:22:18",
+        "file": "tmp5qlojs1r/fabric/group.py",
+        "line": 202,
+        "column": 22,
+        "source": "thread.exception()",
+        "rule": "IMPORTED_CONSTRUCTOR_RESULT",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.main.Fab.create_config",
+    "target": "invoke.Program.config_class",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.main.Fab.create_config",
+        "target": "invoke.Program.config_class",
+        "call_id": "CALL:tmp5qlojs1r/fabric/main.py:95:22:18",
+        "file": "tmp5qlojs1r/fabric/main.py",
+        "line": 95,
+        "column": 22,
+        "source": "self.config_class(lazy=True)",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.main.Fab.no_tasks_given",
+    "target": "fabric.main.Fab._remainder_only",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "implicit_property_access_in_source",
+    "evidence": [
+      {
+        "caller": "fabric.main.Fab.no_tasks_given",
+        "target": "fabric.main.Fab._remainder_only",
+        "call_id": null,
+        "property_access_id": "tmp5qlojs1r/fabric/main.py:88:15",
+        "file": "tmp5qlojs1r/fabric/main.py",
+        "line": 88,
+        "column": 15,
+        "source": "self._remainder_only",
+        "rule": "property_getter_access",
+        "certainty": "descriptor_may_execute",
+        "module_level": false
+      }
+    ]
+  },
+  {
+    "caller": "fabric.main.Fab.print_version",
+    "target": "<**PyStr**>.format",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.main.Fab.print_version",
+        "target": "<**PyStr**>.format",
+        "call_id": "CALL:tmp5qlojs1r/fabric/main.py:21:14:3",
+        "file": "tmp5qlojs1r/fabric/main.py",
+        "line": 21,
+        "column": 14,
+        "source": "\"Paramiko {}\".format(paramiko)",
+        "rule": "LITERAL_BUILTIN_METHOD",
+        "certainty": "SYMBOLIC_ORIGIN"
+      },
+      {
+        "caller": "fabric.main.Fab.print_version",
+        "target": "<**PyStr**>.format",
+        "call_id": "CALL:tmp5qlojs1r/fabric/main.py:22:14:5",
+        "file": "tmp5qlojs1r/fabric/main.py",
+        "line": 22,
+        "column": 14,
+        "source": "\"Invoke {}\".format(invoke)",
+        "rule": "LITERAL_BUILTIN_METHOD",
+        "certainty": "SYMBOLIC_ORIGIN"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.main.Fab.print_version",
+    "target": "invoke.Program.print_version",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.main.Fab.print_version",
+        "target": "invoke.Program.print_version",
+        "call_id": "CALL:tmp5qlojs1r/fabric/main.py:20:8:0",
+        "file": "tmp5qlojs1r/fabric/main.py",
+        "line": 20,
+        "column": 8,
+        "source": "super(Fab, self).print_version()",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.main.make_program",
+    "target": "fabric.main.Fab",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.main.make_program",
+        "target": "fabric.main.Fab",
+        "call_id": "CALL:tmp5qlojs1r/fabric/main.py:143:11:28",
+        "file": "tmp5qlojs1r/fabric/main.py",
+        "line": 143,
+        "column": 11,
+        "source": "Fab(\n        name=\"Fabric\",\n        version=fabric,\n        executor_class=FabExecutor,\n        config_class=Config,\n    )",
+        "rule": "flow_reaching_assignment",
+        "trace": [
+          "reference:Fab@18"
+        ],
+        "module_level": false,
+        "execution_scope": "make_program",
+        "execution_phase": "function_body",
+        "certainty": "definite_within_supported_flow",
+        "reaching_definitions": [
+          {
+            "kind": "reference",
+            "name": "Fab",
+            "line": 18
+          }
+        ],
+        "may_be_unbound": false
+      }
+    ]
+  },
+  {
+    "caller": "fabric.transfer.Transfer.is_remote_dir",
+    "target": "fabric.transfer.Transfer.sftp",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "implicit_property_access_in_source",
+    "evidence": [
+      {
+        "caller": "fabric.transfer.Transfer.is_remote_dir",
+        "target": "fabric.transfer.Transfer.sftp",
+        "call_id": null,
+        "property_access_id": "tmp5qlojs1r/fabric/transfer.py:37:32",
+        "file": "tmp5qlojs1r/fabric/transfer.py",
+        "line": 37,
+        "column": 32,
+        "source": "self.sftp",
+        "rule": "property_getter_access",
+        "certainty": "descriptor_may_execute",
+        "module_level": false
+      }
+    ]
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Transfer.sftp",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "implicit_property_access_in_source",
+    "evidence": [
+      {
+        "caller": "fabric.transfer.Transfer.put",
+        "target": "fabric.transfer.Transfer.sftp",
+        "call_id": null,
+        "property_access_id": "tmp5qlojs1r/fabric/transfer.py:233:12",
+        "file": "tmp5qlojs1r/fabric/transfer.py",
+        "line": 233,
+        "column": 12,
+        "source": "self.sftp",
+        "rule": "property_getter_access",
+        "certainty": "descriptor_may_execute",
+        "module_level": false
+      },
+      {
+        "caller": "fabric.transfer.Transfer.put",
+        "target": "fabric.transfer.Transfer.sftp",
+        "call_id": null,
+        "property_access_id": "tmp5qlojs1r/fabric/transfer.py:233:34",
+        "file": "tmp5qlojs1r/fabric/transfer.py",
+        "line": 233,
+        "column": 34,
+        "source": "self.sftp",
+        "rule": "property_getter_access",
+        "certainty": "descriptor_may_execute",
+        "module_level": false
+      },
+      {
+        "caller": "fabric.transfer.Transfer.put",
+        "target": "fabric.transfer.Transfer.sftp",
+        "call_id": null,
+        "property_access_id": "tmp5qlojs1r/fabric/transfer.py:263:16",
+        "file": "tmp5qlojs1r/fabric/transfer.py",
+        "line": 263,
+        "column": 16,
+        "source": "self.sftp",
+        "rule": "property_getter_access",
+        "certainty": "descriptor_may_execute",
+        "module_level": false
+      },
+      {
+        "caller": "fabric.transfer.Transfer.put",
+        "target": "fabric.transfer.Transfer.sftp",
+        "call_id": null,
+        "property_access_id": "tmp5qlojs1r/fabric/transfer.py:268:12",
+        "file": "tmp5qlojs1r/fabric/transfer.py",
+        "line": 268,
+        "column": 12,
+        "source": "self.sftp",
+        "rule": "property_getter_access",
+        "certainty": "descriptor_may_execute",
+        "module_level": false
+      },
+      {
+        "caller": "fabric.transfer.Transfer.put",
+        "target": "fabric.transfer.Transfer.sftp",
+        "call_id": null,
+        "property_access_id": "tmp5qlojs1r/fabric/transfer.py:275:16",
+        "file": "tmp5qlojs1r/fabric/transfer.py",
+        "line": 275,
+        "column": 16,
+        "source": "self.sftp",
+        "rule": "property_getter_access",
+        "certainty": "descriptor_may_execute",
+        "module_level": false
+      }
+    ]
+  },
+  {
+    "caller": "fabric.tunnels.Tunnel.__init__",
+    "target": "invoke.util.ExceptionHandlingThread.__init__",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.tunnels.Tunnel.__init__",
+        "target": "invoke.util.ExceptionHandlingThread.__init__",
+        "call_id": "CALL:tmp5qlojs1r/fabric/tunnels.py:125:8:22",
+        "file": "tmp5qlojs1r/fabric/tunnels.py",
+        "line": 125,
+        "column": 8,
+        "source": "super(Tunnel, self).__init__()",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager.__init__",
+    "target": "invoke.util.ExceptionHandlingThread.__init__",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.tunnels.TunnelManager.__init__",
+        "target": "invoke.util.ExceptionHandlingThread.__init__",
+        "call_id": "CALL:tmp5qlojs1r/fabric/tunnels.py:42:8:0",
+        "file": "tmp5qlojs1r/fabric/tunnels.py",
+        "line": 42,
+        "column": 8,
+        "source": "super(TunnelManager, self).__init__()",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "socket.socket.accept",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.tunnels.TunnelManager._run",
+        "target": "socket.socket.accept",
+        "call_id": "CALL:tmp5qlojs1r/fabric/tunnels.py:68:39:8",
+        "file": "tmp5qlojs1r/fabric/tunnels.py",
+        "line": 68,
+        "column": 39,
+        "source": "sock.accept()",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "socket.socket.bind",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.tunnels.TunnelManager._run",
+        "target": "socket.socket.bind",
+        "call_id": "CALL:tmp5qlojs1r/fabric/tunnels.py:60:8:5",
+        "file": "tmp5qlojs1r/fabric/tunnels.py",
+        "line": 60,
+        "column": 8,
+        "source": "sock.bind(self.local_address)",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "socket.socket.close",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.tunnels.TunnelManager._run",
+        "target": "socket.socket.close",
+        "call_id": "CALL:tmp5qlojs1r/fabric/tunnels.py:109:8:21",
+        "file": "tmp5qlojs1r/fabric/tunnels.py",
+        "line": 109,
+        "column": 8,
+        "source": "sock.close()",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "socket.socket.listen",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.tunnels.TunnelManager._run",
+        "target": "socket.socket.listen",
+        "call_id": "CALL:tmp5qlojs1r/fabric/tunnels.py:61:8:6",
+        "file": "tmp5qlojs1r/fabric/tunnels.py",
+        "line": 61,
+        "column": 8,
+        "source": "sock.listen(1)",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "socket.socket.setblocking",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.tunnels.TunnelManager._run",
+        "target": "socket.socket.setblocking",
+        "call_id": "CALL:tmp5qlojs1r/fabric/tunnels.py:59:8:4",
+        "file": "tmp5qlojs1r/fabric/tunnels.py",
+        "line": 59,
+        "column": 8,
+        "source": "sock.setblocking(0)",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "socket.socket.setsockopt",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "fabric.tunnels.TunnelManager._run",
+        "target": "socket.socket.setsockopt",
+        "call_id": "CALL:tmp5qlojs1r/fabric/tunnels.py:55:8:3",
+        "file": "tmp5qlojs1r/fabric/tunnels.py",
+        "line": 55,
+        "column": 8,
+        "source": "sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "invoke.vendor.six.moves.queue.Queue.empty",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+        "target": "invoke.vendor.six.moves.queue.Queue.empty",
+        "call_id": "CALL:tmp5qlojs1r/integration/concurrency.py:85:18:26",
+        "file": "tmp5qlojs1r/integration/concurrency.py",
+        "line": 85,
+        "column": 18,
+        "source": "queue.empty()",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+    "target": "invoke.vendor.six.moves.queue.Queue.get",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "integration.concurrency.concurrency.manual_threading_works_okay",
+        "target": "invoke.vendor.six.moves.queue.Queue.get",
+        "call_id": "CALL:tmp5qlojs1r/integration/concurrency.py:86:36:27",
+        "file": "tmp5qlojs1r/integration/concurrency.py",
+        "line": 86,
+        "column": 36,
+        "source": "queue.get(block=False)",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "integration.connection.Connection_.large_remote_commands_finish_cleanly",
+    "target": "<**PyStr**>.format",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "integration.connection.Connection_.large_remote_commands_finish_cleanly",
+        "target": "<**PyStr**>.format",
+        "call_id": "CALL:tmp5qlojs1r/integration/connection.py:114:25:37",
+        "file": "tmp5qlojs1r/integration/connection.py",
+        "line": 114,
+        "column": 25,
+        "source": "\"cat {}\".format(path)",
+        "rule": "LITERAL_BUILTIN_METHOD",
+        "certainty": "SYMBOLIC_ORIGIN"
+      }
+    ]
+  },
+  {
+    "caller": "integration.connection.Connection_.local.wraps_invoke_run",
+    "target": "fabric.connection.Connection.is_connected",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "implicit_property_access_in_source",
+    "evidence": [
+      {
+        "caller": "integration.connection.Connection_.local.wraps_invoke_run",
+        "target": "fabric.connection.Connection.is_connected",
+        "call_id": null,
+        "property_access_id": "tmp5qlojs1r/integration/connection.py:65:23",
+        "file": "tmp5qlojs1r/integration/connection.py",
+        "line": 65,
+        "column": 23,
+        "source": "cxn.is_connected",
+        "rule": "property_getter_access",
+        "certainty": "descriptor_may_execute",
+        "module_level": false
+      }
+    ]
+  },
+  {
+    "caller": "integration.connection.Connection_.mixed_use_of_local_and_run",
+    "target": "fabric.connection.Connection.is_connected",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "implicit_property_access_in_source",
+    "evidence": [
+      {
+        "caller": "integration.connection.Connection_.mixed_use_of_local_and_run",
+        "target": "fabric.connection.Connection.is_connected",
+        "call_id": null,
+        "property_access_id": "tmp5qlojs1r/integration/connection.py:74:19",
+        "file": "tmp5qlojs1r/integration/connection.py",
+        "line": 74,
+        "column": 19,
+        "source": "cxn.is_connected",
+        "rule": "property_getter_access",
+        "certainty": "descriptor_may_execute",
+        "module_level": false
+      },
+      {
+        "caller": "integration.connection.Connection_.mixed_use_of_local_and_run",
+        "target": "fabric.connection.Connection.is_connected",
+        "call_id": null,
+        "property_access_id": "tmp5qlojs1r/integration/connection.py:76:15",
+        "file": "tmp5qlojs1r/integration/connection.py",
+        "line": 76,
+        "column": 15,
+        "source": "cxn.is_connected",
+        "rule": "property_getter_access",
+        "certainty": "descriptor_may_execute",
+        "module_level": false
+      }
+    ]
+  },
+  {
+    "caller": "integration.connection.Connection_.ssh_connections.close_method_closes_connection",
+    "target": "fabric.connection.Connection.is_connected",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "implicit_property_access_in_source",
+    "evidence": [
+      {
+        "caller": "integration.connection.Connection_.ssh_connections.close_method_closes_connection",
+        "target": "fabric.connection.Connection.is_connected",
+        "call_id": null,
+        "property_access_id": "tmp5qlojs1r/integration/connection.py:30:19",
+        "file": "tmp5qlojs1r/integration/connection.py",
+        "line": 30,
+        "column": 19,
+        "source": "c.is_connected",
+        "rule": "property_getter_access",
+        "certainty": "descriptor_may_execute",
+        "module_level": false
+      }
+    ]
+  },
+  {
+    "caller": "integration.connection.Connection_.ssh_connections.close_method_closes_connection",
+    "target": "paramiko.client.SSHClient.get_transport",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "integration.connection.Connection_.ssh_connections.close_method_closes_connection",
+        "target": "paramiko.client.SSHClient.get_transport",
+        "call_id": "CALL:tmp5qlojs1r/integration/connection.py:29:19:7",
+        "file": "tmp5qlojs1r/integration/connection.py",
+        "line": 29,
+        "column": 19,
+        "source": "c.client.get_transport()",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "integration.connection.Connection_.ssh_connections.open_method_generates_real_connection",
+    "target": "fabric.connection.Connection.is_connected",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "implicit_property_access_in_source",
+    "evidence": [
+      {
+        "caller": "integration.connection.Connection_.ssh_connections.open_method_generates_real_connection",
+        "target": "fabric.connection.Connection.is_connected",
+        "call_id": null,
+        "property_access_id": "tmp5qlojs1r/integration/connection.py:21:19",
+        "file": "tmp5qlojs1r/integration/connection.py",
+        "line": 21,
+        "column": 19,
+        "source": "c.is_connected",
+        "rule": "property_getter_access",
+        "certainty": "descriptor_may_execute",
+        "module_level": false
+      }
+    ]
+  },
+  {
+    "caller": "integration.connection.Connection_.ssh_connections.open_method_generates_real_connection",
+    "target": "paramiko.client.SSHClient.get_transport",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "integration.connection.Connection_.ssh_connections.open_method_generates_real_connection",
+        "target": "paramiko.client.SSHClient.get_transport",
+        "call_id": "CALL:tmp5qlojs1r/integration/connection.py:20:19:4",
+        "file": "tmp5qlojs1r/integration/connection.py",
+        "line": 20,
+        "column": 19,
+        "source": "c.client.get_transport()",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "integration.group.Group_.excepted_command",
+    "target": "fabric.group.ThreadingGroup",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "integration.group.Group_.excepted_command",
+        "target": "fabric.group.ThreadingGroup",
+        "call_id": "CALL:tmp5qlojs1r/integration/group.py:28:16:7",
+        "file": "tmp5qlojs1r/integration/group.py",
+        "line": 28,
+        "column": 16,
+        "source": "Group(\"nopebadhost1\", \"nopebadhost2\")",
+        "rule": "import_or_same_module",
+        "trace": [
+          "Group"
+        ],
+        "module_level": false,
+        "execution_scope": "Group_.excepted_command",
+        "execution_phase": "function_body"
+      }
+    ]
+  },
+  {
+    "caller": "integration.group.Group_.failed_command",
+    "target": "fabric.group.ThreadingGroup",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "integration.group.Group_.failed_command",
+        "target": "fabric.group.ThreadingGroup",
+        "call_id": "CALL:tmp5qlojs1r/integration/group.py:15:16:4",
+        "file": "tmp5qlojs1r/integration/group.py",
+        "line": 15,
+        "column": 16,
+        "source": "Group(\"localhost\", \"127.0.0.1\")",
+        "rule": "import_or_same_module",
+        "trace": [
+          "Group"
+        ],
+        "module_level": false,
+        "execution_scope": "Group_.failed_command",
+        "execution_phase": "function_body"
+      }
+    ]
+  },
+  {
+    "caller": "integration.group.Group_.simple_command",
+    "target": "fabric.group.ThreadingGroup",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "integration.group.Group_.simple_command",
+        "target": "fabric.group.ThreadingGroup",
+        "call_id": "CALL:tmp5qlojs1r/integration/group.py:9:16:0",
+        "file": "tmp5qlojs1r/integration/group.py",
+        "line": 9,
+        "column": 16,
+        "source": "Group(\"localhost\", \"127.0.0.1\")",
+        "rule": "import_or_same_module",
+        "trace": [
+          "Group"
+        ],
+        "module_level": false,
+        "execution_scope": "Group_.simple_command",
+        "execution_phase": "function_body"
+      }
+    ]
+  },
+  {
+    "caller": "integration.transfer.Transfer_.put.base_case",
+    "target": "py.path.local.as_cwd",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "integration.transfer.Transfer_.put.base_case",
+        "target": "py.path.local.as_cwd",
+        "call_id": "CALL:tmp5qlojs1r/integration/transfer.py:60:17:27",
+        "file": "tmp5qlojs1r/integration/transfer.py",
+        "line": 60,
+        "column": 17,
+        "source": "path.local(local_dir).as_cwd()",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "caller": "sites.shared_conf",
+    "target": "<**PyList**>.append",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "sites.shared_conf",
+        "target": "<**PyList**>.append",
+        "call_id": "CALL:tmp5qlojs1r/sites/shared_conf.py:37:0:2",
+        "file": "tmp5qlojs1r/sites/shared_conf.py",
+        "line": 37,
+        "column": 0,
+        "source": "extensions.append(\"sphinx.ext.doctest\")",
+        "rule": "FLOW_BUILTIN_METHOD",
+        "certainty": "SYMBOLIC_ORIGIN"
+      }
+    ]
+  },
+  {
+    "caller": "tasks",
+    "target": "invoke.Collection.configure",
+    "oracle_status": "absent_from_original_ground_truth",
+    "review": "requires_source_or_dependency_semantic_review",
+    "evidence": [
+      {
+        "caller": "tasks",
+        "target": "invoke.Collection.configure",
+        "call_id": "CALL:tmp5qlojs1r/tasks.py:96:0:13",
+        "file": "tmp5qlojs1r/tasks.py",
+        "line": 96,
+        "column": 0,
+        "source": "ns.configure(\n    {\n        \"tests\": {\n            # TODO: have pytest tasks honor these?\n            \"package\": \"fabric\",\n            \"logformat\": LOG_FORMAT,\n        },\n        \"packaging\": {\n            # NOTE: this is currently for identifying the source directory.\n            # Should it get used for actual releasing, needs changing.\n            \"package\": \"fabric\",\n            \"sign\": True,\n            \"wheel\": True,\n            \"check_desc\": True,\n            \"changelog_file\": \"sites/www/changelog.rst\",\n        },\n        # TODO: perhaps move this into a tertiary, non automatically loaded,\n        # conf file so that both this & the code under test can reference it?\n        # Meh.\n        \"travis\": {\n            \"sudo\": {\"user\": \"sudouser\", \"password\": \"mypass\"},\n            \"black\": {\"version\": \"18.6b4\"},\n        },\n    }\n)",
+        "rule": "INTERPROCEDURAL_IMPORT_FLOW",
+        "certainty": "SYMBOLIC_RECEIVER_CANDIDATE"
+      }
+    ]
+  }
+]

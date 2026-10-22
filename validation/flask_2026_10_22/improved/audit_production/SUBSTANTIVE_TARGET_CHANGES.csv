@@ -1,0 +1,9 @@
+﻿change,call_id,file,line,source,caller,group,old_status,old_origin,new_status,old_targets,new_targets,relations,rules,all_target_nodes_exist,target_definition_locations,source_excerpt,source_relevant_imports,target_definition_excerpts,manual_label,manual_evidence,old_targets_normalized
+substantive_target_change,CALL:src/flask/json/tag.py:323:15:49,src/flask/json/tag.py,323,"dumps(self.tag(value), separators=("","", "":""))",METHOD:flask.json.tag.TaggedJSONSerializer.dumps,production,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""METHOD:flask.json.tag.TaggedJSONSerializer.dumps""]","[""FUNCTION:flask.json.dumps""]","[""CALLS""]","[""import_or_same_module""]",True,"[{""target"": ""FUNCTION:flask.json.dumps"", ""file"": ""src/flask/json/__init__.py"", ""line"": 13}]","321:     def dumps(self, value: t.Any) -> str:
+322:         """"""Tag the value and dump it to a compact JSON string.""""""
+323:         return dumps(self.tag(value), separators=("","", "":""))
+324: 
+325:     def loads(self, value: str) -> t.Any:",,,UNREVIEWED,,"[""METHOD:flask.json.tag.TaggedJSONSerializer.dumps""]"
+substantive_target_change,CALL:src/flask/json/tag.py:327:32:52,src/flask/json/tag.py,327,loads(value),METHOD:flask.json.tag.TaggedJSONSerializer.loads,production,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""METHOD:flask.json.tag.TaggedJSONSerializer.loads""]","[""FUNCTION:flask.json.loads""]","[""CALLS""]","[""import_or_same_module""]",True,"[{""target"": ""FUNCTION:flask.json.loads"", ""file"": ""src/flask/json/__init__.py"", ""line"": 77}]","325:     def loads(self, value: str) -> t.Any:
+326:         """"""Load data from a JSON string and deserialized any tagged objects.""""""
+327:         return self._untag_scan(loads(value))",,,UNREVIEWED,,"[""METHOD:flask.json.tag.TaggedJSONSerializer.loads""]"

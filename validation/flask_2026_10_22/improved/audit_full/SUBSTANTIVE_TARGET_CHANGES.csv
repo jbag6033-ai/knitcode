@@ -1,0 +1,542 @@
+﻿change,call_id,file,line,source,caller,group,old_status,old_origin,new_status,old_targets,new_targets,relations,rules,all_target_nodes_exist,target_definition_locations,source_excerpt,source_relevant_imports,target_definition_excerpts,manual_label,manual_evidence,old_targets_normalized
+substantive_target_change,CALL:flask/examples/celery/src/task_app/__init__.py:8:10:0,flask/examples/celery/src/task_app/__init__.py,8,Flask(__name__),FUNCTION:examples.celery.src.task_app.create_app,example,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","6: 
+7: def create_app() -> Flask:
+8:     app = Flask(__name__)
+9:     app.config.from_mapping(
+10:         CELERY={",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/examples/javascript/js_example/__init__.py:3:6:0,flask/examples/javascript/js_example/__init__.py,3,Flask(__name__),MODULE:examples.javascript.js_example,example,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1: from flask import Flask
+2: 
+3: app = Flask(__name__)
+4: 
+5: from js_example import views  # noqa: F401",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/examples/tutorial/flaskr/__init__.py:8:10:0,flask/examples/tutorial/flaskr/__init__.py,8,"Flask(__name__, instance_relative_config=True)",FUNCTION:examples.tutorial.flaskr.create_app,example,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","6: def create_app(test_config=None):
+7:     """"""Create and configure an instance of the Flask application.""""""
+8:     app = Flask(__name__, instance_relative_config=True)
+9:     app.config.from_mapping(
+10:         # a default secret that should be overridden by instance config",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/src/flask/json/tag.py:323:15:49,flask/src/flask/json/tag.py,323,"dumps(self.tag(value), separators=("","", "":""))",METHOD:flask.json.tag.TaggedJSONSerializer.dumps,production,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""METHOD:flask.json.tag.TaggedJSONSerializer.dumps""]","[""FUNCTION:flask.json.dumps""]","[""CALLS""]","[""import_or_same_module""]",True,"[{""target"": ""FUNCTION:flask.json.dumps"", ""file"": ""flask/src/flask/json/__init__.py"", ""line"": 13}]","321:     def dumps(self, value: t.Any) -> str:
+322:         """"""Tag the value and dump it to a compact JSON string.""""""
+323:         return dumps(self.tag(value), separators=("","", "":""))
+324: 
+325:     def loads(self, value: str) -> t.Any:",,,UNREVIEWED,,"[""METHOD:flask.json.tag.TaggedJSONSerializer.dumps""]"
+substantive_target_change,CALL:flask/src/flask/json/tag.py:327:32:52,flask/src/flask/json/tag.py,327,loads(value),METHOD:flask.json.tag.TaggedJSONSerializer.loads,production,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""METHOD:flask.json.tag.TaggedJSONSerializer.loads""]","[""FUNCTION:flask.json.loads""]","[""CALLS""]","[""import_or_same_module""]",True,"[{""target"": ""FUNCTION:flask.json.loads"", ""file"": ""flask/src/flask/json/__init__.py"", ""line"": 77}]","325:     def loads(self, value: str) -> t.Any:
+326:         """"""Load data from a JSON string and deserialized any tagged objects.""""""
+327:         return self._untag_scan(loads(value))",,,UNREVIEWED,,"[""METHOD:flask.json.tag.TaggedJSONSerializer.loads""]"
+substantive_target_change,CALL:flask/tests/conftest.py:29:10:2,flask/tests/conftest.py,29,"Flask(""flask_test"", root_path=os.path.dirname(__file__))",FUNCTION:tests.conftest.app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","27: @pytest.fixture
+28: def app():
+29:     app = Flask(""flask_test"", root_path=os.path.dirname(__file__))
+30:     app.config.update(
+31:         TESTING=True,",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_apps/blueprintapp/__init__.py:3:6:0,flask/tests/test_apps/blueprintapp/__init__.py,3,Flask(__name__),MODULE:tests.test_apps.blueprintapp,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1: from flask import Flask
+2: 
+3: app = Flask(__name__)
+4: app.config[""DEBUG""] = True
+5: from blueprintapp.apps.admin import admin  # noqa: E402",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_apps/cliapp/app.py:3:10:0,flask/tests/test_apps/cliapp/app.py,3,"Flask(""testapp"")",MODULE:tests.test_apps.cliapp.app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1: from flask import Flask
+2: 
+3: testapp = Flask(""testapp"")",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_apps/cliapp/factory.py:5:11:0,flask/tests/test_apps/cliapp/factory.py,5,"Flask(""app"")",FUNCTION:tests.test_apps.cliapp.factory.create_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","3: 
+4: def create_app():
+5:     return Flask(""app"")
+6: 
+7: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_apps/cliapp/factory.py:9:11:1,flask/tests/test_apps/cliapp/factory.py,9,"Flask(""_"".join([""app2"", foo, bar]))",FUNCTION:tests.test_apps.cliapp.factory.create_app2,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","7: 
+8: def create_app2(foo, bar):
+9:     return Flask(""_"".join([""app2"", foo, bar]))
+10: 
+11: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_apps/cliapp/importerrorapp.py:5:10:1,flask/tests/test_apps/cliapp/importerrorapp.py,5,"Flask(""testapp"")",MODULE:tests.test_apps.cliapp.importerrorapp,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","3: raise ImportError()
+4: 
+5: testapp = Flask(""testapp"")",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_apps/cliapp/inner1/__init__.py:3:14:0,flask/tests/test_apps/cliapp/inner1/__init__.py,3,Flask(__name__),MODULE:tests.test_apps.cliapp.inner1,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1: from flask import Flask
+2: 
+3: application = Flask(__name__)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_apps/cliapp/inner1/inner2/flask.py:3:6:0,flask/tests/test_apps/cliapp/inner1/inner2/flask.py,3,Flask(__name__),MODULE:tests.test_apps.cliapp.inner1.inner2.flask,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1: from flask import Flask
+2: 
+3: app = Flask(__name__)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_apps/cliapp/multiapp.py:3:7:0,flask/tests/test_apps/cliapp/multiapp.py,3,"Flask(""app1"")",MODULE:tests.test_apps.cliapp.multiapp,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1: from flask import Flask
+2: 
+3: app1 = Flask(""app1"")
+4: app2 = Flask(""app2"")",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_apps/cliapp/multiapp.py:4:7:1,flask/tests/test_apps/cliapp/multiapp.py,4,"Flask(""app2"")",MODULE:tests.test_apps.cliapp.multiapp,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","2: 
+3: app1 = Flask(""app1"")
+4: app2 = Flask(""app2"")",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_apps/helloworld/hello.py:3:6:0,flask/tests/test_apps/helloworld/hello.py,3,Flask(__name__),MODULE:tests.test_apps.helloworld.hello,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1: from flask import Flask
+2: 
+3: app = Flask(__name__)
+4: 
+5: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_async.py:103:10:32,flask/tests/test_async.py,103,Flask(__name__),FUNCTION:tests.test_async.test_async_before_after_request,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","101:     bp_after_called = False
+102: 
+103:     app = Flask(__name__)
+104: 
+105:     @app.route(""/"")",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_async.py:42:10:5,flask/tests/test_async.py,42,Flask(__name__),FUNCTION:tests.test_async._async_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","40: @pytest.fixture(name=""async_app"")
+41: def _async_app():
+42:     app = Flask(__name__)
+43: 
+44:     @app.route(""/"", methods=[""GET"", ""POST""])",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1239:10:362,flask/tests/test_basic.py,1239,flask.Flask(__name__),FUNCTION:tests.test_basic.test_response_type_errors,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1237: 
+1238: def test_response_type_errors():
+1239:     app = flask.Flask(__name__)
+1240:     app.testing = True
+1241: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1436:10:426,flask/tests/test_basic.py,1436,"flask.Flask(__name__, static_url_path=""/foo"")",FUNCTION:tests.test_basic.test_static_url_path,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1434: 
+1435: def test_static_url_path():
+1436:     app = flask.Flask(__name__, static_url_path=""/foo"")
+1437:     app.testing = True
+1438: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1447:10:431,flask/tests/test_basic.py,1447,"flask.Flask(__name__, static_url_path=""/foo/"")",FUNCTION:tests.test_basic.test_static_url_path_with_ending_slash,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1445: 
+1446: def test_static_url_path_with_ending_slash():
+1447:     app = flask.Flask(__name__, static_url_path=""/foo/"")
+1448:     app.testing = True
+1449: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1458:10:436,flask/tests/test_basic.py,1458,"flask.Flask(__name__, static_folder="""", static_url_path="""")",FUNCTION:tests.test_basic.test_static_url_empty_path,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1456: 
+1457: def test_static_url_empty_path(app):
+1458:     app = flask.Flask(__name__, static_folder="""", static_url_path="""")
+1459: 
+1460:     with app.test_client().open(""/static/index.html"", method=""GET"") as rv:",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1465:10:439,flask/tests/test_basic.py,1465,"flask.Flask(__name__, static_folder="""")",FUNCTION:tests.test_basic.test_static_url_empty_path_default,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1463: 
+1464: def test_static_url_empty_path_default(app):
+1465:     app = flask.Flask(__name__, static_folder="""")
+1466: 
+1467:     with app.test_client().open(""/static/index.html"", method=""GET"") as rv:",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1474:10:442,flask/tests/test_basic.py,1474,"flask.Flask(__name__, static_folder=Path(""static""))",FUNCTION:tests.test_basic.test_static_folder_with_pathlib_path,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1472:     from pathlib import Path
+1473: 
+1474:     app = flask.Flask(__name__, static_folder=Path(""static""))
+1475: 
+1476:     with app.test_client().open(""/static/index.html"", method=""GET"") as rv:",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1481:10:446,flask/tests/test_basic.py,1481,"flask.Flask(__name__, static_folder=""static/"")",FUNCTION:tests.test_basic.test_static_folder_with_ending_slash,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1479: 
+1480: def test_static_folder_with_ending_slash():
+1481:     app = flask.Flask(__name__, static_folder=""static/"")
+1482: 
+1483:     @app.route(""/<path:path>"")",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1492:10:450,flask/tests/test_basic.py,1492,"flask.Flask(__name__, host_matching=True, static_host=""example.com"")",FUNCTION:tests.test_basic.test_static_route_with_host_matching,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1490: 
+1491: def test_static_route_with_host_matching():
+1492:     app = flask.Flask(__name__, host_matching=True, static_host=""example.com"")
+1493:     c = app.test_client()
+1494: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1503:8:456,flask/tests/test_basic.py,1503,"flask.Flask(__name__, static_host=""example.com"")",FUNCTION:tests.test_basic.test_static_route_with_host_matching,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1501:     # Providing static_host without host_matching=True should error.
+1502:     with pytest.raises(AssertionError):
+1503:         flask.Flask(__name__, static_host=""example.com"")
+1504:     # Providing host_matching=True with static_folder
+1505:     # but without static_host should error.",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1507:8:458,flask/tests/test_basic.py,1507,"flask.Flask(__name__, host_matching=True)",FUNCTION:tests.test_basic.test_static_route_with_host_matching,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1505:     # but without static_host should error.
+1506:     with pytest.raises(AssertionError):
+1507:         flask.Flask(__name__, host_matching=True)
+1508:     # Providing host_matching=True without static_host
+1509:     # but with static_folder=None should not error.",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1510:4:459,flask/tests/test_basic.py,1510,"flask.Flask(__name__, host_matching=True, static_folder=None)",FUNCTION:tests.test_basic.test_static_route_with_host_matching,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1508:     # Providing host_matching=True without static_host
+1509:     # but with static_folder=None should not error.
+1510:     flask.Flask(__name__, host_matching=True, static_folder=None)
+1511: 
+1512: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1535:10:463,flask/tests/test_basic.py,1535,"flask.Flask(
+        __name__,
+        subdomain_matching=subdomain_matching,
+        host_matching=host_matching,
+        static_host=""example.test"" if host_matching else None,
+    )",FUNCTION:tests.test_basic.test_server_name_matching,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1533:     expect_host: str,
+1534: ) -> None:
+1535:     app = flask.Flask(
+1536:         __name__,
+1537:         subdomain_matching=subdomain_matching,",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1566:10:472,flask/tests/test_basic.py,1566,"flask.Flask(__name__, subdomain_matching=True)",FUNCTION:tests.test_basic.test_server_name_subdomain,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1564: 
+1565: def test_server_name_subdomain():
+1566:     app = flask.Flask(__name__, subdomain_matching=True)
+1567:     client = app.test_client()
+1568: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1784:10:543,flask/tests/test_basic.py,1784,"flask.Flask(__name__, subdomain_matching=True)",FUNCTION:tests.test_basic.test_subdomain_basic_support,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1782: 
+1783: def test_subdomain_basic_support():
+1784:     app = flask.Flask(__name__, subdomain_matching=True)
+1785:     app.config[""SERVER_NAME""] = ""localhost.localdomain""
+1786:     client = app.test_client()",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1804:10:549,flask/tests/test_basic.py,1804,"flask.Flask(__name__, subdomain_matching=True)",FUNCTION:tests.test_basic.test_subdomain_matching,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1802: 
+1803: def test_subdomain_matching():
+1804:     app = flask.Flask(__name__, subdomain_matching=True)
+1805:     client = app.test_client()
+1806:     app.config[""SERVER_NAME""] = ""localhost.localdomain""",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1817:10:553,flask/tests/test_basic.py,1817,"flask.Flask(__name__, subdomain_matching=True)",FUNCTION:tests.test_basic.test_subdomain_matching_with_ports,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1815: 
+1816: def test_subdomain_matching_with_ports():
+1817:     app = flask.Flask(__name__, subdomain_matching=True)
+1818:     app.config[""SERVER_NAME""] = ""localhost.localdomain:3000""
+1819:     client = app.test_client()",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1831:10:558,flask/tests/test_basic.py,1831,"flask.Flask(__name__, subdomain_matching=matching)",FUNCTION:tests.test_basic.test_subdomain_matching_other_name,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1829: @pytest.mark.parametrize(""matching"", (False, True))
+1830: def test_subdomain_matching_other_name(matching):
+1831:     app = flask.Flask(__name__, subdomain_matching=matching)
+1832:     app.config[""SERVER_NAME""] = ""localhost.localdomain:3000""
+1833:     client = app.test_client()",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_basic.py:1967:14:594,flask/tests/test_basic.py,1967,flask.Flask(__name__),FUNCTION:tests.test_basic.test_app_freed_on_zero_refcount,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","1965:     gc.disable()
+1966:     try:
+1967:         app = flask.Flask(__name__)
+1968:         assert app.view_functions[""static""]
+1969:         weak = weakref.ref(app)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_blueprints.py:217:9:81,flask/tests/test_blueprints.py,217,flask.Flask(__name__),FUNCTION:tests.test_blueprints.test_templates_and_static,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","215:         assert e.value.name == ""missing.html""
+216: 
+217:     with flask.Flask(__name__).test_request_context():
+218:         assert flask.render_template(""nested/nested.txt"") == ""I'm nested""
+219: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:100:16:22,flask/tests/test_cli.py,100,"Flask(""appname1"")",FUNCTION:tests.test_cli.test_find_best_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","98: 
+99:     class Module:
+100:         myapp = Flask(""appname1"")
+101: 
+102:         @staticmethod",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:104:19:23,flask/tests/test_cli.py,104,"Flask(""appname2"")",METHOD:tests.test_cli.test_find_best_app.Module.create_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","102:         @staticmethod
+103:         def create_app():
+104:             return Flask(""appname2"")
+105: 
+106:     assert find_best_app(Module) == Module.myapp",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:114:17:26,flask/tests/test_cli.py,114,"Flask(""appname1"")",FUNCTION:tests.test_cli.test_find_best_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","112: 
+113:     class Module:
+114:         myapp1 = Flask(""appname1"")
+115:         myapp2 = Flask(""appname2"")
+116: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:115:17:27,flask/tests/test_cli.py,115,"Flask(""appname2"")",FUNCTION:tests.test_cli.test_find_best_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","113:     class Module:
+114:         myapp1 = Flask(""appname1"")
+115:         myapp2 = Flask(""appname2"")
+116: 
+117:     pytest.raises(NoAppException, find_best_app, Module)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:122:19:29,flask/tests/test_cli.py,122,"Flask(""appname2"")",METHOD:tests.test_cli.test_find_best_app.Module.create_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","120:         @staticmethod
+121:         def create_app(foo, bar):
+122:             return Flask(""appname2"")
+123: 
+124:     pytest.raises(NoAppException, find_best_app, Module)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:265:15:61,flask/tests/test_cli.py,265,"Flask(""createapp"")",FUNCTION:tests.test_cli.test_scriptinfo.create_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","263: 
+264:     def create_app():
+265:         return Flask(""createapp"")
+266: 
+267:     obj = ScriptInfo(create_app=create_app)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:312:40:84,flask/tests/test_cli.py,312,"Flask(""testapp"")",LAMBDA:tests.test_cli.test_with_appcontext.<lambda@312:32>,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","310:         click.echo(current_app.name)
+311: 
+312:     obj = ScriptInfo(create_app=lambda: Flask(""testapp""))
+313: 
+314:     result = runner.invoke(testcmd, obj=obj)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:336:40:93,flask/tests/test_cli.py,336,"Flask(""testappgroup"")",LAMBDA:tests.test_cli.test_appgroup_app_context.<lambda@336:32>,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","334:         click.echo(current_app.name)
+335: 
+336:     obj = ScriptInfo(create_app=lambda: Flask(""testappgroup""))
+337: 
+338:     result = runner.invoke(cli, [""test""], obj=obj)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:349:15:96,flask/tests/test_cli.py,349,"Flask(""flaskgroup"")",FUNCTION:tests.test_cli.test_flaskgroup_app_context.create_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","347: def test_flaskgroup_app_context(runner):
+348:     def create_app():
+349:         return Flask(""flaskgroup"")
+350: 
+351:     @click.group(cls=FlaskGroup, create_app=create_app)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:367:14:102,flask/tests/test_cli.py,367,"Flask(""flaskgroup"")",FUNCTION:tests.test_cli.test_flaskgroup_debug.create_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","365: def test_flaskgroup_debug(runner, set_debug_flag):
+366:     def create_app():
+367:         app = Flask(""flaskgroup"")
+368:         app.debug = True
+369:         return app",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:448:14:125,flask/tests/test_cli.py,448,Flask(__name__),METHOD:tests.test_cli.TestRoutes.app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","446:     @pytest.fixture
+447:     def app(self):
+448:         app = Flask(__name__)
+449:         app.add_url_rule(
+450:             ""/get_post/<int:x>/<int:y>"",",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:496:14:146,flask/tests/test_cli.py,496,"Flask(__name__, static_folder=None)",METHOD:tests.test_cli.TestRoutes.test_no_routes,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","494: 
+495:     def test_no_routes(self, runner):
+496:         app = Flask(__name__, static_folder=None)
+497:         cli = FlaskGroup(create_app=lambda: app)
+498:         result = runner.invoke(cli, [""routes""])",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:49:14:4,flask/tests/test_cli.py,49,"Flask(""appname"")",FUNCTION:tests.test_cli.test_find_best_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","47: def test_find_best_app(test_apps):
+48:     class Module:
+49:         app = Flask(""appname"")
+50: 
+51:     assert find_best_app(Module) == Module.app",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:503:14:149,flask/tests/test_cli.py,503,"Flask(__name__, static_folder=None)",METHOD:tests.test_cli.TestRoutes.test_subdomain,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","501: 
+502:     def test_subdomain(self, runner):
+503:         app = Flask(__name__, static_folder=None)
+504:         app.add_url_rule(""/a"", subdomain=""a"", endpoint=""a"")
+505:         app.add_url_rule(""/b"", subdomain=""b"", endpoint=""b"")",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:512:14:154,flask/tests/test_cli.py,512,"Flask(__name__, static_folder=None, host_matching=True)",METHOD:tests.test_cli.TestRoutes.test_host,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","510: 
+511:     def test_host(self, runner):
+512:         app = Flask(__name__, static_folder=None, host_matching=True)
+513:         app.add_url_rule(""/a"", host=""a"", endpoint=""a"")
+514:         app.add_url_rule(""/b"", host=""b"", endpoint=""b"")",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:54:22:6,flask/tests/test_cli.py,54,"Flask(""appname"")",FUNCTION:tests.test_cli.test_find_best_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","52: 
+53:     class Module:
+54:         application = Flask(""appname"")
+55: 
+56:     assert find_best_app(Module) == Module.application",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:59:16:8,flask/tests/test_cli.py,59,"Flask(""appname"")",FUNCTION:tests.test_cli.test_find_best_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","57: 
+58:     class Module:
+59:         myapp = Flask(""appname"")
+60: 
+61:     assert find_best_app(Module) == Module.myapp",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:66:19:10,flask/tests/test_cli.py,66,"Flask(""appname"")",METHOD:tests.test_cli.test_find_best_app.Module.create_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","64:         @staticmethod
+65:         def create_app():
+66:             return Flask(""appname"")
+67: 
+68:     app = find_best_app(Module)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:75:19:13,flask/tests/test_cli.py,75,"Flask(""appname"")",METHOD:tests.test_cli.test_find_best_app.Module.create_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","73:         @staticmethod
+74:         def create_app(**kwargs):
+75:             return Flask(""appname"")
+76: 
+77:     app = find_best_app(Module)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:84:19:16,flask/tests/test_cli.py,84,"Flask(""appname"")",METHOD:tests.test_cli.test_find_best_app.Module.make_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","82:         @staticmethod
+83:         def make_app():
+84:             return Flask(""appname"")
+85: 
+86:     app = find_best_app(Module)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:91:16:19,flask/tests/test_cli.py,91,"Flask(""appname1"")",FUNCTION:tests.test_cli.test_find_best_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","89: 
+90:     class Module:
+91:         myapp = Flask(""appname1"")
+92: 
+93:         @staticmethod",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_cli.py:95:19:20,flask/tests/test_cli.py,95,"Flask(""appname2"")",METHOD:tests.test_cli.test_find_best_app.Module.create_app,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","93:         @staticmethod
+94:         def create_app():
+95:             return Flask(""appname2"")
+96: 
+97:     assert find_best_app(Module) == Module.myapp",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:111:10:38,flask/tests/test_config.py,111,flask.Flask(__name__),FUNCTION:tests.test_config.test_config_from_mapping,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","109: 
+110: def test_config_from_mapping():
+111:     app = flask.Flask(__name__)
+112:     app.config.from_mapping({""SECRET_KEY"": ""config"", ""TEST_KEY"": ""foo""})
+113:     common_object_test(app)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:115:10:41,flask/tests/test_config.py,115,flask.Flask(__name__),FUNCTION:tests.test_config.test_config_from_mapping,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","113:     common_object_test(app)
+114: 
+115:     app = flask.Flask(__name__)
+116:     app.config.from_mapping([(""SECRET_KEY"", ""config""), (""TEST_KEY"", ""foo"")])
+117:     common_object_test(app)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:119:10:44,flask/tests/test_config.py,119,flask.Flask(__name__),FUNCTION:tests.test_config.test_config_from_mapping,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","117:     common_object_test(app)
+118: 
+119:     app = flask.Flask(__name__)
+120:     app.config.from_mapping(SECRET_KEY=""config"", TEST_KEY=""foo"")
+121:     common_object_test(app)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:123:10:47,flask/tests/test_config.py,123,flask.Flask(__name__),FUNCTION:tests.test_config.test_config_from_mapping,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","121:     common_object_test(app)
+122: 
+123:     app = flask.Flask(__name__)
+124:     app.config.from_mapping(SECRET_KEY=""config"", TEST_KEY=""foo"", skip_key=""skip"")
+125:     common_object_test(app)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:127:10:50,flask/tests/test_config.py,127,flask.Flask(__name__),FUNCTION:tests.test_config.test_config_from_mapping,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","125:     common_object_test(app)
+126: 
+127:     app = flask.Flask(__name__)
+128:     with pytest.raises(TypeError):
+129:         app.config.from_mapping({}, {})",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:139:10:53,flask/tests/test_config.py,139,flask.Flask(__name__),FUNCTION:tests.test_config.test_config_from_class,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","137:         SECRET_KEY = ""config""
+138: 
+139:     app = flask.Flask(__name__)
+140:     app.config.from_object(Test)
+141:     common_object_test(app)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:146:10:57,flask/tests/test_config.py,146,flask.Flask(__name__),FUNCTION:tests.test_config.test_config_from_envvar,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","144: def test_config_from_envvar(monkeypatch):
+145:     monkeypatch.setattr(""os.environ"", {})
+146:     app = flask.Flask(__name__)
+147: 
+148:     with pytest.raises(RuntimeError) as e:",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:163:10:67,flask/tests/test_config.py,163,flask.Flask(__name__),FUNCTION:tests.test_config.test_config_from_envvar_missing,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","161: def test_config_from_envvar_missing(monkeypatch):
+162:     monkeypatch.setattr(""os.environ"", {""FOO_SETTINGS"": ""missing.cfg""})
+163:     app = flask.Flask(__name__)
+164:     with pytest.raises(IOError) as e:
+165:         app.config.from_envvar(""FOO_SETTINGS"")",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:175:10:74,flask/tests/test_config.py,175,flask.Flask(__name__),FUNCTION:tests.test_config.test_config_missing,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","173: 
+174: def test_config_missing():
+175:     app = flask.Flask(__name__)
+176:     with pytest.raises(IOError) as e:
+177:         app.config.from_pyfile(""missing.cfg"")",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:187:10:81,flask/tests/test_config.py,187,flask.Flask(__name__),FUNCTION:tests.test_config.test_config_missing_file,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","185: 
+186: def test_config_missing_file():
+187:     app = flask.Flask(__name__)
+188:     with pytest.raises(IOError) as e:
+189:         app.config.from_file(""missing.json"", load=json.load)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:205:10:88,flask/tests/test_config.py,205,Flask(__name__),FUNCTION:tests.test_config.test_custom_config_class,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:tests.test_config.test_custom_config_class.Flask""]","[""CLASS:tests.test_config.test_custom_config_class.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""flow_reaching_assignment""]",True,"[{""target"": ""CLASS:tests.test_config.test_custom_config_class.Flask"", ""file"": ""flask/tests/test_config.py"", ""line"": 202}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","203:         config_class = Config
+204: 
+205:     app = Flask(__name__)
+206:     assert isinstance(app.config, Config)
+207:     app.config.from_object(__name__)",,,UNREVIEWED,,"[""CLASS:tests.test_config.test_custom_config_class.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:212:10:92,flask/tests/test_config.py,212,flask.Flask(__name__),FUNCTION:tests.test_config.test_session_lifetime,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","210: 
+211: def test_session_lifetime():
+212:     app = flask.Flask(__name__)
+213:     app.config[""PERMANENT_SESSION_LIFETIME""] = 42
+214:     assert app.permanent_session_lifetime.seconds == 42",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:218:10:93,flask/tests/test_config.py,218,flask.Flask(__name__),FUNCTION:tests.test_config.test_get_namespace,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","216: 
+217: def test_get_namespace():
+218:     app = flask.Flask(__name__)
+219:     app.config[""FOO_OPTION_1""] = ""foo option 1""
+220:     app.config[""FOO_OPTION_2""] = ""foo option 2""",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:21:10:0,flask/tests/test_config.py,21,flask.Flask(__name__),FUNCTION:tests.test_config.test_config_from_pyfile,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","19: 
+20: def test_config_from_pyfile():
+21:     app = flask.Flask(__name__)
+22:     app.config.from_pyfile(f""{__file__.rsplit('.', 1)[0]}.py"")
+23:     common_object_test(app)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:247:10:104,flask/tests/test_config.py,247,flask.Flask(__name__),FUNCTION:tests.test_config.test_from_pyfile_weird_encoding,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","245:     f = tmp_path / ""my_config.py""
+246:     f.write_text(f'# -*- coding: {encoding} -*-\nTEST_VALUE = ""föö""\n', encoding)
+247:     app = flask.Flask(__name__)
+248:     app.config.from_pyfile(os.fspath(f))
+249:     value = app.config[""TEST_VALUE""]",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:27:10:4,flask/tests/test_config.py,27,flask.Flask(__name__),FUNCTION:tests.test_config.test_config_from_object,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","25: 
+26: def test_config_from_object():
+27:     app = flask.Flask(__name__)
+28:     app.config.from_object(__name__)
+29:     common_object_test(app)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:33:10:7,flask/tests/test_config.py,33,flask.Flask(__name__),FUNCTION:tests.test_config.test_config_from_file_json,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","31: 
+32: def test_config_from_file_json():
+33:     app = flask.Flask(__name__)
+34:     current_dir = os.path.dirname(os.path.abspath(__file__))
+35:     app.config.from_file(os.path.join(current_dir, ""static"", ""config.json""), json.load)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:40:10:13,flask/tests/test_config.py,40,flask.Flask(__name__),FUNCTION:tests.test_config.test_config_from_file_toml,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","38: 
+39: def test_config_from_file_toml():
+40:     app = flask.Flask(__name__)
+41:     current_dir = os.path.dirname(os.path.abspath(__file__))
+42:     app.config.from_file(",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:57:10:26,flask/tests/test_config.py,57,flask.Flask(__name__),FUNCTION:tests.test_config.test_from_prefixed_env,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","55:     monkeypatch.setenv(""NOT_FLASK_OTHER"", ""other"")
+56: 
+57:     app = flask.Flask(__name__)
+58:     app.config.from_prefixed_env()
+59: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:73:10:30,flask/tests/test_config.py,73,flask.Flask(__name__),FUNCTION:tests.test_config.test_from_prefixed_env_custom_prefix,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","71:     monkeypatch.setenv(""NOT_FLASK_A"", ""b"")
+72: 
+73:     app = flask.Flask(__name__)
+74:     app.config.from_prefixed_env(""NOT_FLASK"")
+75: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_config.py:85:10:36,flask/tests/test_config.py,85,flask.Flask(__name__),FUNCTION:tests.test_config.test_from_prefixed_env_nested,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","83:     monkeypatch.setenv(""FLASK_NEW__K"", ""v"")
+84: 
+85:     app = flask.Flask(__name__)
+86:     app.config[""EXIST""] = {""ok"": ""value"", ""flag"": True, ""inner"": {""ik"": 1}}
+87:     app.config.from_prefixed_env()",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_helpers.py:195:10:48,flask/tests/test_helpers.py,195,MyFlask(__name__),FUNCTION:tests.test_helpers.test_app_aborter_class,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:tests.test_helpers.test_app_aborter_class.MyFlask""]","[""CLASS:tests.test_helpers.test_app_aborter_class.MyFlask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""flow_reaching_assignment""]",True,"[{""target"": ""CLASS:tests.test_helpers.test_app_aborter_class.MyFlask"", ""file"": ""flask/tests/test_helpers.py"", ""line"": 192}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","193:         aborter_class = MyAborter
+194: 
+195:     app = MyFlask(__name__)
+196:     assert isinstance(app.aborter, MyAborter)
+197: ",,,UNREVIEWED,,"[""CLASS:tests.test_helpers.test_app_aborter_class.MyFlask""]"
+substantive_target_change,CALL:flask/tests/test_helpers.py:223:12:54,flask/tests/test_helpers.py,223,"flask.Flask(""importerror"")",METHOD:tests.test_helpers.TestNoImports.test_name_with_import_error,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","221:         (modules_tmp_path / ""importerror.py"").write_text(""raise NotImplementedError()"")
+222:         try:
+223:             flask.Flask(""importerror"")
+224:         except NotImplementedError:
+225:             AssertionError(""Flask(import_name) is importing import_name."")",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_helpers.py:343:14:89,flask/tests/test_helpers.py,343,flask.Flask(__name__),METHOD:tests.test_helpers.TestHelpers.test_make_response,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","341: 
+342:     def test_make_response(self):
+343:         app = flask.Flask(__name__)
+344:         with app.test_request_context():
+345:             rv = flask.helpers.make_response()",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_helpers.py:357:10:94,flask/tests/test_helpers.py,357,flask.Flask(__name__),FUNCTION:tests.test_helpers.test_open_resource,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","355: @pytest.mark.parametrize(""mode"", (""r"", ""rb"", ""rt""))
+356: def test_open_resource(mode):
+357:     app = flask.Flask(__name__)
+358: 
+359:     with app.open_resource(""static/index.html"", mode) as f:",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_helpers.py:365:10:99,flask/tests/test_helpers.py,365,flask.Flask(__name__),FUNCTION:tests.test_helpers.test_open_resource_exceptions,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","363: @pytest.mark.parametrize(""mode"", (""w"", ""x"", ""a"", ""r+""))
+364: def test_open_resource_exceptions(mode):
+365:     app = flask.Flask(__name__)
+366: 
+367:     with pytest.raises(ValueError):",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_helpers.py:373:10:103,flask/tests/test_helpers.py,373,"flask.Flask(__name__, root_path=os.fspath(tmp_path))",FUNCTION:tests.test_helpers.test_open_resource_with_encoding,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","371: @pytest.mark.parametrize(""encoding"", (""utf-8"", ""utf-16-le""))
+372: def test_open_resource_with_encoding(tmp_path, encoding):
+373:     app = flask.Flask(__name__, root_path=os.fspath(tmp_path))
+374:     (tmp_path / ""test"").write_text(""test"", encoding=encoding)
+375: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_helpers.py:73:14:11,flask/tests/test_helpers.py,73,StaticFileApp(__name__),METHOD:tests.test_helpers.TestSendfile.test_static_file,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:tests.test_helpers.TestSendfile.test_static_file.StaticFileApp""]","[""CLASS:tests.test_helpers.TestSendfile.test_static_file.StaticFileApp"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""flow_reaching_assignment""]",True,"[{""target"": ""CLASS:tests.test_helpers.TestSendfile.test_static_file.StaticFileApp"", ""file"": ""flask/tests/test_helpers.py"", ""line"": 69}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","71:                 return 10
+72: 
+73:         app = StaticFileApp(__name__)
+74: 
+75:         with app.test_request_context():",,,UNREVIEWED,,"[""CLASS:tests.test_helpers.TestSendfile.test_static_file.StaticFileApp""]"
+substantive_target_change,CALL:flask/tests/test_instance_config.py:10:8:1,flask/tests/test_instance_config.py,10,"flask.Flask(__name__, instance_path=""instance"")",FUNCTION:tests.test_instance_config.test_explicit_instance_paths,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","8: def test_explicit_instance_paths(modules_tmp_path):
+9:     with pytest.raises(ValueError, match="".*must be absolute""):
+10:         flask.Flask(__name__, instance_path=""instance"")
+11: 
+12:     app = flask.Flask(__name__, instance_path=os.fspath(modules_tmp_path))",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_instance_config.py:12:10:2,flask/tests/test_instance_config.py,12,"flask.Flask(__name__, instance_path=os.fspath(modules_tmp_path))",FUNCTION:tests.test_instance_config.test_explicit_instance_paths,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","10:         flask.Flask(__name__, instance_path=""instance"")
+11: 
+12:     app = flask.Flask(__name__, instance_path=os.fspath(modules_tmp_path))
+13:     assert app.instance_path == os.fspath(modules_tmp_path)
+14: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_reqctx.py:188:10:54,flask/tests/test_reqctx.py,188,CustomFlask(__name__),FUNCTION:tests.test_reqctx.test_session_error_pops_context,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:tests.test_reqctx.test_session_error_pops_context.CustomFlask""]","[""CLASS:tests.test_reqctx.test_session_error_pops_context.CustomFlask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""flow_reaching_assignment""]",True,"[{""target"": ""CLASS:tests.test_reqctx.test_session_error_pops_context.CustomFlask"", ""file"": ""flask/tests/test_reqctx.py"", ""line"": 185}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","186:         session_interface = FailingSessionInterface()
+187: 
+188:     app = CustomFlask(__name__)
+189: 
+190:     @app.route(""/"")",,,UNREVIEWED,,"[""CLASS:tests.test_reqctx.test_session_error_pops_context.CustomFlask""]"
+substantive_target_change,CALL:flask/tests/test_reqctx.py:214:10:63,flask/tests/test_reqctx.py,214,CustomFlask(__name__),FUNCTION:tests.test_reqctx.test_session_dynamic_cookie_name,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:tests.test_reqctx.test_session_dynamic_cookie_name.CustomFlask""]","[""CLASS:tests.test_reqctx.test_session_dynamic_cookie_name.CustomFlask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""flow_reaching_assignment""]",True,"[{""target"": ""CLASS:tests.test_reqctx.test_session_dynamic_cookie_name.CustomFlask"", ""file"": ""flask/tests/test_reqctx.py"", ""line"": 211}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","212:         session_interface = PathAwareSessionInterface()
+213: 
+214:     app = CustomFlask(__name__)
+215:     app.secret_key = ""secret_key""
+216: ",,,UNREVIEWED,,"[""CLASS:tests.test_reqctx.test_session_dynamic_cookie_name.CustomFlask""]"
+substantive_target_change,CALL:flask/tests/test_session_interface.py:20:10:1,flask/tests/test_session_interface.py,20,flask.Flask(__name__),FUNCTION:tests.test_session_interface.test_open_session_with_endpoint,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","18:             assert request.endpoint is not None
+19: 
+20:     app = flask.Flask(__name__)
+21:     app.session_interface = MySessionInterface()
+22: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_signals.py:26:10:7,flask/tests/test_signals.py,26,flask.Flask(__name__),FUNCTION:tests.test_signals.test_before_render_template,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","24: 
+25: def test_before_render_template():
+26:     app = flask.Flask(__name__)
+27: 
+28:     @app.route(""/"")",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_signals.py:51:10:16,flask/tests/test_signals.py,51,flask.Flask(__name__),FUNCTION:tests.test_signals.test_request_signals,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","49: 
+50: def test_request_signals():
+51:     app = flask.Flask(__name__)
+52:     calls = []
+53: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_signals.py:96:10:29,flask/tests/test_signals.py,96,flask.Flask(__name__),FUNCTION:tests.test_signals.test_request_exception_signal,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","94: 
+95: def test_request_exception_signal():
+96:     app = flask.Flask(__name__)
+97:     recorded = []
+98: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_subclassing.py:12:10:1,flask/tests/test_subclassing.py,12,SuppressedFlask(__name__),FUNCTION:tests.test_subclassing.test_suppressed_exception_logging,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:tests.test_subclassing.test_suppressed_exception_logging.SuppressedFlask""]","[""CLASS:tests.test_subclassing.test_suppressed_exception_logging.SuppressedFlask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""flow_reaching_assignment""]",True,"[{""target"": ""CLASS:tests.test_subclassing.test_suppressed_exception_logging.SuppressedFlask"", ""file"": ""flask/tests/test_subclassing.py"", ""line"": 7}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","10: 
+11:     out = StringIO()
+12:     app = SuppressedFlask(__name__)
+13: 
+14:     @app.route(""/"")",,,UNREVIEWED,,"[""CLASS:tests.test_subclassing.test_suppressed_exception_logging.SuppressedFlask""]"
+substantive_target_change,CALL:flask/tests/test_templating.py:412:10:128,flask/tests/test_templating.py,412,MyFlask(__name__),FUNCTION:tests.test_templating.test_custom_template_loader,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:tests.test_templating.test_custom_template_loader.MyFlask""]","[""CLASS:tests.test_templating.test_custom_template_loader.MyFlask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""flow_reaching_assignment""]",True,"[{""target"": ""CLASS:tests.test_templating.test_custom_template_loader.MyFlask"", ""file"": ""flask/tests/test_templating.py"", ""line"": 406}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","410:             return DictLoader({""index.html"": ""Hello Custom World!""})
+411: 
+412:     app = MyFlask(__name__)
+413: 
+414:     @app.route(""/"")",,,UNREVIEWED,,"[""CLASS:tests.test_templating.test_custom_template_loader.MyFlask""]"
+substantive_target_change,CALL:flask/tests/test_templating.py:449:10:136,flask/tests/test_templating.py,449,flask.Flask(__name__),FUNCTION:tests.test_templating.test_templates_auto_reload,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","447:     assert app.jinja_env.auto_reload is False
+448:     # debug is False, config option is False
+449:     app = flask.Flask(__name__)
+450:     app.config[""TEMPLATES_AUTO_RELOAD""] = False
+451:     assert app.debug is False",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_templating.py:454:10:137,flask/tests/test_templating.py,454,flask.Flask(__name__),FUNCTION:tests.test_templating.test_templates_auto_reload,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","452:     assert app.jinja_env.auto_reload is False
+453:     # debug is False, config option is True
+454:     app = flask.Flask(__name__)
+455:     app.config[""TEMPLATES_AUTO_RELOAD""] = True
+456:     assert app.debug is False",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_templating.py:459:10:138,flask/tests/test_templating.py,459,flask.Flask(__name__),FUNCTION:tests.test_templating.test_templates_auto_reload,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","457:     assert app.jinja_env.auto_reload is True
+458:     # debug is True, config option is None
+459:     app = flask.Flask(__name__)
+460:     app.config[""DEBUG""] = True
+461:     assert app.config[""TEMPLATES_AUTO_RELOAD""] is None",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_templating.py:464:10:139,flask/tests/test_templating.py,464,flask.Flask(__name__),FUNCTION:tests.test_templating.test_templates_auto_reload,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","462:     assert app.jinja_env.auto_reload is True
+463:     # debug is True, config option is False
+464:     app = flask.Flask(__name__)
+465:     app.config[""DEBUG""] = True
+466:     app.config[""TEMPLATES_AUTO_RELOAD""] = False",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_templating.py:469:10:140,flask/tests/test_templating.py,469,flask.Flask(__name__),FUNCTION:tests.test_templating.test_templates_auto_reload,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","467:     assert app.jinja_env.auto_reload is False
+468:     # debug is True, config option is True
+469:     app = flask.Flask(__name__)
+470:     app.config[""DEBUG""] = True
+471:     app.config[""TEMPLATES_AUTO_RELOAD""] = True",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_templating.py:531:10:155,flask/tests/test_templating.py,531,CustomFlask(__name__),FUNCTION:tests.test_templating.test_custom_jinja_env,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:tests.test_templating.test_custom_jinja_env.CustomFlask""]","[""CLASS:tests.test_templating.test_custom_jinja_env.CustomFlask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""flow_reaching_assignment""]",True,"[{""target"": ""CLASS:tests.test_templating.test_custom_jinja_env.CustomFlask"", ""file"": ""flask/tests/test_templating.py"", ""line"": 528}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","529:         jinja_environment = CustomEnvironment
+530: 
+531:     app = CustomFlask(__name__)
+532:     assert isinstance(app.jinja_env, CustomEnvironment)",,,UNREVIEWED,,"[""CLASS:tests.test_templating.test_custom_jinja_env.CustomFlask""]"
+substantive_target_change,CALL:flask/tests/test_testing.py:117:10:25,flask/tests/test_testing.py,117,"flask.Flask(__name__, subdomain_matching=True)",FUNCTION:tests.test_testing.test_blueprint_with_subdomain,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","115: 
+116: def test_blueprint_with_subdomain():
+117:     app = flask.Flask(__name__, subdomain_matching=True)
+118:     app.config[""SERVER_NAME""] = ""example.com:1234""
+119:     app.config[""APPLICATION_ROOT""] = ""/foo""",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_testing.py:189:10:50,flask/tests/test_testing.py,189,flask.Flask(__name__),FUNCTION:tests.test_testing.test_session_transactions_no_null_sessions,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","187: 
+188: def test_session_transactions_no_null_sessions():
+189:     app = flask.Flask(__name__)
+190: 
+191:     with app.test_client() as c:",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_testing.py:305:10:83,flask/tests/test_testing.py,305,"flask.Flask(__name__, subdomain_matching=True)",FUNCTION:tests.test_testing.test_subdomain,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","303: 
+304: def test_subdomain():
+305:     app = flask.Flask(__name__, subdomain_matching=True)
+306:     app.config[""SERVER_NAME""] = ""example.com""
+307:     client = app.test_client()",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/test_user_error_handler.py:185:10:73,flask/tests/test_user_error_handler.py,185,flask.Flask(__name__),FUNCTION:tests.test_user_error_handler.test_default_error_handler,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""imported_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","183:         raise Forbidden()
+184: 
+185:     app = flask.Flask(__name__)
+186: 
+187:     @app.errorhandler(HTTPException)",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/type_check/typing_app_decorators.py:6:6:0,flask/tests/type_check/typing_app_decorators.py,6,Flask(__name__),MODULE:tests.type_check.typing_app_decorators,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","4: from flask import Response
+5: 
+6: app = Flask(__name__)
+7: 
+8: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/type_check/typing_error_handler.py:10:6:0,flask/tests/type_check/typing_error_handler.py,10,Flask(__name__),MODULE:tests.type_check.typing_error_handler,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","8: from flask import Flask
+9: 
+10: app = Flask(__name__)
+11: 
+12: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"
+substantive_target_change,CALL:flask/tests/type_check/typing_route.py:13:6:0,flask/tests/type_check/typing_route.py,13,Flask(__name__),MODULE:tests.type_check.typing_route,test,RESOLVED_INTERNAL,INTERNAL,RESOLVED_INTERNAL,"[""CLASS:flask.app.Flask""]","[""CLASS:flask.app.Flask"", ""METHOD:flask.app.Flask.__init__""]","[""CALLS"", ""INSTANTIATES""]","[""constructor_init"", ""import_or_same_module""]",True,"[{""target"": ""CLASS:flask.app.Flask"", ""file"": ""flask/src/flask/app.py"", ""line"": 109}, {""target"": ""METHOD:flask.app.Flask.__init__"", ""file"": ""flask/src/flask/app.py"", ""line"": 308}]","11: from flask.wrappers import Response
+12: 
+13: app = Flask(__name__)
+14: 
+15: ",,,UNREVIEWED,,"[""CLASS:flask.app.Flask""]"

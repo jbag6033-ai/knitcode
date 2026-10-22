@@ -1,0 +1,147 @@
+{
+  "image_emotion_gender_demo": [
+    "utils.datasets.get_labels",
+    "utils.inference.apply_offsets",
+    "utils.inference.detect_faces",
+    "utils.inference.draw_bounding_box",
+    "utils.inference.draw_text",
+    "utils.inference.load_detection_model",
+    "utils.inference.load_image",
+    "utils.preprocessor.preprocess_input"
+  ],
+  "image_gradcam_demo": [
+    "utils.datasets.get_labels",
+    "utils.grad_cam.calculate_guided_gradient_CAM",
+    "utils.grad_cam.compile_gradient_function",
+    "utils.grad_cam.compile_saliency_function",
+    "utils.grad_cam.modify_backprop",
+    "utils.grad_cam.register_gradient",
+    "utils.inference.apply_offsets",
+    "utils.inference.detect_faces",
+    "utils.inference.draw_bounding_box",
+    "utils.inference.load_detection_model",
+    "utils.inference.load_image",
+    "utils.preprocessor.preprocess_input"
+  ],
+  "models.cnn": [
+    "models.cnn.simple_CNN"
+  ],
+  "train_emotion_classifier": [
+    "models.cnn.mini_XCEPTION",
+    "utils.datasets.DataManager.__init__",
+    "utils.datasets.DataManager.get_data",
+    "utils.datasets.split_data",
+    "utils.preprocessor.preprocess_input"
+  ],
+  "train_gender_classifier": [
+    "models.cnn.mini_XCEPTION",
+    "utils.data_augmentation.ImageGenerator.__init__",
+    "utils.data_augmentation.ImageGenerator.flow",
+    "utils.datasets.DataManager.__init__",
+    "utils.datasets.DataManager.get_data",
+    "utils.datasets.split_imdb_data"
+  ],
+  "utils.data_augmentation.ImageGenerator.contrast": [
+    "utils.data_augmentation.ImageGenerator._gray_scale"
+  ],
+  "utils.data_augmentation.ImageGenerator.flow": [
+    "utils.data_augmentation.ImageGenerator._do_random_crop",
+    "utils.data_augmentation.ImageGenerator._wrap_in_dictionary",
+    "utils.data_augmentation.ImageGenerator.preprocess_images",
+    "utils.data_augmentation.ImageGenerator.transform",
+    "utils.preprocessor._imread",
+    "utils.preprocessor._imresize",
+    "utils.preprocessor.to_categorical"
+  ],
+  "utils.data_augmentation.ImageGenerator.preprocess_images": [
+    "utils.preprocessor.preprocess_input"
+  ],
+  "utils.data_augmentation.ImageGenerator.saturation": [
+    "utils.data_augmentation.ImageGenerator._gray_scale"
+  ],
+  "utils.data_augmentation.ImageGenerator.transform": [
+    "utils.data_augmentation.ImageGenerator.horizontal_flip",
+    "utils.data_augmentation.ImageGenerator.lighting",
+    "utils.data_augmentation.ImageGenerator.vertical_flip"
+  ],
+  "utils.datasets.DataManager._load_KDEF": [
+    "utils.datasets.get_class_to_arg"
+  ],
+  "utils.datasets.DataManager.get_data": [
+    "utils.datasets.DataManager._load_KDEF",
+    "utils.datasets.DataManager._load_fer2013",
+    "utils.datasets.DataManager._load_imdb"
+  ],
+  "utils.grad_cam": [
+    "utils.grad_cam.calculate_guided_gradient_CAM",
+    "utils.grad_cam.compile_gradient_function",
+    "utils.grad_cam.compile_saliency_function",
+    "utils.grad_cam.load_image",
+    "utils.grad_cam.modify_backprop",
+    "utils.grad_cam.register_gradient"
+  ],
+  "utils.grad_cam.calculate_guided_gradient_CAM": [
+    "utils.grad_cam.calculate_gradient_weighted_CAM",
+    "utils.grad_cam.deprocess_image"
+  ],
+  "utils.grad_cam.calculate_guided_gradient_CAM_v2": [
+    "utils.grad_cam.calculate_gradient_weighted_CAM",
+    "utils.grad_cam.deprocess_image"
+  ],
+  "utils.grad_cam.compile_gradient_function": [
+    "utils.grad_cam.normalize"
+  ],
+  "utils.grad_cam.compile_gradient_function.<lambda1>": [
+    "utils.grad_cam.target_category_loss"
+  ],
+  "utils.grad_cam.load_image": [
+    "utils.preprocessor.preprocess_input"
+  ],
+  "utils.visualizer": [
+    "utils.visualizer.make_mosaic",
+    "utils.visualizer.pretty_imshow"
+  ],
+  "utils.visualizer.display_image": [
+    "utils.visualizer.pretty_imshow"
+  ],
+  "video_emotion_color_demo": [
+    "utils.datasets.get_labels",
+    "utils.inference.apply_offsets",
+    "utils.inference.detect_faces",
+    "utils.inference.draw_bounding_box",
+    "utils.inference.draw_text",
+    "utils.inference.load_detection_model",
+    "utils.preprocessor.preprocess_input"
+  ],
+  "video_emotion_gender_demo": [
+    "utils.datasets.get_labels",
+    "utils.inference.apply_offsets",
+    "utils.inference.detect_faces",
+    "utils.inference.draw_bounding_box",
+    "utils.inference.draw_text",
+    "utils.inference.load_detection_model",
+    "utils.preprocessor.preprocess_input"
+  ],
+  "video_gradcam_demo": [
+    "utils.datasets.get_class_to_arg",
+    "utils.grad_cam.calculate_guided_gradient_CAM",
+    "utils.grad_cam.compile_gradient_function",
+    "utils.grad_cam.compile_saliency_function",
+    "utils.grad_cam.modify_backprop",
+    "utils.grad_cam.register_gradient",
+    "utils.inference.apply_offsets",
+    "utils.inference.detect_faces",
+    "utils.inference.draw_bounding_box",
+    "utils.inference.load_detection_model",
+    "utils.preprocessor.preprocess_input"
+  ],
+  "web.emotion_gender_processor.process_image": [
+    "utils.datasets.get_labels",
+    "utils.inference.apply_offsets",
+    "utils.inference.detect_faces",
+    "utils.inference.draw_bounding_box",
+    "utils.inference.draw_text",
+    "utils.inference.load_detection_model",
+    "utils.preprocessor.preprocess_input"
+  ]
+}

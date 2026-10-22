@@ -15,7 +15,7 @@ def package(output=None):
         output = ROOT / 'dist' / f"{manifest['name']}-{version}.vsix"
     vsix_manifest = f'''<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
-<Metadata><Identity Language="en-US" Id="knitcode" Version="{version}" Publisher="knitcode-local"/><DisplayName>KnitCode</DisplayName><Description xml:space="preserve">Python code relationships and Git evidence</Description><Tags>python,visualization</Tags><Categories>Visualization</Categories><GalleryFlags>Public</GalleryFlags><Properties><Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.85.0"/><Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="workspace"/></Properties></Metadata>
+<Metadata><Identity Language="en-US" Id="{manifest['name']}" Version="{version}" Publisher="knitcode-local"/><DisplayName>{manifest['displayName']}</DisplayName><Description xml:space="preserve">Python code relationships and Git evidence</Description><Tags>python,visualization</Tags><Categories>Visualization</Categories><GalleryFlags>Public</GalleryFlags><Properties><Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.85.0"/><Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="workspace"/></Properties></Metadata>
 <Installation><InstallationTarget Id="Microsoft.VisualStudio.Code"/></Installation>
 <Dependencies/><Assets><Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true"/></Assets></PackageManifest>'''
     content_types = '''<?xml version="1.0" encoding="utf-8"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="json" ContentType="application/json"/><Default Extension="js" ContentType="application/javascript"/><Default Extension="css" ContentType="text/css"/><Default Extension="py" ContentType="text/plain"/><Default Extension="md" ContentType="text/markdown"/><Default Extension="vsixmanifest" ContentType="text/xml"/></Types>'''
@@ -26,9 +26,8 @@ def package(output=None):
         archive.writestr('[Content_Types].xml', content_types)
         for relative in ['package.json', 'extension.js', 'README.md', 'media/map.js', 'media/map.css']:
             archive.write(source / relative, 'extension/' + relative)
-        for module in ['analyzer', 'backend', 'git_analyzer']:
-            for file in sorted((ROOT / module).glob('*.py')):
-                archive.write(file, 'extension/vendor/' + str(file.relative_to(ROOT)))
+        for file in sorted(ROOT.glob('*.py')):
+            archive.write(file, 'extension/vendor/' + file.name)
     return output
 
 

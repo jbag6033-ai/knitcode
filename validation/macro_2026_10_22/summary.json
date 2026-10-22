@@ -1,0 +1,131 @@
+[
+  {
+    "project": "autojump",
+    "files": 4,
+    "baseline": {
+      "truth_pairs": 217,
+      "predicted_pairs": 148,
+      "tp": 147,
+      "fp": 1,
+      "fn": 70,
+      "precision": 0.9932432432432432,
+      "recall": 0.6774193548387096,
+      "f1": 0.8054794520547944
+    },
+    "improved": {
+      "truth_pairs": 217,
+      "predicted_pairs": 155,
+      "tp": 154,
+      "fp": 1,
+      "fn": 63,
+      "precision": 0.9935483870967742,
+      "recall": 0.7096774193548387,
+      "f1": 0.8279569892473119
+    },
+    "added_true_positive": [
+      [
+        "autojump_argparse.HelpFormatter._Section.format_help",
+        "autojump_argparse.HelpFormatter._dedent"
+      ],
+      [
+        "autojump_argparse.HelpFormatter._Section.format_help",
+        "autojump_argparse.HelpFormatter._indent"
+      ],
+      [
+        "autojump_argparse.HelpFormatter._Section.format_help",
+        "autojump_argparse.HelpFormatter._join_parts"
+      ],
+      [
+        "autojump_argparse.HelpFormatter.__init__",
+        "autojump_argparse.HelpFormatter._Section.__init__"
+      ],
+      [
+        "autojump_argparse.HelpFormatter.format_help",
+        "autojump_argparse.HelpFormatter._Section.format_help"
+      ],
+      [
+        "autojump_argparse.HelpFormatter.start_section",
+        "autojump_argparse.HelpFormatter._Section.__init__"
+      ],
+      [
+        "autojump_argparse._SubParsersAction.add_parser",
+        "autojump_argparse._SubParsersAction._ChoicesPseudoAction.__init__"
+      ]
+    ]
+  },
+  {
+    "project": "fabric",
+    "files": 12,
+    "baseline": {
+      "truth_pairs": 62,
+      "predicted_pairs": 39,
+      "tp": 38,
+      "fp": 1,
+      "fn": 24,
+      "precision": 0.9743589743589743,
+      "recall": 0.6129032258064516,
+      "f1": 0.7524752475247525
+    },
+    "improved": {
+      "truth_pairs": 62,
+      "predicted_pairs": 39,
+      "tp": 38,
+      "fp": 1,
+      "fn": 24,
+      "precision": 0.9743589743589743,
+      "recall": 0.6129032258064516,
+      "f1": 0.7524752475247525
+    },
+    "added_true_positive": []
+  },
+  {
+    "project": "face_classification",
+    "files": 20,
+    "baseline": {
+      "truth_pairs": 99,
+      "predicted_pairs": 97,
+      "tp": 97,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.9797979797979798,
+      "f1": 0.989795918367347
+    },
+    "improved": {
+      "truth_pairs": 99,
+      "predicted_pairs": 97,
+      "tp": 97,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.9797979797979798,
+      "f1": 0.989795918367347
+    },
+    "added_true_positive": []
+  },
+  {
+    "project": "asciinema",
+    "files": 24,
+    "baseline": {
+      "truth_pairs": 144,
+      "predicted_pairs": 104,
+      "tp": 103,
+      "fp": 1,
+      "fn": 41,
+      "precision": 0.9903846153846154,
+      "recall": 0.7152777777777778,
+      "f1": 0.8306451612903227
+    },
+    "improved": {
+      "truth_pairs": 144,
+      "predicted_pairs": 104,
+      "tp": 103,
+      "fp": 1,
+      "fn": 41,
+      "precision": 0.9903846153846154,
+      "recall": 0.7152777777777778,
+      "f1": 0.8306451612903227
+    },
+    "added_true_positive": []
+  }
+]

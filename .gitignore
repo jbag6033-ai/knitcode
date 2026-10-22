@@ -1,32 +1,9 @@
-# Python virtual environment
-Knitcode/
-.venv/
-venv/
-
-# Python cache
+output/
+Sublist3r/
 __pycache__/
-*.py[cod]
-
-# pytest
-.pytest_cache/
-
-# macOS
-.DS_Store
-
-# IDE
-.vscode/
-.idea/
-
-# Generated visualization outputs
-*.html
-lib/
-
-# External benchmark repositories
-benchmark/
-
-# Packaged VS Code extension
+*.pyc
+.venv/
 dist/
+benchmarks/
 
-# Local experiment outputs; publish only the curated verification snapshot.
-/reports/*
-!/reports/release-2026-10-16/
+.DS_Store

@@ -1,0 +1,122 @@
+{
+  "contract": "Unique exact caller-callee pairs; both endpoints in source-derived module namespaces. Source-ordered lambda notation normalization only. No suffix matching, edge rewrites or constructor substitution.",
+  "primary_metric": "function_calls_all_truth_pairs",
+  "before": {
+    "truth_pairs": 62,
+    "predicted_pairs": 39,
+    "tp": 38,
+    "fp": 1,
+    "fn": 24,
+    "precision": 0.9743589743589743,
+    "recall": 0.6129032258064516,
+    "f1": 0.7524752475247525
+  },
+  "after": {
+    "truth_pairs": 62,
+    "predicted_pairs": 47,
+    "tp": 42,
+    "fp": 5,
+    "fn": 20,
+    "precision": 0.8936170212765957,
+    "recall": 0.6774193548387096,
+    "f1": 0.7706422018348622
+  },
+  "paper": {
+    "url": "https://arxiv.org/pdf/2103.00587",
+    "table": "IV",
+    "precision": 0.983,
+    "recall": 0.619,
+    "f1_calculated": 0.7596466916354556,
+    "directly_comparable": false
+  },
+  "regressions": {
+    "autojump": {
+      "before": {
+        "truth_pairs": 217,
+        "predicted_pairs": 155,
+        "tp": 154,
+        "fp": 1,
+        "fn": 63,
+        "precision": 0.9935483870967742,
+        "recall": 0.7096774193548387,
+        "f1": 0.8279569892473119
+      },
+      "after": {
+        "truth_pairs": 217,
+        "predicted_pairs": 155,
+        "tp": 154,
+        "fp": 1,
+        "fn": 63,
+        "precision": 0.9935483870967742,
+        "recall": 0.7096774193548387,
+        "f1": 0.8279569892473119
+      }
+    },
+    "asciinema": {
+      "before": {
+        "truth_pairs": 144,
+        "predicted_pairs": 104,
+        "tp": 103,
+        "fp": 1,
+        "fn": 41,
+        "precision": 0.9903846153846154,
+        "recall": 0.7152777777777778,
+        "f1": 0.8306451612903227
+      },
+      "after": {
+        "truth_pairs": 144,
+        "predicted_pairs": 113,
+        "tp": 104,
+        "fp": 9,
+        "fn": 40,
+        "precision": 0.9203539823008849,
+        "recall": 0.7222222222222222,
+        "f1": 0.8093385214007782
+      }
+    },
+    "face_classification": {
+      "before": {
+        "truth_pairs": 99,
+        "predicted_pairs": 97,
+        "tp": 97,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.9797979797979798,
+        "f1": 0.989795918367347
+      },
+      "after": {
+        "truth_pairs": 99,
+        "predicted_pairs": 97,
+        "tp": 97,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.9797979797979798,
+        "f1": 0.989795918367347
+      }
+    },
+    "Sublist3r": {
+      "before": {
+        "truth_pairs": 115,
+        "predicted_pairs": 116,
+        "tp": 115,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.9913793103448276,
+        "recall": 1.0,
+        "f1": 0.9956709956709957
+      },
+      "after": {
+        "truth_pairs": 115,
+        "predicted_pairs": 116,
+        "tp": 115,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.9913793103448276,
+        "recall": 1.0,
+        "f1": 0.9956709956709957
+      }
+    }
+  }
+}

@@ -1,0 +1,864 @@
+{
+  "commit": "d086db856be187255b8ec61ef409357393020f32",
+  "review_method": "Source-reviewed by the same assistant; no independent human review. Curated cases include observed failures. No whole-project precision/recall inference.",
+  "exact": {
+    "cases": 14,
+    "passed": 12,
+    "tp": 10,
+    "fp": 2,
+    "fn": 2
+  },
+  "required": {
+    "cases": 16,
+    "found": 4,
+    "missing": 12,
+    "note": "Only required targets are scored; additional candidates are not labeled FP."
+  },
+  "source_checks": {
+    "production": {
+      "symbols": 427,
+      "calls": 1223,
+      "missing_symbols": [],
+      "missing_calls": [],
+      "legacy_checker_missing_lambda_count": 11,
+      "structural_16_checks_pass": true,
+      "status_10_checks_pass": true,
+      "note": "Legacy verify_v23 source-location check omits ast.Lambda. Its nonzero exit is preserved in metadata/logs. Independent lambda-aware source check passes."
+    },
+    "full": {
+      "symbols": 1606,
+      "calls": 3961,
+      "missing_symbols": [],
+      "missing_calls": [],
+      "legacy_checker_missing_lambda_count": 26,
+      "structural_16_checks_pass": true,
+      "status_10_checks_pass": true,
+      "note": "Legacy verify_v23 source-location check omits ast.Lambda. Its nonzero exit is preserved in metadata/logs. Independent lambda-aware source check passes."
+    }
+  },
+  "rows": [
+    {
+      "group": "exact_binding",
+      "file": "src/flask/__main__.py",
+      "line": 3,
+      "callee": "main",
+      "caller": null,
+      "expected": [
+        "FUNCTION:flask.cli.main"
+      ],
+      "actual": [
+        "FUNCTION:flask.cli.main"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": true,
+      "scenario": "Default namespaces, import binding unchanged.",
+      "source_excerpt": "1: from .cli import main\n2: \n3: main()",
+      "expected_definitions": [
+        {
+          "id": "FUNCTION:flask.cli.main",
+          "file": "src/flask/cli.py",
+          "line": 1121
+        }
+      ],
+      "caller_location": null
+    },
+    {
+      "group": "exact_binding",
+      "file": "src/flask/app.py",
+      "line": 408,
+      "callee": "send_from_directory",
+      "caller": "METHOD:flask.app.Flask.send_static_file",
+      "expected": [
+        "FUNCTION:flask.helpers.send_from_directory"
+      ],
+      "actual": [
+        "FUNCTION:flask.helpers.send_from_directory"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": true,
+      "scenario": "Default namespaces, import binding unchanged.",
+      "source_excerpt": "406:         # call it here so it works for blueprints too.\n407:         max_age = self.get_send_file_max_age(filename)\n408:         return send_from_directory(\n409:             t.cast(str, self.static_folder), filename, max_age=max_age\n410:         )",
+      "expected_definitions": [
+        {
+          "id": "FUNCTION:flask.helpers.send_from_directory",
+          "file": "src/flask/helpers.py",
+          "line": 543
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/app.py",
+        "line": 390
+      }
+    },
+    {
+      "group": "exact_binding",
+      "file": "src/flask/app.py",
+      "line": 707,
+      "callee": "get_load_dotenv",
+      "caller": "METHOD:flask.app.Flask.run",
+      "expected": [
+        "FUNCTION:flask.helpers.get_load_dotenv"
+      ],
+      "actual": [
+        "FUNCTION:flask.helpers.get_load_dotenv"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": true,
+      "scenario": "Default namespaces, import binding unchanged.",
+      "source_excerpt": "705:             return\n706: \n707:         if get_load_dotenv(load_dotenv):\n708:             cli.load_dotenv()\n709: ",
+      "expected_definitions": [
+        {
+          "id": "FUNCTION:flask.helpers.get_load_dotenv",
+          "file": "src/flask/helpers.py",
+          "line": 36
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/app.py",
+        "line": 630
+      }
+    },
+    {
+      "group": "exact_binding",
+      "file": "src/flask/app.py",
+      "line": 708,
+      "callee": "cli.load_dotenv",
+      "caller": "METHOD:flask.app.Flask.run",
+      "expected": [
+        "FUNCTION:flask.cli.load_dotenv"
+      ],
+      "actual": [
+        "FUNCTION:flask.cli.load_dotenv"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": true,
+      "scenario": "Default namespaces, import binding unchanged.",
+      "source_excerpt": "706: \n707:         if get_load_dotenv(load_dotenv):\n708:             cli.load_dotenv()\n709: \n710:             # if set, env var overrides existing value",
+      "expected_definitions": [
+        {
+          "id": "FUNCTION:flask.cli.load_dotenv",
+          "file": "src/flask/cli.py",
+          "line": 698
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/app.py",
+        "line": 630
+      }
+    },
+    {
+      "group": "exact_binding",
+      "file": "src/flask/cli.py",
+      "line": 348,
+      "callee": "prepare_import",
+      "caller": "METHOD:flask.cli.ScriptInfo.load_app",
+      "expected": [
+        "FUNCTION:flask.cli.prepare_import"
+      ],
+      "actual": [
+        "FUNCTION:flask.cli.prepare_import"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": true,
+      "scenario": "Default namespaces, import binding unchanged.",
+      "source_excerpt": "346:                     re.split(r\":(?![\\\\/])\", self.app_import_path, maxsplit=1) + [None]\n347:                 )[:2]\n348:                 import_name = prepare_import(path)\n349:                 app = locate_app(import_name, name)\n350:             else:",
+      "expected_definitions": [
+        {
+          "id": "FUNCTION:flask.cli.prepare_import",
+          "file": "src/flask/cli.py",
+          "line": 200
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/cli.py",
+        "line": 333
+      }
+    },
+    {
+      "group": "exact_binding",
+      "file": "src/flask/cli.py",
+      "line": 349,
+      "callee": "locate_app",
+      "caller": "METHOD:flask.cli.ScriptInfo.load_app",
+      "expected": [
+        "FUNCTION:flask.cli.locate_app"
+      ],
+      "actual": [
+        "FUNCTION:flask.cli.locate_app"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": true,
+      "scenario": "Default namespaces, import binding unchanged.",
+      "source_excerpt": "347:                 )[:2]\n348:                 import_name = prepare_import(path)\n349:                 app = locate_app(import_name, name)\n350:             else:\n351:                 for path in (\"wsgi.py\", \"app.py\"):",
+      "expected_definitions": [
+        {
+          "id": "FUNCTION:flask.cli.locate_app",
+          "file": "src/flask/cli.py",
+          "line": 241
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/cli.py",
+        "line": 333
+      }
+    },
+    {
+      "group": "exact_binding",
+      "file": "src/flask/helpers.py",
+      "line": 529,
+      "callee": "_prepare_send_file_kwargs",
+      "caller": "FUNCTION:flask.helpers.send_file",
+      "expected": [
+        "FUNCTION:flask.helpers._prepare_send_file_kwargs"
+      ],
+      "actual": [
+        "FUNCTION:flask.helpers._prepare_send_file_kwargs"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": true,
+      "scenario": "Default namespaces, import binding unchanged.",
+      "source_excerpt": "527:     \"\"\"\n528:     return werkzeug.utils.send_file(  # type: ignore[return-value]\n529:         **_prepare_send_file_kwargs(\n530:             path_or_file=path_or_file,\n531:             environ=request.environ,",
+      "expected_definitions": [
+        {
+          "id": "FUNCTION:flask.helpers._prepare_send_file_kwargs",
+          "file": "src/flask/helpers.py",
+          "line": 402
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/helpers.py",
+        "line": 417
+      }
+    },
+    {
+      "group": "exact_binding",
+      "file": "src/flask/helpers.py",
+      "line": 583,
+      "callee": "_prepare_send_file_kwargs",
+      "caller": "FUNCTION:flask.helpers.send_from_directory",
+      "expected": [
+        "FUNCTION:flask.helpers._prepare_send_file_kwargs"
+      ],
+      "actual": [
+        "FUNCTION:flask.helpers._prepare_send_file_kwargs"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": true,
+      "scenario": "Default namespaces, import binding unchanged.",
+      "source_excerpt": "581:     \"\"\"\n582:     return werkzeug.utils.send_from_directory(  # type: ignore[return-value]\n583:         directory, path, **_prepare_send_file_kwargs(**kwargs)\n584:     )\n585: ",
+      "expected_definitions": [
+        {
+          "id": "FUNCTION:flask.helpers._prepare_send_file_kwargs",
+          "file": "src/flask/helpers.py",
+          "line": 402
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/helpers.py",
+        "line": 543
+      }
+    },
+    {
+      "group": "exact_binding",
+      "file": "src/flask/templating.py",
+      "line": 148,
+      "callee": "_render",
+      "caller": "FUNCTION:flask.templating.render_template",
+      "expected": [
+        "FUNCTION:flask.templating._render"
+      ],
+      "actual": [
+        "FUNCTION:flask.templating._render"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": true,
+      "scenario": "Default namespaces, import binding unchanged.",
+      "source_excerpt": "146:     ctx = app_ctx._get_current_object()\n147:     template = ctx.app.jinja_env.get_or_select_template(template_name_or_list)\n148:     return _render(ctx, template, context)\n149: \n150: ",
+      "expected_definitions": [
+        {
+          "id": "FUNCTION:flask.templating._render",
+          "file": "src/flask/templating.py",
+          "line": 123
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/templating.py",
+        "line": 136
+      }
+    },
+    {
+      "group": "exact_binding",
+      "file": "src/flask/templating.py",
+      "line": 160,
+      "callee": "_render",
+      "caller": "FUNCTION:flask.templating.render_template_string",
+      "expected": [
+        "FUNCTION:flask.templating._render"
+      ],
+      "actual": [
+        "FUNCTION:flask.templating._render"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": true,
+      "scenario": "Default namespaces, import binding unchanged.",
+      "source_excerpt": "158:     ctx = app_ctx._get_current_object()\n159:     template = ctx.app.jinja_env.from_string(source)\n160:     return _render(ctx, template, context)\n161: \n162: ",
+      "expected_definitions": [
+        {
+          "id": "FUNCTION:flask.templating._render",
+          "file": "src/flask/templating.py",
+          "line": 123
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/templating.py",
+        "line": 151
+      }
+    },
+    {
+      "group": "exact_binding",
+      "file": "src/flask/json/tag.py",
+      "line": 323,
+      "callee": "dumps",
+      "caller": "METHOD:flask.json.tag.TaggedJSONSerializer.dumps",
+      "expected": [
+        "FUNCTION:flask.json.dumps"
+      ],
+      "actual": [
+        "METHOD:flask.json.tag.TaggedJSONSerializer.dumps"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": false,
+      "scenario": "Default namespaces, import binding unchanged.",
+      "source_excerpt": "321:     def dumps(self, value: t.Any) -> str:\n322:         \"\"\"Tag the value and dump it to a compact JSON string.\"\"\"\n323:         return dumps(self.tag(value), separators=(\",\", \":\"))\n324: \n325:     def loads(self, value: str) -> t.Any:",
+      "expected_definitions": [
+        {
+          "id": "FUNCTION:flask.json.dumps",
+          "file": "src/flask/json/__init__.py",
+          "line": 13
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/json/tag.py",
+        "line": 321
+      }
+    },
+    {
+      "group": "exact_binding",
+      "file": "src/flask/json/tag.py",
+      "line": 327,
+      "callee": "loads",
+      "caller": "METHOD:flask.json.tag.TaggedJSONSerializer.loads",
+      "expected": [
+        "FUNCTION:flask.json.loads"
+      ],
+      "actual": [
+        "METHOD:flask.json.tag.TaggedJSONSerializer.loads"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": false,
+      "scenario": "Default namespaces, import binding unchanged.",
+      "source_excerpt": "325:     def loads(self, value: str) -> t.Any:\n326:         \"\"\"Load data from a JSON string and deserialized any tagged objects.\"\"\"\n327:         return self._untag_scan(loads(value))",
+      "expected_definitions": [
+        {
+          "id": "FUNCTION:flask.json.loads",
+          "file": "src/flask/json/__init__.py",
+          "line": 77
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/json/tag.py",
+        "line": 325
+      }
+    },
+    {
+      "group": "exact_binding",
+      "file": "src/flask/json/__init__.py",
+      "line": 44,
+      "callee": "_json.dumps",
+      "caller": "FUNCTION:flask.json.dumps",
+      "expected": [],
+      "actual": [],
+      "status": "KNOWN_NON_INTERNAL",
+      "certainty": "PROVEN_STATIC_ORIGIN",
+      "passed": true,
+      "scenario": "Default namespaces, import binding unchanged.",
+      "source_excerpt": "42: \n43:     kwargs.setdefault(\"default\", _default)\n44:     return _json.dumps(obj, **kwargs)\n45: \n46: ",
+      "expected_definitions": [],
+      "caller_location": {
+        "file": "src/flask/json/__init__.py",
+        "line": 13
+      }
+    },
+    {
+      "group": "exact_binding",
+      "file": "src/flask/json/__init__.py",
+      "line": 105,
+      "callee": "_json.loads",
+      "caller": "FUNCTION:flask.json.loads",
+      "expected": [],
+      "actual": [],
+      "status": "KNOWN_NON_INTERNAL",
+      "certainty": "PROVEN_STATIC_ORIGIN",
+      "passed": true,
+      "scenario": "Default namespaces, import binding unchanged.",
+      "source_excerpt": "103:         return current_app.json.loads(s, **kwargs)\n104: \n105:     return _json.loads(s, **kwargs)\n106: \n107: ",
+      "expected_definitions": [],
+      "caller_location": {
+        "file": "src/flask/json/__init__.py",
+        "line": 77
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/app.py",
+      "line": 987,
+      "callee": "self.make_default_options_response",
+      "caller": "METHOD:flask.app.Flask.dispatch_request",
+      "expected": [
+        "METHOD:flask.app.Flask.make_default_options_response"
+      ],
+      "actual": [],
+      "status": "UNKNOWN",
+      "certainty": "UNVERIFIED",
+      "passed": false,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "985:             and req.method == \"OPTIONS\"\n986:         ):\n987:             return self.make_default_options_response(ctx)\n988:         # otherwise dispatch to the handler for that endpoint\n989:         view_args: dict[str, t.Any] = req.view_args  # type: ignore[assignment]",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.app.Flask.make_default_options_response",
+          "file": "src/flask/app.py",
+          "line": 1053
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/app.py",
+        "line": 966
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/app.py",
+      "line": 1014,
+      "callee": "self.preprocess_request",
+      "caller": "METHOD:flask.app.Flask.full_dispatch_request",
+      "expected": [
+        "METHOD:flask.app.Flask.preprocess_request"
+      ],
+      "actual": [],
+      "status": "UNKNOWN",
+      "certainty": "UNVERIFIED",
+      "passed": false,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "1012:         try:\n1013:             request_started.send(self, _async_wrapper=self.ensure_sync)\n1014:             rv = self.preprocess_request(ctx)\n1015:             if rv is None:\n1016:                 rv = self.dispatch_request(ctx)",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.app.Flask.preprocess_request",
+          "file": "src/flask/app.py",
+          "line": 1366
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/app.py",
+        "line": 992
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/app.py",
+      "line": 1016,
+      "callee": "self.dispatch_request",
+      "caller": "METHOD:flask.app.Flask.full_dispatch_request",
+      "expected": [
+        "METHOD:flask.app.Flask.dispatch_request"
+      ],
+      "actual": [],
+      "status": "UNKNOWN",
+      "certainty": "UNVERIFIED",
+      "passed": false,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "1014:             rv = self.preprocess_request(ctx)\n1015:             if rv is None:\n1016:                 rv = self.dispatch_request(ctx)\n1017:         except Exception as e:\n1018:             rv = self.handle_user_exception(ctx, e)",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.app.Flask.dispatch_request",
+          "file": "src/flask/app.py",
+          "line": 966
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/app.py",
+        "line": 992
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/app.py",
+      "line": 1018,
+      "callee": "self.handle_user_exception",
+      "caller": "METHOD:flask.app.Flask.full_dispatch_request",
+      "expected": [
+        "METHOD:flask.app.Flask.handle_user_exception"
+      ],
+      "actual": [],
+      "status": "UNKNOWN",
+      "certainty": "UNVERIFIED",
+      "passed": false,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "1016:                 rv = self.dispatch_request(ctx)\n1017:         except Exception as e:\n1018:             rv = self.handle_user_exception(ctx, e)\n1019:         return self.finalize_request(ctx, rv)\n1020: ",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.app.Flask.handle_user_exception",
+          "file": "src/flask/app.py",
+          "line": 865
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/app.py",
+        "line": 992
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/app.py",
+      "line": 1019,
+      "callee": "self.finalize_request",
+      "caller": "METHOD:flask.app.Flask.full_dispatch_request",
+      "expected": [
+        "METHOD:flask.app.Flask.finalize_request"
+      ],
+      "actual": [],
+      "status": "UNKNOWN",
+      "certainty": "UNVERIFIED",
+      "passed": false,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "1017:         except Exception as e:\n1018:             rv = self.handle_user_exception(ctx, e)\n1019:         return self.finalize_request(ctx, rv)\n1020: \n1021:     def finalize_request(",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.app.Flask.finalize_request",
+          "file": "src/flask/app.py",
+          "line": 1021
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/app.py",
+        "line": 992
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/app.py",
+      "line": 1039,
+      "callee": "self.make_response",
+      "caller": "METHOD:flask.app.Flask.finalize_request",
+      "expected": [
+        "METHOD:flask.app.Flask.make_response"
+      ],
+      "actual": [],
+      "status": "UNKNOWN",
+      "certainty": "UNVERIFIED",
+      "passed": false,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "1037:         :internal:\n1038:         \"\"\"\n1039:         response = self.make_response(rv)\n1040:         try:\n1041:             response = self.process_response(ctx, response)",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.app.Flask.make_response",
+          "file": "src/flask/app.py",
+          "line": 1224
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/app.py",
+        "line": 1021
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/app.py",
+      "line": 1041,
+      "callee": "self.process_response",
+      "caller": "METHOD:flask.app.Flask.finalize_request",
+      "expected": [
+        "METHOD:flask.app.Flask.process_response"
+      ],
+      "actual": [],
+      "status": "UNKNOWN",
+      "certainty": "UNVERIFIED",
+      "passed": false,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "1039:         response = self.make_response(rv)\n1040:         try:\n1041:             response = self.process_response(ctx, response)\n1042:             request_finished.send(\n1043:                 self, _async_wrapper=self.ensure_sync, response=response",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.app.Flask.process_response",
+          "file": "src/flask/app.py",
+          "line": 1394
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/app.py",
+        "line": 1021
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/app.py",
+      "line": 1075,
+      "callee": "self.async_to_sync",
+      "caller": "METHOD:flask.app.Flask.ensure_sync",
+      "expected": [
+        "METHOD:flask.app.Flask.async_to_sync"
+      ],
+      "actual": [],
+      "status": "UNKNOWN",
+      "certainty": "UNVERIFIED",
+      "passed": false,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "1073:         \"\"\"\n1074:         if iscoroutinefunction(func):\n1075:             return self.async_to_sync(func)\n1076: \n1077:         return func",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.app.Flask.async_to_sync",
+          "file": "src/flask/app.py",
+          "line": 1079
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/app.py",
+        "line": 1065
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/app.py",
+      "line": 1597,
+      "callee": "self.full_dispatch_request",
+      "caller": "METHOD:flask.app.Flask.wsgi_app",
+      "expected": [
+        "METHOD:flask.app.Flask.full_dispatch_request"
+      ],
+      "actual": [],
+      "status": "UNKNOWN",
+      "certainty": "UNVERIFIED",
+      "passed": false,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "1595:             try:\n1596:                 ctx.push()\n1597:                 response = self.full_dispatch_request(ctx)\n1598:             except Exception as e:\n1599:                 error = e",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.app.Flask.full_dispatch_request",
+          "file": "src/flask/app.py",
+          "line": 992
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/app.py",
+        "line": 1566
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/templating.py",
+      "line": 125,
+      "callee": "app.update_template_context",
+      "caller": "FUNCTION:flask.templating._render",
+      "expected": [
+        "METHOD:flask.app.Flask.update_template_context"
+      ],
+      "actual": [],
+      "status": "UNKNOWN",
+      "certainty": "UNVERIFIED",
+      "passed": false,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "123: def _render(ctx: AppContext, template: Template, context: dict[str, t.Any]) -> str:\n124:     app = ctx.app\n125:     app.update_template_context(ctx, context)\n126:     before_render_template.send(\n127:         app, _async_wrapper=app.ensure_sync, template=template, context=context",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.app.Flask.update_template_context",
+          "file": "src/flask/app.py",
+          "line": 588
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/templating.py",
+        "line": 123
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/json/__init__.py",
+      "line": 41,
+      "callee": "current_app.json.dumps",
+      "caller": "FUNCTION:flask.json.dumps",
+      "expected": [
+        "METHOD:flask.json.provider.DefaultJSONProvider.dumps"
+      ],
+      "actual": [],
+      "status": "UNKNOWN",
+      "certainty": "UNVERIFIED",
+      "passed": false,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "39:     \"\"\"\n40:     if current_app:\n41:         return current_app.json.dumps(obj, **kwargs)\n42: \n43:     kwargs.setdefault(\"default\", _default)",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.json.provider.DefaultJSONProvider.dumps",
+          "file": "src/flask/json/provider.py",
+          "line": 166
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/json/__init__.py",
+        "line": 13
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/json/__init__.py",
+      "line": 103,
+      "callee": "current_app.json.loads",
+      "caller": "FUNCTION:flask.json.loads",
+      "expected": [
+        "METHOD:flask.json.provider.DefaultJSONProvider.loads"
+      ],
+      "actual": [],
+      "status": "UNKNOWN",
+      "certainty": "UNVERIFIED",
+      "passed": false,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "101:     \"\"\"\n102:     if current_app:\n103:         return current_app.json.loads(s, **kwargs)\n104: \n105:     return _json.loads(s, **kwargs)",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.json.provider.DefaultJSONProvider.loads",
+          "file": "src/flask/json/provider.py",
+          "line": 181
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/json/__init__.py",
+        "line": 77
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/config.py",
+      "line": 124,
+      "callee": "self.from_pyfile",
+      "caller": "METHOD:flask.config.Config.from_envvar",
+      "expected": [
+        "METHOD:flask.config.Config.from_pyfile"
+      ],
+      "actual": [
+        "METHOD:flask.config.Config.from_pyfile"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": true,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "122:                 \" file\"\n123:             )\n124:         return self.from_pyfile(rv, silent=silent)\n125: \n126:     def from_prefixed_env(",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.config.Config.from_pyfile",
+          "file": "src/flask/config.py",
+          "line": 187
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/config.py",
+        "line": 102
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/config.py",
+      "line": 215,
+      "callee": "self.from_object",
+      "caller": "METHOD:flask.config.Config.from_pyfile",
+      "expected": [
+        "METHOD:flask.config.Config.from_object"
+      ],
+      "actual": [
+        "METHOD:flask.config.Config.from_object"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": true,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "213:             e.strerror = f\"Unable to load configuration file ({e.strerror})\"\n214:             raise\n215:         self.from_object(d)\n216:         return True\n217: ",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.config.Config.from_object",
+          "file": "src/flask/config.py",
+          "line": 218
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/config.py",
+        "line": 187
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/config.py",
+      "line": 302,
+      "callee": "self.from_mapping",
+      "caller": "METHOD:flask.config.Config.from_file",
+      "expected": [
+        "METHOD:flask.config.Config.from_mapping"
+      ],
+      "actual": [
+        "METHOD:flask.config.Config.from_mapping"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": true,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "300:             raise\n301: \n302:         return self.from_mapping(obj)\n303: \n304:     def from_mapping(",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.config.Config.from_mapping",
+          "file": "src/flask/config.py",
+          "line": 304
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/config.py",
+        "line": 256
+      }
+    },
+    {
+      "group": "required_base_scenario",
+      "file": "src/flask/json/tag.py",
+      "line": 323,
+      "callee": "self.tag",
+      "caller": "METHOD:flask.json.tag.TaggedJSONSerializer.dumps",
+      "expected": [
+        "METHOD:flask.json.tag.TaggedJSONSerializer.tag"
+      ],
+      "actual": [
+        "METHOD:flask.json.tag.TaggedJSONSerializer.tag"
+      ],
+      "status": "RESOLVED_INTERNAL",
+      "certainty": "SOURCE_BACKED",
+      "passed": true,
+      "scenario": "Concrete base Flask/Config/TaggedJSONSerializer; no user overrides or subclass creation; active default app/JSON provider where applicable. Required possible target only.",
+      "source_excerpt": "321:     def dumps(self, value: t.Any) -> str:\n322:         \"\"\"Tag the value and dump it to a compact JSON string.\"\"\"\n323:         return dumps(self.tag(value), separators=(\",\", \":\"))\n324: \n325:     def loads(self, value: str) -> t.Any:",
+      "expected_definitions": [
+        {
+          "id": "METHOD:flask.json.tag.TaggedJSONSerializer.tag",
+          "file": "src/flask/json/tag.py",
+          "line": 289
+        }
+      ],
+      "caller_location": {
+        "file": "src/flask/json/tag.py",
+        "line": 321
+      }
+    }
+  ]
+}

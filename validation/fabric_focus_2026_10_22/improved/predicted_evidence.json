@@ -1,0 +1,1327 @@
+[
+  {
+    "caller": "fabric.config.Config.__init__",
+    "target": "fabric.config.Config.set_runtime_ssh_path",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/config.py:74:8:2",
+    "file": "tmp4oidkbvw/fabric/config.py",
+    "line": 74,
+    "column": 8,
+    "source": "self.set_runtime_ssh_path(kwargs.pop(\"runtime_ssh_path\", None))",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.config.Config",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.config.Config.__init__",
+    "target": "fabric.config.Config.load_ssh_config",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/config.py:97:12:13",
+    "file": "tmp4oidkbvw/fabric/config.py",
+    "line": 97,
+    "column": 12,
+    "source": "self.load_ssh_config()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.config.Config",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.config.Config.load_ssh_config",
+    "target": "fabric.config.Config._load_ssh_files",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/config.py:127:12:15",
+    "file": "tmp4oidkbvw/fabric/config.py",
+    "line": 127,
+    "column": 12,
+    "source": "self._load_ssh_files()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.config.Config",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.load_ssh_config",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.config.Config.clone",
+    "target": "fabric.config.Config.load_ssh_config",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/config.py:151:8:20",
+    "file": "tmp4oidkbvw/fabric/config.py",
+    "line": 151,
+    "column": 8,
+    "source": "self.load_ssh_config()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.config.Config",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.clone",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.config.Config._load_ssh_files",
+    "target": "fabric.config.Config._load_ssh_file",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/config.py:186:12:29",
+    "file": "tmp4oidkbvw/fabric/config.py",
+    "line": 186,
+    "column": 12,
+    "source": "self._load_ssh_file(os.path.expanduser(path))",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.config.Config",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Config._load_ssh_files",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.config.Config._load_ssh_files",
+    "target": "fabric.config.Config._load_ssh_file",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/config.py:189:16:31",
+    "file": "tmp4oidkbvw/fabric/config.py",
+    "line": 189,
+    "column": 16,
+    "source": "self._load_ssh_file(os.path.expanduser(path))",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.config.Config",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Config._load_ssh_files",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.config.Config.global_defaults",
+    "target": "fabric.util.get_local_user",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/config.py:250:20:42",
+    "file": "tmp4oidkbvw/fabric/config.py",
+    "line": 250,
+    "column": 20,
+    "source": "get_local_user()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "get_local_user"
+    ],
+    "module_level": false,
+    "execution_scope": "Config.global_defaults",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "fabric.config.Config",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:256:21:4",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 256,
+    "column": 21,
+    "source": "Config()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "Config"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "fabric.config.Config.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:256:21:4",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 256,
+    "column": 21,
+    "source": "Config()",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.config.Config",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "fabric.connection.Connection.derive_shorthand",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:266:20:8",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 266,
+    "column": 20,
+    "source": "self.derive_shorthand(host)",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "fabric.connection.Connection.get_gateway",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:303:59:17",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 303,
+    "column": 59,
+    "source": "self.get_gateway()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__init__",
+    "target": "fabric.connection.Connection.resolve_connect_kwargs",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:330:30:20",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 330,
+    "column": 30,
+    "source": "self.resolve_connect_kwargs(connect_kwargs)",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__init__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.get_gateway",
+    "target": "fabric.connection.Connection.derive_shorthand",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:384:19:29",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 384,
+    "column": 19,
+    "source": "self.derive_shorthand(hop)",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.get_gateway",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.get_gateway",
+    "target": "fabric.connection.Connection",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:391:22:32",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 391,
+    "column": 22,
+    "source": "Connection(hop, **kwargs)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "Connection"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.get_gateway",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.get_gateway",
+    "target": "fabric.connection.Connection.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:391:22:32",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 391,
+    "column": 22,
+    "source": "Connection(hop, **kwargs)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.get_gateway",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__eq__",
+    "target": "fabric.connection.Connection._identity",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:434:15:41",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 434,
+    "column": 15,
+    "source": "self._identity()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__eq__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__lt__",
+    "target": "fabric.connection.Connection._identity",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:437:15:43",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 437,
+    "column": 15,
+    "source": "self._identity()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__lt__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__hash__",
+    "target": "fabric.connection.Connection._identity",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:442:20:46",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 442,
+    "column": 20,
+    "source": "self._identity()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__hash__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.open",
+    "target": "fabric.connection.Connection.open_gateway",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:517:29:59",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 517,
+    "column": 29,
+    "source": "self.open_gateway()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.open",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.__exit__",
+    "target": "fabric.connection.Connection.close",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:584:8:74",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 584,
+    "column": 8,
+    "source": "self.close()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.__exit__",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.get",
+    "target": "fabric.transfer.Transfer.get",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:664:15:84",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 664,
+    "column": 15,
+    "source": "Transfer(self).get(*args, **kwargs)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmp4oidkbvw/fabric/connection.py:664:15 > root:METHOD:fabric.connection.Connection.get",
+      "context:METHOD:fabric.connection.Connection.get",
+      "receiver:fabric.transfer.Transfer"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.get",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "fabric.connection.Connection.get",
+    "target": "fabric.transfer.Transfer",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:664:15:85",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 664,
+    "column": 15,
+    "source": "Transfer(self)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "Transfer"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.get",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.get",
+    "target": "fabric.transfer.Transfer.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:664:15:85",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 664,
+    "column": 15,
+    "source": "Transfer(self)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.transfer.Transfer"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.get",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.put",
+    "target": "fabric.transfer.Transfer.put",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:675:15:86",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 675,
+    "column": 15,
+    "source": "Transfer(self).put(*args, **kwargs)",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "allocation:tmp4oidkbvw/fabric/connection.py:675:15 > root:METHOD:fabric.connection.Connection.put",
+      "context:METHOD:fabric.connection.Connection.put",
+      "receiver:fabric.transfer.Transfer"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.put",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "fabric.connection.Connection.put",
+    "target": "fabric.transfer.Transfer",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:675:15:87",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 675,
+    "column": 15,
+    "source": "Transfer(self)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "Transfer"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.put",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.put",
+    "target": "fabric.transfer.Transfer.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:675:15:87",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 675,
+    "column": 15,
+    "source": "Transfer(self)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.transfer.Transfer"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.put",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_local",
+    "target": "fabric.tunnels.TunnelManager",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:736:18:89",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 736,
+    "column": 18,
+    "source": "TunnelManager(\n            local_port=local_port,\n            local_host=local_host,\n            remote_port=remote_port,\n            remote_host=remote_host,\n            # TODO: not a huge fan of handing in our transport, but...?\n            transport=self.transport,\n            finished=finished,\n        )",
+    "rule": "import_or_same_module",
+    "trace": [
+      "TunnelManager"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.forward_local",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_local",
+    "target": "fabric.tunnels.TunnelManager.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:736:18:89",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 736,
+    "column": 18,
+    "source": "TunnelManager(\n            local_port=local_port,\n            local_host=local_host,\n            remote_port=remote_port,\n            remote_host=remote_host,\n            # TODO: not a huge fan of handing in our transport, but...?\n            transport=self.transport,\n            finished=finished,\n        )",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.tunnels.TunnelManager",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.forward_local",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_remote.callback",
+    "target": "fabric.tunnels.Tunnel",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:858:21:97",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 858,
+    "column": 21,
+    "source": "Tunnel(channel=channel, sock=sock, finished=Event())",
+    "rule": "import_or_same_module",
+    "trace": [
+      "Tunnel"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.forward_remote.callback",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.forward_remote.callback",
+    "target": "fabric.tunnels.Tunnel.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/connection.py:858:21:97",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 858,
+    "column": 21,
+    "source": "Tunnel(channel=channel, sock=sock, finished=Event())",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.tunnels.Tunnel",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Connection.forward_remote.callback",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "fabric.executor.FabExecutor.expand_calls",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/executor.py:27:23:4",
+    "file": "tmp4oidkbvw/fabric/executor.py",
+    "line": 27,
+    "column": 23,
+    "source": "self.expand_calls(call.pre, apply_hosts=False)",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.executor.FabExecutor",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "FabExecutor.expand_calls",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "fabric.executor.FabExecutor.parameterize",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/executor.py:30:27:6",
+    "file": "tmp4oidkbvw/fabric/executor.py",
+    "line": 30,
+    "column": 27,
+    "source": "self.parameterize(call, host)",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.executor.FabExecutor",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "FabExecutor.expand_calls",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "fabric.executor.FabExecutor.expand_calls",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/executor.py:36:23:9",
+    "file": "tmp4oidkbvw/fabric/executor.py",
+    "line": 36,
+    "column": 23,
+    "source": "self.expand_calls(call.post, apply_hosts=False)",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.executor.FabExecutor",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "FabExecutor.expand_calls",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "fabric.exceptions.NothingToDo",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/executor.py:42:22:10",
+    "file": "tmp4oidkbvw/fabric/executor.py",
+    "line": 42,
+    "column": 22,
+    "source": "NothingToDo(\n                    \"Was told to run a command, but not given any hosts to run it on!\"  # noqa\n                )",
+    "rule": "import_or_same_module",
+    "trace": [
+      "NothingToDo"
+    ],
+    "module_level": false,
+    "execution_scope": "FabExecutor.expand_calls",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.executor.FabExecutor.expand_calls",
+    "target": "fabric.executor.FabExecutor.parameterize",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/executor.py:55:27:15",
+    "file": "tmp4oidkbvw/fabric/executor.py",
+    "line": 55,
+    "column": 27,
+    "source": "self.parameterize(anon, host)",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.executor.FabExecutor",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "FabExecutor.expand_calls",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.executor.ConnectionCall.make_context",
+    "target": "fabric.connection.Connection",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/executor.py:84:15:19",
+    "file": "tmp4oidkbvw/fabric/executor.py",
+    "line": 84,
+    "column": 15,
+    "source": "Connection(host=self.host, config=config)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "Connection"
+    ],
+    "module_level": false,
+    "execution_scope": "ConnectionCall.make_context",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.executor.ConnectionCall.make_context",
+    "target": "fabric.connection.Connection.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/executor.py:84:15:19",
+    "file": "tmp4oidkbvw/fabric/executor.py",
+    "line": 84,
+    "column": 15,
+    "source": "Connection(host=self.host, config=config)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.connection.Connection",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "ConnectionCall.make_context",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.Group.from_connections",
+    "target": "fabric.group.Group",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/group.py:81:16:2",
+    "file": "tmp4oidkbvw/fabric/group.py",
+    "line": 81,
+    "column": 16,
+    "source": "cls()",
+    "rule": "object_flow_may_call",
+    "trace": [
+      "context:METHOD:fabric.group.Group.from_connections"
+    ],
+    "module_level": false,
+    "execution_scope": "Group.from_connections",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "fabric.group.Group.from_connections",
+    "target": "fabric.group.Group.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/group.py:81:16:2",
+    "file": "tmp4oidkbvw/fabric/group.py",
+    "line": 81,
+    "column": 16,
+    "source": "cls()",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.group.Group",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Group.from_connections",
+    "execution_phase": "function_body",
+    "certainty": "interprocedural_may_call"
+  },
+  {
+    "caller": "fabric.group.SerialGroup.run",
+    "target": "fabric.group.GroupResult",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/group.py:144:18:4",
+    "file": "tmp4oidkbvw/fabric/group.py",
+    "line": 144,
+    "column": 18,
+    "source": "GroupResult()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "GroupResult"
+    ],
+    "module_level": false,
+    "execution_scope": "SerialGroup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.SerialGroup.run",
+    "target": "fabric.group.GroupResult.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/group.py:144:18:4",
+    "file": "tmp4oidkbvw/fabric/group.py",
+    "line": 144,
+    "column": 18,
+    "source": "GroupResult()",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.group.GroupResult",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "SerialGroup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.SerialGroup.run",
+    "target": "fabric.exceptions.GroupException",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/group.py:153:18:6",
+    "file": "tmp4oidkbvw/fabric/group.py",
+    "line": 153,
+    "column": 18,
+    "source": "GroupException(results)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "GroupException"
+    ],
+    "module_level": false,
+    "execution_scope": "SerialGroup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.SerialGroup.run",
+    "target": "fabric.exceptions.GroupException.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/group.py:153:18:6",
+    "file": "tmp4oidkbvw/fabric/group.py",
+    "line": 153,
+    "column": 18,
+    "source": "GroupException(results)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.exceptions.GroupException",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "SerialGroup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.ThreadingGroup.run",
+    "target": "fabric.group.GroupResult",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/group.py:171:18:9",
+    "file": "tmp4oidkbvw/fabric/group.py",
+    "line": 171,
+    "column": 18,
+    "source": "GroupResult()",
+    "rule": "import_or_same_module",
+    "trace": [
+      "GroupResult"
+    ],
+    "module_level": false,
+    "execution_scope": "ThreadingGroup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.ThreadingGroup.run",
+    "target": "fabric.group.GroupResult.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/group.py:171:18:9",
+    "file": "tmp4oidkbvw/fabric/group.py",
+    "line": 171,
+    "column": 18,
+    "source": "GroupResult()",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.group.GroupResult",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "ThreadingGroup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.ThreadingGroup.run",
+    "target": "fabric.exceptions.GroupException",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/group.py:210:18:19",
+    "file": "tmp4oidkbvw/fabric/group.py",
+    "line": 210,
+    "column": 18,
+    "source": "GroupException(results)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "GroupException"
+    ],
+    "module_level": false,
+    "execution_scope": "ThreadingGroup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.ThreadingGroup.run",
+    "target": "fabric.exceptions.GroupException.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/group.py:210:18:19",
+    "file": "tmp4oidkbvw/fabric/group.py",
+    "line": 210,
+    "column": 18,
+    "source": "GroupException(results)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.exceptions.GroupException",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "ThreadingGroup.run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.GroupResult.succeeded",
+    "target": "fabric.group.GroupResult._bifurcate",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/group.py:259:8:24",
+    "file": "tmp4oidkbvw/fabric/group.py",
+    "line": 259,
+    "column": 8,
+    "source": "self._bifurcate()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.group.GroupResult",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "GroupResult.succeeded",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.group.GroupResult.failed",
+    "target": "fabric.group.GroupResult._bifurcate",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/group.py:269:8:25",
+    "file": "tmp4oidkbvw/fabric/group.py",
+    "line": 269,
+    "column": 8,
+    "source": "self._bifurcate()",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.group.GroupResult",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "GroupResult.failed",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.main.make_program",
+    "target": "fabric.main.Fab",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/main.py:143:11:28",
+    "file": "tmp4oidkbvw/fabric/main.py",
+    "line": 143,
+    "column": 11,
+    "source": "Fab(\n        name=\"Fabric\",\n        version=fabric,\n        executor_class=FabExecutor,\n        config_class=Config,\n    )",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:Fab@18"
+    ],
+    "module_level": false,
+    "execution_scope": "make_program",
+    "execution_phase": "function_body",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "Fab",
+        "line": 18
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "fabric.main",
+    "target": "fabric.main.make_program",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/main.py:151:10:29",
+    "file": "tmp4oidkbvw/fabric/main.py",
+    "line": 151,
+    "column": 10,
+    "source": "make_program()",
+    "rule": "flow_reaching_assignment",
+    "trace": [
+      "reference:make_program@142"
+    ],
+    "module_level": true,
+    "execution_scope": "<module>",
+    "execution_phase": "module_initialization",
+    "certainty": "definite_within_supported_flow",
+    "reaching_definitions": [
+      {
+        "kind": "reference",
+        "name": "make_program",
+        "line": 142
+      }
+    ],
+    "may_be_unbound": false
+  },
+  {
+    "caller": "fabric.runners.Remote.generate_result",
+    "target": "fabric.runners.Result",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/runners.py:68:15:11",
+    "file": "tmp4oidkbvw/fabric/runners.py",
+    "line": 68,
+    "column": 15,
+    "source": "Result(**kwargs)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "Result"
+    ],
+    "module_level": false,
+    "execution_scope": "Remote.generate_result",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.runners.Remote.generate_result",
+    "target": "fabric.runners.Result.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/runners.py:68:15:11",
+    "file": "tmp4oidkbvw/fabric/runners.py",
+    "line": 68,
+    "column": 15,
+    "source": "Result(**kwargs)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.runners.Result",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Remote.generate_result",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "fabric.transfer.Result",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/transfer.py:139:15:16",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 139,
+    "column": 15,
+    "source": "Result(\n            orig_remote=orig_remote,\n            remote=remote,\n            orig_local=orig_local,\n            local=local,\n            connection=self.connection,\n        )",
+    "rule": "import_or_same_module",
+    "trace": [
+      "Result"
+    ],
+    "module_level": false,
+    "execution_scope": "Transfer.get",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "fabric.transfer.Result.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/transfer.py:139:15:16",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 139,
+    "column": 15,
+    "source": "Result(\n            orig_remote=orig_remote,\n            remote=remote,\n            orig_local=orig_local,\n            local=local,\n            connection=self.connection,\n        )",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.transfer.Result"
+    ],
+    "module_level": false,
+    "execution_scope": "Transfer.get",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Transfer.is_remote_dir",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/transfer.py:212:13:25",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 212,
+    "column": 13,
+    "source": "self.is_remote_dir(remote)",
+    "rule": "self_method",
+    "trace": [
+      "fabric.transfer.Transfer"
+    ],
+    "module_level": false,
+    "execution_scope": "Transfer.put",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Result",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/transfer.py:277:15:50",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 277,
+    "column": 15,
+    "source": "Result(\n            orig_remote=orig_remote,\n            remote=remote,\n            orig_local=orig_local,\n            local=local,\n            connection=self.connection,\n        )",
+    "rule": "import_or_same_module",
+    "trace": [
+      "Result"
+    ],
+    "module_level": false,
+    "execution_scope": "Transfer.put",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Result.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/transfer.py:277:15:50",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 277,
+    "column": 15,
+    "source": "Result(\n            orig_remote=orig_remote,\n            remote=remote,\n            orig_local=orig_local,\n            local=local,\n            connection=self.connection,\n        )",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.transfer.Result"
+    ],
+    "module_level": false,
+    "execution_scope": "Transfer.put",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "fabric.tunnels.Tunnel",
+    "relation": "INSTANTIATES",
+    "call_id": "CALL:tmp4oidkbvw/fabric/tunnels.py:88:21:13",
+    "file": "tmp4oidkbvw/fabric/tunnels.py",
+    "line": 88,
+    "column": 21,
+    "source": "Tunnel(channel=channel, sock=tun_sock, finished=finished)",
+    "rule": "import_or_same_module",
+    "trace": [
+      "Tunnel"
+    ],
+    "module_level": false,
+    "execution_scope": "TunnelManager._run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.tunnels.TunnelManager._run",
+    "target": "fabric.tunnels.Tunnel.__init__",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/tunnels.py:88:21:13",
+    "file": "tmp4oidkbvw/fabric/tunnels.py",
+    "line": 88,
+    "column": 21,
+    "source": "Tunnel(channel=channel, sock=tun_sock, finished=finished)",
+    "rule": "constructor_init",
+    "trace": [
+      "fabric.tunnels.Tunnel",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "TunnelManager._run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.tunnels.Tunnel._run",
+    "target": "fabric.tunnels.Tunnel.read_and_write",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/tunnels.py:133:33:26",
+    "file": "tmp4oidkbvw/fabric/tunnels.py",
+    "line": 133,
+    "column": 33,
+    "source": "self.read_and_write(\n                        self.sock, self.channel, self.socket_chunk_size\n                    )",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.tunnels.Tunnel",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Tunnel._run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.tunnels.Tunnel._run",
+    "target": "fabric.tunnels.Tunnel.read_and_write",
+    "relation": "CALLS",
+    "call_id": "CALL:tmp4oidkbvw/fabric/tunnels.py:137:33:27",
+    "file": "tmp4oidkbvw/fabric/tunnels.py",
+    "line": 137,
+    "column": 33,
+    "source": "self.read_and_write(\n                        self.channel, self.sock, self.channel_chunk_size\n                    )",
+    "rule": "self_inheritance",
+    "trace": [
+      "fabric.tunnels.Tunnel",
+      "unknown_base"
+    ],
+    "module_level": false,
+    "execution_scope": "Tunnel._run",
+    "execution_phase": "function_body"
+  },
+  {
+    "caller": "fabric.connection.Connection.open",
+    "target": "fabric.connection.Connection.is_connected",
+    "relation": "CALLS",
+    "call_id": null,
+    "property_access_id": "tmp4oidkbvw/fabric/connection.py:492:11",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 492,
+    "column": 11,
+    "source": "self.is_connected",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.connection.Connection.close",
+    "target": "fabric.connection.Connection.is_connected",
+    "relation": "CALLS",
+    "call_id": null,
+    "property_access_id": "tmp4oidkbvw/fabric/connection.py:575:11",
+    "file": "tmp4oidkbvw/fabric/connection.py",
+    "line": 575,
+    "column": 11,
+    "source": "self.is_connected",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.main.Fab.load_collection",
+    "target": "fabric.main.Fab._remainder_only",
+    "relation": "CALLS",
+    "call_id": null,
+    "property_access_id": "tmp4oidkbvw/fabric/main.py:76:11",
+    "file": "tmp4oidkbvw/fabric/main.py",
+    "line": 76,
+    "column": 11,
+    "source": "self._remainder_only",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.main.Fab.no_tasks_given",
+    "target": "fabric.main.Fab._remainder_only",
+    "relation": "CALLS",
+    "call_id": null,
+    "property_access_id": "tmp4oidkbvw/fabric/main.py:88:15",
+    "file": "tmp4oidkbvw/fabric/main.py",
+    "line": 88,
+    "column": 15,
+    "source": "self._remainder_only",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.is_remote_dir",
+    "target": "fabric.transfer.Transfer.sftp",
+    "relation": "CALLS",
+    "call_id": null,
+    "property_access_id": "tmp4oidkbvw/fabric/transfer.py:37:32",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 37,
+    "column": 32,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "fabric.transfer.Transfer.sftp",
+    "relation": "CALLS",
+    "call_id": null,
+    "property_access_id": "tmp4oidkbvw/fabric/transfer.py:107:12",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 107,
+    "column": 12,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "fabric.transfer.Transfer.sftp",
+    "relation": "CALLS",
+    "call_id": null,
+    "property_access_id": "tmp4oidkbvw/fabric/transfer.py:107:34",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 107,
+    "column": 34,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "fabric.transfer.Transfer.sftp",
+    "relation": "CALLS",
+    "call_id": null,
+    "property_access_id": "tmp4oidkbvw/fabric/transfer.py:128:12",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 128,
+    "column": 12,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "fabric.transfer.Transfer.sftp",
+    "relation": "CALLS",
+    "call_id": null,
+    "property_access_id": "tmp4oidkbvw/fabric/transfer.py:130:12",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 130,
+    "column": 12,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.get",
+    "target": "fabric.transfer.Transfer.sftp",
+    "relation": "CALLS",
+    "call_id": null,
+    "property_access_id": "tmp4oidkbvw/fabric/transfer.py:135:30",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 135,
+    "column": 30,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Transfer.sftp",
+    "relation": "CALLS",
+    "call_id": null,
+    "property_access_id": "tmp4oidkbvw/fabric/transfer.py:233:12",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 233,
+    "column": 12,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Transfer.sftp",
+    "relation": "CALLS",
+    "call_id": null,
+    "property_access_id": "tmp4oidkbvw/fabric/transfer.py:233:34",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 233,
+    "column": 34,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Transfer.sftp",
+    "relation": "CALLS",
+    "call_id": null,
+    "property_access_id": "tmp4oidkbvw/fabric/transfer.py:263:16",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 263,
+    "column": 16,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Transfer.sftp",
+    "relation": "CALLS",
+    "call_id": null,
+    "property_access_id": "tmp4oidkbvw/fabric/transfer.py:268:12",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 268,
+    "column": 12,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  },
+  {
+    "caller": "fabric.transfer.Transfer.put",
+    "target": "fabric.transfer.Transfer.sftp",
+    "relation": "CALLS",
+    "call_id": null,
+    "property_access_id": "tmp4oidkbvw/fabric/transfer.py:275:16",
+    "file": "tmp4oidkbvw/fabric/transfer.py",
+    "line": 275,
+    "column": 16,
+    "source": "self.sftp",
+    "rule": "property_getter_access",
+    "certainty": "descriptor_may_execute",
+    "module_level": false
+  }
+]

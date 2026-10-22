@@ -1,0 +1,34 @@
+=== KnitCode static call graph v2.5 (static object-flow extension) ===
+Commit          : d086db856be187255b8ec61ef409357393020f32
+Python files    : 24
+Parse errors    : 0
+Symbols         : 427
+Call sites      : 1223
+Resolved sites  : 148
+Unresolved sites: 1075
+Module-level resolved sites: 8
+Collection indirect sites   : 0
+Graph edges     : 453 (CONTAINS/INHERITS/CALLS/INSTANTIATES)
+Object Flow     : 9515 expression steps, 4 budget/recursion cutoffs (entry limit 6000)
+Ambiguous sites : 0 (multiple may-call candidates)
+Conditional     : 0 (may be unbound)
+Call-site status:
+  RESOLVED_INTERNAL   : 148
+  KNOWN_NON_INTERNAL  : 584
+  UNKNOWN             : 491
+Known non-internal origin:
+  BUILTIN             : 336
+  STDLIB              : 176
+  EXTERNAL_IMPORT     : 72
+Classification :
+  BUILTIN             : 282
+  BUILTIN_METHOD      : 51
+  STDLIB              : 179
+  EXTERNAL_IMPORT     : 76
+  INTERNAL_CANDIDATE  : 8
+  INDIRECT_CALL       : 32
+  FIELD_CHAIN         : 57
+  RECEIVER_UNKNOWN    : 330
+  DYNAMIC_UNKNOWN     : 60
+  Note: categories are heuristic, not verified ground truth.
+Output          : /Users/jeff_park/knitcode/validation/flask_2026_10_22/production (report.html, classification JSON/CSV, call_statuses JSON/CSV)
