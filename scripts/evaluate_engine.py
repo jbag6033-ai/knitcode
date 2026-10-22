@@ -117,7 +117,7 @@ def parser_and_scale_probes():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', type=Path, default=ROOT / 'validation/current_evaluation/probes.json')
+    parser.add_argument('--output', type=Path, default=ROOT / 'output/probes.json')
     args = parser.parse_args()
     result = evaluate()
     result['supplemental'] = parser_and_scale_probes()

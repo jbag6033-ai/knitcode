@@ -143,9 +143,9 @@ def evaluate(project, out, scorer, artifact_root=None):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--reference-script', type=Path, default=ROOT/'validation/paper_2026_10_22/reference/compare_macro_benchmark_cg.py')
+    parser.add_argument('--reference-script', type=Path, default=ROOT/'scripts/reference/pycg/compare_macro_benchmark_cg.py')
     parser.add_argument('--artifact-root', type=Path)
-    parser.add_argument('--output', type=Path, default=ROOT/'validation/paper_2026_10_22')
+    parser.add_argument('--output', type=Path, default=ROOT/'output/paper_evaluation')
     parser.add_argument('--project', choices=PROJECTS, action='append')
     args = parser.parse_args()
     scorer = runpy.run_path(str(args.reference_script))

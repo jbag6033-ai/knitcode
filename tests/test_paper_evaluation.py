@@ -9,7 +9,7 @@ class PaperScoringTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.scorer = runpy.run_path(str(Path(__file__).resolve().parents[1] /
-            'validation/paper_2026_10_22/reference/compare_macro_benchmark_cg.py'))
+            'scripts/reference/pycg/compare_macro_benchmark_cg.py'))
 
     def test_external_and_extra_caller_edges_are_not_filtered(self):
         result=score({'app.go':['vendor.send'], 'other':['vendor.extra']},

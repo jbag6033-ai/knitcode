@@ -1,7 +1,0 @@
-{
-  "artifact": "dist/knitcode-static-0.2.0.vsix",
-  "sha256": "1ca1bf2ddcd73d553b078d0c239012d71e1a778f2b519794962461c56513fd28",
-  "all_vendor_sources_match_checkout": true,
-  "isolated_focus_cases_match": 22,
-  "zip_integrity": "PASS"
-}
