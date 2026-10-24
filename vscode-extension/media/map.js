@@ -3,6 +3,8 @@ const api = acquireVsCodeApi();
 const $ = id => document.getElementById(id);
 let data, selected, depth = 1, tab = 'cochange', trail = [];
 let index = new Map(), calls = [];
+const IMPLICIT = {callback: '조건부 콜백 후보', property_get: 'property 읽기 후보', property_set: 'property 쓰기 후보',
+  property_delete: 'property 삭제 후보'};
 function el(tag, text, parent, action) {
   const node = document.createElement(tag);
   if (text !== undefined) node.textContent = text;
@@ -132,7 +134,8 @@ function evidence() {
     el('button', `${source.name} → ${target.name}`, row, () => choose(edge.source === selected ? edge.target : edge.source));
     el('button', `${source.file}:${edge.lineno || source.lineno || 1} ↗`, row, () => open(source, edge.lineno));
     const proof = edge.evidence || {};
-    el('small', proof.callback_call_id ? '조건부 콜백 후보' : edge.type === 'instantiates' ? '생성자 후보' : '호출 후보', row);
+    el('small', edge.type === 'calls_implicit' ? (IMPLICIT[proof.implicit_kind] || '암묵 호출 후보')
+      : edge.type === 'instantiates' ? '생성자 후보' : '호출 후보', row);
     el('small', [proof.rule, proof.certainty].filter(Boolean).join(' · '), row);
   }
   const node = index.get(selected);
@@ -208,7 +211,7 @@ window.addEventListener('message', ({data:message}) => {
   if (message.type !== 'data') return;
   data = message.data;
   index = new Map(data.nodes.map(n => [n.id,n]));
-  calls = data.edges.filter(e => ['calls','instantiates'].includes(e.type));
+  calls = data.edges.filter(e => ['calls','calls_override','instantiates','calls_implicit'].includes(e.type));
   const s = data.summary;
   const counts = data.status_summary?.statuses || {};
   const cutoffs = data.flow?.recursion_or_budget_cutoffs || 0;

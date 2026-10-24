@@ -1,9 +1,11 @@
 """Repository-wide, no-execution AST facts for the KnitCode v1 analyzer."""
 from __future__ import annotations
 import ast
+import re
 import tokenize
 from pathlib import Path
 from typing import Any
+from source_snapshot import SourceSnapshot
 
 SKIP_DIRS = {'.git', '.venv', 'venv', '__pycache__', 'node_modules', 'build', 'dist', '.tox', '.mypy_cache', '.pytest_cache', 'output'}
 
@@ -12,9 +14,40 @@ def loc(node: ast.AST) -> dict[str, Any]:
     return {k: getattr(node, v, None) for k, v in (("line", "lineno"), ("column", "col_offset"), ("end_line", "end_lineno"), ("end_column", "end_col_offset"))}
 
 
-def text_of(source: str, node: ast.AST | None) -> str | None:
+# Same line splitting as ast.get_source_segment: \r\n, \r, \n only (no \f).
+_LINE = re.compile(r'.*?(?:\r\n|\r|\n)|.+', re.S)
+
+
+class SourceText:
+    """Source string with its line list computed once.
+
+    ast.get_source_segment re-splits the whole file on every call, which was
+    quadratic for large modules. Columns are UTF-8 byte offsets, as in ast.
+    """
+    def __init__(self, source: str):
+        self.source = source
+        self.lines = _LINE.findall(source)
+
+    def segment(self, node: ast.AST) -> str | None:
+        try:
+            if node.end_lineno is None or node.end_col_offset is None:
+                return None
+            first, last = node.lineno - 1, node.end_lineno - 1
+            start, end = node.col_offset, node.end_col_offset
+        except AttributeError:
+            return None
+        lines = self.lines
+        if first == last:
+            return lines[first].encode()[start:end].decode()
+        return ''.join([lines[first].encode()[start:].decode(), *lines[first + 1:last],
+                        lines[last].encode()[:end].decode()])
+
+
+def text_of(source: str | SourceText, node: ast.AST | None) -> str | None:
     if node is None:
         return None
+    if isinstance(source, SourceText):
+        return source.segment(node)
     return ast.get_source_segment(source, node)
 
 
@@ -49,7 +82,7 @@ def binding_of(node: ast.AST | None) -> dict[str, Any]:
 
 class FactsVisitor(ast.NodeVisitor):
     def __init__(self, source: str):
-        self.source = source
+        self.source = SourceText(source)
         self.scopes: list[str] = []
         self.scope_types: list[str] = []
         # Lexical scope and executing caller are different for definitions,
@@ -124,6 +157,8 @@ class FactsVisitor(ast.NodeVisitor):
             'decorators': [text_of(self.source, x) for x in node.decorator_list],
             'bases': [text_of(self.source, x) for x in node.bases],
             'class_keywords': [kw.arg for kw in node.keywords],
+            'class_keyword_values': {kw.arg: text_of(self.source, kw.value)
+                                     for kw in node.keywords if kw.arg},
             **loc(node),
         })
         self._visit_with_phase(node.decorator_list, 'class_decorator')
@@ -349,6 +384,7 @@ def scan_repository(root: str | Path, *, source_roots: list[str] | None = None) 
                 validated.append(normalized)
         source_roots = sorted(set(validated), key=len, reverse=True)
     files: list[dict] = []
+    syntax_trees = {}
     errors: list[dict] = []
     for file in sorted(root.rglob('*.py')):
         if any(p in SKIP_DIRS for p in file.relative_to(root).parts[:-1]):
@@ -359,6 +395,7 @@ def scan_repository(root: str | Path, *, source_roots: list[str] | None = None) 
             with tokenize.open(file) as stream:
                 source = stream.read()
             tree = ast.parse(source, filename=str(file))
+            tree.knit_total_lines = len(source.splitlines())
             visitor = FactsVisitor(source)
             visitor.visit(tree)
             # Optional facts: snapshot abstract variable values at each call
@@ -372,8 +409,16 @@ def scan_repository(root: str | Path, *, source_roots: list[str] | None = None) 
             files.append({"file": relative, "source": source, "classes": visitor.classes, "functions": visitor.functions,
                           "imports": visitor.imports, "calls": visitor.calls, "assignments": visitor.assignments,
                           "binding_hazards": visitor.binding_hazards})
+            syntax_trees[relative] = tree
         except (SyntaxError, UnicodeError, OSError) as exc:
             errors.append({"file": relative, "type": type(exc).__name__, "message": str(exc)})
-    return {"repository": root.name, "root": str(root), "source_roots": source_roots,
+    metadata_sources = {}
+    for name in ('setup.cfg', 'pyproject.toml'):
+        try:
+            metadata_sources[name] = (root / name).read_text(encoding='utf-8')
+        except (OSError, UnicodeError):
+            pass
+    return SourceSnapshot({"repository": root.name, "root": str(root), "source_roots": source_roots,
             "python_file_count": len(files),
-            "parse_errors": errors, "files": files}
+            "parse_errors": errors, "files": files, "metadata_sources": metadata_sources}, syntax_trees=syntax_trees,
+                          metadata_sources=metadata_sources)

@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 from typing import Any
+from source_snapshot import SourceSnapshot
 
 
 def load_json(path: str | Path) -> dict[str, Any]:
@@ -13,8 +14,10 @@ def load_json(path: str | Path) -> dict[str, Any]:
 def save_json(data: dict[str, Any], path: str | Path) -> None:
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
+    # One write of the encoded text is much faster than json.dump's many
+    # small writes; the file content is identical.
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        f.write(json.dumps(data, ensure_ascii=False, indent=2))
 
 
 def normalize_path(path: str) -> str:
@@ -116,6 +119,7 @@ def build_symbol_result(ast_result: dict[str, Any]) -> dict[str, Any]:
                 'module': module, 'file': file_path, 'scope': cls.get('scope'),
                 'bases': cls.get('bases', []), 'decorators': cls.get('decorators', []),
                 'class_keywords': cls.get('class_keywords', []),
+                'class_keyword_values': cls.get('class_keyword_values', {}),
                 **location(cls),
             })
             local_index[(file_path, qname)] = symbol_id
@@ -291,8 +295,9 @@ def build_symbol_result(ast_result: dict[str, Any]) -> dict[str, Any]:
                 **location(assignment),
             })
 
-    return {
+    return SourceSnapshot({
         "repository": repository,
+        "metadata_sources": ast_result.get('metadata_sources', getattr(ast_result, 'metadata_sources', {})),
         "source_roots": source_roots,
         "analysis_sources": {normalize_path(f['file']): f['source'] for f in ast_result.get('files', []) if 'source' in f},
         "symbol_count": len(symbols),
@@ -303,7 +308,8 @@ def build_symbol_result(ast_result: dict[str, Any]) -> dict[str, Any]:
         "calls": calls,
         "assignments": assignments,
         "binding_hazards": binding_hazards,
-    }
+    }, syntax_trees=getattr(ast_result, 'syntax_trees', None),
+       metadata_sources=ast_result.get('metadata_sources', getattr(ast_result, 'metadata_sources', {})))
 
 
 def main() -> None:

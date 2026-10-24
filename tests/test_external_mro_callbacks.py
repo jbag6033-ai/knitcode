@@ -6,7 +6,7 @@ import sys
 import tempfile
 import textwrap
 import unittest
-from unittest.mock import patch
+import unittest.mock
 
 from ast_parser import scan_repository
 from symbol_builder import build_symbol_result
@@ -122,16 +122,48 @@ class ExternalMROCallbackTests(unittest.TestCase):
                 obj=Worker(); obj.work()
         ''','obj.work'),{'METHOD:app.Internal.work'})
 
-    def test_unrecognized_stdlib_layout_stays_unknown(self):
-        with patch('stdlib_mro.multiprocessing_contract',return_value=({},[])):
-            self.assertEqual(self.targets('''
-                from multiprocessing import Process
-                class Internal:
-                    def work(self): pass
-                class Worker(Process,Internal): pass
-                def go():
-                    obj=Worker(); obj.work()
-            ''','obj.work'),set())
+    def test_platform_guarded_patch_is_conditional_on_every_analyzing_os(self):
+        # Sublist3r: `if sys.platform.startswith('win'): multiprocessing.Process =
+        # threading.Thread`. The result must not depend on the analyzing machine.
+        import graph_builder
+        source = '''
+            import multiprocessing as mp
+            import sys
+            import threading
+            if sys.platform.startswith('win'):
+                mp.Process=threading.Thread
+            class Internal:
+                def work(self): pass
+            class Worker(mp.Process,Internal): pass
+            def go():
+                obj=Worker(); obj.work()
+        '''
+
+        class HostSys:
+            def __init__(self, platform): self.platform = platform
+            def __getattr__(self, name): return getattr(sys, name)
+        results = []
+        for host in ('win32', 'linux', 'darwin'):
+            with self.subTest(host=host), unittest.mock.patch.object(graph_builder, 'sys', HostSys(host)):
+                g = self.graph(source)
+                edges = [e for e in g['edges'] if e['type'] == 'CALLS' and e['evidence'].get('source') == 'obj.work()']
+                self.assertEqual([e['target'] for e in edges], ['METHOD:app.Internal.work'])
+                self.assertEqual(edges[0]['evidence']['certainty'], 'conditional_namespace_may_call')
+                self.assertEqual(edges[0]['evidence']['conditionally_patched_bases'], ['multiprocessing.Process'])
+                results.append(edges[0]['evidence'])
+        self.assertTrue(all(r == results[0] for r in results))
+
+    def test_conditionally_rebound_project_base_stays_unknown(self):
+        # Only external bases take the annotated path; a project base that may
+        # be rebound keeps the strict rule.
+        self.assertEqual(self.targets('''
+            import sys
+            import lib
+            if sys.platform.startswith('win'):
+                lib.Base=object
+            class Worker(lib.Base):
+                def go(self): self.work()
+        ''','self.work',{'lib.py':'class Base:\n    def work(self): pass\n'}),set())
 
     def test_conditional_import_cannot_use_stdlib_contract(self):
         self.assertEqual(self.targets('''
@@ -155,7 +187,8 @@ class ExternalMROCallbackTests(unittest.TestCase):
         ''','obj.work',{'multiprocessing.py':'class Process(Unknown): pass\n'}),set())
 
     def callbacks(self,g):
-        return [e for e in g['edges'] if e['evidence'].get('callback_call_id')]
+        # Callbacks are implicit calls: kept apart from call-site edges.
+        return [e for e in g['implicit_edges'] if e['evidence']['implicit_kind']=='callback']
 
     def test_sorted_lambda_callback_has_separate_trigger(self):
         g=self.graph('def go(values):\n    return sorted(values,key=lambda x:x)\n')
@@ -164,7 +197,10 @@ class ExternalMROCallbackTests(unittest.TestCase):
         self.assertTrue(edges[0]['target'].startswith('LAMBDA:app.go.'))
         self.assertEqual(edges[0]['source'],'FUNCTION:app.go')
         self.assertEqual(edges[0]['evidence']['certainty'],'callback_may_execute')
-        self.assertIsNone(edges[0]['evidence']['call_id'])
+        self.assertEqual(edges[0]['type'],'CALLS_IMPLICIT')
+        self.assertNotIn('call_id',edges[0]['evidence'])
+        trigger=next(r for r in g['call_statuses'] if r['callee_text']=='sorted')['call_id']
+        self.assertEqual(edges[0]['evidence']['trigger_call_id'],trigger)
         self.assertEqual(next(r for r in g['call_statuses'] if r['callee_text']=='sorted')['status'],'KNOWN_NON_INTERNAL')
 
     def test_named_key_callback_is_not_omitted_to_match_benchmark(self):

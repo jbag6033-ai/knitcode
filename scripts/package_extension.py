@@ -28,6 +28,7 @@ def package(output=None):
             archive.write(source / relative, 'extension/' + relative)
         for file in sorted(ROOT.glob('*.py')):
             archive.write(file, 'extension/vendor/' + file.name)
+        archive.write(ROOT / 'viewer_template.html', 'extension/vendor/viewer_template.html')
     return output
 
 

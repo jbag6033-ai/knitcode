@@ -13,6 +13,13 @@ import textwrap
 
 
 class ExternalCallTests(unittest.TestCase):
+    def test_unknown_constructed_name_does_not_crash_export(self):
+        self.external('''
+            def strip(path, repository=None):
+                path = (path or '').replace('\\\\', '/')
+                return path.partition('/')
+        ''')
+
     def external(self, source, extra=None):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)

@@ -14,13 +14,14 @@ from call_status import annotate_call_statuses
 from vscode_history import read_history
 
 
-def export_project(root, days=90, limit=300):
+def export_project(root, days=90, limit=300, *, analysis_profile=None, call_policy=None):
     root = Path(root).resolve(strict=True)
     if not root.is_dir():
         raise ValueError('Analysis root must be a directory')
     facts = scan_repository(root)
     symbols = build_symbol_result(facts)
-    graph = annotate_call_statuses(reclassify_graph(build_graph(symbols), symbols), symbols)
+    graph = annotate_call_statuses(reclassify_graph(
+        build_graph(symbols, profile=analysis_profile, call_policy=call_policy), symbols), symbols)
 
     def relative(file):
         return file.removeprefix(root.name + '/')
@@ -28,11 +29,14 @@ def export_project(root, days=90, limit=300):
     files = [relative(f['file']) for f in facts['files']]
     nodes = [{**n, 'name': n.get('canonical_name', n['name']),
               'file': relative(n['file']), 'type': n['kind'].lower(),
-              'lineno': n.get('line') or 1} for n in graph['nodes']]
+              'lineno': n.get('line') or 1} for n in [*graph['nodes'], *graph.get('supplemental_nodes', [])]]
     nodes += [dict(id='file:' + f, name=Path(f).name, file=f, type='file', lineno=1)
               for f in files]
+    # Implicit calls (property access, operators, with, sorted key callbacks)
+    # are kept apart from call-site edges as calls_implicit.
     edges = [{**e, 'type': e['type'].lower(),
-              'lineno': e.get('evidence', {}).get('line')} for e in graph['edges']]
+              'lineno': e.get('evidence', {}).get('line')}
+             for e in [*graph['edges'], *graph.get('implicit_edges', []), *graph.get('supplemental_edges', [])]]
     edges += [dict(source='file:' + n['file'], target=n['id'], type='contains')
               for n in nodes if n['type'] != 'file']
     history = read_history(root, set(files), days, limit)
@@ -53,7 +57,11 @@ def export_project(root, days=90, limit=300):
                 call_statuses=[{**c, 'file': relative(c['file'])}
                                for c in graph['call_statuses']],
                 warnings=[f"{relative(e['file'])}: {e['message']}" for e in facts['parse_errors']],
-                flow=graph.get('object_flow_stats', {}))
+                flow=graph.get('object_flow_stats', {}),
+                analysis_profile=graph.get('analysis_profile'), call_graph_policy=graph.get('call_graph_policy'),
+                entry_points=graph.get('entry_points', []), reading_order=graph.get('reading_order', {}),
+                hierarchy=graph.get('hierarchy', {}), import_cycles=graph.get('import_cycles', []),
+                dynamic_calls=graph.get('dynamic_calls', []))
 
 
 if __name__ == '__main__':
