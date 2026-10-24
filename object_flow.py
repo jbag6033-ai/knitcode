@@ -8,6 +8,7 @@ syntax outside this interpreter's supported subset.
 from __future__ import annotations
 
 import ast
+from collections import defaultdict
 from dataclasses import dataclass, replace
 
 
@@ -29,11 +30,47 @@ class Value:
     tags: frozenset[str] = frozenset()
 
     def join(self, other):
+        # Values are immutable, so a join that adds nothing can return an
+        # existing operand. Most merges in large projects are of this kind.
+        if other is self or (other.atoms <= self.atoms and other.tags <= self.tags):
+            if len(self.atoms) <= 32:
+                return self
+        elif self.atoms <= other.atoms and self.tags <= other.tags and len(other.atoms) <= 32:
+            return other
         atoms = self.atoms | other.atoms
         return Value(atoms if len(atoms) <= 32 else frozenset({Atom('unknown')}), self.tags | other.tags)
 
     def tagged(self, tag):
+        if tag in self.tags:
+            return self
         return replace(self, tags=self.tags | {tag})
+
+
+# Implicit calls: Python runs these methods without a call expression.
+_BINARY = {ast.Add: 'add', ast.Sub: 'sub', ast.Mult: 'mul', ast.MatMult: 'matmul',
+           ast.Div: 'truediv', ast.FloorDiv: 'floordiv', ast.Mod: 'mod', ast.Pow: 'pow',
+           ast.LShift: 'lshift', ast.RShift: 'rshift', ast.BitAnd: 'and', ast.BitOr: 'or',
+           ast.BitXor: 'xor'}
+_UNARY = {ast.USub: '__neg__', ast.UAdd: '__pos__', ast.Invert: '__invert__'}
+# (method on the left operand, reflected method on the right operand)
+_COMPARE = {ast.Eq: ('__eq__', '__eq__'), ast.NotEq: ('__ne__', '__ne__'),
+            ast.Lt: ('__lt__', '__gt__'), ast.LtE: ('__le__', '__ge__'),
+            ast.Gt: ('__gt__', '__lt__'), ast.GtE: ('__ge__', '__le__')}
+_PROTOCOL_BUILTINS = {'len': '__len__', 'iter': '__iter__', 'next': '__next__',
+                      'reversed': '__reversed__', 'str': '__str__', 'repr': '__repr__',
+                      'bool': '__bool__', 'hash': '__hash__', 'abs': '__abs__',
+                      'format': '__format__', 'int': '__int__', 'float': '__float__',
+                      'complex': '__complex__', 'bytes': '__bytes__', 'round': '__round__',
+                      'dir': '__dir__'}
+
+
+def is_property(symbol):
+    for decorator in symbol.get('decorators') or []:
+        name = decorator.split('(')[0]
+        if name.split('.')[-1] in ('property', 'cached_property') or \
+                name.endswith(('.setter', '.getter', '.deleter')):
+            return True
+    return False
 
 
 UNKNOWN = Value(frozenset({Atom('unknown')}))
@@ -46,7 +83,21 @@ def one(kind, name='', site=''):
 
 
 def merge_maps(a, b):
-    return {k: a.get(k, UNKNOWN).join(b.get(k, UNKNOWN)) for k in a.keys() | b.keys()}
+    # A key missing on one side is UNKNOWN there. Callers never depend on
+    # the key order of the result.
+    merged = dict(a)
+    if a is b:
+        return merged
+    for k, right in b.items():
+        left = merged.get(k)
+        if left is None:
+            merged[k] = UNKNOWN.join(right)
+        elif left is not right:
+            merged[k] = left.join(right)
+    if len(merged) != len(b):
+        for k in a.keys() - b.keys():
+            merged[k] = a[k].join(UNKNOWN)
+    return merged
 
 
 def literal_key(node):
@@ -76,8 +127,6 @@ class ObjectFlow:
         self.coroutines = {}
         self.lambda_symbols = {(s['file'],s['line'],s['column']):s for s in resolver.symbols if s['kind']=='LAMBDA'}
         self.callback_events = {}
-        self.property_events = {}
-        self.property_sources = {}
         self.external_events = {}
         from call_status import StatusAnnotator
         self.call_origins = StatusAnnotator(resolver.data)
@@ -87,25 +136,77 @@ class ObjectFlow:
         self.cutoffs = 0
         self.generic_context_fallbacks = 0
         self.specific = set()
+        self._own_nodes_cache = {}
+        self._member_cache = {}
+        self._builtin_property_cache = {}
+        self._assigned_targets = None   # file -> assigned dotted names (class_assignments)
+        self._assigned_cache = {}
+        # (file, line, column, kind, member) -> owner/module/end + per-mode targets
+        self.implicit_events = {}
+        self.implicit_results = []
+        self._generator_cache = {}
+        self.enhanced = getattr(resolver, 'enhanced', False)
+        self._attribute_hint_cache = {}
+        self._global_hint_cache = {}
+        self.advisory_events = defaultdict(set)
+        self.reference_events = defaultdict(set)
+        self._refs_cache = {}  # Static names only; never objects, heaps or returns.
         self.call_index = {(c['file'], c['line'], c['column'], c.get('end_line'), c.get('end_column')): c for c in resolver.calls}
+        trees = resolver.syntax_trees
+        functions_by_file = defaultdict(list)
+        for symbol in resolver.symbols:
+            if symbol['kind'] in ('FUNCTION', 'METHOD'):
+                functions_by_file[symbol['file']].append(symbol)
         for file, source in resolver.data.get('analysis_sources', {}).items():
-            tree = ast.parse(source)
+            tree = trees[file]
             self.modules[file] = tree
             index = {n.lineno: n for n in ast.walk(tree) if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef))}
-            for symbol in resolver.symbols:
-                if symbol['file'] == file and symbol['kind'] in ('FUNCTION', 'METHOD') and symbol['line'] in index:
+            for symbol in functions_by_file[file]:
+                if symbol['line'] in index:
                     self.functions[symbol['id']] = index[symbol['line']]
+        self.class_nodes = {(file, n.lineno): n for file, tree in self.modules.items()
+                            for n in ast.walk(tree) if isinstance(n, ast.ClassDef)}
 
     def refs(self, name, context, node):
         call = {**context, 'line': getattr(node, 'lineno', context.get('line', 0))}
+        key = (name, call['file'], call['module'], call.get('scope'), call['line'])
+        if key in self._refs_cache:
+            return self._refs_cache[key]
         imports = self.r.imports_at(call)
+        # Nested definitions in enclosing function scopes shadow imports; class
+        # namespaces are not visible from their methods (lexical_scopes).
         refs = []
         if '.' not in name:
             for scope in self.r.lexical_scopes(context.get('scope'), context['module']):
                 refs = self.r._lookup('.'.join([context['module'], scope, name]))
                 if refs:
                     break
-        return refs or self.r._resolve_reference(name, context['module'], imports)
+        refs = refs or self.r._resolve_reference(name, context['module'], imports)
+        self._refs_cache[key] = refs
+        return refs
+
+    def reference(self, node, value, context, mode):
+        if not self.enhanced:return value
+        parent=self.r._source_parents.get(context['file'],{}).get(node)
+        if isinstance(parent,ast.Call) and parent.func is node:return value
+        for atom in value.atoms:
+            if atom.kind in ('reference','bound_method') and atom.name in self.r.by_id:
+                self.reference_events[(context.get('caller_id') or 'MODULE:'+context['module'],node.lineno,mode)].add(atom.name)
+        return value
+
+    def assigned_name(self, file, name, prefix):
+        """Whether file assigns name, or (prefix='any'/'dotted') a dotted prefix
+        of it; 'dotted' only counts prefixes that are themselves dotted."""
+        key = (file, name, prefix)
+        if key not in self._assigned_cache:
+            if self._assigned_targets is None:
+                self._assigned_targets = defaultdict(set)
+                for target_file, _, target in self.call_origins.class_assignments:
+                    self._assigned_targets[target_file].add(target)
+            self._assigned_cache[key] = any(
+                name == target or prefix and (prefix == 'any' or '.' in target) and name.startswith(target + '.')
+                for target in self._assigned_targets.get(file, ()))
+        return self._assigned_cache[key]
 
     def external_reference(self, name, context, node):
         from import_resolution import canonical_import
@@ -117,8 +218,7 @@ class ObjectFlow:
         origins = self.call_origins.origins.trace(canonical_import(imp))
         if len(origins) != 1 or origins[0]['kind'] not in ('stdlib', 'external'):
             return UNKNOWN
-        if any(file == context['file'] and (name == target or name.startswith(target + '.'))
-               for file, _, target in self.call_origins.class_assignments):
+        if self.assigned_name(context['file'], name, 'any'):
             return UNKNOWN
         return one('external_reference', origins[0]['name'] + ('.' + rest if dot else ''))
 
@@ -171,12 +271,165 @@ class ObjectFlow:
                 node = ast.parse(node.value, mode='eval').body
             except SyntaxError:
                 return UNKNOWN
+        if self.enhanced and isinstance(node, ast.BinOp) and isinstance(node.op, ast.BitOr):
+            return self.hint(node.left, context).join(self.hint(node.right, context)).tagged('annotation')
+        if self.enhanced and isinstance(node, ast.Subscript):
+            base = ast.unparse(node.value)
+            imports = self.r.imports_at(context)
+            head, dot, tail = base.partition('.')
+            origin = imports.get(head, head) + ('.' + tail if dot else '')
+            if origin in ('type', 'typing.Type') and (origin != 'type' or not self.refs('type', context, node)):
+                element = self.hint(node.slice, context)
+                return Value(frozenset(Atom('reference', self.r.classes[a.name]['id'])
+                                      for a in element.atoms if a.kind == 'object' and a.name in self.r.classes)).join(UNKNOWN).tagged('annotation')
+            if origin == 'contextvars.ContextVar':
+                element = self.hint(node.slice, context)
+                return Value(frozenset(Atom('typed_value', a.name, a.site, 'contextvar')
+                                      for a in element.atoms if a.kind == 'object')).join(UNKNOWN).tagged('annotation')
+            if origin in ('typing.Optional', 'typing.Union', 'typing.Annotated'):
+                arguments = list(node.slice.elts) if isinstance(node.slice, ast.Tuple) else [node.slice]
+                result = UNKNOWN
+                for argument in arguments[:1] if origin == 'typing.Annotated' else arguments:
+                    result = result.join(self.hint(argument, context))
+                return result.tagged('annotation')
+            allowed = {'list', 'tuple', 'set', 'frozenset', 'dict', 'List', 'Tuple', 'Set', 'Dict',
+                       'Sequence', 'Iterable', 'Iterator', 'Mapping'}
+            short = origin.rsplit('.', 1)[-1]
+            if short in allowed and (origin.startswith(('typing.', 'collections.abc.'))
+                                     or origin in ('list', 'tuple', 'set', 'frozenset', 'dict')
+                                     and not self.refs(origin, context, node)):
+                args = list(node.slice.elts) if isinstance(node.slice, ast.Tuple) else [node.slice]
+                is_dict = short.lower() in ('dict', 'mapping')
+                element = UNKNOWN
+                for argument in args[-1:] if is_dict else args:
+                    element = element.join(self.hint(argument, context))
+                atoms = frozenset(Atom('typed_value', a.name, a.site, 'dict' if is_dict else 'sequence')
+                                  for a in element.atoms if a.kind == 'object')
+                if not is_dict:
+                    atoms |= frozenset(Atom('collection_object', a.name, a.site)
+                                       for a in element.atoms if a.kind == 'object')
+                return Value(atoms).join(UNKNOWN).tagged('annotation')
         if not isinstance(node, (ast.Name, ast.Attribute)):
             return UNKNOWN
         refs = self.refs(ast.unparse(node), context, node)
         if len(refs) == 1 and refs[0]['kind'] == 'CLASS':
-            return one('object', refs[0]['canonical_name'], 'hint:' + refs[0]['id']).join(UNKNOWN).tagged('annotation')
+            cls = refs[0]
+            # A typing.Protocol marker adds no runtime member implementation.
+            # Normalize only this explicit marker plus exactly one project base.
+            if len(cls.get('bases', [])) == 2:
+                bases=[];protocol=False
+                for base in cls['bases']:
+                    imported=self.r.imports_at({**cls,'scope':cls.get('scope','<module>')})
+                    head,*tail=base.split('.')
+                    canonical='.'.join([imported.get(head,head),*tail])
+                    protocol |= canonical in ('typing.Protocol','typing_extensions.Protocol')
+                    bases.extend(self.r._resolve_reference(base,cls['module'],imported))
+                projects=[b for b in bases if b['kind']=='CLASS']
+                if protocol and len(projects)==1:cls=projects[0]
+            return one('object', cls['canonical_name'], 'hint:' + cls['id']).join(UNKNOWN).tagged('annotation')
         return UNKNOWN
+
+    def declared_global(self, name, context, node):
+        imports=self.r.imports_at(context)
+        head,*tail=name.split('.')
+        canonical='.'.join([imports.get(head,context['module']+'.'+head),*tail])
+        if canonical in self._global_hint_cache:return self._global_hint_cache[canonical]
+        self._global_hint_cache[canonical]=UNKNOWN
+        module,_,variable=canonical.rpartition('.')
+        assignments=self.r.origins.assigns.get((module,variable),[])
+        if len(assignments)!=1:return UNKNOWN
+        row=assignments[0]
+        if row.get('control_depth') or any(h['name']==variable and h['type'] in ('GLOBAL','NONLOCAL')
+                                          for h in self.r.data.get('binding_hazards',[])):
+            return UNKNOWN
+        statement=self.r._source_nodes.get(row['file'],{}).get((row['line'],row.get('column',0)))
+        if not isinstance(statement,ast.AnnAssign):return UNKNOWN
+        value=self.hint(statement.annotation,{**row,'scope':'<module>'})
+        # Conditional typing-only classes with multiple concrete bases do not
+        # certify which runtime proxy member supplies an implementation.
+        if any(a.kind=='object' and (cls:=self.r.classes.get(a.name))
+               and len(self.r._get_bases(cls))>1 for a in value.atoms):
+            return UNKNOWN
+        self._global_hint_cache[canonical]=value
+        return value
+
+    def attribute_hint(self, class_name, attribute):
+        """Advisory declared/stable field types; a live heap write always wins."""
+        key = (class_name, attribute)
+        if key in self._attribute_hint_cache:
+            return self._attribute_hint_cache[key]
+        self._attribute_hint_cache[key] = UNKNOWN
+        cls = self.r.classes.get(class_name)
+        if not cls:
+            return UNKNOWN
+        order, status = self.r._mro(cls)
+        if status != 'complete':
+            return UNKNOWN
+        for name in order:
+            if (name,attribute) in self.r.mutated_class_attributes or (name,'*') in self.r.mutated_class_attributes:
+                return UNKNOWN
+            owner = self.r.classes.get(name)
+            if not owner:
+                continue
+            tree = self.class_nodes.get((owner['file'], owner['line']))
+            if tree is None:
+                continue
+            context = {**owner, 'scope': owner['qualified_name']}
+            for stmt in tree.body:
+                targets = stmt.targets if isinstance(stmt, ast.Assign) else [stmt.target] if isinstance(stmt, ast.AnnAssign) else []
+                if any(isinstance(t,ast.Name) and t.id==attribute for t in targets):
+                    expression=getattr(stmt,'value',None)
+                    refs=self.refs(ast.unparse(expression),context,stmt) if isinstance(expression,(ast.Name,ast.Attribute)) else []
+                    if len(refs)==1 and refs[0]['kind']=='CLASS':
+                        value=one('reference',refs[0]['id']).tagged('field')
+                        self._attribute_hint_cache[key]=value
+                        return value
+                if isinstance(stmt, ast.AnnAssign) and isinstance(stmt.target, ast.Name) and stmt.target.id == attribute:
+                    value = self.hint(stmt.annotation, context)
+                    self._attribute_hint_cache[key] = value
+                    return value
+            writes = []
+            annotations = []
+            for method in tree.body:
+                if not isinstance(method, (ast.FunctionDef, ast.AsyncFunctionDef)) or not method.args.args:
+                    continue
+                receiver = method.args.args[0].arg
+                symbol = next((s for s in self.r.symbols if s['file']==owner['file']
+                               and s['line']==method.lineno and s['kind']=='METHOD'), None)
+                if symbol is None or symbol.get('decorators'):
+                    continue
+                ctx = {**symbol, 'scope': symbol['qualified_name']}
+                for stmt in self.own_nodes(method):
+                    targets = stmt.targets if isinstance(stmt, ast.Assign) else [stmt.target] if isinstance(stmt, (ast.AnnAssign, ast.AugAssign)) else stmt.targets if isinstance(stmt, ast.Delete) else []
+                    if not any(isinstance(t, ast.Attribute) and isinstance(t.value, ast.Name)
+                               and t.value.id==receiver and t.attr==attribute for t in targets):
+                        continue
+                    if isinstance(stmt, ast.AnnAssign):
+                        annotations.append(self.hint(stmt.annotation, ctx))
+                    value = getattr(stmt, 'value', None)
+                    refs = self.refs(ast.unparse(value.func), ctx, value) if isinstance(value, ast.Call) else []
+                    writes.append(refs[0] if len(refs)==1 and refs[0]['kind']=='CLASS'
+                                  and self.r.safe_callable(refs[0]) else None)
+            if annotations and all(a == annotations[0] for a in annotations):
+                value = annotations[0]
+                self._attribute_hint_cache[key] = value
+                return value
+            if writes:
+                if all(w and w['id']==writes[0]['id'] for w in writes):
+                    target = writes[0]
+                    value = one('object', target['canonical_name'], 'hint:field:' + owner['id'] + ':' + attribute).join(UNKNOWN).tagged('annotation')
+                    self._attribute_hint_cache[key] = value
+                    return value
+                return UNKNOWN
+        return UNKNOWN
+
+    def truth(self, node, env, heap, context, mode, site):
+        value = self.expr(node, env, heap, context, mode, site)
+        for atom in value.atoms:
+            receiver = Value(frozenset({atom}), value.tags)
+            if not self.implicit(node, context, mode, 'truth', '__bool__', receiver):
+                self.implicit(node, context, mode, 'truth', '__len__', receiver)
+        return value
 
     def namespace_shadow(self, cls, attribute, heap):
         """A write on this path suppresses the old descriptor, not saved aliases."""
@@ -302,7 +555,8 @@ class ObjectFlow:
             value = parameter_value(param, supplied)
             env[param.arg] = value.tagged('context') if mode == 'specific' else value
         for param in fn.args.kwonlyargs:
-            env[param.arg] = parameter_value(param, kwargs.get(param.arg))
+            value = parameter_value(param, kwargs.get(param.arg))
+            env[param.arg] = value.tagged('context') if mode == 'specific' else value
         # Python determines locals lexically, even before their first store.
         for n in self.own_nodes(fn):
             if isinstance(n, ast.Name) and isinstance(n.ctx, ast.Store):
@@ -326,21 +580,164 @@ class ObjectFlow:
         # ellipsis stubs, never contradict a known return value or implicit None.
         if stub or any(a.kind == 'unknown' for a in result.atoms):
             result = (UNKNOWN if stub else result).join(self.hint(fn.returns, context))
+        elif self.enhanced and fn.returns and any(a.kind == 'none' for a in result.atoms):
+            hinted=self.hint(fn.returns, context)
+            result=result.join(Value(frozenset(Atom('advisory_object',a.name,a.site)
+                                               for a in hinted.atoms if a.kind=='object'),hinted.tags))
         result = result.tagged('return:' + symbol['canonical_name']).tagged('return')
         self.summaries[symbol['id']] = self.summaries.get(symbol['id'], BOTTOM).join(result)
         return result
 
-    @staticmethod
-    def own_nodes(fn):
-        pending = list(fn.body)
-        while pending:
-            node = pending.pop()
-            yield node
-            if not isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef, ast.Lambda)):
-                pending.extend(ast.iter_child_nodes(node))
+    def own_nodes(self, fn):
+        # invoke() revisits the same function many times; walk it once.
+        nodes = self._own_nodes_cache.get(fn)
+        if nodes is None:
+            nodes, pending = [], list(fn.body)
+            while pending:
+                node = pending.pop()
+                nodes.append(node)
+                if not isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef, ast.Lambda)):
+                    pending.extend(ast.iter_child_nodes(node))
+            self._own_nodes_cache[fn] = nodes
+        return nodes
 
     def is_generator(self, fn):
-        return any(isinstance(n, (ast.Yield, ast.YieldFrom)) for n in self.own_nodes(fn))
+        if fn not in self._generator_cache:
+            self._generator_cache[fn] = any(isinstance(n, (ast.Yield, ast.YieldFrom)) for n in self.own_nodes(fn))
+        return self._generator_cache[fn]
+
+    def member(self, class_name, name):
+        """Project methods named `name` that the type `class_name` resolves,
+        decorated ones included (properties). Empty when an external base or a
+        class attribute provides the name first, or the class is unknown."""
+        key = (class_name, name)
+        if key in self._member_cache:
+            return self._member_cache[key]
+        found = []
+        cls = self.r.classes.get(class_name)
+        if cls:
+            order, status = self.r._mro(cls)
+            if status != 'complete':
+                # Same policy as Resolver._find_method: a local definition on
+                # an unknown base, or on a class whose decorator is
+                # source-proven (class_decorators.py); nothing otherwise.
+                from class_decorators import preserves_local_method
+                local = status == 'unknown_base' or (
+                    status == 'unknown_class_customization' and preserves_local_method(self.r, cls, name))
+                order = [class_name] if local else []
+            for k in order:
+                if k == 'builtins.object':
+                    break
+                if k in self.r.external_bases:
+                    if name in self.r.external_bases[k]:
+                        break
+                    continue
+                if k in self.r._KNOWN_STDLIB_BASES or k not in self.r.classes:
+                    continue
+                found = [s for s in self.r._lookup(k + '.' + name) if s['kind'] == 'METHOD']
+                owner = self.r.classes[k]
+                if found or any(name in a.get('targets', []) for a in
+                                self.r.assignments.get((owner['file'], owner['qualified_name']), [])):
+                    break
+        self._member_cache[key] = found
+        return found
+
+    def builtin_property(self, fn):
+        """True when fn's descriptor decorator is the real property (or its
+        accessor) or functools.cached_property, not a project name."""
+        if fn['id'] in self._builtin_property_cache:
+            return self._builtin_property_cache[fn['id']]
+        context = {**fn, 'scope': fn['scope']}
+        imports = self.r.imports_at(context)
+        result = False
+        for decorator in fn.get('decorators') or []:
+            name = decorator.split('(')[0]
+            if name.split('.')[-1] == 'cached_property':
+                result = imports.get(name.split('.')[0]) in ('functools', 'functools.cached_property')
+                break
+            if name == 'property' or name.endswith(('.setter', '.getter', '.deleter')):
+                result = not ('property' in imports or self.refs('property', context, self.functions.get(fn['id']))
+                              or self.r._find_binding(context, 'property'))
+                break
+        self._builtin_property_cache[fn['id']] = result
+        return result
+
+    def implicit(self, node, context, mode, kind, name, value, *, want_property=False):
+        """Record methods run implicitly on the project objects in value."""
+        hits, receivers = set(), set()
+        for atom in value.atoms:
+            if atom.kind != 'object':
+                continue
+            # A patched method (Cls.m = ..., setattr) no longer certifies the
+            # original definition; a descriptor must be the real property.
+            methods = [m for m in self.member(atom.name, name)
+                       if is_property(m) == want_property and m['id'] not in self.r.mutated_methods
+                       and (not want_property or self.builtin_property(m))]
+            if methods:
+                hits.update(m['id'] for m in methods)
+                receivers.add(atom.name)
+        if not hits:
+            return False
+        key = (context['file'], node.lineno, node.col_offset, kind, name)
+        event = self.implicit_events.setdefault(key, {
+            'owner': context.get('caller_id'), 'module': context.get('module'),
+            'end': (node.end_lineno, node.end_col_offset), 'modes': {}})
+        slot = event['modes'].setdefault(mode, {'targets': set(), 'receivers': set()})
+        slot['targets'].update(hits)
+        slot['receivers'].update(receivers)
+        return True
+
+    def implicit_operator(self, node, context, mode, left_name, right_name, left, right):
+        self.implicit(node, context, mode, 'operator', left_name, left)
+        if right_name and self.lacks_forward(left, (left_name,)):
+            self.implicit(node, context, mode, 'operator', right_name, right)
+
+    def lacks_forward(self, value, names):
+        """True only when every value of the left operand is a project object
+        whose class provably defines none of `names`, or a numeric literal.
+        Python then calls the reflected method of the right operand (object's
+        default comparisons and int/float operators return NotImplemented).
+        Unknown or opaque types, and str/bytes literals (`'%s' % x`), record
+        nothing."""
+        if not value.atoms:
+            return False
+        for atom in value.atoms:
+            if atom.kind == 'literal' and not atom.name.startswith(("'", '"', "b'", 'b"')):
+                continue
+            cls = self.r.classes.get(atom.name) if atom.kind == 'object' else None
+            if not cls:
+                return False
+            order, status = self.r._mro(cls)
+            if status != 'complete':
+                return False
+            for k in order:
+                if k == 'builtins.object':
+                    break
+                if k in self.r.external_bases:
+                    if any(n in self.r.external_bases[k] for n in names):
+                        return False
+                    continue
+                if k in self.r._KNOWN_STDLIB_BASES or k not in self.r.classes:
+                    return False
+                owner = self.r.classes[k]
+                if any(s['kind'] == 'METHOD' for n in names for s in self.r._lookup(k + '.' + n)) or any(
+                        n in a.get('targets', []) for n in names
+                        for a in self.r.assignments.get((owner['file'], owner['qualified_name']), [])):
+                    return False
+        return True
+
+    def peek(self, node, env, heap, context, mode, site):
+        """Value of a call-free name/attribute/subscript expression that the
+        legacy flow does not evaluate. The step budget is restored so the
+        existing analysis is unaffected."""
+        if any(isinstance(n, (ast.Call, ast.NamedExpr, ast.Await, ast.Yield, ast.YieldFrom, ast.Lambda))
+               for n in ast.walk(node)):
+            return UNKNOWN
+        saved = self.steps, self.root_steps
+        try:
+            return self.expr(node, env, dict(heap), context, mode, site)
+        finally:
+            self.steps, self.root_steps = saved
 
     def expr(self, node, env, heap, context, mode, site):
         if node is None:
@@ -351,10 +748,12 @@ class ObjectFlow:
             return UNKNOWN
         if isinstance(node, ast.Name):
             if node.id in env:
-                return env[node.id]
+                return self.reference(node,env[node.id],context,mode)
             refs = self.refs(node.id, context, node)
-            return (Value(frozenset(Atom('reference', s['id']) for s in refs)) if refs
-                    else self.external_reference(node.id, context, node))
+            if refs:
+                return self.reference(node,Value(frozenset(Atom('reference', s['id']) for s in refs)),context,mode)
+            declared=self.declared_global(node.id,context,node) if self.enhanced else UNKNOWN
+            return declared.join(self.external_reference(node.id, context, node))
         if isinstance(node, ast.Constant):
             return NONE if node.value is None else one('literal', repr(node.value))
         if isinstance(node, ast.Starred):
@@ -415,9 +814,14 @@ class ObjectFlow:
         if isinstance(node, ast.Subscript):
             collection = self.expr(node.value, env, heap, context, mode, site)
             self.expr(node.slice, env, heap, context, mode, site)
+            if isinstance(node.ctx, ast.Load):
+                self.implicit(node, context, mode, 'subscript', '__getitem__', collection)
             key = literal_key(node.slice)
             result = BOTTOM
             for atom in collection.atoms:
+                if self.enhanced and atom.kind == 'typed_value':
+                    result = result.join(one('object', atom.name, atom.site)).join(UNKNOWN).tagged('annotation')
+                    continue
                 if atom.kind.startswith('collection_'):
                     continue
                 if atom.kind != 'container' or key is None or heap.get((atom.site, '*'), UNKNOWN).atoms:
@@ -445,7 +849,8 @@ class ObjectFlow:
             branch = dict(heap)
             outcomes, result = [], BOTTOM
             for index, item in enumerate(node.values):
-                value = self.expr(item, env, branch, context, mode, site)
+                value = ((self.truth if self.enhanced else self.expr)(item, env, branch, context, mode, site)
+                         if index < len(node.values)-1 else self.expr(item, env, branch, context, mode, site))
                 truth = bool(item.value) if isinstance(item, ast.Constant) else None
                 stops = (truth is False if isinstance(node.op, ast.And) else truth is True)
                 if index == len(node.values)-1 or stops:
@@ -461,7 +866,7 @@ class ObjectFlow:
             heap.clear(); heap.update(merged)
             return result
         if isinstance(node, ast.IfExp):
-            self.expr(node.test, env, heap, context, mode, site)
+            (self.truth if self.enhanced else self.expr)(node.test, env, heap, context, mode, site)
             left, right = dict(heap), dict(heap)
             a = self.expr(node.body, dict(env), left, context, mode, site)
             b = self.expr(node.orelse, dict(env), right, context, mode, site)
@@ -469,6 +874,7 @@ class ObjectFlow:
             return a.join(b)
         if isinstance(node, ast.Attribute):
             receiver = self.expr(node.value, env, heap, context, mode, site)
+            self.implicit(node, context, mode, 'property_get', node.attr, receiver, want_property=True)
             result = BOTTOM
             for atom in receiver.atoms:
                 if atom.kind in ('external_reference', 'external_result'):
@@ -481,9 +887,8 @@ class ObjectFlow:
                 cls = self.r.classes.get(atom.name)
                 getter = self.property_getter(cls, node.attr, heap)
                 if getter:
-                    key = (context['file'], node.lineno, node.col_offset, context.get('caller_id'), mode)
-                    self.property_events.setdefault(key, set()).add(getter['id'])
-                    self.property_sources[key[:3]] = ast.get_source_segment(self.r.data['analysis_sources'][context['file']], node)
+                    # The getter edge itself is recorded by implicit(); here
+                    # only its return value flows on (self.worker.run()).
                     value = self.invoke(getter, [one('object', atom.name, atom.site)], {}, heap,
                                         mode, site, property_access=True)
                     result = result.join(value.tagged('field'))
@@ -514,7 +919,7 @@ class ObjectFlow:
                     # yield a non-callable value rather than the method.
                     result = result.join(Value(bound_methods) if len(bound_methods) == len(methods) else UNKNOWN)
                 else:
-                    result = result.join(UNKNOWN)
+                    result = result.join(self.attribute_hint(atom.name, node.attr) if self.enhanced else UNKNOWN)
             # Module/class qualified references are resolved only if the root
             # is not an actual local receiver (no name-based fallback).
             root = node
@@ -528,10 +933,47 @@ class ObjectFlow:
                 refs = self.refs(ast.unparse(node), context, node)
                 if refs:
                     return Value(frozenset(Atom('reference', s['id']) for s in refs))
+                if self.enhanced:
+                    result=result.join(self.declared_global(ast.unparse(node),context,node))
             tracked = any(a.kind == 'object' for a in receiver.atoms) or bool(receiver.tags & {'return', 'field'})
-            return result.tagged('field') if self.fields and tracked else result
+            result=result.tagged('field') if self.fields and tracked else result
+            return self.reference(node,result,context,mode)
         if isinstance(node, ast.Call):
             return self.call(node, env, heap, context, mode, site)
+        # Same evaluation order as the generic walk below, plus implicit calls.
+        if self.enhanced and isinstance(node, ast.FormattedValue):
+            value=self.expr(node.value,env,heap,context,mode,site)
+            self.expr(node.format_spec,env,heap,context,mode,site)
+            member={114:'__repr__',115:'__str__',97:'__repr__'}.get(node.conversion,'__format__')
+            self.implicit(node,context,mode,'format',member,value)
+            return UNKNOWN
+        if isinstance(node, ast.BinOp):
+            left = self.expr(node.left, env, heap, context, mode, site)
+            right = self.expr(node.right, env, heap, context, mode, site)
+            op = _BINARY.get(type(node.op))
+            if op:
+                self.implicit_operator(node, context, mode, f'__{op}__', f'__r{op}__', left, right)
+            return UNKNOWN
+        if isinstance(node, ast.UnaryOp):
+            operand = (self.truth if self.enhanced and isinstance(node.op, ast.Not) else self.expr)(node.operand, env, heap, context, mode, site)
+            if type(node.op) in _UNARY:
+                self.implicit(node, context, mode, 'operator', _UNARY[type(node.op)], operand)
+            return UNKNOWN
+        if isinstance(node, ast.Compare):
+            left = self.expr(node.left, env, heap, context, mode, site)
+            for op, comparator in zip(node.ops, node.comparators):
+                right = self.expr(comparator, env, heap, context, mode, site)
+                if isinstance(op, (ast.In, ast.NotIn)):
+                    self.implicit(node, context, mode, 'operator', '__contains__', right)
+                elif type(op) in _COMPARE:
+                    self.implicit_operator(node, context, mode, *_COMPARE[type(op)], left, right)
+                left = right
+            return UNKNOWN
+        if isinstance(node, (ast.ListComp, ast.SetComp, ast.GeneratorExp, ast.DictComp)):
+            for generator in node.generators:
+                iterable = self.peek(generator.iter, env, heap, context, mode, site)
+                self.implicit(generator.iter, context, mode, 'iteration',
+                              '__aiter__' if generator.is_async else '__iter__', iterable)
         for child in ast.iter_child_nodes(node):
             if isinstance(child, ast.expr):
                 self.expr(child, env, heap, context, mode, site)
@@ -596,6 +1038,11 @@ class ObjectFlow:
                     if atom.kind in ('external_reference', 'external_result'):
                         kind = 'external_reference' if atom.kind == 'external_reference' else 'external_bound'
                         external.append((atom.name + '.' + node.func.attr, kind))
+                    if self.enhanced and atom.kind == 'advisory_object':
+                        call=self.call_index.get((context['file'],node.lineno,node.col_offset,node.end_lineno,node.end_col_offset))
+                        if call:
+                            for method in self.member(atom.name,node.func.attr):
+                                if self.r.safe_callable(method):self.advisory_events[(call['id'],mode)].add(method['id'])
                     if atom.kind == 'object':
                         cls = self.r.classes.get(atom.name)
                         # Instance attributes shadow non-data method descriptors.
@@ -637,6 +1084,12 @@ class ObjectFlow:
                                 if base_atom.kind == 'external_reference':
                                     external.append((base_atom.name + '.' + node.func.attr, 'external_bound'))
                         nested = [s for s in self.r._lookup(atom.name + '.' + node.func.attr) if s['kind'] == 'CLASS']
+                        if self.enhanced and not found and not nested:
+                            field=self.attribute_hint(atom.name,node.func.attr)
+                            for field_atom in field.atoms:
+                                if field_atom.kind=='reference' and field_atom.name in self.r.by_id:
+                                    fn=self.r.by_id[field_atom.name]
+                                    targets.append(fn);bindings.append((fn,None))
                         for nested_class in nested:
                             targets.append(nested_class); bindings.append((nested_class, None))
                         for fn in found:
@@ -699,6 +1152,9 @@ class ObjectFlow:
             bindings = [(fn, bound) for fn, bound in bindings if self.r.safe_callable(fn)]
         args = [self.expr(a, env, heap, context, mode, site) for a in node.args]
         kwargs = {k.arg: self.expr(k.value, env, heap, context, mode, site) for k in node.keywords}
+        if (not targets and args and isinstance(node.func, ast.Name)
+                and node.func.id in _PROTOCOL_BUILTINS and node.func.id not in env):
+            self.implicit(node, context, mode, 'protocol_builtin', _PROTOCOL_BUILTINS[node.func.id], args[0])
         self.note_builtin_callback(node, args, kwargs, context)
         if isinstance(node.func, ast.Name) and node.func.id in ('setattr', 'delattr') and len(args) >= 2:
             key = node.args[1]
@@ -717,9 +1173,7 @@ class ObjectFlow:
         if external_root.isidentifier():
             root_import, _, _ = self.call_origins._bound_at(
                 {**context, 'line': node.lineno, 'column': node.col_offset}, external_root)
-        if any(file == context['file'] and (external_text == target or
-               (root_import and '.' in target and external_text.startswith(target + '.')))
-               for file, _, target in self.call_origins.class_assignments):
+        if self.assigned_name(context['file'], external_text, 'dotted' if root_import else None):
             external = []
         if external:
             call = self.call_index.get((context['file'], node.lineno, node.col_offset, node.end_lineno, node.end_col_offset))
@@ -771,6 +1225,23 @@ class ObjectFlow:
                 if name in NON_CONSTRUCTOR_RETURN_APIS:
                     continue
                 result = result.join(one('external_result', name).tagged('return'))
+        if self.enhanced and receiver and isinstance(node.func, ast.Attribute) and not targets:
+            for atom in receiver.atoms:
+                if atom.kind != 'typed_value' or atom.receiver_class not in ('dict','contextvar'):
+                    continue
+                if node.func.attr == 'get':
+                    result = result.join(one('object', atom.name, atom.site)).tagged('annotation')
+                elif node.func.attr == 'values' and atom.receiver_class=='dict':
+                    result = result.join(one('collection_object', atom.name, atom.site)).tagged('annotation')
+                elif node.func.attr == 'items' and atom.receiver_class=='dict':
+                    result = result.join(Value(frozenset({Atom('collection_pair_object',atom.name,atom.site,'items')}))).tagged('annotation')
+        if self.enhanced and not targets and args and isinstance(node.func,ast.Name) and node.func.id not in env:
+            bound,reasons,_=self.call_origins._bound_at({**context,'line':node.lineno},node.func.id)
+            if not bound and not reasons:
+                if node.func.id=='sorted':result=result.join(args[0]).tagged('binding')
+                elif node.func.id=='enumerate':
+                    result=result.join(Value(frozenset(Atom('collection_pair_object',a.name,a.site,'enumerate')
+                        for a in args[0].atoms if a.kind=='collection_object'))).tagged('binding')
         return result
 
     def note_builtin_callback(self, node, args, kwargs, context):
@@ -796,6 +1267,8 @@ class ObjectFlow:
     def invalidate_escaped(values, heap):
         # Find the whole reachable graph BEFORE discarding container entries.
         escaped = {a.site for v in values for a in v.atoms if a.kind in ('object', 'container')}
+        if not escaped:
+            return  # Nothing reachable escapes: the heap is unchanged.
         while True:
             more = {a.site for (obj, _), v in heap.items() if obj in escaped
                     for a in v.atoms if a.kind in ('object', 'container')} - escaped
@@ -816,15 +1289,19 @@ class ObjectFlow:
                     heap[key] = UNKNOWN
             heap[(atom.site, '*')] = UNKNOWN
 
-    def assign(self, target, value, env, heap, context, mode, site):
+    def assign(self, target, value, env, heap, context, mode, site, record=True):
         if isinstance(target, ast.Name):
             env[target.id] = value
         elif isinstance(target, ast.Subscript):
             container = self.expr(target.value, env, heap, context, mode, site)
             self.expr(target.slice, env, heap, context, mode, site)
+            if record:
+                self.implicit(target, context, mode, 'subscript', '__setitem__', container)
             self.invalidate_containers(container, heap)
         elif isinstance(target, ast.Attribute) and self.fields:
             receiver = self.expr(target.value, env, heap, context, mode, site)
+            if record:
+                self.implicit(target, context, mode, 'property_set', target.attr, receiver, want_property=True)
             self.namespace_write(receiver, target.attr, heap)
             objects = [a for a in receiver.atoms if a.kind == 'object']
             strong = len(receiver.atoms) == 1 and len(objects) == 1 and not objects[0].site.startswith('hint:')
@@ -832,8 +1309,58 @@ class ObjectFlow:
                 key = (obj.site, target.attr)
                 heap[key] = value if strong else heap.get(key, UNKNOWN).join(value)
         elif isinstance(target, (ast.Tuple, ast.List)):
+            pairs=[a for a in value.atoms if a.kind=='pair_object'] if self.enhanced else []
+            if pairs and len(target.elts)==2 and not any(isinstance(t,ast.Starred) for t in target.elts):
+                self.assign(target.elts[0],UNKNOWN,env,heap,context,mode,site,record)
+                values=Value(frozenset(Atom('object',a.name,a.site) for a in pairs)).join(UNKNOWN).tagged('annotation')
+                self.assign(target.elts[1],values,env,heap,context,mode,site,record)
+                return
             for part in target.elts:
-                self.assign(part, UNKNOWN, env, heap, context, mode, site)
+                self.assign(part, UNKNOWN, env, heap, context, mode, site, record)
+
+    def context_protocol(self, receiver, name, args, heap, mode, site):
+        """Interpret a source-backed special method without inventing a call site.
+
+        Python looks these methods up on the type, not instance attributes.
+        Use the same allocation identity and ordinary return/heap interpreter.
+        Unknown implementations cannot certify a yielded object or stale fields.
+        """
+        result, outcomes = BOTTOM, []
+        for atom in receiver.atoms:
+            branch = dict(heap)
+            cls = self.r.classes.get(atom.name) if atom.kind == 'object' else None
+            methods, _ = self.r._find_method(cls, name) if cls else ([], [])
+            if len(methods) == 1:
+                fn = methods[0]
+                bound = one('object', atom.name, atom.site)
+                if 'classmethod' in fn.get('decorators', []):
+                    bound = one('reference', cls['id'])
+                actual = args if 'staticmethod' in fn.get('decorators', []) else [bound, *args]
+                value = self.invoke(fn, actual, {}, branch,
+                                    'generic' if mode == 'generic' else 'specific', site)
+            else:
+                value = UNKNOWN
+                # Match the ordinary unknown-call policy: only objects known
+                # to escape to the manager may be mutated. An unrelated lock
+                # is not evidence that every object in the heap was modified.
+                escaped = {atom.site} if atom.kind == 'object' else set()
+                while True:
+                    more = {a.site for (obj, _), v in branch.items() if obj in escaped
+                            for a in v.atoms if a.kind == 'object'} - escaped
+                    if not more:
+                        break
+                    escaped.update(more)
+                for key in branch:
+                    if key[0] in escaped:
+                        branch[key] = UNKNOWN.tagged('field')
+            result = result.join(value)
+            outcomes.append(branch)
+        if outcomes:
+            merged = outcomes[0]
+            for branch in outcomes[1:]:
+                merged = merge_maps(merged, branch)
+            heap.clear(); heap.update(merged)
+        return (result if result.atoms else UNKNOWN).tagged('return').tagged('context_manager')
 
     def block(self, body, env, heap, context, mode, site):
         returns = BOTTOM
@@ -863,36 +1390,77 @@ class ObjectFlow:
                     if name in env:
                         env[name] = UNKNOWN
                 continue
+            if isinstance(stmt, ast.Assert):
+                (self.truth if self.enhanced else self.expr)(stmt.test, env, heap, context, mode, site)
+                self.expr(stmt.msg, env, heap, context, mode, site)
+                continue
             if isinstance(stmt, ast.Pass):
                 continue
             if isinstance(stmt, (ast.Assign, ast.AnnAssign)):
                 value = self.expr(stmt.value, env, heap, context, mode, site)
+                if self.enhanced and isinstance(stmt, ast.AnnAssign):
+                    declared = self.hint(stmt.annotation, context)
+                    if any(a.kind in ('typed_value', 'collection_object') for a in declared.atoms):
+                        value = value.join(declared)
                 for target in stmt.targets if isinstance(stmt, ast.Assign) else [stmt.target]:
                     self.assign(target, value, env, heap, context, mode, site)
             elif isinstance(stmt, ast.Expr):
                 self.expr(stmt.value, env, heap, context, mode, site)
             elif isinstance(stmt, ast.AugAssign):
-                self.expr(stmt.value, env, heap, context, mode, site)
+                operand = self.expr(stmt.value, env, heap, context, mode, site)
+                op = _BINARY.get(type(stmt.op))
+                if op:
+                    current = self.peek(stmt.target, env, heap, context, mode, site)
+                    # x += y tries __iadd__, then __add__, then y.__radd__.
+                    if not self.implicit(stmt, context, mode, 'operator', f'__i{op}__', current):
+                        self.implicit(stmt, context, mode, 'operator', f'__{op}__', current)
+                    if self.lacks_forward(current, (f'__i{op}__', f'__{op}__')):
+                        self.implicit(stmt, context, mode, 'operator', f'__r{op}__', operand)
                 self.assign(stmt.target, UNKNOWN, env, heap, context, mode, site)
             elif isinstance(stmt, ast.Delete):
                 for target in stmt.targets:
-                    self.assign(target, UNKNOWN, env, heap, context, mode, site)
+                    if isinstance(target, ast.Subscript):
+                        container = self.peek(target.value, env, heap, context, mode, site)
+                        self.implicit(target, context, mode, 'subscript', '__delitem__', container)
+                    elif isinstance(target, ast.Attribute):
+                        owner = self.peek(target.value, env, heap, context, mode, site)
+                        self.implicit(target, context, mode, 'property_delete', target.attr, owner,
+                                      want_property=True)
+                    self.assign(target, UNKNOWN, env, heap, context, mode, site, record=False)
             elif isinstance(stmt, ast.Assert):
-                self.expr(stmt.test, env, heap, context, mode, site)
+                (self.truth if self.enhanced else self.expr)(stmt.test, env, heap, context, mode, site)
                 self.expr(stmt.msg, env, heap, context, mode, site)
             elif isinstance(stmt, (ast.With, ast.AsyncWith)):
-                # __enter__ can raise or return an arbitrary object.  No
-                # assumptions about the context manager's yielded type.
                 with_env, with_heap = dict(env), dict(heap)
+                managers = []
                 for item in stmt.items:
-                    self.expr(item.context_expr, with_env, with_heap, context, mode, site)
+                    manager = self.expr(item.context_expr, with_env, with_heap, context, mode, site)
+                    prefix = '__a' if isinstance(stmt, ast.AsyncWith) else '__'
+                    self.implicit(item.context_expr, context, mode, 'context_manager', prefix + 'enter__', manager)
+                    self.implicit(item.context_expr, context, mode, 'context_manager', prefix + 'exit__', manager)
+                    managers.append(manager)
+                    # Awaitable execution is not modeled: async with remains
+                    # unknown rather than treating a coroutine as its result.
+                    entered = (self.context_protocol(manager, '__enter__', [], with_heap, mode, site)
+                               if isinstance(stmt, ast.With) else UNKNOWN.tagged('return'))
                     if item.optional_vars is not None:
-                        self.assign(item.optional_vars, UNKNOWN, with_env, with_heap, context, mode, site)
+                        self.assign(item.optional_vars, entered, with_env, with_heap, context, mode, site)
+                return_start = len(self.return_heaps[-1]) if self.return_heaps else 0
                 with_env, ret, live = self.block(stmt.body, with_env, with_heap, context, mode, site)
+                if isinstance(stmt, ast.With):
+                    # Apply exit effects on normal flow and captured returns.
+                    exit_heaps = [with_heap]
+                    if self.return_heaps:
+                        exit_heaps += self.return_heaps[-1][return_start:]
+                    for exit_heap in exit_heaps:
+                        for manager in reversed(managers):
+                            self.context_protocol(manager, '__exit__', [UNKNOWN] * 3,
+                                                  exit_heap, mode, site)
                 returns = returns.join(ret)
-                # Context manager entry may fail before the body starts.
-                env = merge_maps(env, with_env) if live else env
-                heap.clear(); heap.update(merge_maps(heap, with_heap))
+                # Failed entry cannot reach the next normal statement. Keep
+                # the binding from the successful body, not a pre-with alias.
+                env = with_env if live else env
+                heap.clear(); heap.update(with_heap)
                 if not live:
                     return env, returns, False
             elif isinstance(stmt, (ast.For, ast.AsyncFor, ast.While)):
@@ -919,6 +1487,8 @@ class ObjectFlow:
                     iterable = stmt.iter
                     element = UNKNOWN
                     collection = self.expr(iterable, env, heap, context, mode, site)
+                    self.implicit(iterable, context, mode, 'iteration',
+                                  '__aiter__' if isinstance(stmt, ast.AsyncFor) else '__iter__', collection)
                     unwrapped = frozenset(
                         Atom(atom.kind.removeprefix('collection_'), atom.name, atom.site, atom.receiver_class)
                         for atom in collection.atoms if atom.kind.startswith('collection_')
@@ -942,11 +1512,15 @@ class ObjectFlow:
                         if any(a.kind != 'container' and not a.kind.startswith('collection_') for a in collection.atoms):
                             element = element.join(UNKNOWN)
                         element = element.tagged('binding')
+                    if self.enhanced:
+                        declared=Value(frozenset(Atom('object',a.name,a.site) for a in collection.atoms
+                                                if a.kind=='typed_value' and a.receiver_class=='sequence'))
+                        element=element.join(declared).tagged('annotation') if declared.atoms else element
                     if not element.atoms:
                         element = UNKNOWN.tagged('binding')
                     self.assign(stmt.target, element, loop_env, loop_heap, context, mode, site)
                 else:
-                    self.expr(stmt.test, env, heap, context, mode, site)
+                    (self.truth if self.enhanced else self.expr)(stmt.test, env, heap, context, mode, site)
                 loop_env, loop_ret, loop_live = self.block(stmt.body, loop_env, loop_heap, context, mode, site)
                 returns = returns.join(loop_ret)
                 # Loop else executes on normal exhaustion, not necessarily on
@@ -1067,7 +1641,7 @@ class ObjectFlow:
                     merged_heap = merge_maps(merged_heap, branch_heap)
                 heap.clear(); heap.update(merged_heap)
             elif isinstance(stmt, ast.If):
-                self.expr(stmt.test, env, heap, context, mode, site)
+                (self.truth if self.enhanced else self.expr)(stmt.test, env, heap, context, mode, site)
                 branches = [stmt.body, stmt.orelse]
                 if isinstance(stmt.test, ast.Constant):
                     branches = [stmt.body if stmt.test.value else stmt.orelse]
@@ -1153,4 +1727,19 @@ class ObjectFlow:
                 ids = set().union(*(e['targets'] for e in chosen))
                 trace = sorted(set().union(*(e['trace'] for e in chosen)))
                 result[call['id']] = ([self.r.by_id[i] for i in sorted(ids)], 'object_flow_may_call', trace)
+        # Implicit calls follow the same context policy as explicit ones: an
+        # observed caller-specific context wins, else root/generic contexts.
+        for (file, line, column, kind, name), event in sorted(self.implicit_events.items(), key=lambda kv: kv[0]):
+            modes = ['specific'] if event['owner'] in self.specific else ['root', 'generic']
+            chosen = [event['modes'][m] for m in modes if m in event['modes']]
+            if not chosen:
+                chosen = [event['modes'][m] for m in ('root', 'generic') if m in event['modes']]
+            if not chosen:
+                continue
+            self.implicit_results.append({
+                'file': file, 'line': line, 'column': column,
+                'end_line': event['end'][0], 'end_column': event['end'][1],
+                'kind': kind, 'member': name, 'owner': event['owner'], 'module': event['module'],
+                'targets': sorted(set().union(*(c['targets'] for c in chosen))),
+                'receivers': sorted(set().union(*(c['receivers'] for c in chosen)))})
         return result

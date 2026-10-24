@@ -10,7 +10,9 @@ class FabricPropertyTests(unittest.TestCase):
     def pairs(self, source):
         graph = self.graph(source)
         names = {n['id']: n['canonical_name'] for n in graph['nodes']}
-        return {(names[e['source']], names[e['target']]) for e in graph['edges'] if e['type'] == 'CALLS'}
+        # Getter runs are implicit calls (implicit_edges), apart from call sites.
+        edges = [e for e in graph['edges'] if e['type'] == 'CALLS'] + graph['implicit_edges']
+        return {(names[e['source']], names[e['target']]) for e in edges}
 
     def test_getter_access_has_implicit_edge(self):
         pairs = self.pairs('''

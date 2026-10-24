@@ -6,7 +6,7 @@ Keep these edges separate from the internal graph and its status accounting.
 from __future__ import annotations
 
 import ast
-from collections import Counter
+from collections import Counter, defaultdict
 from call_status import StatusAnnotator
 from import_resolution import canonical_import
 from symbol_builder import save_json
@@ -17,6 +17,14 @@ def build_external_call_graph(symbols, graph):
     status = StatusAnnotator(symbols)
     calls = {c['id']: c for c in symbols.get('calls', [])}
     nodes, edges = {}, []
+    assigned = defaultdict(set)   # file -> assigned dotted names, indexed once
+    for file, _, target in status.class_assignments:
+        assigned[file].add(target)
+
+    def assigned_name(file, name, prefix):
+        """file assigns name, or (prefix='any'/'dotted') a (dotted) prefix of it."""
+        return any(name == target or prefix and (prefix == 'any' or '.' in target)
+                   and name.startswith(target + '.') for target in assigned.get(file, ()))
 
     def add(call, name, rule, certainty, origin):
         target = 'EXTERNAL:' + name
@@ -27,6 +35,8 @@ def build_external_call_graph(symbols, graph):
                           rule=rule, certainty=certainty)))
 
     def imported(call, name):
+        if not isinstance(name, str) or not name:
+            return None
         head, dot, rest = name.partition('.')
         imp, conflicts, _ = status._bound_at(call, head)
         if not imp or conflicts:
@@ -39,8 +49,7 @@ def build_external_call_graph(symbols, graph):
             return None
         full = origins[0]['name'] + ('.' + rest if dot else '')
         # Assignment to an imported namespace invalidates the original API.
-        if any(file == call['file'] and (name == target or name.startswith(target + '.'))
-               for file, _, target in status.class_assignments):
+        if assigned_name(call['file'], name, 'any'):
             return None
         return full, origins[0]['kind'].upper()
 
@@ -51,9 +60,7 @@ def build_external_call_graph(symbols, graph):
         call_text = call.get('callee_text') or ''
         call_root = call_text.split('.')[0]
         root_import = status._bound_at(call, call_root)[0] if call_root.isidentifier() else None
-        if any(file == call['file'] and (target == call_text or
-               (root_import and '.' in target and call_text.startswith(target + '.')))
-               for file, _, target in status.class_assignments):
+        if assigned_name(call['file'], call_text, 'dotted' if root_import else None):
             continue
         evidence = row.get('evidence', {})
         name = evidence.get('origin_name', '')
